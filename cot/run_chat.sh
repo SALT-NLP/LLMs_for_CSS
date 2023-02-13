@@ -1,0 +1,1 @@
+python run_chat.py --dataset multiarith --demo_path demos/multiarith_auto --output_dir experiment/multiarith_auto
