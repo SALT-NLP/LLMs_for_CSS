@@ -62,7 +62,7 @@ def getResponseforPrompt(chatbot, allprompts):
             allresponse.append(response)
             i += 1
             errortime = 0
-            chatbot.reset()
+            chatbot.reset_chat()
         except Exception as exc:
             print(f"Data point {i} went wrong!")
             print(exc)
