@@ -74,7 +74,7 @@ def getResponseforPrompt(chatbot, allprompts):
 
 def getrationales(inputpath, outputpath, args):
     print("get rationale")
-    chatbot = Chatbot(api_key=args.api_key)
+    chatbot = Chatbot(session_token=args.session_token)
 
     start = time.time()
 
@@ -155,7 +155,7 @@ def getrationales(inputpath, outputpath, args):
 
 def getanswers(inputpath, outputpath, args):
     print("get answers")
-    chatbot = Chatbot(session_token=args.api_key)
+    chatbot = Chatbot(session_token=args.session_token)
     start = time.time()
 
     with open(inputpath, "r", encoding="utf-8") as f:
