@@ -199,7 +199,7 @@ def getanswers(inputpath, outputpath, args):
             raw_data = json.load(f)
             conversations = raw_data['Conversation']
             i = 0
-            for (u,v) in raw_data['Conversation'].items():
+            for (u,v) in conversations.items():
                 if allflag[i] == 1:
                     i += 1
                     continue
@@ -226,7 +226,7 @@ def getanswers(inputpath, outputpath, args):
                 print("no error for this sample")
                 allflag[touseindex[i]] = 1
                 print(touseindex[i], goldlabel[i], touseresponse)
-                fw.write(str(touseindex[i]) + "\t" + goldlabel[i] + "\t" + touseresponse + "\n")
+                fw.write(str(touseindex[i]) + "\t" + str(goldlabel[i]) + "\t" + str(touseresponse) + "\n")
                 fw.flush()
             else:
                 print("this data point meets error! please repeat!")
