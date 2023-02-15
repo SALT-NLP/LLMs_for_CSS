@@ -7,6 +7,7 @@ import time
 import re
 import random
 import argparse
+
 #from revChatGPT.ChatGPT import Chatbot
 from revChatGPT.V1 import Chatbot
 
@@ -262,7 +263,7 @@ def calculateres(path, args):
             #gold = content[1]
         gold = content[1] == 'true'
         
-        #pred = 'True' in content[2]
+        pred = content[2]
         pred = 'true' in pred.replace("&&&&&&", "").lower()
         
         print(gold, pred, content[2])
@@ -297,6 +298,10 @@ def main():
 
 errortime = 0
 if __name__ == "__main__":
-    #main()
-    import asyncio
-    asyncio.run(main())
+    st = time.time()
+    main()
+    et = time.time()
+
+    # get the execution time
+    elapsed_time = et - st
+    print('Execution time:', elapsed_time, 'seconds')

@@ -1,2 +1,5 @@
-0	False	False. &&&&&&&&&&&&The conversation seems to be a civil and respectful discussion between two people about the appropriate use of a person's name and the correct number of players in a poker tournament. There is no evidence of personal attacks or insults directed at anyone.
-1	False	True. The conversation contains several personal attacks, including accusations of not reading comments, being careless, deliberately lying, and being obtuse.
+
+0	False	False. The conversation is a civil discussion about the proper name to use for a person and a clarification about the number of players in a poker tournament. There is no personal attack.
+1	False	True. The conversation contains personal attacks, such as accusing the other person of not reading comments and being careless, calling them a liar, and telling them to stop being deliberately obtuse.
+2	False	True. The response from person A includes a dismissive and sarcastic remark ("I wish you lot would stop editing it otherwise"), which can be seen as a personal attack on person B.
+3	False	True.
