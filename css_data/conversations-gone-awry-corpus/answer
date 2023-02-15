@@ -3,3 +3,17 @@
 1	False	True. The conversation contains personal attacks, such as accusing the other person of not reading comments and being careless, calling them a liar, and telling them to stop being deliberately obtuse.
 2	False	True. The response from person A includes a dismissive and sarcastic remark ("I wish you lot would stop editing it otherwise"), which can be seen as a personal attack on person B.
 3	False	True.
+4	False	False.
+5	False	True, the conversation contains personal attacks.
+6	False	False.
+7	False	True.
+8	False	True. The conversation includes personal attacks, specifically in the statement "you don't seem to know the difference between mph and kph." Additionally, there is a threat of a future scolding in the statement "now he will scold you message me back."
+9	False	True, the conversation contains personal attacks.
+10	False	False.
+12	False	False, there is no personal attack in this conversation.
+13	False	True. The conversation includes a personal attack in the last sentence of speaker A's final statement.
+14	False	False. &&&&&&&&&&&&The conversation does not contain a personal attack. It is a discussion about the appropriateness of deleting or archiving discussions on a Talk page and whether certain discussions are off-topic or not. While there may be disagreement between the two individuals, they are discussing the issue at hand and not attacking each other personally.
+15	False	True. The conversation includes personal attacks such as calling the other person's contributions "mere fan trivia" and "Marvel fancruft trivia" and accusing them of having a personal vendetta.
+16	False	True. &&&&&&&&&&&&In the second message, B accuses Inspectre of spamming and promoting their religion on Wikipedia, which could be seen as a personal attack. In the first message, A also makes derogatory comments about Inspectre, suggesting that they enjoy being a martyr and referring to their supposed masochistic pleasure. These comments could also be seen as a personal attack.
+17	False	True.
+18	False	False. The conversation does not contain a personal attack.

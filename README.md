@@ -155,3 +155,23 @@ python testreasoning.py --dataset task_name
 you can modify time.sleep(x) based on your own experience
 
 It will first generate all rationales, then generate all answers.
+
+
+## CSS update
+
+
+To run chatgpt zero-cot, please follow the instructions below.
+
+1. install revChatGPT and dependencies
+```   
+pip3 install --upgrade revChatGPT
+```
+
+2. substitute the arg.access_token with your own.
+
+Refer to: https://chat.openai.com/api/auth/session
+
+3. usage:
+```
+python testcss.py --dataset conv_go_awry
+```
