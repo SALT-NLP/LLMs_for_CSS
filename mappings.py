@@ -22,6 +22,6 @@ convokit_prompts = {
     "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
     "politeness": "Was this statement polite (True or False)? ",
     "toxicity": "Predict whether the given conversation has a personal attack (True or False).",
-    "persuasion": "Does this reply convince the original poster (Yes Or No)?",
+    "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
 }
