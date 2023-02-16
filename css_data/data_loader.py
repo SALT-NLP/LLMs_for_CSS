@@ -123,6 +123,8 @@ def main(dataset, save_dir):
 
         assert len(contexts) == len(labels) and len(contexts) == len(prompts)
         raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
+        data_f = pd.DataFrame.from_dict(raw_data)
+        data_f.to_json("{}.json".format(dataset))
 
 
 if __name__ == "__main__":
