@@ -1,6 +1,8 @@
 import argparse
+import csv
 import os
 import pandas as pd
+import wget
 from convokit import Corpus, download
 from mappings import *
 
@@ -10,6 +12,19 @@ def deep_get(recursive_key, recursive_dict):
     for key in recursive_key.split("."):
         level = level[key]
     return level
+
+
+def csv_process(dataset, save_dir):
+    filename = "{}.csv".format(dataset)
+    if not os.path.exists(filename):
+        filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
+    df = pd.read_csv(filename)
+    context_column, label_columns = csv_column_map[dataset]
+    df["context"] = df[context_column]
+    df["labels"] = df[label_columns]
+    df["prompts"] = [prompts[dataset]] * len(df["labels"])
+    df = df[["context", "labels", "prompts"]]
+    df.to_json("{}/{}.json".format(save_dir, dataset))
 
 
 def convokit_process(dataset, save_dir):
@@ -75,23 +90,24 @@ def convokit_process(dataset, save_dir):
             utterance = corpus.get_utterance(utterance_id).to_dict()
             label = deep_get(label_field, utterance)
             labels.append(label)
-            prompts.append(convokit_prompts[dataset])
+            prompts.append(prompts[dataset])
     elif label_type == "speaker":
         speaker_contexts = []
         for i, utterances in enumerate(speaker_utterance_maps):
+            print(contexts[i])
             for speaker, utterance_id in utterances.items():
                 speaker_contexts.append(contexts[i])
                 utterance = corpus.get_utterance(utterance_id).to_dict()
                 label = deep_get(label_field, utterance)
                 labels.append(label)
-                prompts.append(convokit_prompts[dataset].replace("{$speaker}", speaker))
+                prompts.append(prompts[dataset].replace("{$speaker}", speaker))
         contexts = speaker_contexts
     elif label_type == "conversation":
         for conversation_id in conversation_ids:
             conversation = corpus.get_conversation(conversation_id).to_dict()
             label = deep_get(label_field, conversation)
             labels.append(label)
-            prompts.append(convokit_prompts[dataset])
+            prompts.append(prompts[dataset])
 
     assert len(contexts) == len(labels) and len(contexts) == len(prompts)
     raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
@@ -104,12 +120,18 @@ def convokit_process(dataset, save_dir):
 def main(dataset, save_dir):
     if dataset in convokit_ds:
         convokit_process(dataset, save_dir)
+    elif dataset in csv_download:
+        csv_process(dataset, save_dir)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--dataset", "-d", type=str, default="power", choices=list(convokit_ds.keys())
+        "--dataset",
+        "-d",
+        type=str,
+        default="power",
+        choices=list(prompts.keys()),
     )
     parser.add_argument("--save_dir", "-s", type=str, default="processed")
     args = parser.parse_args()
