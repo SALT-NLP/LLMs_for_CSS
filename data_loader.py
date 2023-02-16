@@ -1,6 +1,7 @@
 import argparse
 import csv
 import os
+import numpy as np
 import pandas as pd
 import wget
 from convokit import Corpus, download
@@ -14,14 +15,28 @@ def deep_get(recursive_key, recursive_dict):
     return level
 
 
+def boolify(df):
+    column_names = df.select_dtypes(include=[np.number]).columns
+    m = df[df.select_dtypes(include=[np.number]).columns].max().reset_index(name="max")
+    n = m.loc[m["max"] == 1, "max"]
+    p = column_names[n.index]
+    df[p] = df[p].astype(bool)
+    return df
+
+
 def csv_process(dataset, save_dir):
     filename = "{}.csv".format(dataset)
     if not os.path.exists(filename):
         filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
-    df = pd.read_csv(filename)
     context_column, label_columns = csv_column_map[dataset]
+    if type(context_column) == type("str"):
+        df = pd.read_csv(filename)
+    else:
+        df = pd.read_csv(filename, header=None)
+
     df["context"] = df[context_column]
     df["labels"] = df[label_columns]
+    df = boolify(df)
     df["prompts"] = [prompts[dataset]] * len(df["labels"])
     df = df[["context", "labels", "prompts"]]
     df.to_json("{}/{}.json".format(save_dir, dataset))

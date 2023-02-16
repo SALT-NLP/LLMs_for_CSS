@@ -21,11 +21,13 @@ convokit_labels = {
 csv_column_map = {
     "hate": ("post", "implicit_class"),
     "reframe": ("original_text", "reframed_text"),
+    "humor": (3, 1),
 }
 
 csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
+    "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
 }
 
 prompts = {
@@ -37,4 +39,5 @@ prompts = {
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
     "hate": "Which of the following categories best describes the sentence: grievance, incitement, inferiority, irony, stereotypical, threatening?",
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
+    "humor": "Was that joke humorous (True or False)?",
 }
