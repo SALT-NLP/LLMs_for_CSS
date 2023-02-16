@@ -60,7 +60,10 @@ def getResponseforPrompt(chatbot, allprompts):
             print("######Response#####", response)
             
             if len(response) <2:
+                i += 1
                 allresponse.append("Error!")
+                chatbot.reset_chat()
+                continue
             #message = chatbot.ask(oneprompt)
             #allresponse.append(message[0]['message'])
             #i += 1
