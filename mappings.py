@@ -18,10 +18,14 @@ convokit_labels = {
 }
 
 # (context, label)
-csv_column_map = {"hate": ("post", "implicit_class")}
+csv_column_map = {
+    "hate": ("post", "implicit_class"),
+    "reframe": ("original_text", "reframed_text"),
+}
 
 csv_download = {
-    "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv"
+    "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
+    "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
 }
 
 prompts = {
@@ -32,4 +36,5 @@ prompts = {
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
     "hate": "Which of the following categories best describes the sentence: grievance, incitement, inferiority, irony, stereotypical, threatening?",
+    "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
 }
