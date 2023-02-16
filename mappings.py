@@ -18,9 +18,9 @@ convokit_labels = {
 }
 
 convokit_prompts = {
-    "power": "Is {$speaker} an administrator (Yes or No)?",
-    "stance": "Does {$speaker} support {$title} (Yes or No)?",  # This Dataset is strange currently, too long of context
-    "politeness": "Was this statement polite (Yes or No)? ",
+    "power": "Is {$speaker} an administrator (True or False)?",
+    "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
+    "politeness": "Was this statement polite (True or False)? ",
     "toxicity": "Predict whether the given conversation has a personal attack (True or False).",
     "persuasion": "Does this reply convince the original poster (Yes Or No)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
