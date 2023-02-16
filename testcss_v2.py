@@ -20,11 +20,11 @@ def data_split(raw_datapth, input_path, args):
     
     with open(raw_datapth, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
-    indexs = raw_data['context'].keys()
+    indexes = raw_data['context'].keys()
     
     num_testing = args.testing_size
     random.seed(0)
-    selected_indexs = random.sample(indexs, num_testing)
+    selected_indexs = random.sample(indexes, num_testing)
     
     for u in selected_indexs:
         contexts.append(raw_data['context'][u])
@@ -42,6 +42,7 @@ def get_response(chatbot, allprompts):
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
+        #print(oneprompt)
         try:
             
             response = ""
@@ -123,7 +124,7 @@ def get_answers(input_path, output_path, args):
         input_prompts = []
         for i in range(len(test_samples)):
             oneres = test_samples[i]
-            input_prompts.append(oneres + '\n' + prompts[i])
+            input_prompts.append(oneres + ' ' + prompts[i])
             
         fw = open(output_path, "a+", encoding="utf-8")
         response = []
