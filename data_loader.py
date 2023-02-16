@@ -96,6 +96,8 @@ def convokit_process(dataset, save_dir):
     assert len(contexts) == len(labels) and len(contexts) == len(prompts)
     raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
     data_f = pd.DataFrame.from_dict(raw_data)
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
     data_f.to_json(save_dir + "/{}.json".format(dataset))
 
 
