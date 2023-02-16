@@ -13,11 +13,15 @@ from revChatGPT.V1 import Chatbot
 
 def data_split(raw_datapth, input_path, args):
     
+    if os.path.exists(input_path):
+        print("###### Testing Files Exist! ######")
+        return
+    
     contexts = []
     labels = []
     prompts = []
     
-    
+    print("###### Creating Testing Files! ######")
     with open(raw_datapth, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     indexes = raw_data['context'].keys()
