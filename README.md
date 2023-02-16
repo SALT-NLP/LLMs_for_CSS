@@ -14,17 +14,17 @@ pip3 install -e .
 python data_loader.py -d power --save_dir ./css_data/wiki-corpus
 ```
 
-3. install revChatGPT and dependencies
+3. Install revChatGPT and dependencies
 ```   
 pip3 install --upgrade revChatGPT
 ```
 
-4. substitute the arg.access_token with your own.
+4. Substitute the arg.access_token with your own.
 
 Refer to: https://chat.openai.com/api/auth/session
 
 
-5. usage:
+5. Usage:
 ```
 python testcss_v2.py --dataset wiki_corpus
 ```
