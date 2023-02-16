@@ -57,9 +57,13 @@ def getResponseforPrompt(chatbot, allprompts):
             response = ""
             for data in chatbot.ask(oneprompt):
                 response = data["message"]
-            #   print(data)
+            print("######Response#####", response)
             
-            
+            if len(response) <2:
+                allresponse.append("Error!")
+            #message = chatbot.ask(oneprompt)
+            #allresponse.append(message[0]['message'])
+            #i += 1
             allresponse.append(response)
             i += 1
             errortime = 0

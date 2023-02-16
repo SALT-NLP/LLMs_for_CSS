@@ -17,3 +17,584 @@
 16	False	True. &&&&&&&&&&&&In the second message, B accuses Inspectre of spamming and promoting their religion on Wikipedia, which could be seen as a personal attack. In the first message, A also makes derogatory comments about Inspectre, suggesting that they enjoy being a martyr and referring to their supposed masochistic pleasure. These comments could also be seen as a personal attack.
 17	False	True.
 18	False	False. The conversation does not contain a personal attack.
+19	False	True. The comment "You don't have many friends do you?" is a personal attack. Additionally, the comment "This isn't Myspace or Match.com, and isn't going to become anything like it due to the many idiots like you on the site" can also be interpreted as a personal attack.
+20	False	False. &&&&&&&&&&&&The conversation does not contain any personal attack, it is a civil and polite exchange where B suggests a minor correction to A's text and A agrees with it without any disagreement or aggression.
+21	False	True.
+22	False	True. The conversation includes statements that could be perceived as personal attacks, such as "Please read wiki_link and wiki_link for additional information" and "Of course not. It's a pain to do so." These statements could be seen as condescending and dismissive.
+23	False	True. &&&&&&&&&&&&The statement "it's all bullshit you pulled outta your ass, right?" is a personal attack because it attacks the character and credibility of the person (B) instead of addressing the issue of finding the source. It is important to maintain respectful and constructive communication even when disagreeing with someone or questioning their sources.
+24	False	True, the conversation contains a personal attack.
+25	False	True. The statement "Your histrionics aside" and "before it penetrates your thick fucking skull" are both personal attacks.
+26	False	True. The statement "Take this discussion OFF OF MY TALK PAGE" can be interpreted as a personal attack.
+27	False	True, the conversation contains a personal attack.
+28	False	False. There is no personal attack in this conversation.
+29	False	True.
+30	False	False. There is no personal attack in the given conversation.
+31	False	True, the conversation contains a personal attack.
+32	False	True. &&&&&&&&&&&&The statement "the edits you should not tolerate are the other side preaching their incorrect disambiguation" is an attack on the other party's editing and can be interpreted as an insult. The use of the phrase "preaching their incorrect disambiguation" suggests that the other party is intentionally making false or misleading edits, which could be perceived as a personal attack.
+33	False	True.
+34	False	True. The second speaker (B) is questioning the intelligence of the first speaker (A) by asking "How can anyone be so sure..." and later suggests that someone else "remembers" when Zainab was married, implying that A is not capable of finding that information.
+35	False	True, the conversation contains personal attacks.
+36	False	True. The statement "This article suffers from whitewashing by Spacefarer, DaveApter, Triplejumper, Saladdays, Ratagonia, Gilbertine goldmark, and AlexJackl, among other, all strong LGAT and/or Landmark Education graduates and apologists attempting to create an article devoid of any crtical thought, as their livelihood/reputation likely rides on it" is a personal attack.
+37	False	True. The conversation contains personal attacks such as "STOP THE VANDALISM" and "This is getting to be pathetic on your end."
+38	False	False. There is no personal attack in this conversation.
+39	False	True.
+48	False	False. There is no personal attack in this conversation.
+49	False	True. The statement "Only an idiot would interpret GMT as subject to daylight savings" is a personal attack. It uses an insulting term to refer to someone who may interpret GMT incorrectly.
+50	False	False. &&&&&&&&&&&&There is no personal attack in this conversation. However, there is some context missing that could potentially change the meaning or intention behind the messages.
+51	False	True.
+52	False	False.
+53	False	True, the conversation contains a personal attack.
+54	False	True. The conversation contains a personal attack directed at Mr. Garcia.
+55	False	True.
+56	False	False.
+57	False	True. The conversation contains personal attacks, such as accusing the other user of lying and being "barefaced and shameless".
+58	False	
+59	False	
+60	False	
+61	False	
+62	False	
+63	False	
+64	False	
+65	False	
+66	False	
+67	False	
+68	False	
+69	False	
+70	False	
+71	False	
+72	False	
+73	False	
+74	False	
+75	False	
+76	False	
+77	False	
+78	False	
+79	False	
+80	False	
+81	False	
+82	False	
+83	False	
+84	False	
+85	False	
+86	False	
+87	False	
+97	False	
+98	False	
+99	False	
+100	False	
+101	False	
+102	False	
+103	False	
+104	False	
+105	False	
+106	False	
+107	False	
+108	False	
+109	False	
+110	False	
+111	False	
+112	False	
+113	False	
+114	False	
+115	False	
+116	False	
+117	False	
+118	False	
+119	False	
+120	False	
+121	False	
+122	False	
+123	False	
+124	False	
+125	False	
+126	False	
+127	False	
+128	False	
+129	False	
+130	False	
+131	False	
+132	False	
+133	False	
+134	False	
+135	False	
+136	False	
+146	False	
+147	False	
+148	False	
+149	False	
+150	False	
+151	False	
+152	False	
+153	False	
+154	False	
+155	False	
+156	False	
+157	False	
+158	False	
+159	False	
+160	False	
+161	False	
+162	False	
+163	False	
+164	False	
+165	False	
+166	False	
+167	False	
+168	False	
+169	False	
+170	False	
+171	False	
+172	False	
+173	False	
+174	False	
+175	False	
+176	False	
+177	False	
+178	False	
+179	False	
+180	False	
+181	False	
+182	False	
+183	False	
+184	False	
+185	False	
+195	False	
+196	False	
+197	False	
+198	False	
+199	False	
+200	False	
+201	False	
+202	False	
+203	False	
+204	False	
+205	False	
+206	False	
+207	False	
+208	False	
+209	False	
+210	False	
+211	False	
+212	False	
+213	False	
+214	False	
+215	False	
+216	False	
+217	False	
+218	False	
+219	False	
+220	False	
+221	False	
+222	False	
+223	False	
+224	False	
+225	False	
+226	False	
+227	False	
+228	False	
+229	False	
+230	False	
+231	False	
+232	False	
+233	False	
+244	False	
+245	False	
+246	False	
+247	False	
+248	False	
+249	False	
+250	False	
+251	False	
+252	False	
+253	False	
+254	False	
+255	False	
+256	False	
+257	False	
+258	False	
+259	False	
+260	False	
+261	False	
+262	False	
+263	False	
+264	False	
+265	False	
+266	False	
+267	False	
+268	False	
+269	False	
+270	False	
+271	False	
+272	False	
+273	False	
+274	False	
+275	False	
+276	False	
+277	False	
+278	False	
+279	False	
+280	False	
+281	False	
+282	False	
+283	False	
+293	False	
+294	False	
+295	False	
+296	False	
+297	False	
+298	False	
+299	False	
+300	False	
+301	False	
+302	False	
+303	False	
+304	False	
+305	False	
+306	False	
+307	False	
+308	False	
+309	False	
+310	False	
+311	False	
+312	False	
+313	False	
+314	False	
+315	False	
+316	False	
+317	False	
+318	False	
+319	False	
+320	False	
+321	False	
+322	False	
+323	False	
+324	False	
+325	False	
+326	False	
+327	False	
+328	False	
+329	False	
+330	False	
+331	False	
+332	False	
+342	False	
+343	False	
+344	False	
+345	False	
+346	False	
+347	False	
+348	False	
+349	False	
+350	False	
+351	False	
+352	False	
+353	False	
+354	False	
+355	False	
+356	False	
+357	False	
+358	False	
+359	False	
+360	False	
+361	False	
+362	False	
+363	False	
+364	False	
+365	False	
+366	False	
+367	False	
+368	False	
+369	False	
+370	False	
+371	False	
+372	False	
+373	False	
+374	False	
+375	False	
+376	False	
+377	False	
+378	False	
+379	False	
+380	False	
+381	False	
+391	False	
+392	False	
+393	False	
+394	False	
+395	False	
+396	False	
+397	False	
+398	False	
+399	False	
+11	False	
+40	False	
+41	False	
+42	False	
+43	False	
+44	False	
+45	False	
+46	False	
+47	False	
+88	False	
+89	False	
+90	False	
+91	False	
+93	False	
+94	False	
+95	False	
+96	False	
+137	False	
+138	False	
+139	False	
+140	False	
+141	False	
+142	False	
+143	False	
+144	False	
+145	False	
+186	False	
+187	False	
+188	False	
+189	False	
+237	False	
+238	False	
+239	False	
+240	False	
+241	False	
+242	False	
+243	False	
+284	False	
+285	False	
+286	False	
+287	False	
+288	False	
+289	False	
+290	False	
+291	False	
+292	False	
+333	False	
+334	False	
+335	False	
+336	False	
+337	False	
+338	False	
+339	False	
+340	False	
+341	False	
+382	False	
+383	False	
+384	False	
+385	False	
+386	False	
+387	False	
+388	False	
+389	False	
+390	False	
+92	False	
+190	False	
+191	False	
+192	False	
+193	False	
+194	False	
+234	False	
+235	False	
+236	False	
+11	False	True. &&&&&&&&&&&&The comment "Are you a moron?" is a personal attack.
+40	False	False. &&&&&&&&&&&&The conversation appears to be a discussion about a user named "Rambutan" and their behavior on Wikipedia. While there are disagreements and criticisms about Rambutan's editing habits, there does not appear to be a direct personal attack against them. The discussion seems to remain focused on the issue at hand, and the comments are not directed at Rambutan as a person, but rather their actions and behavior on Wikipedia.
+41	False	False. The conversation does not contain a personal attack.
+42	False	False. The conversation does not contain a personal attack.
+43	False	True. The response from person A ("jerk") could be seen as a personal attack towards person B.
+44	False	True. The statement "And the only reason all of this is too complicated to shoehorn into the first sentence is because you are making it overly complicated" can be interpreted as a personal attack.
+45	False	True. The statement "There is no fucking inaccurate information. Stop screwing with the page." contains a personal attack.
+46	False	False.
+47	False	True. The conversation contains a personal attack when B suggests that A is calling Lindsay Lohan a monster, and A responds by calling B's comment "dumb".
+58	False	False. The conversation does not contain a personal attack.
+59	False	True.
+60	False	True. The conversation contains a personal attack when person B accuses person A of distorting history to make a nationalist point.
+61	False	True.
+62	False	False. &&&&&&&&&&&&There is no personal attack in this conversation. The discussion is focused on the edit war happening on a Wikipedia article, and the conversation is cordial and respectful, with no insults or disparaging comments directed towards any individual.
+63	False	True. The user "B" refers to Universalgenius as a "vandal" and calls for them to be "blocked" and "banned." They also accuse Universalgenius of calling them and another user "stupid and childish," and refer to him as a "vandal" again. These statements could be seen as a personal attack.
+64	False	False. The conversation is a discussion about a historical topic and there is no personal attack present.
+65	False	True. The conversation contains personal attacks, particularly in the statements "Not to mention his version of the article is plagued with bad English, grammar, style as well as totaled with redlinks" and "Your version of the article just flat out sucks".
+66	False	False. &&&&&&&&&&&&The conversation is focused on discussing the proposal to merge and move articles related to prehistoric Spain and Portugal, as well as considering whether to also include another related article. The conversation is polite and respectful, with no personal attacks.
+67	False	True. The statement "Dude are you blind?" can be considered a personal attack as it is aggressive and insulting towards the other person's abilities.
+68	False	False. There is no personal attack in the given conversation.
+69	False	True. The comment "Go back to GameFAQs or 4chan or whereever it is you're coming from, fuckwad" is a personal attack.
+70	False	False. &&&&&&&&&&&&There is no personal attack in the conversation. It appears to be a technical discussion about the creation and editing of a Wikipedia page.
+71	False	True. The statement "How is it possible for one person to have so much stupidity in them as to ignore fifty million rapid-fire warnings?" is a personal attack as it directly insults the person's intelligence.
+72	False	False. The conversation appears to be a discussion about the copyright status of a photograph and whether it is in the public domain, and there is no personal attack present.
+73	False	True.
+74	False	False. The conversation is a civil discussion about adding more information to an article and correcting some errors. There is no personal attack.
+75	False	True.
+76	False	False. There doesn't seem to be a personal attack in this conversation.
+77	False	True. There are personal attacks in this conversation. Both A and B are making negative comments about the anonymous users they are discussing, referring to them as "anonymous socks" and "anonymous liars" and suggesting that they are engaging in inappropriate behavior. A also suggests that the anonymous users do not deserve "courtesy or apologies" and dismisses their comments as "ludicrous nonsense."
+78	False	False. There doesn't seem to be any personal attacks in the conversation.
+79	False	True, the conversation includes personal attacks.
+80	False	True. The comment "Just passing by, and I wondered if I could be enlightened of my faults" can be interpreted as a sarcastic and confrontational remark, which could be seen as a personal attack.
+81	False	True, the conversation contains a personal attack. The statement "Stop being an ass" is a direct insult to the other person and constitutes a personal attack.
+82	False	True. The conversation contains personal attacks, specifically in the message from user B where they refer to the blocked user as a "teenager" and criticize their editing approach as "unpleasant."
+83	False	True, the conversation contains a personal attack when A says "That's the dumbest thing I've ever heard."
+84	False	False. There is no personal attack in the given conversation.
+85	False	True. The conversation includes a personal attack when the user in response to B, states "Having no evidence, or bad evidence and then going around to everyone and spreading that is not good faith, and is damaging to wikipedia. You cannot go around spreading rumors as fact."
+86	False	False. The conversation does not contain any personal attacks.
+87	False	True, the conversation includes personal attacks. Both A and B are using derogatory language to refer to the other user, calling them a "problem user" and a "hypocrite".
+88	False	False. The conversation is a civil discussion about how to accurately represent the views of different denominations within Judaism, without any personal attacks.
+89	False	True. The conversation contains a personal attack with the phrase "Stop pushing for it, and read all that stuff. It shows plenty of good reasons for leaving them separate, and they've been enumerated above. Read it through, and work on improving the article, instead of making us rehash this shit again and again."
+90	False	False. &&&&&&&&&&&&There is no evidence of a personal attack in the given conversation. Both parties are being courteous and expressing gratitude for the other's contribution to the thread.
+91	False	True.
+92	False	True. The conversation contains personal attacks from both sides.
+93	False	
+94	False	
+95	False	
+96	False	
+97	False	
+98	False	True. The conversation includes personal attacks and a dismissive tone towards the views of others.
+99	False	True, the conversation includes personal attacks.
+100	False	False. &&&&&&&&&&&&The conversation does not contain any personal attacks. It is a friendly exchange of birthday wishes and a gift of a snack from a wiki link. There is no insult or negative remark made towards anyone.
+101	False	True. The conversation includes personal attacks directed towards the user IrishGuy.
+102	False	False. &&&&&&&&&&&&The conversation seems to be a disagreement over the source and accuracy of information, but there is no personal attack directed towards either party.
+103	False	True. The conversation includes a personal attack in B's response to A's suggested move.
+104	False	False. The conversation does not contain a personal attack.
+105	False	True. The conversation contains several instances of incivility and personal attacks on both sides, including the use of derogatory language and dismissive remarks.
+106	False	True. The comment made by user A, "Would this dick calling itself Ganymede please piss off," is a personal attack.
+107	False	True. The conversation contains personal attacks and incivility from both parties. A has used dismissive language towards B, and B has accused A of incivility and taken the matter to someone else for resolution. A has responded with more personal attacks towards B.
+108	False	False. The conversation is a discussion about a Wikipedia editor and their actions, and while there are some suspicions expressed, there is no direct personal attack.
+117	False	True. The conversation contains multiple instances of profanity and personal attacks.
+118	False	False. &&&&&&&&&&&&The conversation does not contain a personal attack. It is a warning to not upload copyrighted images and to read up on fair use policies. The second person is confused and asking for clarification, but there is no personal attack in their response.
+119	False	True, the conversation contains a personal attack.
+120	False	False. The conversation does not contain any personal attacks.
+121	False	True. The last statement from person B includes a personal attack towards person A.
+122	False	False. &&&&&&&&&&&&The conversation is a discussion about the placement of a disambiguation link in a Wikipedia page and there is no indication of a personal attack or any offensive language directed towards any individual or group.
+123	False	True. &&&&&&&&&&&&The response "Wow, you're a jerk" is a personal attack on the person who made the previous comment. It is not a constructive or respectful response, and it may escalate the conversation in a negative way. It is important to communicate respectfully and avoid personal attacks, even when we disagree with others.
+124	False	True, the conversation includes personal attacks.
+125	False	True.
+126	False	False. &&&&&&&&&&&&The conversation is focused on a specific task and there is no language used that is derogatory, insulting, or belittling towards either party.
+127	False	True. The conversation contains personal attacks directed towards the users involved, using words like "ought to be relieved of the keys to the broom cupboard" and "Childish and completely inappropriate".
+128	False	False. The conversation does not contain a personal attack.
+129	False	True. The response "Go away silly person" is a personal attack.
+130	False	True. The conversation contains a personal attack as Archiveman2011 has reported Liam20112011 and accused them of being the same person as the user they reported.
+131	False	True.
+290	False	False. &&&&&&&&&&&&The conversation does not contain a personal attack. It consists of positive comments and compliments exchanged between A and B. There is no evidence of any insult, criticism, or negative statement directed at anyone.
+291	False	True. The conversation contains personal attacks and derogatory comments towards each other.
+292	False	False.
+293	False	True.
+294	False	False. The conversation does not contain a personal attack.
+295	False	True. The statement "I think you are a sock" is a personal attack.
+296	False	Based on the conversation provided, it seems that there is no direct personal attack towards any specific individual. However, the conversation does suggest a disregard for rules and the authority enforcing them, which could be seen as a disrespectful attitude towards the community or moderators involved. So, the answer would be False for a direct personal attack but could be considered disrespectful.
+297	False	True.
+298	False	False.
+299	False	True. The conversation contains personal attacks and insults towards the other person's arguments and statements, such as "the speculative and incoherent crap you're spouting."
+300	False	False. The conversation does not contain any personal attacks. It is a discussion about whether or not tour dates should be included in an article and whether or not it violates wiki_link.
+301	False	True. The conversation contains personal attacks and aggressive language.
+302	False	False. There is no personal attack in this conversation.
+303	False	True.
+304	False	False. &&&&&&&&&&&&The conversation does not contain any personal attacks. The comments are congratulatory and appreciative of the work done on the article.
+305	False	True.
+306	False	False. The conversation does not contain a personal attack.
+307	False	True. The conversation contains a personal attack in B's response, where they call A "ignorant."
+308	False	True, the conversation contains a personal attack.
+309	False	True. &&&&&&&&&&&&The statement "Why is blocked user light current allowed to evade his block without sanction?" in B's first comment can be interpreted as a personal attack against A, implying negligence or dereliction of duty. Additionally, B's use of the phrase "stirring up shit" in the second comment can also be considered a personal attack.
+310	False	False. There is no personal attack in the given conversation.
+311	False	True. The conversation shows a hostile and threatening tone, with one person demanding information and threatening to erase the article if they don't get what they want. The other person responds with personal attacks, threatening to erase the article and disregarding the rules. This type of aggressive behavior can be considered a personal attack.
+319	False	True, the conversation contains a personal attack.
+320	False	True. The statement "Words about cooperation and collaboration would be more convincing if they came from someone who didn't repeatedly edit war" could be seen as a personal attack on the character and behavior of the other person.
+321	False	True, the conversation contains personal attacks.
+322	False	True. The language used to refer to the anonymous user as "annoying" and "asshole" can be considered a personal attack.
+323	False	True.
+324	False	True. The response from B could be seen as a personal attack by accusing A of making a public service announcement and implying that A is not following FAC guidelines.
+325	False	True, the conversation contains personal attacks.
+326	False	False. There doesn't appear to be any personal attack in this conversation.
+327	False	True. The conversation includes personal attacks and insults between the participants.
+328	False	False. &&&&&&&&&&&&The conversation does not contain any personal attacks.
+329	False	True.
+330	False	False. &&&&&&&&&&&&There is no evidence of a personal attack in the conversation. They are simply discussing different tools for identifying and addressing vandalism on Wikipedia.
+331	False	True. The conversation contains personal attacks and accusations of harassment and vandalism towards each other.
+332	False	False. There is no personal attack in this conversation. The discussion is about a new user who added links to external sites with copyrighted photographs, and the experienced editor removed those links and warned the user about it. The new user then asked for an explanation and a possible solution. The conversation seems to be civil and focused on the topic at hand.
+333	False	True. The conversation contains personal attacks and insults from both sides.
+334	False	False, there is no personal attack in this conversation.
+335	False	True, the last statement in the conversation includes a personal attack.
+336	False	False. &&&&&&&&&&&&The conversation is discussing a comparison between two organizations and whether they can be compared using the same standards. There is no personal attack directed towards any individual or group. The mention of Robertgreer appears to be a simple acknowledgement of their previous response. The external link provided by B is unrelated to the conversation and does not involve any personal attack either.
+337	False	True. The conversation includes personal attacks, such as "stop spamming" and "you are scum".
+338	False	False. There doesn't seem to be any personal attacks in this conversation.
+339	False	True.
+340	False	False. The conversation does not contain a personal attack.
+341	False	True, the conversation contains several instances of personal attacks and hostile language, particularly from User A towards User B.
+342	False	False. The conversation does not contain a personal attack.
+343	False	True. The conversation contains a personal attack in B's last response.
+344	False	False. The conversation does not contain a personal attack.
+345	False	True, the conversation contains personal attacks.
+346	False	True. &&&&&&&&&&&&The statement "It wasn't friendly or productive either" could be seen as a personal attack towards the behavior of user A. Additionally, user A's statement "I appreciate that you think you're defusing the situation, however I disagree that I'm an actor in this, just the reactor" could be interpreted as an attempt to deflect blame or responsibility onto the other user, which could also be seen as a form of personal attack.
+347	False	True. The conversation contains personal attacks and insults.
+348	False	False. The conversation does not contain a personal attack.
+349	False	True. The comment "Do you really have a Ph.D.? Please give me the year you graduated and the school so I can verify it." can be seen as a personal attack.
+350	False	False.
+351	False	True. The conversation contains a personal attack, specifically in A's response where they call B "pathetic."
+352	False	False. &&&&&&&&&&&&There doesn't seem to be any personal attack in this conversation. It is a friendly exchange between two users discussing their experiences with closing articles for deletion and another user making a lighthearted comment.
+353	False	True, the conversation contains a personal attack.
+354	False	False. There is no personal attack in the given conversation.
+355	False	True.
+356	False	False. The conversation does not contain a personal attack.
+357	False	True. The conversation includes personal attacks on both sides, such as accusing each other of being inconsistent, disruptive, or racist, and insulting each other's musical tastes.
+358	False	False. The given conversation does not contain a personal attack.
+368	False	False. &&&&&&&&&&&&The conversation appears to be a warning and notification about a possible violation of Wikipedia's policies and guidelines, particularly the three-revert rule. While it does address a specific user's behavior, it does not contain any direct or personal attacks.
+369	False	True.
+370	False	False. &&&&&&&&&&&&There doesn't seem to be any personal attack in the conversation. Both A and B are expressing their opinions and discussing the purpose of Wikipedia, without attacking each other personally.
+371	False	True, the conversation contains a personal attack.
+372	False	False. The conversation is discussing different perspectives and providing information to support those perspectives, but there is no personal attack.
+373	False	True, the conversation contains personal attacks.
+374	False	False. The conversation does not contain a personal attack.
+375	False	True. &&&&&&&&&&&&The statement "now get the hell off my talk page or I'm RfCing your sorry ass for vandalism" is a personal attack, as it uses aggressive language and threatens the other person with a punitive action.
+376	False	False. &&&&&&&&&&&&While there is some tension and competition between the two speakers, they maintain a civil and polite conversation, with no insults or personal attacks directed towards each other.
+377	False	True, the conversation contains a personal attack.
+378	False	True. &&&&&&&&&&&&The statement "they come up with an arrogance" in B's response could be interpreted as a personal attack.
+379	False	True, the conversation contains a personal attack with the use of the phrase "that crappy old rugby infobox with DCIs."
+380	False	True. There is a personal attack when A tells Supreme Deliciousness to "Please stop harassing me" and "I don't appreciate you following me around and pestering me".
+268	False	True. The conversation contains personal attacks, with both A and B accusing each other of being "petty" and questioning each other's understanding and behavior.
+269	False	True. &&&&&&&&&&&&There are multiple personal attacks in this conversation. Person A implies that Person B's threat was uncalled for and Person B responds with sarcasm by saying "Whatever, I'm still right." Later on, Person B directly attacks Person A's attitude and suggests that they are selectively following policies.
+270	False	False. &&&&&&&&&&&&The conversation does not contain a personal attack. It is a discussion between two individuals about the appropriate way to address issues on a website and how to handle situations involving insulting behavior by an administrator.
+271	False	True. The conversation contains a personal attack in the last statement made by A towards individuals who make mistakes while editing.
+272	False	False. There is no personal attack in the given conversation.
+273	False	True. The response from person B includes a personal attack using vulgar language and threatening behavior towards person A.
+274	False	False. There is no personal attack in the conversation.
+275	False	False. &&&&&&&&&&&&While there is some informal language and frustration expressed, there is no direct personal attack or insult towards any individual in the conversation.
+276	False	False.
+277	False	True. There are multiple instances of personal attacks in this conversation, including calling someone a "POV pusher", accusing someone of "bad faith behavior", and telling someone to "shut up" and calling them "rude".
+278	False	False. The conversation does not contain a personal attack.
+279	False	True.
+280	False	False.
+281	False	True. The statement "I stopped taking you seriously when you started quacking like a duck" is a personal attack.
+282	False	True. The conversation contains personal attacks and aggressive language, such as "misleading", "bogus", "bullying tone", "soapbox rants", and "don't be bullied".
+283	False	True. The statement "You are a pompous fool" is a personal attack directed at person A.
+284	False	False.
+285	False	True, the conversation contains a personal attack.
+286	False	False.
+287	False	I'm sorry, but I'm having a hard time understanding the context of the conversation you posted. Could you please provide some more information or context about what this conversation is about and what you would like me to do?
+288	False	False. The conversation appears to be a discussion between two editors about the quality of an article, and while there are differences in opinion, there is no apparent personal attack directed at anyone.
+289	False	True. The conversation includes personal attacks such as calling the articles "inferior," "pathetic," and "crappy."
+312	False	False.
+313	False	True. The conversation contains several instances of personal attacks, such as accusing the admin of lacking understanding and being ridiculous.
+314	False	False. &&&&&&&&&&&&The conversation is focused on a question regarding the assessment process for a Wikipedia article and there is no indication of any personal attack or disrespect towards either party.
+315	False	True.
+316	False	True. The conversation contains personal attacks and accusations between A and B.
+317	False	True. The conversation includes personal attacks such as "you are the kind of person that makes Wikipedia suck" and "Get used to that picture going up again and again until you leave it alone."
+318	False	False. The given conversation does not contain any personal attacks.
+359	False	True. The conversation includes personal attacks such as "But you already know that and are just trolling now" and "Don't waste your time on danteferno, you might as well be talking to a wall."
+360	False	True. The conversation includes instances of incivility and personal attacks.
+361	False	True. The conversation includes personal attacks such as "Looks like you have a license for another tantrum!" and "someone is trying to interfere with your moral preening display." These comments are directed at the other person and are intended to insult or criticize them.
+362	False	False. &&&&&&&&&&&&The conversation does not contain a personal attack. It is a discussion about the leadership of a group and the use of sources in an article.
+363	False	False.
+364	False	False. &&&&&&&&&&&&The conversation does not contain any personal attacks.
+365	False	True. The conversation includes personal attacks, such as "You are a very foolish person" and "Never mind."
+366	False	True, the conversation contains a personal attack. A has threatened to report B to Wikipedia for their editing behavior, which can be seen as a form of intimidation or a personal attack.
+367	False	True. &&&&&&&&&&&&In the given conversation, person A and B are engaging in an edit war on a Wikipedia page about Julius von Schlosser. During the conversation, person A and B exchange multiple messages, and at some point, they start to attack each other personally. For example, in their last message, person B accuses person A of being an "incompetent editor" and using "ridiculous tags." Such personal attacks can escalate the conflict and make it harder to find a resolution.
+381	False	True. The statement "Enjoy your ban, loser" is a personal attack.
+382	False	False. The conversation does not contain a personal attack.
+392	False	False. &&&&&&&&&&&&There is no personal attack in this conversation. It seems to be a discussion between two individuals who have different opinions on how to handle external links in a particular situation. They express their views and try to find a compromise. There is no insult, name-calling, or any other form of attack.
+393	False	True, the conversation contains multiple personal attacks. Person A's comments in particular are dismissive, belittling, and intended to provoke Person B.
+394	False	False. There doesn't seem to be a personal attack in this conversation. The users are expressing their disagreement and providing reasons for their opinions, but they are not attacking or insulting each other.
+395	False	True, the conversation contains a personal attack.
+396	False	False. The conversation may be heated, but there is no personal attack being made.
+397	False	True, the conversation contains a personal attack.
+398	False	True. The conversation contains personal attacks towards a specific editor, Freakshownerd, such as calling them a "wiki_link" and accusing them of being unwilling to engage substantively with the complaints of other editors.
+399	False	True, the conversation contains multiple personal attacks.
+93	False	True. The conversation includes personal attacks, such as "I can't work out whether you are an idiot or whether you think I am" and "It's hard to take your advice when you don't follow it yourself."
