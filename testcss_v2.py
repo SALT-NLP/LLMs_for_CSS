@@ -1,5 +1,6 @@
 import json
 import os
+import pandas as pd
 from os.path import exists
 from os import getenv
 from sys import argv, exit
@@ -10,8 +11,30 @@ import argparse
 from revChatGPT.V1 import Chatbot
 
 
-def data_split():
-    pass
+def data_split(raw_datapth, input_path, args):
+    
+    contexts = []
+    labels = []
+    prompts = []
+    
+    
+    with open(raw_datapth, "r", encoding="utf-8") as f:
+        raw_data = json.load(f)
+    indexs = raw_data['context'].keys()
+    
+    num_testing = args.testing_size
+    random.seed(0)
+    selected_indexs = random.sample(indexs, num_testing)
+    
+    for u in selected_indexs:
+        contexts.append(raw_data['context'][u])
+        labels.append(raw_data['labels'][u])
+        prompts.append(raw_data['prompts'][u])
+    
+    testing_data = {"context": contexts, "labels": labels, "prompts": prompts}
+    data_f = pd.DataFrame.from_dict(testing_data)
+    data_f.to_json(input_path)
+    
 
 def get_response(chatbot, allprompts):
     global errortime
@@ -55,7 +78,7 @@ def get_answers(input_path, output_path, args):
     
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
-    count = len(raw_data['Label'])
+    count = len(raw_data['labels'])
     print("###### Number of Data: ", count, " ######")
     allflag = [0 for i in range(count)]  
     
@@ -174,13 +197,15 @@ def parse_arguments():
         "--dataset", type=str, default="conv_go_awry",
         choices=["conv_go_awry", "wiki_corpus"], help="dataset used for experiment"
     )
+    
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
         # To update this dataset
         args.input_path = "css_data/conversations-gone-awry-corpus/raw_data.json"
         args.answer_path = "css_data/conversations-gone-awry-corpus/answer"
     elif args.dataset == "wiki_corpus":
-        args.input_path = "css_data/wiki_corpus/power.json"
+        args.raw_datapath = "css_data/wiki_corpus/power.json"
+        args.input_path = "css_data/wiki_corpus/test.json"
         args.answer_path = "css_data/wiki_corpus/answer"
         
     else:
@@ -188,6 +213,7 @@ def parse_arguments():
     
     
     # substitute this with your own access token!
+    args.testing_size = 500
     args.access_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJqaWFhb2NAYWxsZW5haS5vcmciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZ2VvaXBfY291bnRyeSI6IlVTIn0sImh0dHBzOi8vYXBpLm9wZW5haS5jb20vYXV0aCI6eyJ1c2VyX2lkIjoidXNlci1JWVpYSEFrdVJKTXJrVXlLU2RSbFZEWWkifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDYwOWFjMWY0NGMxZjQ1MDA3MDQwYmExZiIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzY0OTA3NjAsImV4cCI6MTY3NzcwMDM2MCwiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvZmZsaW5lX2FjY2VzcyJ9.XFsYqMo1JpK58MYk0QzqkuIn2bTfknFzjBGkYFHznPj-dQjgHuyxB6HwgznSj7jYa2hmloBMK3FxV3peXQ5aLiqfh0QIBgHWUlr3CSCm2ypB82V8HjcgN-18WYlACIg_w7im7xYmMv3_1iRGWyq4d1-8vzxgtADrthqPNcjaib3nPwj9RzYOdcV6fZd4n54MqcuXn2l-Yge0weB539GvBRkinCmEbcNJZKJ3VYQu6EiO0t_MzRodCOLnD-auZBfs-sbyVMuRH65RSjIqVsdhp8S_f2gmTaMs4MRU2CC0b8QX-3mVFZmhRHhUYA5TEaEaHT8Y83AA0j3C6erwx-gMpg"
     return args
 
@@ -197,12 +223,15 @@ def main():
     args = parse_arguments()
     
     try:
-        inputpath = args.inputpath
-        answerpath = args.answerpath
+        input_path = args.input_path
+        answer_path = args.answer_path
+        raw_datapath = args.raw_datapath
         
-        get_answers(inputpath, answerpath, args)
+        data_split(raw_datapath, input_path, args)
         
-        calculateres(answerpath, args)  
+        get_answers(input_path, answer_path, args)
+        
+        calculateres(answer_path, args)  
         
     except KeyboardInterrupt:
         print("\n !!!!!! Key Interruptions! Goodbye! !!!!!! \n")
