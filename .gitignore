@@ -7,3 +7,4 @@
 *.tsv
 css_data/*
 ConvoKit/*
+*.pyc
