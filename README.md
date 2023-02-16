@@ -9,7 +9,7 @@ cd ConvoKit
 pip3 install -e .
 ```
 
-2. Download the datasets:
+2. Download the datasets and pre-process the datasets:
 ```
 python data_loader.py -d power --save_dir ./css_data/wiki-corpus
 ```
