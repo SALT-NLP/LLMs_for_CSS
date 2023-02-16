@@ -25,14 +25,21 @@ def parse_arguments():
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus"], help="dataset used for experiment"
     )
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
+        # To update
         args.inputpath = "css_data/conversations-gone-awry-corpus/raw_data.json"
         args.answerpath = "css_data/conversations-gone-awry-corpus/answer"
+    elif args.dataset == "wiki_corpus":
+        args.inputpath = "css_data/conversations-gone-awry-corpus/raw_data.json"
+        args.answerpath = "css_data/conversations-gone-awry-corpus/answer"
+        
     else:
         raise ValueError("dataset is not properly defined ...")
+    
+    
     
     
     # substitute this with your own access token!
