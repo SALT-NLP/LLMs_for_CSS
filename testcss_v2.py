@@ -200,13 +200,14 @@ def parse_arguments():
     
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
-        # To update this dataset
-        args.input_path = "css_data/conversations-gone-awry-corpus/raw_data.json"
+        args.raw_datapath = "css_data/conversations-gone-awry-corpus/power.json"
+        args.input_path = "css_data/conversations-gone-awry-corpus/test.json"
         args.answer_path = "css_data/conversations-gone-awry-corpus/answer"
     elif args.dataset == "wiki_corpus":
         args.raw_datapath = "css_data/wiki-corpus/power.json"
         args.input_path = "css_data/wiki-corpus/test.json"
         args.answer_path = "css_data/wiki-corpus/answer"
+    
         
     else:
         raise ValueError("dataset is not properly defined ...")
