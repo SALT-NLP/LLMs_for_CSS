@@ -13,7 +13,41 @@ from revChatGPT.V1 import Chatbot
 def data_split():
     pass
 
+def get_response(chatbot, allprompts):
+    global errortime
+    allresponse = []
+    i = 0
+    while i < len(allprompts):
+        oneprompt = allprompts[i]
+        try:
+            
+            response = ""
+            for data in chatbot.ask(oneprompt):
+                response = data["message"]
+            print("######Response#####", response)
+            
+            if len(response) <2:
+                i += 1
+                allresponse.append("Error!")
+                chatbot.reset_chat()
+                continue
 
+            allresponse.append(response)
+            i += 1
+            errortime = 0
+            chatbot.reset_chat()
+        except Exception as exc:
+            print(f"Data point {i} went wrong!")
+            print(exc)
+            allresponse.append("Error!")
+            errortime += 1
+            if errortime > 60:
+                print("Error too many times! sleep 1800s")
+                errortime = 0
+                time.sleep(180)
+            i += 1
+        time.sleep(6)
+    return allprompts, allresponse
 
 def get_answers(input_path, output_path, args):
     print("###### Getting Answers! ######")
@@ -25,7 +59,7 @@ def get_answers(input_path, output_path, args):
     print("###### Number of Data: ", count, " ######")
     allflag = [0 for i in range(count)]  
     
-    if not os.path.exists(outputpath):
+    if not os.path.exists(output_path):
         print("no answer file! create now")
         f = open(output_path, "w+", encoding="utf-8")
         f.close()
@@ -47,6 +81,7 @@ def get_answers(input_path, output_path, args):
         test_samples = []
         gold_label = []
         touseindex = []
+        prompts = []
         
         with open(input_path, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
@@ -57,20 +92,20 @@ def get_answers(input_path, output_path, args):
                     i += 1
                     continue
                 test_samples.append(v)
-                gold_label.append(raw_data['Label'][u])
+                gold_label.append(raw_data['labels'][u])
+                prompts.append(raw_data['prompts'][u])
                 touseindex.append(i)
                 i += 1
 
-        inputprompts = []
+        input_prompts = []
         for i in range(len(test_samples)):
             oneres = test_samples[i]
-            inputprompts.append(oneres + args.direct_answer_trigger_for_zeroshot_cot)
-            #print(oneres)
-        #exit -1
-        fw = open(outputpath, "a+", encoding="utf-8")
+            input_prompts.append(oneres + '\n' + prompts[i])
+            
+        fw = open(output_path, "a+", encoding="utf-8")
         response = []
-        for i in range(len(inputprompts)):
-            _, oneresponse = getResponseforPrompt(chatbot, [inputprompts[i]])
+        for i in range(len(input_prompts)):
+            _, oneresponse = get_response(chatbot, [input_prompts[i]])
             touseresponse = oneresponse[0].replace('\n','&&&&&&')
             response.append(touseresponse)
             if "Error" not in touseresponse:
@@ -94,8 +129,6 @@ def get_answers(input_path, output_path, args):
         if iffinish:
             break
     
-
-
 
 def calculateres(path, args):
     with open(args.input_path, 'r') as f:
