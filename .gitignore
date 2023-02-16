@@ -1,0 +1,8 @@
+*.json
+*.jsonl
+*.jsonlist
+*.jsonlistx
+*.xlsx
+*.csv
+*.tsv
+css_data/*
