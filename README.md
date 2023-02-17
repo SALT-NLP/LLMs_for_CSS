@@ -1,6 +1,6 @@
 # SocialChatGPT
 
-## How to run testing with ChatGPT?
+## How to run the testing with ChatGPT?
 
 1. Install ConvoKit
 ```
