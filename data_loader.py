@@ -39,6 +39,8 @@ def csv_process(dataset, save_dir):
     df = boolify(df)
     df["prompts"] = [prompts[dataset]] * len(df["labels"])
     df = df[["context", "labels", "prompts"]]
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))
 
 

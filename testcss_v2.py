@@ -205,7 +205,7 @@ def parse_arguments():
     
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
-        args.raw_datapath = "css_data/conv_go_awry/power.json"
+        args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
         args.input_path = "css_data/conv_go_awry/test.json"
         args.answer_path = "css_data/conv_go_awry/answer"
     elif args.dataset == "wiki_corpus":
