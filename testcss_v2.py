@@ -210,10 +210,6 @@ def calculateres(path, args):
             golds.append(gold)
             preds.append(pred)
                 
-            
-                
-            
-            
         else:
             pass
         
