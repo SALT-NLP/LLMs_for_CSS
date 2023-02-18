@@ -191,13 +191,13 @@ def calculateres(path, args):
         index = int(content[0])
         allnum += 1
         
-        if args.dataset in ['conv_go_awry', 'wiki_corpus']:
+        if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor']:
             gold = content[1].lower()
             pred = content[2].lower()
             print(gold, pred)
             if gold in pred:
                 accnum += 1
-        elif args.dataset is 'implicit_hate':
+        elif args.dataset == 'implicit_hate':
             gold = label_dict[content[1].lower()]
             pred = content[2].lower()
             for u in label_set:
@@ -235,7 +235,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus", "implicit_hate"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor"], help="dataset used for experiment"
     )
     
     args = parser.parse_args()
@@ -251,6 +251,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
+    elif args.dataset == "reddit_humor":
+        args.raw_datapath = "css_data/reddit_humor/humor.json"
+        args.input_path = "css_data/reddit_humor/test.json"
+        args.answer_path = "css_data/reddit_humor/answer"
     
         
     else:
