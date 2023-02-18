@@ -9,6 +9,8 @@ import re
 import random
 import argparse
 from revChatGPT.V1 import Chatbot
+from sklearn.metrics import classification_report
+
 
 
 def data_split(raw_datapth, input_path, args):
@@ -163,10 +165,22 @@ def calculateres(path, args):
         a = json.load(f)
     label_set = set([v.lower() for (u,v) in a['labels'].items()])
     print('###### Label Space:', label_set)
+    label_dict = {'None':0}
+    
+    i = 1
+    for u in label_set:
+        label_dict[u] = i
+        i += 1
     
     f = open(path, 'r', encoding="utf-8")
     allnum = 0
     accnum = 0
+    
+    
+    preds = []
+    golds = []
+    target_names = list(label_dict.keys())
+    
     while True:
         oneline = f.readline().strip()
         if not oneline:
@@ -183,13 +197,34 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
+        elif args.dataset is 'implicit_hate':
+            gold = label_dict[content[1].lower()]
+            pred = content[2].lower()
+            for u in label_set:
+                if u in pred:
+                    pred = label_dict[u]
+                    break
+                pred = 0
+            if gold == pred:
+                accnum += 1
+            golds.append(gold)
+            preds.append(pred)
+                
+            
+                
+            
+            
         else:
             pass
+        
     
     print("\n ###### Results ###### \n")
     print("Acc: ",  float(accnum) / float(allnum))
     print('umber of Correct Data: ', accnum)
     print("Number of Testing Data: ",  allnum)
+    
+    if len(preds) > 0:
+        print(classification_report(golds, preds, target_names=target_names))
 
 
 
@@ -200,7 +235,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate"], help="dataset used for experiment"
     )
     
     args = parser.parse_args()
@@ -212,6 +247,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/wiki-corpus/power.json"
         args.input_path = "css_data/wiki-corpus/test.json"
         args.answer_path = "css_data/wiki-corpus/answer"
+    elif args.dataset == "implicit_hate":
+        args.raw_datapath = "css_data/implicit_hate/hate.json"
+        args.input_path = "css_data/implicit_hate/test.json"
+        args.answer_path = "css_data/implicit_hate/answer"
     
         
     else:
