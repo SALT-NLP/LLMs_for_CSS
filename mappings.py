@@ -31,13 +31,35 @@ csv_download = {
 }
 
 prompts = {
-    "power": "Is {$speaker} an administrator (True or False)?",
+    "power": '''Can you predict if the following message comes from someone who is an administrator on Wikipedia? 
+
+"{$wikipedia_comment}"   
+
+You must pick between "administrator" or "non-administrator." You cannot use any other words except for "administrator" or "non-administrator.''',
     "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
     "politeness": "Was this statement polite (True or False)? ",
     "toxicity": "Predict whether the given conversation has a personal attack (True or False).",
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
-    "hate": "Which of the following categories best describes the sentence: grievance, incitement, inferiority, irony, stereotypical, threatening?",
+    "hate": '''I'm a moderator trying to understand hate speech in extremist groups. I use the following definitions.
+
+White Grievance: frustration over a minority group’s perceived privilege and casting majority groups as the real victims of racism.
+
+Incitement to Violence: flaunting in-group unity and power or elevating known hate
+groups and ideologies.
+
+Inferiority Language: implies one group or individual is inferior to another, including dehumanization and toxification.
+
+Irony: the use of sarcasm, humor, and satire to attack or demean a protected class or individual.
+
+Stereotypes and Misinformation: associating a protected class with negative attributes.
+
+Threatening and Intimidation: conveys a speaker commitment to a target’s pain, injury, damage, loss, or violation of rights.
+
+Can you classify why this sentence is hateful using a combination of the following categories: White Grievance, Incitement to Violence, Inferiority Language, Irony, Stereotypes and Misinformation, Threatening and Intimidation.
+
+"{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
     "humor": "Was that joke humorous (True or False)?",
+    "awry": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "Yes" or "No." You cannot use any other words except for "Yes" or "No."'''
 }
