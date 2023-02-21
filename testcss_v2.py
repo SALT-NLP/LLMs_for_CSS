@@ -72,7 +72,7 @@ def get_response(chatbot, allprompts):
             allresponse.append("Error!")
             errortime += 1
             if errortime > 60:
-                print("Error too many times! sleep 1800s")
+                print("Error too many times! sleep 180s")
                 errortime = 0
                 time.sleep(180)
             i += 1
