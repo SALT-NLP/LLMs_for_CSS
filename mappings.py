@@ -30,7 +30,7 @@ csv_download = {
     "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
 }
 
-prompts = {
+prompts_templates = {
     "power": '''Can you predict if the following message comes from someone who is an administrator on Wikipedia? 
 
 "{$wikipedia_comment}"   

@@ -37,7 +37,7 @@ def csv_process(dataset, save_dir):
     df["context"] = df[context_column]
     df["labels"] = df[label_columns]
     df = boolify(df)
-    df["prompts"] = [prompts[dataset]] * len(df["labels"])
+    df["prompts"] = [prompts_templates[dataset]] * len(df["labels"])
     df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
@@ -107,7 +107,7 @@ def convokit_process(dataset, save_dir):
             utterance = corpus.get_utterance(utterance_id).to_dict()
             label = deep_get(label_field, utterance)
             labels.append(label)
-            prompts.append(prompts[dataset])
+            prompts.append(prompts_templates[dataset])
     elif label_type == "speaker":
         speaker_contexts = []
         for i, utterances in enumerate(speaker_utterance_maps):
@@ -117,14 +117,14 @@ def convokit_process(dataset, save_dir):
                 utterance = corpus.get_utterance(utterance_id).to_dict()
                 label = deep_get(label_field, utterance)
                 labels.append(label)
-                prompts.append(prompts[dataset].replace("{$speaker}", speaker))
+                prompts.append(prompts_templates[dataset].replace("{$speaker}", speaker))
         contexts = speaker_contexts
     elif label_type == "conversation":
         for conversation_id in conversation_ids:
             conversation = corpus.get_conversation(conversation_id).to_dict()
             label = deep_get(label_field, conversation)
             labels.append(label)
-            prompts.append(prompts[dataset])
+            prompts.append(prompts_templates[dataset])
 
     assert len(contexts) == len(labels) and len(contexts) == len(prompts)
     raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
