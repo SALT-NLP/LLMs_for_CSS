@@ -5,7 +5,6 @@
 *.xlsx
 *.csv
 *.tsv
-css_data/*
 ConvoKit/*
 *.pyc
 __pycache__/*
