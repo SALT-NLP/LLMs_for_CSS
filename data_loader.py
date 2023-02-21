@@ -148,7 +148,7 @@ if __name__ == "__main__":
         "-d",
         type=str,
         default="power",
-        choices=list(prompts.keys()),
+        choices=list(prompts_templates.keys()),
     )
     parser.add_argument("--save_dir", "-s", type=str, default="processed")
     args = parser.parse_args()
