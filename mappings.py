@@ -38,7 +38,6 @@ prompts_templates = {
 You must pick between "administrator" or "non-administrator." You cannot use any other words except for "administrator" or "non-administrator.''',
     "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
     "politeness": "Was this statement polite (True or False)? ",
-    "toxicity": "Predict whether the given conversation will have a personal attack (True or False).",
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
     "hate": '''I'm a moderator trying to understand hate speech in extremist groups. I use the following definitions.
@@ -61,5 +60,5 @@ Can you classify why this sentence is hateful using a combination of the followi
 "{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
     "humor": "Was that joke humorous (True or False)?",
-    "awry": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "Yes" or "No." You cannot use any other words except for "Yes" or "No."'''
+    "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"'''
 }
