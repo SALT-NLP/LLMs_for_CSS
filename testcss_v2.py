@@ -52,6 +52,8 @@ def get_response(chatbot, allprompts):
         try:
             
             response = ""
+            if len(oneprompt) > 10000:
+                oneprompt = oneprompt[-10000:]
             for data in chatbot.ask(oneprompt):
                 response = data["message"]
             print("######Response#####", response)
@@ -69,6 +71,7 @@ def get_response(chatbot, allprompts):
         except Exception as exc:
             print(f"Data point {i} went wrong!")
             print(exc)
+            
             allresponse.append("Error!")
             errortime += 1
             if errortime > 60:
@@ -146,6 +149,7 @@ def get_answers(input_path, output_path, args):
                 fw.flush()
             else:
                 print("this data point meets error! please repeat!")
+                
         fw.close()
         #end = time.time()
         #print("all used time: ", end - start)
@@ -163,7 +167,7 @@ def get_answers(input_path, output_path, args):
 def calculateres(path, args):
     with open(args.input_path, 'r') as f:
         a = json.load(f)
-    label_set = set([v.lower() for (u,v) in a['labels'].items()])
+    label_set = set([str(v).lower() for (u,v) in a['labels'].items()])
     print('###### Label Space:', label_set)
     label_dict = {'None':0}
     
@@ -192,6 +196,7 @@ def calculateres(path, args):
         allnum += 1
         
         if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor']:
+            #print(content[1])
             gold = content[1].lower()
             pred = content[2].lower()
             print(gold, pred)
