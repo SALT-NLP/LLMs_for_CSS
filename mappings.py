@@ -59,6 +59,6 @@ Can you classify why this sentence is hateful using a combination of the followi
 
 "{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
-    "humor": "Was that joke humorous (True or False)?",
+    "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False" You cannot use any other words except for "True" or "False" ''',
     "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"'''
 }
