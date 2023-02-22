@@ -52,8 +52,6 @@ def get_response(chatbot, allprompts):
         try:
             
             response = ""
-            if len(oneprompt) > 10000:
-                oneprompt = oneprompt[-10000:]
             for data in chatbot.ask(oneprompt):
                 response = data["message"]
             print("######Response#####", response)
