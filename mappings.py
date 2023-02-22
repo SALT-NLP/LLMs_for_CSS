@@ -31,11 +31,8 @@ csv_download = {
 }
 
 prompts_templates = {
-    "power": '''Can you predict if the following message comes from someone who is an administrator on Wikipedia? 
-
-"{$wikipedia_comment}"   
-
-You must pick between "administrator" or "non-administrator." You cannot use any other words except for "administrator" or "non-administrator.''',
+    "power": '''Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
+You must pick between "True" or "False." You cannot use any other words except for "True" or "False.''',
     "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
     "politeness": "Was this statement polite (True or False)? ",
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
