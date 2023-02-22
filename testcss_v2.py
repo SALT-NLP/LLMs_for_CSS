@@ -219,7 +219,7 @@ def calculateres(path, args):
     
     print("\n ###### Results ###### \n")
     print("Acc: ",  float(accnum) / float(allnum))
-    print('umber of Correct Data: ', accnum)
+    print('Number of Correct Data: ', accnum)
     print("Number of Testing Data: ",  allnum)
     
     if len(preds) > 0:
