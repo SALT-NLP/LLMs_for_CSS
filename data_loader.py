@@ -1,9 +1,6 @@
-import argparse
-import csv
-import os
+import argparse, csv, json, os, wget
 import numpy as np
 import pandas as pd
-import wget
 from convokit import Corpus, download
 from mappings import *
 
@@ -23,18 +20,38 @@ def boolify(df):
     df[p] = df[p].astype(bool)
     return df
 
+def get_context_column(df, context_column):
+    
+    def row(r, context_column):
+        return " ".join([f"{col}: {r[col]}" for col in context_column])
+    
+    if type(context_column) == tuple:
+        return [row(r,context_column) for _, r in df.iterrows()] 
+    return df[context_column]
+    
 
-def csv_process(dataset, save_dir):
-    filename = "{}.csv".format(dataset)
-    if not os.path.exists(filename):
-        filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
-    context_column, label_columns = csv_column_map[dataset]
-    if type(context_column) == type("str"):
-        df = pd.read_csv(filename)
+def csv_process(dataset, save_dir, jsonl=False):
+    
+    df = pd.DataFrame()
+    if jsonl:
+        filename = "{}.jsonl".format(dataset)
+        if not os.path.exists(filename):
+            filename = wget.download(jsonl_download[dataset], out="{}.jsonl".format(dataset))
+        with open(filename, 'r') as infile:
+            data = data = {i: json.loads(L) for i, L in enumerate(infile.readlines())}
+            df = pd.DataFrame.from_dict(data).T
     else:
-        df = pd.read_csv(filename, header=None)
+        filename = "{}.csv".format(dataset)
+        if not os.path.exists(filename):
+            filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
+        if type(context_column) in {str, tuple}:
+            df = pd.read_csv(filename)
+        else:
+            df = pd.read_csv(filename, header=None)
 
-    df["context"] = df[context_column]
+    print(df.head())
+    context_column, label_columns = csv_column_map[dataset]
+    df["context"] = get_context_column(df, context_column) #df[context_column]
     df["labels"] = df[label_columns]
     df = boolify(df)
     df["prompts"] = [prompts_templates[dataset]] * len(df["labels"])
@@ -42,7 +59,6 @@ def csv_process(dataset, save_dir):
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))
-
 
 def convokit_process(dataset, save_dir):
     corpus = Corpus(
@@ -139,6 +155,8 @@ def main(dataset, save_dir):
         convokit_process(dataset, save_dir)
     elif dataset in csv_download:
         csv_process(dataset, save_dir)
+    elif dataset in jsonl_download:
+        csv_process(dataset, save_dir, jsonl=True)
 
 
 if __name__ == "__main__":
