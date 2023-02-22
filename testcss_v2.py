@@ -147,8 +147,8 @@ def get_answers(input_path, output_path, args):
             else:
                 print("this data point meets error! please repeat!")
         fw.close()
-        end = time.time()
-        print("all used time: ", end - start)
+        #end = time.time()
+        #print("all used time: ", end - start)
 
         iffinish = True
         for oneflag in allflag:
