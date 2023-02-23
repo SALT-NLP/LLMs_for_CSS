@@ -1,4 +1,4 @@
-#config.py
+config.py
 *.json
 !test.json
 *.jsonl
