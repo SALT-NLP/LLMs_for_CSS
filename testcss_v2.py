@@ -11,8 +11,6 @@ import argparse
 from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
 
-
-
 def data_split(raw_datapth, input_path, args):
     
     if os.path.exists(input_path):
@@ -226,15 +224,12 @@ def calculateres(path, args):
         print(classification_report(golds, preds, target_names=target_names))
 
 
-
-
-
 def parse_arguments():
     parser = argparse.ArgumentParser(description="chatgpt-zero-shot-css")
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute"], help="dataset used for experiment"
     )
     
     args = parser.parse_args()
@@ -254,7 +249,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
-    
+    elif args.dataset == "flute":
+        args.raw_datapath = "css_data/flute/flute.json"
+        args.input_path = "css_data/flute/test.json"
+        args.answer_path = "css_data/flute/answer"
         
     else:
         raise ValueError("dataset is not properly defined ...")
@@ -262,7 +260,7 @@ def parse_arguments():
     
     # substitute this with your own access token!
     args.testing_size = 500
-    args.access_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJqaWFhb2NAYWxsZW5haS5vcmciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZ2VvaXBfY291bnRyeSI6IlVTIn0sImh0dHBzOi8vYXBpLm9wZW5haS5jb20vYXV0aCI6eyJ1c2VyX2lkIjoidXNlci1JWVpYSEFrdVJKTXJrVXlLU2RSbFZEWWkifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDYwOWFjMWY0NGMxZjQ1MDA3MDQwYmExZiIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzY0OTA3NjAsImV4cCI6MTY3NzcwMDM2MCwiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvZmZsaW5lX2FjY2VzcyJ9.XFsYqMo1JpK58MYk0QzqkuIn2bTfknFzjBGkYFHznPj-dQjgHuyxB6HwgznSj7jYa2hmloBMK3FxV3peXQ5aLiqfh0QIBgHWUlr3CSCm2ypB82V8HjcgN-18WYlACIg_w7im7xYmMv3_1iRGWyq4d1-8vzxgtADrthqPNcjaib3nPwj9RzYOdcV6fZd4n54MqcuXn2l-Yge0weB539GvBRkinCmEbcNJZKJ3VYQu6EiO0t_MzRodCOLnD-auZBfs-sbyVMuRH65RSjIqVsdhp8S_f2gmTaMs4MRU2CC0b8QX-3mVFZmhRHhUYA5TEaEaHT8Y83AA0j3C6erwx-gMpg"
+    args.access_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJjanppZW1zQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJnZW9pcF9jb3VudHJ5IjoiVVMifSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InVzZXJfaWQiOiJ1c2VyLU5wamFUQUtjU09qczdsUE1lOWwySGRKeCJ9LCJpc3MiOiJodHRwczovL2F1dGgwLm9wZW5haS5jb20vIiwic3ViIjoiYXV0aDB8NjI4NDIwODQwYTNkYWQwMDY5MTI3ODc1IiwiYXVkIjpbImh0dHBzOi8vYXBpLm9wZW5haS5jb20vdjEiLCJodHRwczovL29wZW5haS5vcGVuYWkuYXV0aDBhcHAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY3NjQwODY1NywiZXhwIjoxNjc3NjE4MjU3LCJhenAiOiJUZEpJY2JlMTZXb1RIdE45NW55eXdoNUU0eU9vNkl0RyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbW9kZWwucmVhZCBtb2RlbC5yZXF1ZXN0IG9yZ2FuaXphdGlvbi5yZWFkIG9mZmxpbmVfYWNjZXNzIn0.eT2ZpQH5xL7VotnBR7Q_PYon533zDlSNHLO0sgBRCykTaUkFijf4UcD4aXwPbB1CSVvYtWSX7NQI3RjSpJQ_1uXI1oabHR-WH-JR-wBrfgZyyYI8j5-Is8KHFUx3XFR7F7i0u1qwWh4DZW7td4IxHb7ge5RA-Tf8YQPP0sN9Mgp81dxfX2doAk-_9dpFXpmOpd8bPV-hW40yMSycEiOX4witz65EzspraG83WEgbfXVctramx0ult_qDDmzKnkhZwVavSwf017VRHtbDXfuHP18pjJa9p1XXuj00VVNMZFkzvWG45g7Vpc6m9RViP0uLVkg9LeR3OcVtJr0x58phsw"
     return args
 
 

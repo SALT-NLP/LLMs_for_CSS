@@ -22,12 +22,17 @@ csv_column_map = {
     "hate": ("post", "implicit_class"),
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
+    "flute": (("premise", "hypothesis"), "label")
 }
 
 csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
     "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
+}
+
+jsonl_download = {
+    "flute": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl"
 }
 
 prompts_templates = {
@@ -57,5 +62,8 @@ Can you classify why this sentence is hateful using a combination of the followi
 "{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
     "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False" You cannot use any other words except for "True" or "False" ''',
-    "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"'''
+    "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',
+    "flute": '''(1) "{$hypothesis}"
+(2) "{$premise}"
+Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)'''
 }
