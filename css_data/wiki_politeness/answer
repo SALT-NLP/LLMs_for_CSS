@@ -129,3 +129,10 @@
 272	1	Neutral.
 275	0	The statement is polite.
 277	1	I would say that the statement is polite.
+280	0	Based on the given options, the statement "Sorry, what? Could you be more specific please?" can be classified as neutral.
+283	0	The above statement is neutral.
+289	-1	Neutral.
+295	-1	neutral
+300	0	Answer: The statement is polite.
+305	0	The statement "Restored history. Can check that I did it all ok?" can be classified as neutral.
+311	-1	neutral
