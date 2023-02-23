@@ -31,7 +31,7 @@ def get_context_column(df, context_column):
     
 
 def csv_process(dataset, save_dir, jsonl=False):
-    
+    context_column, label_columns = csv_column_map[dataset]
     df = pd.DataFrame()
     if jsonl:
         filename = "{}.jsonl".format(dataset)
@@ -51,7 +51,6 @@ def csv_process(dataset, save_dir, jsonl=False):
             df = pd.read_csv(filename, header=None)
 
     print(df.head())
-    context_column, label_columns = csv_column_map[dataset]
     df["context"] = get_context_column(df, context_column) #df[context_column]
     df["labels"] = df[label_columns]
     df = boolify(df)
