@@ -19,7 +19,7 @@ python data_loader.py -d power --save_dir ./css_data/wiki-corpus
 pip3 install --upgrade revChatGPT
 ```
 
-4. Substitute the arg.access_token with your own.
+4. Substitute the access_token with your own in the Config.py.
 
 Refer to: https://chat.openai.com/api/auth/session
 
