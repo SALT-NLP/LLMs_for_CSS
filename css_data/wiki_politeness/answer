@@ -121,3 +121,8 @@
 244	0	The statement is neutral.
 247	-1	Neutral.
 250	-1	The statement is impolite.
+254	0	Neutral.
+257	1	The above statement is neutral.
+263	0	Neutral.
+266	0	The statement is polite.
+270	0	The above statement is neutral.
