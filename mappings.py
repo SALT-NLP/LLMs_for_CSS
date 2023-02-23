@@ -38,8 +38,8 @@ jsonl_download = {
 prompts_templates = {
     "power": '''Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
 You must pick between "True" or "False." You cannot use any other words except for "True" or "False.''',
-    "stance": "Does {$speaker} support {$title} (True or False)?",  # This Dataset is strange currently, too long of context
-    "politeness": "Was this statement polite (True or False)? ",
+    "stance": "Does {$speaker} support {$title} (True or False)? You cannot use any other words except for 'True' or 'False'.",  # This Dataset is strange currently, too long of context
+    "politeness": "Was this statement polite? You must pick between 'True' or 'False'. You cannot use any other words except for 'True' or 'False'.",
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
     "hate": '''I'm a moderator trying to understand hate speech in extremist groups. I use the following definitions.
@@ -61,7 +61,7 @@ Can you classify why the above sentence is hateful using a combination of the fo
 
 "{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
-    "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False" You cannot use any other words except for "True" or "False" ''',
+    "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False". You cannot use any other words except for "True" or "False" ''',
     "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',
     "flute": '''(1) "{$hypothesis}"
 (2) "{$premise}"

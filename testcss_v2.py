@@ -191,7 +191,7 @@ def calculateres(path, args):
         index = int(content[0])
         allnum += 1
         
-        if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor']:
+        if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor', 'supreme_corpus', 'wiki_politeness']:
             #print(content[1])
             gold = content[1].lower()
             pred = content[2].lower()
@@ -229,7 +229,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness"], help="dataset used for experiment"
     )
     
     args = parser.parse_args()
@@ -253,6 +253,14 @@ def parse_arguments():
         args.raw_datapath = "css_data/flute/flute.json"
         args.input_path = "css_data/flute/test.json"
         args.answer_path = "css_data/flute/answer"
+    elif args.dataset == "supreme_corpus":
+        args.raw_datapath = "css_data/supreme_corpus/stance.json"
+        args.input_path = "css_data/supreme_corpus/test.json"
+        args.answer_path = "css_data/supreme_corpus/answer"
+    elif args.dataset == "wiki_politeness":
+        args.raw_datapath = "css_data/wiki_politeness/politeness.json"
+        args.input_path = "css_data/wiki_politeness/test.json"
+        args.answer_path = "css_data/wiki_politeness/answer"
         
     else:
         raise ValueError("dataset is not properly defined ...")
