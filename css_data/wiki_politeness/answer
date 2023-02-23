@@ -136,3 +136,6 @@
 300	0	Answer: The statement is polite.
 305	0	The statement "Restored history. Can check that I did it all ok?" can be classified as neutral.
 311	-1	neutral
+319	0	The statement is neutral.
+322	-1	The statement is impolite.
+337	1	Based on the information given, the above statement is "neutral".

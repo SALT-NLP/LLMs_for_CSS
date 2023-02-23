@@ -10,5 +10,4 @@ ConvoKit/*
 *.pyc
 __pycache__/*
 *.ipynb
-config.py~
-
+config.py
