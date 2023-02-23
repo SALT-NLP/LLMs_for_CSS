@@ -59,7 +59,7 @@ Threatening and Intimidation: conveys a speaker commitment to a target’s pain,
 
 Can you classify why the above sentence is hateful using a combination of the following categories: White Grievance, Incitement to Violence, Inferiority Language, Irony, Stereotypes and Misinformation, Threatening and Intimidation.
 
-''',
+"{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
     "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False" You cannot use any other words except for "True" or "False" ''',
     "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',

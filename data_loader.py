@@ -44,6 +44,7 @@ def csv_process(dataset, save_dir, jsonl=False):
         filename = "{}.csv".format(dataset)
         if not os.path.exists(filename):
             filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
+       #df = pd.read_csv(filename)
         if type(context_column) in {str, tuple}:
             df = pd.read_csv(filename)
         else:
