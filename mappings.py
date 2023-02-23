@@ -39,7 +39,7 @@ prompts_templates = {
     "power": '''Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
 You must pick between "True" or "False." You cannot use any other words except for "True" or "False.''',
     "stance": "Does {$speaker} support {$title} (True or False)? You cannot use any other words except for 'True' or 'False'.",  # This Dataset is strange currently, too long of context
-    "politeness": "Was this statement polite? You must pick between 'True' or 'False'. You cannot use any other words except for 'True' or 'False'.",
+    "politeness": "Is this above statement polite? You must pick between 'polite', 'neutral' or 'impolite'. You cannot use any other words except for 'polite', 'neutral' and 'impolite'.",
     "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
     "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
     "hate": '''I'm a moderator trying to understand hate speech in extremist groups. I use the following definitions.

@@ -191,14 +191,25 @@ def calculateres(path, args):
         index = int(content[0])
         allnum += 1
         
-        if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor', 'supreme_corpus', 'wiki_politeness']:
+        if args.dataset in ['conv_go_awry', 'wiki_corpus', 'reddit_humor', 'supreme_corpus', ]:
             #print(content[1])
             gold = content[1].lower()
             pred = content[2].lower()
             print(gold, pred)
             if gold in pred:
                 accnum += 1
-        elif args.dataset == 'implicit_hate':
+        elif args.dataset in ['wiki_politeness']:
+            if int(content[1]) == 0:
+                gold = 'neutral'
+            elif int(content[1]) == 1:
+                gold = 'polite'
+            elif int(content[1]) == -1:
+                gold = 'impolite'
+            pred = content[2].lower()
+            print(gold, pred)
+            if gold in pred:
+                accnum += 1    
+        elif args.dataset in ['implicit_hate']:
             gold = label_dict[content[1].lower()]
             pred = content[2].lower()
             for u in label_set:
