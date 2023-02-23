@@ -10,7 +10,7 @@ import random
 import argparse
 from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
-from Config import config_access_token
+from config import config_access_token
 
 def data_split(raw_datapth, input_path, args):
     
