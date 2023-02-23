@@ -22,13 +22,14 @@ csv_column_map = {
     "hate": ("post", "implicit_class"),
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
-    "flute": (("premise", "hypothesis"), "label")
+    "flute": (("premise", "hypothesis"), "label"),
+    "media_ideology": ("content", "bias_text")
 }
 
 csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
-    "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
+    "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv"
 }
 
 jsonl_download = {
@@ -65,5 +66,7 @@ Can you classify why the above sentence is hateful using a combination of the fo
     "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',
     "flute": '''(1) "{$hypothesis}"
 (2) "{$premise}"
-Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)'''
+Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)''',
+    "media_ideology": '''"{$content}"
+Predict the leaning of the above article using either: "left", "center" or "right"'''
 }

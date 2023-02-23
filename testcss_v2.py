@@ -241,7 +241,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness", "media_ideology"], help="dataset used for experiment"
     )
     
     args = parser.parse_args()
@@ -273,6 +273,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
         args.answer_path = "css_data/wiki_politeness/answer"
+    elif args.dataset == "media_ideology":
+        args.raw_datapath = "css_data/media_ideology/media_ideology.json"
+        args.input_path = "css_data/media_ideology/test.json"
+        args.answer_path = "css_data/media_ideology/answer"
         
     else:
         raise ValueError("dataset is not properly defined ...")

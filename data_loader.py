@@ -30,10 +30,12 @@ def get_context_column(df, context_column):
     return df[context_column]
     
 
-def csv_process(dataset, save_dir, jsonl=False):
+def csv_process(dataset, save_dir, local=False, jsonl=False):
     context_column, label_columns = csv_column_map[dataset]
     df = pd.DataFrame()
-    if jsonl:
+    if local:
+        df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
+    elif jsonl:
         filename = "{}.jsonl".format(dataset)
         if not os.path.exists(filename):
             filename = wget.download(jsonl_download[dataset], out="{}.jsonl".format(dataset))
@@ -157,6 +159,8 @@ def main(dataset, save_dir):
         csv_process(dataset, save_dir)
     elif dataset in jsonl_download:
         csv_process(dataset, save_dir, jsonl=True)
+    else:
+        csv_process(dataset, save_dir, local=True)
 
 
 if __name__ == "__main__":
