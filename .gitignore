@@ -1,3 +1,4 @@
+Config.py
 *.json
 !test.json
 *.jsonl
@@ -10,4 +11,4 @@ ConvoKit/*
 *.pyc
 __pycache__/*
 *.ipynb
-Config.py
+
