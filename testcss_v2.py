@@ -84,12 +84,6 @@ def get_answers(input_path, output_path, prompts_path, args):
     print("###### Getting Answers! ######")
     chatbot = Chatbot(config={"access_token":args.access_token})
     
-    open_mode = 'r' if os.path.exists(prompts_path) else 'w+'
-    with open(prompts_path, open_mode) as f:
-        try:
-            prompt_map = json.load(f)
-        except: prompt_map = {}
-
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     count = len(raw_data['labels'])
@@ -138,17 +132,15 @@ def get_answers(input_path, output_path, prompts_path, args):
         for i in range(len(test_samples)):
             oneres = test_samples[i]
             input_prompts.append(oneres + ' ' + prompts[i])
-            
+        
+        print("DUMPING PROMPTS")
+        with open(prompts_path, 'w', encoding='utf-8') as f:
+            json.dump({k: v for k, v in enumerate(input_prompts)}, f, ensure_ascii=False, indent=4)
+
         fw = open(output_path, "a+", encoding="utf-8")
         response = []
         for i in range(len(input_prompts)):
             _, oneresponse = get_response(chatbot, [input_prompts[i]])
-
-            prompt_map[i] = input_prompts[i]
-
-            with open(prompts_path, 'w', encoding='utf-8') as f:
-                json.dump(prompt_map, f, ensure_ascii=False, indent=4)
-
             touseresponse = oneresponse[0].replace('\n','&&&&&&')
             response.append(touseresponse)
             if "Error" not in touseresponse and in_domain(touseresponse, args): # implement: in_domain
