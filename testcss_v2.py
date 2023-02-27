@@ -146,7 +146,7 @@ def get_answers(input_path, output_path, prompts_path, args):
 
             prompt_map[i] = input_prompts[i]
 
-            with open(prompt_path, 'w', encoding='utf-8') as f:
+            with open(prompts_path, 'w', encoding='utf-8') as f:
                 json.dump(prompt_map, f, ensure_ascii=False, indent=4)
 
             touseresponse = oneresponse[0].replace('\n','&&&&&&')
