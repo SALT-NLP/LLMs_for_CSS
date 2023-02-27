@@ -80,10 +80,16 @@ def get_response(chatbot, allprompts):
         time.sleep(6)
     return allprompts, allresponse
 
-def get_answers(input_path, output_path, args):
+def get_answers(input_path, output_path, prompts_path, args):
     print("###### Getting Answers! ######")
     chatbot = Chatbot(config={"access_token":args.access_token})
     
+    open_mode = 'r' if os.path.exists(prompts_path) else 'w+'
+    with open(prompts_path, open_mode) as f:
+        try:
+            prompt_map = json.load(f)
+        except: prompt_map = {}
+
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     count = len(raw_data['labels'])
@@ -137,6 +143,12 @@ def get_answers(input_path, output_path, args):
         response = []
         for i in range(len(input_prompts)):
             _, oneresponse = get_response(chatbot, [input_prompts[i]])
+
+            prompt_map[i] = input_prompts[i]
+
+            with open(prompt_path, 'w', encoding='utf-8') as f:
+                json.dump(prompt_map, f, ensure_ascii=False, indent=4)
+
             touseresponse = oneresponse[0].replace('\n','&&&&&&')
             response.append(touseresponse)
             if "Error" not in touseresponse and in_domain(touseresponse, args): # implement: in_domain
@@ -309,11 +321,13 @@ def main():
     try:
         input_path = args.input_path
         answer_path = args.answer_path
+        prompts_path = args.answer_path.replace("/answer", "/prompts.json")
+
         raw_datapath = args.raw_datapath
         
         data_split(raw_datapath, input_path, args)
         
-        get_answers(input_path, answer_path, args)
+        get_answers(input_path, answer_path, prompts_path, args)
         
         calculateres(answer_path, args)  
         
