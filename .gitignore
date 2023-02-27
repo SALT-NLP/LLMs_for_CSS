@@ -1,5 +1,6 @@
 *.json
 !test.json
+!prompts.json
 *.jsonl
 *.jsonlist
 *.jsonlistx
