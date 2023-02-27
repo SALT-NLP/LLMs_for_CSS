@@ -1,4 +1,4 @@
-import argparse, csv, json, os, wget
+import argparse, csv, json, os, re, wget
 import numpy as np
 import pandas as pd
 from convokit import Corpus, download
@@ -29,6 +29,16 @@ def get_context_column(df, context_column):
         return [row(r,context_column) for _, r in df.iterrows()] 
     return df[context_column]
     
+def build_prompts(df, prompt_template):
+    cols = re.findall(r'{\$([A-Za-z_ ]+)}', prompt_template)
+    
+    prompts = []
+    for _, row in df.iterrows():
+        prompt = prompt_template
+        for col in cols:
+            prompt = prompt.replace(f'{{${col}}}', row[col])
+        prompts.append(prompt)
+    return prompts
 
 def csv_process(dataset, save_dir, local=False, jsonl=False):
     context_column, label_columns = csv_column_map[dataset]
@@ -56,7 +66,8 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     df["context"] = get_context_column(df, context_column) #df[context_column]
     df["labels"] = df[label_columns]
     df = boolify(df)
-    df["prompts"] = [prompts_templates[dataset]] * len(df["labels"])
+    df["prompts"] = build_prompts(df, prompts_templates[dataset]) #[prompts_templates[dataset]] * len(df["labels"])
+    print(df.head()['prompts'])
     df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)

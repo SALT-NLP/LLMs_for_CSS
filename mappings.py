@@ -68,5 +68,5 @@ Can you classify why the above sentence is hateful using a combination of the fo
 (2) "{$premise}"
 Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)''',
     "media_ideology": '''"{$content}"
-Predict the leaning of the above article using either: "left", "center" or "right"'''
+If a political scientist had to choose from the options "left", "center" or "right", she would describe the political leaning of the above article as:'''
 }

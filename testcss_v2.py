@@ -4,6 +4,7 @@ import pandas as pd
 from os.path import exists
 from os import getenv
 from sys import argv, exit
+from ast import literal_eval
 import time
 import re
 import random
@@ -138,7 +139,7 @@ def get_answers(input_path, output_path, args):
             _, oneresponse = get_response(chatbot, [input_prompts[i]])
             touseresponse = oneresponse[0].replace('\n','&&&&&&')
             response.append(touseresponse)
-            if "Error" not in touseresponse:
+            if "Error" not in touseresponse and in_domain(touseresponse, args): # implement: in_domain
                 print("no error for this sample")
                 allflag[touseindex[i]] = 1
                 print(touseindex[i], gold_label[i], touseresponse)
@@ -160,7 +161,15 @@ def get_answers(input_path, output_path, args):
         if iffinish:
             break
     
-
+def in_domain(response, args):
+    if args.labelset is not None:
+        labelset = literal_eval(args.labelset)
+        for lbl in labelset:
+            if lbl in response:
+                return True
+        return False
+    return True
+    
 def calculateres(path, args):
     with open(args.input_path, 'r') as f:
         a = json.load(f)
@@ -238,11 +247,11 @@ def calculateres(path, args):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="chatgpt-zero-shot-css")
-
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
         choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness", "media_ideology"], help="dataset used for experiment"
     )
+    parser.add_argument("--labelset", default=None)
     
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
@@ -277,6 +286,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
         args.answer_path = "css_data/media_ideology/answer"
+        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative']"
         
     else:
         raise ValueError("dataset is not properly defined ...")
