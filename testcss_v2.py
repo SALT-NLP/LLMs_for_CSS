@@ -67,16 +67,20 @@ def get_response(chatbot, allprompts):
             chatbot.reset_chat()
         except Exception as exc:
             print(f"Data point {i} went wrong!")
-            print(exc)
 
             allresponse.append("Error!")
             errortime += 1
             if errortime > 60:
-                print("Error too many times! sleep 1200s")
+                print("Error too many times! sleep 1200s and move on")
                 errortime = 0
                 time.sleep(1200)
-            i += 1
-        time.sleep(6)
+                i += 1
+            else:
+                print("Error and Retry after 2 minutes.")
+                time.sleep(120)
+
+        randSleep = random.randint(10, 30)
+        time.sleep(60 + randSleep)  # Rate Limit is 50 queries per hour
     return allprompts, allresponse
 
 
@@ -166,9 +170,8 @@ def get_answers(input_path, output_path, prompts_path, args):
                     fw.flush()
                     break
                 else:
-                    print("Error Sleep and Repeat")
-                    time.sleep(20)
-                    continue
+                    print("Error After Sleep and Repeat")
+                    break
         fw.close()
         # end = time.time()
         # print("all used time: ", end - start)

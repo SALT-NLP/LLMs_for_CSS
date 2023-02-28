@@ -40,35 +40,87 @@ jsonl_download = {
 }
 
 prompts_templates = {
-    "power": '''Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
-You must pick between "True" or "False." You cannot use any other words except for "True" or "False."''',
-    "stance": "Does {$speaker} support {$title} (True or False)? You cannot use any other words except for 'True' or 'False'.",  # This Dataset is strange currently, too long of context
-    "politeness": "Is this above statement polite? You must pick between 'polite', 'neutral' or 'impolite'. You cannot use any other words except for 'polite', 'neutral' and 'impolite'.",
-    "persuasion": "Do you think this reply would convince the original poster (True Or False)?",
-    "discourse": "Which of the following best characterizes the previous statement: question, answer, announcement, agreement, appreciation, disagreement, elaboration, or humor? ",
-    "hate": '''I'm a moderator trying to understand hate speech in extremist groups. I use the following definitions.
+    "power": """
 
-White Grievance: frustration over a minority group’s perceived privilege and casting majority groups as the real victims of racism.
+Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
+A: True
+B: False
 
-Incitement to Violence: flaunting in-group unity and power or elevating known hate
-groups and ideologies.
+Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.""",
+    "stance": """
 
-Inferiority Language: implies one group or individual is inferior to another, including dehumanization and toxification.
+Does {$speaker} support {$title}? 
+A: True
+B: False
 
-Irony: the use of sarcasm, humor, and satire to attack or demean a protected class or individual.
+Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+""",  # This Dataset is strange currently, too long of context
+    "politeness": """
 
-Stereotypes and Misinformation: associating a protected class with negative attributes.
+Which of the following best describes the statement above? 
+A: Polite
+B: Neutral
+C: Impolite
 
-Threatening and Intimidation: conveys a speaker commitment to a target’s pain, injury, damage, loss, or violation of rights.
+Constraint: Answer with only the option above that is most accurate and nothing else.
+""",
+    "persuasion": """
 
-Can you classify why the above sentence is hateful using a combination of the following categories: White Grievance, Incitement to Violence, Inferiority Language, Irony, Stereotypes and Misinformation, Threatening and Intimidation.
+If you were the original poster, would this reply convince you?
+A: True
+B: False
 
-"{$sentence}"''',
-    "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
-    "humor": """Is the above joke humorous to most of the people? You must pick between "True" or "False". You cannot use any other words except for "True" or "False" """,
-    "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',
-    "flute-explanation": """Premise: "{$hypothesis}"
-Hypothesis: "{$premise}"
+Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+""",
+    "discourse": """
+
+Which of the following best characterizes the discourse type of the previous statement?
+A: Question
+B: Answer
+C: Announcement
+D: Agreement
+E: Appreciation
+F: Elaboration
+G: Humor
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+""",
+    "hate": """
+
+Which of the following categories of hate speech best describes the sentence above?
+A: White Grievance (frustration over a minority group’s perceived privilege and casting majority groups as the real victims of racism)
+B: Incitement to Violence (flaunting in-group unity and power or elevating known hate
+groups and ideologies)
+C: Inferiority Language (implies one group or individual is inferior to another, including dehumanization and toxification)
+D: Irony (the use of sarcasm, humor, and satire to attack or demean a protected class or individual)
+E: Stereotypes and Misinformation (associating a protected class with negative attributes)
+F: Threatening and Intimidation (conveys a speaker commitment to a target’s pain, injury, damage, loss, or violation of rights)
+
+Constraint: Answer with one or more of the options above that is most accurate and nothing else. Always choose at least one of the options.
+
+""",
+    "reframe": """
+
+Reframe the previous sentence positively, without changing the core meaning of the sentence.
+""",
+    "humor": """
+
+
+Is the above joke humourous by standard societal norms?
+A: True
+B: False
+
+Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+""",
+    "toxicity": """
+
+Will the following conversation eventually going to derail into a personal attack? 
+A: True
+B: False
+
+Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+""",
+    "flute-explanation": """
 
 Which of the following describes the relationship between the premise and the hypothesis?
 A: Entailment
@@ -76,27 +128,27 @@ B: Contradiction
 
 Constraint: Explain your answer step by step and then list which of the two options is most accurate.
 """,
-    "flute-classification": """Premise: "{$hypothesis}"
-Hypothesis: "{$premise}"
+    "flute-classification": """
 
-Which of the following best describes the type of figurative language used between the premise and the hypothesis?
-A: Creative Paraphrase
-B: Idiom
-C: Metaphor
+Which of the following best describes the type of figurative language used in the hypothesis?
+A: Idiom
+B: Metaphor
+C: Creative Paraphrase
 D: Sarcasm
 E: Simile
 
-Constrain: Answer with only the option above that is most accurate and nothing else.
+Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
-    "media_ideology": """"{$content}" 
-Which of the following leanings would a political scientist say that the article has?
+    "media_ideology": """" 
+
+Which of the following leanings would a political scientist say that the above article has?
 A: Left
 B: Right
 C: Center
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
-    "hippocorpus": """"{$story}"
+    "hippocorpus": """
 
 Which sentences above indicate new events? Which of the events are surprising?""",
 }

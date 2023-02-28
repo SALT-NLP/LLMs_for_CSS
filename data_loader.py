@@ -37,7 +37,7 @@ def truncate(text, length=2048):
 
 def build_prompts(df, prompt_template):
     cols = re.findall(r"{\$([A-Za-z_ ]+)}", prompt_template)
-    trunc_length = 2048 // len(cols)
+    trunc_length = 2048 // max(len(cols), 1)
 
     prompts = []
     for _, row in df.iterrows():
