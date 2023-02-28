@@ -20,30 +20,33 @@ def boolify(df):
     df[p] = df[p].astype(bool)
     return df
 
+
 def get_context_column(df, context_column):
-    
     def row(r, context_column):
         return " ".join([f"{col}: {r[col]}" for col in context_column])
-    
+
     if type(context_column) == tuple:
-        return [row(r,context_column) for _, r in df.iterrows()] 
+        return [row(r, context_column) for _, r in df.iterrows()]
     return df[context_column]
-    
+
+
 def truncate(text, length=2048):
-    print(text, ' '.join(text.split(' ')[:length]))
-    return ' '.join(text.split(' ')[:length])
-    
+    print(text, " ".join(text.split(" ")[:length]))
+    return " ".join(text.split(" ")[:length])
+
+
 def build_prompts(df, prompt_template):
-    cols = re.findall(r'{\$([A-Za-z_ ]+)}', prompt_template)
-    trunc_length = 2048//len(cols)
-    
+    cols = re.findall(r"{\$([A-Za-z_ ]+)}", prompt_template)
+    trunc_length = 2048 // len(cols)
+
     prompts = []
     for _, row in df.iterrows():
         prompt = prompt_template
         for col in cols:
-            prompt = prompt.replace(f'{{${col}}}', truncate(row[col], trunc_length))
+            prompt = prompt.replace(f"{{${col}}}", truncate(row[col], trunc_length))
         prompts.append(prompt)
     return prompts
+
 
 def csv_process(dataset, save_dir, local=False, jsonl=False):
     context_column, label_columns = csv_column_map[dataset]
@@ -53,30 +56,37 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     elif jsonl:
         filename = "{}.jsonl".format(dataset)
         if not os.path.exists(filename):
-            filename = wget.download(jsonl_download[dataset], out="{}.jsonl".format(dataset))
-        with open(filename, 'r') as infile:
+            filename = wget.download(
+                jsonl_download[dataset], out="{}.jsonl".format(dataset)
+            )
+        with open(filename, "r") as infile:
             data = data = {i: json.loads(L) for i, L in enumerate(infile.readlines())}
             df = pd.DataFrame.from_dict(data).T
     else:
         filename = "{}.csv".format(dataset)
         if not os.path.exists(filename):
-            filename = wget.download(csv_download[dataset], out="{}.csv".format(dataset))
-       #df = pd.read_csv(filename)
+            filename = wget.download(
+                csv_download[dataset], out="{}.csv".format(dataset)
+            )
+        # df = pd.read_csv(filename)
         if type(context_column) in {str, tuple}:
             df = pd.read_csv(filename)
         else:
             df = pd.read_csv(filename, header=None)
 
     print(df.head())
-    df["context"] = get_context_column(df, context_column) #df[context_column]
+    df["context"] = get_context_column(df, context_column)  # df[context_column]
     df["labels"] = df[label_columns]
     df = boolify(df)
-    df["prompts"] = build_prompts(df, prompts_templates[dataset]) #[prompts_templates[dataset]] * len(df["labels"])
-    print(df.head()['prompts'])
+    df["prompts"] = build_prompts(
+        df, prompts_templates[dataset]
+    )  # [prompts_templates[dataset]] * len(df["labels"])
+    print(df.head()["prompts"])
     df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))
+
 
 def convokit_process(dataset, save_dir):
     corpus = Corpus(
@@ -145,13 +155,14 @@ def convokit_process(dataset, save_dir):
     elif label_type == "speaker":
         speaker_contexts = []
         for i, utterances in enumerate(speaker_utterance_maps):
-            print(contexts[i])
             for speaker, utterance_id in utterances.items():
                 speaker_contexts.append(contexts[i])
                 utterance = corpus.get_utterance(utterance_id).to_dict()
                 label = deep_get(label_field, utterance)
                 labels.append(label)
-                prompts.append(prompts_templates[dataset].replace("{$speaker}", speaker))
+                prompts.append(
+                    prompts_templates[dataset].replace("{$speaker}", speaker)
+                )
         contexts = speaker_contexts
     elif label_type == "conversation":
         for conversation_id in conversation_ids:
