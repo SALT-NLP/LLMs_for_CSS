@@ -22,19 +22,21 @@ csv_column_map = {
     "hate": ("post", "implicit_class"),
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
-    "flute": (("premise", "hypothesis"), "label"),
+    "flute-explanation": (("premise", "hypothesis"), "label"),
+    "flute-classification": (("premise", "hypothesis"), "type"),
     "media_ideology": ("content", "bias_text"),
-    "hippocorpus": ("story", "events")
+    "hippocorpus": ("story", "events"),
 }
 
 csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
-    "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv"
+    "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
 }
 
 jsonl_download = {
-    "flute": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl"
+    "flute-explanation": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl"
+    "flute-classification": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl"
 }
 
 prompts_templates = {
@@ -63,20 +65,38 @@ Can you classify why the above sentence is hateful using a combination of the fo
 
 "{$sentence}"''',
     "reframe": "Reframe the previous sentence positively, without changing the core meaning of the sentence.",
-    "humor": '''Is the above joke humorous to most of the people? You must pick between "True" or "False". You cannot use any other words except for "True" or "False" ''',
+    "humor": """Is the above joke humorous to most of the people? You must pick between "True" or "False". You cannot use any other words except for "True" or "False" """,
     "toxicity": '''Is the following conversation eventually going to derail into a personal attack? You must pick between "True" or "False" You cannot use any other words except for "True" or "False"''',
-    "flute": '''(1) "{$hypothesis}"
-(2) "{$premise}"
-Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)''',
-    "media_ideology": '''"{$content}" 
+    "flute-explanation": """Premise: "{$hypothesis}"
+Hypothesis: "{$premise}"
+
+Which of the following describes the relationship between the premise and the hypothesis?
+A: Entailment
+B: Contradiction
+
+Constraint: Explain your answer step by step and then list which of the two options is most accurate.
+""",
+    "flute-classification": """Premise: "{$hypothesis}"
+Hypothesis: "{$premise}"
+
+Which of the following best describes the type of figurative language used between the premise and the hypothesis?
+A: Creative Paraphrase
+B: Idiom
+C: Metaphor
+D: Sarcasm
+E: Simile
+
+Constrain: Answer with only the option above that is most accurate and nothing else.
+""",
+    "media_ideology": """"{$content}" 
 Which of the following leanings would a political scientist say that the article has?
-A:"Left"
-B:"Right"
-C:"Center"
+A: Left
+B: Right
+C: Center
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
-''',
-    "hippocorpus": '''"{$story}"
+""",
+    "hippocorpus": """"{$story}"
 
-Which sentences above indicate new events? Which of the events are surprising?'''
+Which sentences above indicate new events? Which of the events are surprising?""",
 }
