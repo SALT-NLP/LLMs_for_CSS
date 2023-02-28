@@ -29,14 +29,19 @@ def get_context_column(df, context_column):
         return [row(r,context_column) for _, r in df.iterrows()] 
     return df[context_column]
     
+def truncate(text, length=2048):
+    print(text, ' '.join(text.split(' ')[:length]))
+    return ' '.join(text.split(' ')[:length])
+    
 def build_prompts(df, prompt_template):
     cols = re.findall(r'{\$([A-Za-z_ ]+)}', prompt_template)
+    trunc_length = 2048//len(cols)
     
     prompts = []
     for _, row in df.iterrows():
         prompt = prompt_template
         for col in cols:
-            prompt = prompt.replace(f'{{${col}}}', row[col])
+            prompt = prompt.replace(f'{{${col}}}', truncate(row[col], trunc_length))
         prompts.append(prompt)
     return prompts
 
