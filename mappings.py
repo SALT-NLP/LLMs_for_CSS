@@ -23,7 +23,8 @@ csv_column_map = {
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
     "flute": (("premise", "hypothesis"), "label"),
-    "media_ideology": ("content", "bias_text")
+    "media_ideology": ("content", "bias_text"),
+    "hippocorpus": ("story", "events")
 }
 
 csv_download = {
@@ -68,5 +69,8 @@ Can you classify why the above sentence is hateful using a combination of the fo
 (2) "{$premise}"
 Does sentence (1) entail sentence (2) or does it lead to a contradiction and why? Is there any sarcasm, simile, or metaphor in sentence (1)''',
     "media_ideology": '''"{$content}"
-If a political scientist had to choose from the options "left", "center" or "right", she would describe the political leaning of the above article as:'''
+If a political scientist had to choose from the options "left", "center" or "right", she would describe the political leaning of the above article as:''',
+    "hippocorpus": '''"{$story}"
+
+Which sentences above indicate new events? Which of the events are surprising?'''
 }

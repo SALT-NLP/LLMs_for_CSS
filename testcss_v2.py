@@ -253,7 +253,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="chatgpt-zero-shot-css")
     parser.add_argument(
         "--dataset", type=str, default="conv_go_awry",
-        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness", "media_ideology"], help="dataset used for experiment"
+        choices=["conv_go_awry", "wiki_corpus", "implicit_hate", "reddit_humor", "flute", "supreme_corpus", "wiki_politeness", "media_ideology", "hippocorpus"], help="dataset used for experiment"
     )
     parser.add_argument("--labelset", default=None)
     
@@ -291,7 +291,10 @@ def parse_arguments():
         args.input_path = "css_data/media_ideology/test.json"
         args.answer_path = "css_data/media_ideology/answer"
         args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative']"
-        
+    elif args.dataset == "hippocorpus":
+        args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
+        args.input_path = "css_data/hippocorpus/test.json"
+        args.answer_path = "css_data/hippocorpus/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
     
