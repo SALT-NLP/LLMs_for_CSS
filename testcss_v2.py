@@ -28,7 +28,7 @@ def data_split(raw_datapth, input_path, args):
         raw_data = json.load(f)
     indexes = raw_data['context'].keys()
     
-    num_testing = args.testing_size
+    num_testing = min(args.testing_size, len(indexes))
     random.seed(0)
     selected_indexs = random.sample(indexes, num_testing)
     
