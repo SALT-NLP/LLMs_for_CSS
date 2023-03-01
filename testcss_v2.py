@@ -13,7 +13,6 @@ from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
 from config import config_access_token
 
-
 def data_split(raw_datapth, input_path, args):
     if os.path.exists(input_path):
         print("###### Testing Files Exist! ######")
