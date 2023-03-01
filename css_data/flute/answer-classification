@@ -1,0 +1,500 @@
+0	Idiom	C: Creative Paraphrase
+1	Simile	B: Metaphor.
+2	Sarcasm	C: Creative Paraphrase.
+3	Metaphor	C: Creative Paraphrase
+4	CreativeParaphrase	C: Creative Paraphrase
+5	Metaphor	C: Creative Paraphrase.
+6	Idiom	C: Creative Paraphrase.
+7	Sarcasm	C: Creative Paraphrase
+8	CreativeParaphrase	C: Creative Paraphrase
+9	Simile	B: Metaphor
+10	Metaphor	C: Creative Paraphrase.
+11	Metaphor	C: Creative Paraphrase.
+12	Idiom	C: Creative Paraphrase
+13	Metaphor	C: Creative Paraphrase
+14	CreativeParaphrase	C: Creative Paraphrase
+15	CreativeParaphrase	C: Creative Paraphrase
+16	Idiom	C: Creative Paraphrase
+17	Simile	C: Creative Paraphrase
+18	Idiom	C: Creative Paraphrase
+19	Idiom	C: Creative Paraphrase
+20	Idiom	C: Creative Paraphrase
+21	Idiom	B: Metaphor
+22	Idiom	B: Metaphor
+23	Sarcasm	C: Creative Paraphrase
+24	Metaphor	B: Metaphor
+25	Idiom	C: Creative Paraphrase
+26	Idiom	C: Creative Paraphrase
+27	CreativeParaphrase	C: Creative Paraphrase.
+28	CreativeParaphrase	C: Creative Paraphrase
+29	Simile	E: Simile
+30	CreativeParaphrase	C: Creative Paraphrase
+31	CreativeParaphrase	C: Creative Paraphrase
+32	Sarcasm	C: Creative Paraphrase
+33	Simile	B: Metaphor
+34	Metaphor	B: Metaphor
+35	Idiom	C: Creative Paraphrase
+36	Metaphor	C: Creative Paraphrase
+37	Simile	E: Simile
+38	Idiom	C: Creative Paraphrase
+39	Sarcasm	C: Creative Paraphrase
+40	CreativeParaphrase	B: Metaphor
+41	Idiom	C: Creative Paraphrase
+42	Sarcasm	C: Creative Paraphrase
+43	Simile	B: Metaphor
+44	Sarcasm	D: Sarcasm.
+45	Sarcasm	B: Metaphor
+46	Sarcasm	C: Creative Paraphrase
+47	Metaphor	C: Creative Paraphrase
+49	Sarcasm	D: Sarcasm.
+50	Metaphor	B: Metaphor
+51	Sarcasm	C: Creative Paraphrase
+52	Idiom	C: Creative Paraphrase
+53	Metaphor	C: Creative Paraphrase.
+54	Sarcasm	D: Sarcasm
+55	Idiom	C: Creative Paraphrase.
+56	Metaphor	C: Creative Paraphrase.
+57	Simile	B: Metaphor
+58	Sarcasm	C: Creative Paraphrase
+59	Sarcasm	C: Creative Paraphrase.
+60	Sarcasm	C: Creative Paraphrase
+62	Sarcasm	C: Creative Paraphrase
+63	Idiom	C: Creative Paraphrase
+64	Sarcasm	C: Creative Paraphrase
+65	Idiom	B: Metaphor
+66	Idiom	A: Idiom
+67	Metaphor	C: Creative Paraphrase
+68	Metaphor	B: Metaphor
+69	CreativeParaphrase	C: Creative Paraphrase.
+70	Sarcasm	C: Creative Paraphrase.
+71	Idiom	B: Metaphor.
+72	Simile	C: Creative Paraphrase
+73	CreativeParaphrase	B: Metaphor
+74	Sarcasm	D: Sarcasm
+75	Idiom	B: Metaphor
+76	CreativeParaphrase	B: Metaphor
+77	Sarcasm	C: Creative Paraphrase
+78	Sarcasm	C: Creative Paraphrase
+79	Sarcasm	D: Sarcasm
+80	Simile	E: Simile
+81	Metaphor	E: Simile
+82	Idiom	C: Creative Paraphrase
+83	Idiom	C: Creative Paraphrase
+84	Sarcasm	C: Creative Paraphrase
+85	Idiom	C: Creative Paraphrase
+86	CreativeParaphrase	C: Creative Paraphrase
+87	Metaphor	B: Metaphor
+88	Metaphor	C: Creative Paraphrase
+90	Sarcasm	C: Creative Paraphrase
+91	CreativeParaphrase	C: Creative Paraphrase
+92	Simile	Simile.
+93	Metaphor	C: Creative Paraphrase
+94	Sarcasm	C: Creative Paraphrase
+95	Sarcasm	C: Creative Paraphrase
+96	CreativeParaphrase	C: Creative Paraphrase
+97	Sarcasm	D: Sarcasm
+98	Metaphor	C: Creative Paraphrase
+99	Idiom	C: Creative Paraphrase
+100	Sarcasm	C: Creative Paraphrase
+101	Sarcasm	C: Creative Paraphrase
+102	Idiom	C: Creative Paraphrase.
+103	Metaphor	B: Metaphor
+104	Sarcasm	B: Metaphor
+105	Metaphor	B: Metaphor
+106	Idiom	B: Metaphor
+107	Sarcasm	C: Creative Paraphrase
+108	CreativeParaphrase	C: Creative Paraphrase
+109	Simile	B: Metaphor
+110	Idiom	C: Creative Paraphrase
+111	Simile	B: Metaphor
+112	Idiom	C: Creative Paraphrase
+113	Idiom	B: Metaphor
+114	Metaphor	C: Creative Paraphrase
+115	CreativeParaphrase	C: Creative Paraphrase
+116	Simile	B: Metaphor
+117	Simile	B: Metaphor
+118	Sarcasm	C: Creative Paraphrase
+119	Idiom	C: Creative Paraphrase.
+120	Sarcasm	C: Creative Paraphrase
+121	Idiom	C: Creative Paraphrase
+122	CreativeParaphrase	C: Creative Paraphrase
+123	Idiom	C: Creative Paraphrase
+124	CreativeParaphrase	C: Creative Paraphrase
+125	Simile	B: Metaphor
+126	Simile	B: Metaphor
+127	Sarcasm	D: Sarcasm.
+128	Simile	C: Creative Paraphrase
+129	Metaphor	C: Creative Paraphrase
+130	Idiom	C: Creative Paraphrase
+131	Metaphor	C: Creative Paraphrase
+132	Metaphor	B: Metaphor
+133	Sarcasm	C: Creative Paraphrase.
+134	Metaphor	C: Creative Paraphrase
+136	Sarcasm	C: Creative Paraphrase
+137	Sarcasm	D: Sarcasm
+138	Sarcasm	C: Creative Paraphrase
+139	Sarcasm	C: Creative Paraphrase
+140	CreativeParaphrase	C: Creative Paraphrase
+141	Sarcasm	C: Creative Paraphrase
+142	CreativeParaphrase	C: Creative Paraphrase
+143	Sarcasm	C: Creative Paraphrase
+144	Metaphor	C: Creative Paraphrase
+145	Sarcasm	C: Creative Paraphrase
+146	Idiom	B: Metaphor
+147	Metaphor	C: Creative Paraphrase
+148	Idiom	B: Metaphor
+149	Simile	E: Simile
+150	CreativeParaphrase	C: Creative Paraphrase
+151	Sarcasm	B: Metaphor
+152	Metaphor	B: Metaphor
+153	Idiom	C: Creative Paraphrase
+154	Sarcasm	D: Sarcasm
+155	CreativeParaphrase	C: Creative Paraphrase
+156	CreativeParaphrase	C: Creative Paraphrase
+157	CreativeParaphrase	C: Creative Paraphrase
+158	CreativeParaphrase	C: Creative Paraphrase
+159	Idiom	B: Metaphor
+160	Metaphor	D: Sarcasm
+161	Simile	E: Simile
+162	Simile	E: Simile
+163	Idiom	B: Metaphor
+164	CreativeParaphrase	C: Creative Paraphrase
+165	Simile	B: Metaphor
+166	Idiom	C: Creative Paraphrase
+167	Metaphor	B: Metaphor.
+168	Metaphor	C: Creative Paraphrase
+169	Simile	E: Simile
+170	Sarcasm	D: Sarcasm.
+171	Sarcasm	D: Sarcasm
+172	Simile	B: Metaphor
+173	Metaphor	C: Creative Paraphrase
+174	CreativeParaphrase	C: Creative Paraphrase
+175	Simile	B: Metaphor
+176	CreativeParaphrase	C: Creative Paraphrase
+177	Sarcasm	C: Creative Paraphrase
+178	Simile	C: Creative Paraphrase
+179	Idiom	C: Creative Paraphrase
+180	CreativeParaphrase	C: Creative Paraphrase
+181	Simile	B: Metaphor.
+182	Sarcasm	C: Creative Paraphrase
+183	Sarcasm	D: Sarcasm
+184	Idiom	C: Creative Paraphrase.
+185	Sarcasm	C: Creative Paraphrase
+186	CreativeParaphrase	C: Creative Paraphrase.
+187	Simile	B: Metaphor.
+188	Metaphor	C: Creative Paraphrase
+189	Metaphor	C: Creative Paraphrase.
+190	Idiom	A: Idiom.
+191	Sarcasm	C: Creative Paraphrase
+192	CreativeParaphrase	C: Creative Paraphrase
+193	Metaphor	B: Metaphor
+194	Idiom	C: Creative Paraphrase
+195	Sarcasm	C: Creative Paraphrase
+196	Sarcasm	C: Creative Paraphrase
+197	Sarcasm	D: Sarcasm.
+198	Idiom	C: Creative Paraphrase
+199	Simile	E: Simile
+200	Metaphor	C: Creative Paraphrase
+201	Metaphor	C: Creative Paraphrase
+202	CreativeParaphrase	B: Metaphor
+203	Sarcasm	C: Creative Paraphrase
+204	CreativeParaphrase	C: Creative Paraphrase
+205	Metaphor	C: Creative Paraphrase
+206	Idiom	C: Creative Paraphrase
+207	Idiom	C: Creative Paraphrase.
+208	Sarcasm	C: Creative Paraphrase
+209	Metaphor	C: Creative Paraphrase
+211	Metaphor	B: Metaphor
+212	Idiom	C: Creative Paraphrase
+213	Sarcasm	D: Sarcasm
+214	Idiom	B: Metaphor.
+215	Metaphor	B: Metaphor
+216	Sarcasm	C: Creative Paraphrase
+217	CreativeParaphrase	C: Creative Paraphrase
+218	CreativeParaphrase	C: Creative Paraphrase
+219	Simile	B: Metaphor.
+220	Idiom	C: Creative Paraphrase.
+221	Metaphor	B: Metaphor
+222	Idiom	B: Metaphor
+223	Metaphor	B: Metaphor
+224	Idiom	C: Creative Paraphrase
+225	Sarcasm	C: Creative Paraphrase
+226	CreativeParaphrase	C: Creative Paraphrase
+227	Simile	C: Creative Paraphrase
+228	Sarcasm	D: Sarcasm
+229	Simile	E: Simile
+230	Idiom	C: Creative Paraphrase
+231	Idiom	C: Creative Paraphrase
+232	Metaphor	C: Creative Paraphrase
+233	CreativeParaphrase	B: Metaphor
+234	Sarcasm	D: Sarcasm
+235	Sarcasm	C: Creative Paraphrase.
+236	Idiom	C: Creative Paraphrase
+237	Idiom	C: Creative Paraphrase
+238	Sarcasm	C: Creative Paraphrase.
+239	Sarcasm	C: Creative Paraphrase
+240	Sarcasm	C: Creative Paraphrase
+241	Metaphor	C: Creative Paraphrase
+242	Metaphor	C: Creative Paraphrase
+243	Simile	C: Creative Paraphrase
+244	Metaphor	C: Creative Paraphrase
+245	Sarcasm	C: Creative Paraphrase
+246	Metaphor	C: Creative Paraphrase.
+247	Metaphor	B: Metaphor
+248	CreativeParaphrase	C: Creative Paraphrase
+249	Metaphor	B: Metaphor
+250	Sarcasm	D: Sarcasm
+251	Sarcasm	C: Creative Paraphrase
+252	Sarcasm	C: Creative Paraphrase.
+253	Idiom	C: Creative Paraphrase
+254	Sarcasm	C: Creative Paraphrase
+255	Idiom	B: Metaphor
+256	Sarcasm	C: Creative Paraphrase
+257	Metaphor	C: Creative Paraphrase
+258	Sarcasm	C: Creative Paraphrase
+259	Metaphor	B: Metaphor
+260	Idiom	C: Creative Paraphrase
+261	Sarcasm	B: Metaphor
+262	Idiom	C: Creative Paraphrase
+263	Metaphor	C: Creative Paraphrase
+264	CreativeParaphrase	C: Creative Paraphrase
+265	Sarcasm	C: Creative Paraphrase
+266	Sarcasm	D: Sarcasm
+267	Sarcasm	C: Creative Paraphrase
+268	CreativeParaphrase	C: Creative Paraphrase
+269	Idiom	B: Metaphor
+270	Simile	B: Metaphor
+271	Sarcasm	C: Creative Paraphrase
+272	Idiom	C: Creative Paraphrase
+273	Sarcasm	C: Creative Paraphrase
+274	Idiom	B: Metaphor.
+275	Metaphor	C: Creative Paraphrase
+276	Sarcasm	D: Sarcasm
+277	CreativeParaphrase	C: Creative Paraphrase
+278	Idiom	C: Creative Paraphrase.
+279	Idiom	B: Metaphor
+280	Simile	E: Simile
+281	CreativeParaphrase	C: Creative Paraphrase
+282	CreativeParaphrase	C: Creative Paraphrase
+283	Idiom	C: Creative Paraphrase
+284	Sarcasm	C: Creative Paraphrase
+286	Sarcasm	C: Creative Paraphrase
+287	Idiom	C: Creative Paraphrase
+288	Idiom	C: Creative Paraphrase
+289	Idiom	C: Creative Paraphrase
+290	Sarcasm	C: Creative Paraphrase
+291	Sarcasm	D: Sarcasm
+292	Idiom	B: Metaphor
+293	Simile	B: Metaphor
+294	Sarcasm	C: Creative Paraphrase
+295	Metaphor	B: Metaphor
+296	Simile	B: Metaphor
+297	Sarcasm	E: Simile
+298	Idiom	C: Creative Paraphrase
+299	Simile	B: Metaphor
+300	CreativeParaphrase	C: Creative Paraphrase
+301	Sarcasm	D: Sarcasm.
+302	Idiom	C: Creative Paraphrase
+303	Metaphor	B: Metaphor.
+304	Sarcasm	C: Creative Paraphrase.
+305	Metaphor	C: Creative Paraphrase
+306	Idiom	C: Creative Paraphrase
+307	Simile	B: Metaphor
+308	Sarcasm	D: Sarcasm
+309	Simile	E: Simile.
+310	Sarcasm	C: Creative Paraphrase
+311	Idiom	C: Creative Paraphrase
+312	Metaphor	B: Metaphor
+313	Idiom	A: Idiom
+314	Metaphor	B: Metaphor
+315	Sarcasm	C: Creative Paraphrase
+316	Metaphor	C: Creative Paraphrase.
+317	CreativeParaphrase	C: Creative Paraphrase
+318	Simile	B: Metaphor
+319	CreativeParaphrase	B: Metaphor
+320	Idiom	C: Creative Paraphrase
+321	Metaphor	C: Creative Paraphrase
+322	Simile	B: Metaphor
+323	Simile	B: Metaphor.
+324	Idiom	C: Creative Paraphrase
+325	Simile	B: Metaphor
+326	Sarcasm	C: Creative Paraphrase
+327	Idiom	C: Creative Paraphrase
+328	Metaphor	B: Metaphor
+329	Sarcasm	C: Creative Paraphrase
+330	Metaphor	C: Creative Paraphrase
+331	Sarcasm	C: Creative Paraphrase
+332	CreativeParaphrase	C: Creative Paraphrase.
+333	Metaphor	C: Creative Paraphrase.
+334	Metaphor	C: Creative Paraphrase
+335	CreativeParaphrase	C: Creative Paraphrase
+336	Sarcasm	D: Sarcasm
+337	Simile	E: Simile
+338	Simile	B: Metaphor
+339	Sarcasm	C: Creative Paraphrase
+340	Sarcasm	C: Creative Paraphrase
+341	Simile	C: Creative Paraphrase
+342	CreativeParaphrase	C: Creative Paraphrase.
+343	CreativeParaphrase	C: Creative Paraphrase
+344	Metaphor	B: Metaphor
+345	Idiom	C: Creative Paraphrase.
+346	Idiom	C: Creative Paraphrase.
+347	Idiom	B: Metaphor
+348	Simile	C: Creative Paraphrase
+349	Simile	E: Simile
+350	Metaphor	C: Creative Paraphrase
+351	Sarcasm	D: Sarcasm.
+352	Simile	B: Metaphor
+353	Idiom	C: Creative Paraphrase
+354	Simile	E: Simile
+355	Idiom	C: Creative Paraphrase
+356	Idiom	B: Metaphor
+357	Idiom	C: Creative Paraphrase
+358	Sarcasm	C: Creative Paraphrase
+359	Idiom	B: Metaphor
+361	Idiom	C: Creative Paraphrase
+362	Idiom	B: Metaphor
+363	Idiom	C: Creative Paraphrase
+364	Simile	C: Creative Paraphrase
+365	Idiom	C: Creative Paraphrase
+366	Sarcasm	C: Creative Paraphrase
+367	Simile	E: Simile
+368	Sarcasm	D: Sarcasm
+369	Sarcasm	D: Sarcasm.
+370	Simile	B: Metaphor
+371	Idiom	B: Metaphor.
+372	Idiom	C: Creative Paraphrase
+373	Metaphor	C: Creative Paraphrase
+374	Idiom	C: Creative Paraphrase
+376	Simile	E: Simile
+377	Sarcasm	C: Creative Paraphrase
+378	Idiom	C: Creative Paraphrase.
+379	Sarcasm	B: Metaphor
+380	Sarcasm	C: Creative Paraphrase
+381	Sarcasm	C: Creative Paraphrase.
+382	Metaphor	C: Creative Paraphrase
+383	Idiom	C: Creative Paraphrase.
+384	Idiom	C: Creative Paraphrase
+385	Idiom	C: Creative Paraphrase
+386	Metaphor	C: Creative Paraphrase
+387	Idiom	C: Creative Paraphrase
+388	Simile	E: Simile.
+389	Sarcasm	C: Creative Paraphrase
+390	Idiom	B: Metaphor
+391	Metaphor	B: Metaphor.
+392	Simile	E: Simile
+393	Metaphor	C: Creative Paraphrase
+394	Metaphor	B: Metaphor
+395	Sarcasm	C: Creative Paraphrase
+396	CreativeParaphrase	B: Metaphor
+397	Sarcasm	C: Creative Paraphrase
+398	CreativeParaphrase	C: Creative Paraphrase
+399	CreativeParaphrase	C: Creative Paraphrase
+400	Idiom	B: Metaphor
+401	Sarcasm	C: Creative Paraphrase
+402	CreativeParaphrase	C: Creative Paraphrase
+403	Metaphor	C: Creative Paraphrase
+404	Idiom	B: Metaphor
+405	Metaphor	C: Creative Paraphrase
+407	Sarcasm	D: Sarcasm
+408	Metaphor	C: Creative Paraphrase
+409	Sarcasm	D: Sarcasm
+410	Idiom	C: Creative Paraphrase.
+411	Metaphor	B: Metaphor
+412	Sarcasm	C: Creative Paraphrase
+413	CreativeParaphrase	C: Creative Paraphrase
+414	CreativeParaphrase	C: Creative Paraphrase
+415	CreativeParaphrase	C: Creative Paraphrase
+416	Idiom	C: Creative Paraphrase
+417	CreativeParaphrase	C: Creative Paraphrase
+418	CreativeParaphrase	C: Creative Paraphrase
+419	Sarcasm	D: Sarcasm.
+420	Idiom	C: Creative Paraphrase
+421	Metaphor	C: Creative Paraphrase
+422	Idiom	C: Creative Paraphrase
+423	Sarcasm	C: Creative Paraphrase.
+424	Simile	B: Metaphor
+425	CreativeParaphrase	C: Creative Paraphrase
+426	Sarcasm	C: Creative Paraphrase
+427	CreativeParaphrase	C: Creative Paraphrase
+428	Sarcasm	E: Simile
+429	Idiom	C: Creative Paraphrase
+430	Simile	B: Metaphor
+432	CreativeParaphrase	C: Creative Paraphrase
+435	Idiom	C: Creative Paraphrase.
+436	Idiom	A: Idiom
+437	Sarcasm	C: Creative Paraphrase
+438	Idiom	C: Creative Paraphrase
+439	Idiom	B: Metaphor
+440	Sarcasm	D: Sarcasm
+441	Simile	B: Metaphor
+442	Sarcasm	C: Creative Paraphrase
+443	Metaphor	C: Creative Paraphrase
+444	Sarcasm	C: Creative Paraphrase
+445	CreativeParaphrase	C: Creative Paraphrase
+446	Simile	B: Metaphor
+447	Sarcasm	D: Sarcasm
+448	Metaphor	C: Creative Paraphrase
+449	Sarcasm	C: Creative Paraphrase.
+450	Idiom	B: Metaphor
+451	Simile	E: Simile
+452	Sarcasm	C: Creative Paraphrase
+453	Simile	B: Metaphor
+454	CreativeParaphrase	C: Creative Paraphrase
+455	Sarcasm	D: Sarcasm
+456	Metaphor	B: Metaphor
+457	Simile	C: Creative Paraphrase.
+458	Simile	B: Metaphor.
+459	Simile	E: Simile
+460	Sarcasm	C: Creative Paraphrase
+461	Sarcasm	D: Sarcasm.
+462	Sarcasm	B: Metaphor
+463	Idiom	C: Creative Paraphrase
+464	CreativeParaphrase	C: Creative Paraphrase.
+465	Sarcasm	D: Sarcasm
+466	Idiom	B: Metaphor.
+467	CreativeParaphrase	C: Creative Paraphrase
+468	CreativeParaphrase	C: Creative Paraphrase
+469	Metaphor	C: Creative Paraphrase.
+470	CreativeParaphrase	C: Creative Paraphrase
+472	Idiom	B: Metaphor
+473	Idiom	C: Creative Paraphrase
+474	CreativeParaphrase	C: Creative Paraphrase
+475	Sarcasm	C: Creative Paraphrase
+476	Sarcasm	C: Creative Paraphrase.
+477	Sarcasm	D: Sarcasm
+478	Idiom	C: Creative Paraphrase
+479	Metaphor	C: Creative Paraphrase
+481	Metaphor	B: Metaphor
+482	CreativeParaphrase	C: Creative
+483	Sarcasm	D: Sarcasm.
+484	Metaphor	C: Creative Paraphrase
+485	Sarcasm	D: Sarcasm
+487	Sarcasm	C: Creative Paraphrase.
+488	Idiom	B: Metaphor
+489	Sarcasm	D: Sarcasm
+490	Simile	B: Metaphor
+491	CreativeParaphrase	C: Creative Paraphrase
+492	Idiom	C: Creative Paraphrase
+494	Simile	B: Metaphor.
+495	CreativeParaphrase	B: Metaphor
+496	Metaphor	C: Creative Paraphrase
+497	Metaphor	C: Creative Paraphrase
+498	Sarcasm	C: Creative Paraphrase
+48	Idiom	B: Metaphor
+61	Metaphor	C: Creative Paraphrase
+135	Sarcasm	D: Sarcasm
+210	Idiom	C: Creative Paraphrase
+285	Simile	E: Simile.
+360	CreativeParaphrase	C: Creative Paraphrase.
+375	Idiom	C: Creative Paraphrase
+431	Sarcasm	B: Metaphor
+433	Metaphor	B: Metaphor
+434	Sarcasm	C: Creative Paraphrase
+471	Simile	E: Simile
+480	Sarcasm	C: Creative Paraphrase
+486	Sarcasm	D: Sarcasm
+493	CreativeParaphrase	C: Creative Paraphrase
+499	Sarcasm	C: Creative Paraphrase
+89	Idiom	C: Creative Paraphrase
+406	Sarcasm	C: Creative Paraphrase
