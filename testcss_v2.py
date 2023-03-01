@@ -290,6 +290,7 @@ def parse_arguments():
             "wiki_politeness",
             "media_ideology",
             "hippocorpus",
+            "indian_english_dialect"
         ],
         help="dataset used for experiment",
     )
@@ -337,6 +338,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
         args.answer_path = "css_data/hippocorpus/answer"
+    elif args.dataset == "indian_english_dialect":
+        args.raw_datapath = "css_data/indian_english_dialect/indian_english_dialect.json"
+        args.input_path = "css_data/indian_english_dialect/test.json"
+        args.answer_path = "css_data/indian_english_dialect/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
