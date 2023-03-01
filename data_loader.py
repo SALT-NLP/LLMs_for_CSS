@@ -1,4 +1,6 @@
 import argparse, csv, json, os, re, wget
+from string import ascii_uppercase
+import itertools
 import numpy as np
 import pandas as pd
 from convokit import Corpus, download
@@ -87,6 +89,37 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
         os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))
 
+def sentence_alphaenumerate(text):
+
+    def iter_all_strings():
+        for size in itertools.count(1):
+            for s in itertools.product(ascii_uppercase, repeat=size):
+                yield "".join(s)
+    
+    string = ""
+    for i, a in enumerate(iter_all_strings()):
+        sents = text.split('. ')
+        if i>=len(sents):
+            break
+        string += f"{a.upper()}: {sents[i]}"
+        if i<len(sents)-1:
+            string += ".\n"
+    return string
+
+def alphaenumerate_process(dataset, save_dir):
+    context_column, label_columns = csv_column_map[dataset]
+    df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
+    df["labels"] = df[label_columns]
+    df = boolify(df)
+    df["context"] = [sentence_alphaenumerate(text) for text in df[context_column].values]
+    df["prompts"] = build_prompts(
+        df, prompts_templates[dataset]
+    )
+    print(df.head()["prompts"])
+    df = df[["context", "labels", "prompts"]]
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+    df.to_json("{}/{}.json".format(save_dir, dataset))
 
 def convokit_process(dataset, save_dir):
     corpus = Corpus(
@@ -182,6 +215,8 @@ def convokit_process(dataset, save_dir):
 def main(dataset, save_dir):
     if dataset in convokit_ds:
         convokit_process(dataset, save_dir)
+    elif dataset in {'hippocorpus'}:
+        alphaenumerate_process(dataset, save_dir)
     elif dataset in csv_download:
         csv_process(dataset, save_dir)
     elif dataset in jsonl_download:
