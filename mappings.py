@@ -148,5 +148,5 @@ C: Center
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
-    "hippocorpus": """Which sentences above indicate new events?""",
+    "hippocorpus": """This is an Event Extraction task. Which sentences above indicate new events?""",
 }
