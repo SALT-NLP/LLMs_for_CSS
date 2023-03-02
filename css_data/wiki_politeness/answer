@@ -1,500 +1,498 @@
-0	1	B: Neutral.
-1	0	B: Neutral
-2	0	B: Neutral.
-3	1	B: Neutral
-4	1	B: Neutral
-5	1	B: Neutral
-6	1	B: Neutral
-7	0	B: Neutral.
-8	-1	B: Neutral
-9	-1	B: Neutral
-10	1	B: Neutral
-11	0	B: Neutral.
-12	0	B: Neutral.
-13	0	B: Neutral.
-14	0	B: Neutral
-15	-1	B: Neutral
-16	-1	B: Neutral.
-17	-1	B: Neutral
-18	-1	B: Neutral.
-19	0	B: Neutral.
-20	-1	B: Neutral.
-21	1	B: Neutral
-22	-1	A: Polite
-23	1	A: Polite
-24	-1	B: Neutral
-25	0	B: Neutral.
-26	1	B: Neutral.
-27	1	B: Neutral
-28	-1	C: Impolite
-29	-1	B: Neutral
-30	0	B: Neutral
-31	0	B: Neutral
-32	0	B: Neutral
-33	1	B: Neutral.
-34	0	B: Neutral
-35	1	B: Neutral
-36	-1	C: Impolite
-37	-1	B: Neutral.
-38	-1	C: Impolite
-39	0	B: Neutral
-40	0	C: Impolite
-41	0	B: Neutral
-42	0	B: Neutral
-43	1	A: Polite.
-44	0	B: Neutral
-45	0	B: Neutral
-46	-1	B: Neutral
-47	-1	C: Impolite
-48	1	B: Neutral.
-49	0	B: Neutral
-50	-1	B: Neutral.
-51	0	B: Neutral.
-52	-1	B: Neutral
-53	0	B: Neutral
-54	0	B: Neutral.
-55	-1	B: Neutral
-56	-1	B: Neutral.
-57	0	B: Neutral.
-58	0	B: Neutral.
-59	0	B: Neutral
-60	-1	B: Neutral
-61	-1	B: Neutral
-62	1	A: Polite
-63	0	A: Polite.
-64	-1	B: Neutral
-65	0	B: Neutral
-66	1	B: Neutral
-67	0	B: Neutral
-68	1	B: Neutral.
-69	-1	B: Neutral
-70	0	B: Neutral
-71	0	B: Neutral
-72	1	B: Neutral
-73	0	B: Neutral.
-74	1	B: Neutral
-76	1	B: Neutral
-77	-1	C: Impolite
-78	0	B: Neutral.
-79	0	B: Neutral
-80	0	B: Neutral.
-81	-1	C: Impolite
-82	1	B: Neutral.
-83	0	B: Neutral
-84	1	B: Neutral.
-85	0	B: Neutral.
-86	0	B: Neutral
-87	0	B: Neutral
-88	-1	B: Neutral
-89	0	A: Polite
-90	0	B: Neutral
-91	0	B: Neutral.
-92	1	B: Neutral
-93	0	B: Neutral
-94	0	A: Polite
-95	0	B: Neutral
-96	1	B: Neutral
-97	0	B: Neutral
-98	0	B: Neutral.
-99	-1	B: Neutral.
-100	1	B: Neutral
-101	-1	B: Neutral
-102	-1	B: Neutral.
-103	1	B: Neutral
-105	0	B: Neutral
-106	0	B: Neutral
-107	1	B: Neutral.
-108	1	A: Polite.
-109	0	B: Neutral
-110	0	B: Neutral
-111	-1	B: Neutral
-112	1	B: Neutral.
-113	1	B: Neutral.
-114	0	B: Neutral
-115	-1	B: Neutral
-116	0	B: Neutral
-117	1	B: Neutral
-118	0	A: Polite
-119	0	B: Neutral
-120	1	B: Neutral
-121	0	B: Neutral
-122	1	A: Polite
-123	1	B: Neutral
-124	-1	B: Neutral.
-125	-1	B: Neutral.
-126	1	B: Neutral
-127	-1	B: Neutral.
-128	-1	B: Neutral
-129	0	B: Neutral
-130	1	B: Neutral.
-131	0	B: Neutral.
-132	1	B: Neutral
-133	-1	B: Neutral.
-134	1	B: Neutral
-135	1	B: Neutral
-136	1	B: Neutral
-137	1	B: Neutral
-138	1	B: Neutral
-139	0	B: Neutral
-140	-1	B: Neutral
-141	0	B: Neutral
-142	-1	B: Neutral.
-143	1	B: Neutral.
-144	0	B: Neutral.
-145	0	B: Neutral
-146	0	B: Neutral
-147	-1	B: Neutral
-148	0	B: Neutral
-150	-1	B: Neutral.
-151	-1	B: Neutral
-152	0	B: Neutral
-153	0	B: Neutral
-154	0	B: Neutral.
-155	-1	B: Neutral
-156	0	B: Neutral.
-157	-1	B: Neutral
-158	0	B: Neutral.
-159	-1	B: Neutral
-160	1	B: Neutral
-161	-1	B: Neutral
-162	0	B: Neutral
-163	0	B: Neutral
-164	1	B: Neutral
-165	0	B: Neutral
-166	0	B: Neutral
-167	0	B: Neutral
-168	-1	B: Neutral
-169	1	B: Neutral
-170	0	B: Neutral
-171	-1	B: Neutral
-172	-1	B: Neutral.
-173	0	B: Neutral
-174	0	B: Neutral
-175	0	B: Neutral.
-176	-1	B: Neutral
-177	1	B: Neutral
-178	1	B: Neutral
-179	-1	B: Neutral.
-180	-1	B: Neutral.
-181	1	A: Polite
-182	-1	B: Neutral
-183	0	B: Neutral
-184	1	B: Neutral
-185	1	B: Neutral
-186	-1	B: Neutral.
-187	-1	C: Impolite
-188	1	B: Neutral
-189	1	A: Polite
-190	0	B: Neutral
-191	1	B: Neutral
-192	1	B: Neutral
-193	0	B: Neutral
-194	1	B: Neutral
-195	-1	B: Neutral.
-196	1	B: Neutral.
-197	-1	C: Impolite
-198	0	A: Polite
-199	-1	B: Neutral
-200	1	B: Neutral.
-201	-1	A: Polite
-202	1	B: Neutral
-203	-1	B: Neutral
-204	0	B: Neutral.
-205	0	B: Neutral.
-206	1	B: Neutral.
-207	-1	B: Neutral.
-208	-1	B: Neutral
-209	-1	B: Neutral
-210	-1	B: Neutral
-211	0	B: Neutral
-212	-1	B: Neutral.
-213	-1	B: Neutral
-214	0	B: Neutral
-215	-1	B: Neutral.
-216	0	B: Neutral
-217	0	B: Neutral.
-218	-1	B: Neutral
-219	1	The statement "Asukkaista 84,5% oli ruotsinkielisiä ja 15,4% suomenkielisiä vuonna 1970 ja kunta oli kaksikielinen" is neutral.
-220	0	B: Neutral.
-221	0	B: Neutral
-222	1	B: Neutral
-223	1	B: Neutral
-225	-1	C: Impolite.
-226	0	B: Neutral
-227	-1	C: Impolite
-228	0	B: Neutral.
-229	1	B: Neutral
-230	0	B: Neutral
-231	0	B: Neutral.
-232	1	B: Neutral
-233	1	B: Neutral.
-234	0	B: Neutral
-235	0	B: Neutral
-236	0	B: Neutral.
-237	0	B: Neutral.
-238	0	B: Neutral
-239	1	A: Polite.
-240	1	A: Polite
-241	0	B: Neutral
-242	1	A: Polite
-243	0	B: Neutral
-244	0	B: Neutral.
-245	1	B: Neutral
-246	0	B: Neutral
-247	-1	B: Neutral
-248	0	B: Neutral
-249	-1	B: Neutral.
-250	-1	C: Impolite.
-251	1	B: Neutral
-252	1	B: Neutral.
-253	0	B: Neutral.
-254	0	B: Neutral
-255	1	B: Neutral
-256	0	B: Neutral.
-257	1	B: Neutral.
-258	0	B: Neutral
-259	1	B: Neutral
-260	0	B: Neutral.
-261	0	B: Neutral.
-262	1	A: Polite
-263	0	B: Neutral
-264	0	B: Neutral
-265	0	B: Neutral
-266	0	B: Neutral
-267	-1	B: Neutral
-268	0	B: Neutral
-269	1	B: Neutral
-270	0	B: Neutral.
-271	0	B: Neutral
-272	1	B: Neutral
-273	0	B: Neutral.
-274	0	B: Neutral
-275	0	A: Polite
-276	-1	C: Impolite.
-277	1	B: Neutral.
-278	1	B: Neutral.
-279	1	B: Neutral
-280	0	A: Polite
-281	0	B: Neutral
-282	-1	B: Neutral.
-283	0	B: Neutral
-284	-1	B: Neutral
-285	0	B: Neutral.
-286	0	B: Neutral
-287	0	B: Neutral.
-288	1	B: Neutral.
-289	-1	B: Neutral
-290	1	B: Neutral.
-291	-1	B: Neutral
-292	1	B: Neutral
-293	-1	B: Neutral
-294	0	B: Neutral
-295	-1	B: Neutral
-296	0	C: Impolite.
-297	0	B: Neutral
-298	0	B: Neutral.
-300	0	B: Neutral.
-301	0	B: Neutral
-302	1	B: Neutral.
-303	1	B: Neutral
-304	0	B: Neutral.
-305	0	B: Neutral.
-306	0	B: Neutral.
-307	0	B: Neutral.
-308	0	B: Neutral.
-309	0	B: Neutral
-310	-1	B: Neutral
-311	-1	B: Neutral
-312	1	B: Neutral
-313	-1	B: Neutral
-314	0	B: Neutral
-315	1	B: Neutral.
-316	-1	B: Neutral
-317	0	B: Neutral.
-318	1	B: Neutral
-319	0	B: Neutral
-320	0	B: Neutral
-321	-1	B: Neutral.
-322	-1	C: Impolite
-323	0	B: Neutral
-324	0	B: Neutral
-325	1	B: Neutral
-326	0	B: Neutral
-327	0	B: Neutral.
-328	0	B: Neutral.
-329	-1	B: Neutral
-330	0	A: Polite
-331	1	B: Neutral
-332	1	B: Neutral.
-333	0	B: Neutral.
-334	0	B: Neutral
-335	-1	A: Polite
-336	0	B: Neutral.
-337	1	B: Neutral
-338	-1	B: Neutral.
-339	-1	C: Impolite
-340	1	A: Polite
-341	0	B: Neutral
-342	-1	B: Neutral
-343	-1	C: Impolite.
-344	-1	B: Neutral
-345	0	B: Neutral
-346	0	B: Neutral
-347	-1	B: Neutral
-348	-1	A: Polite
-349	-1	B: Neutral
-350	0	B: Neutral
-351	1	A: Polite.
-352	0	B: Neutral.
-353	0	B: Neutral
-354	-1	B: Neutral
-355	0	B: Neutral
-356	0	B: Neutral
-357	-1	B: Neutral.
-358	1	B: Neutral.
-359	-1	B: Neutral.
-360	-1	B: Neutral.
-361	0	B: Neutral.
-362	-1	B: Neutral.
-363	1	B: Neutral
-364	0	B: Neutral
-365	0	B: Neutral.
-366	0	B: Neutral
-367	0	B: Neutral
-368	-1	B: Neutral.
-369	0	B: Neutral
-370	0	B: Neutral
-371	0	B: Neutral
-372	1	B: Neutral
-373	-1	B: Neutral
-375	1	B: Neutral
-376	0	B: Neutral
-377	-1	C: Impolite
-378	1	B: Neutral
-379	0	B: Neutral
-380	0	B: Neutral
-381	1	A: Polite
-382	0	B: Neutral
-383	-1	B: Neutral
-384	-1	B: Neutral
-385	0	B: Neutral
-386	0	B: Neutral
-387	-1	C: Impolite.
-388	0	B: Neutral
-389	0	B: Neutral
-390	0	B: Neutral.
-391	0	B: Neutral.
-392	1	B: Neutral.
-393	0	B: Neutral
-394	-1	B: Neutral.
-395	-1	B: Neutral.
-396	0	B: Neutral
-397	0	B: Neutral.
-398	0	B: Neutral.
-399	0	B: Neutral
-400	-1	B: Neutral.
-401	1	B: Neutral
-402	-1	B: Neutral
-403	0	B: Neutral
-404	0	B: Neutral
-405	0	B: Neutral.
-406	-1	B: Neutral.
-407	1	B: Neutral
-408	0	B: Neutral.
-409	1	A: Polite.
-410	-1	C: Impolite
-411	0	B: Neutral.
-412	0	B: Neutral.
-413	1	B: Neutral
-414	0	B: Neutral
-415	1	B: Neutral
-416	0	B: Neutral.
-417	1	A: Polite
-418	0	A: Polite
-419	-1	B: Neutral
-420	0	B: Neutral
-421	1	B: Neutral
-422	0	B: Neutral
-423	-1	B: Neutral
-424	1	B: Neutral
-425	0	B: Neutral
-426	-1	C: Impolite
-427	0	B: Neutral
-428	-1	B: Neutral.
-429	0	C: Impolite
-430	-1	B: Neutral.
-431	-1	B: Neutral
-432	0	B: Neutral.
-433	1	B: Neutral.
-434	-1	C: Impolite.
-435	0	B: Neutral
-436	-1	C: Impolite
-437	0	B: Neutral.
-438	-1	C: Impolite.
-439	0	B: Neutral
-440	1	B: Neutral
-441	-1	B: Neutral.
-442	0	C: Impolite
-443	0	B: Neutral.
-444	-1	B: Neutral
-445	0	B: Neutral
-446	0	B: Neutral
-449	0	B: Neutral
-450	0	B: Neutral
-451	-1	B: Neutral
-452	-1	B: Neutral.
-453	1	B: Neutral
-454	0	B: Neutral
-455	0	B: Neutral
-456	0	B: Neutral
-457	-1	B: Neutral.
-459	1	B: Neutral
-460	1	A: Polite
-461	1	B: Neutral
-462	1	B: Neutral.
-463	-1	B: Neutral.
-464	0	B: Neutral.
-465	0	B: Neutral
-466	0	B: Neutral
-467	-1	B: Neutral
-468	-1	B: Neutral
-469	0	The best option that describes the statement above is A: Polite.
-470	0	B: Neutral
-471	1	B: Neutral.
-473	1	The statement above is best described as A: Polite.
-474	-1	B: Neutral.
-475	0	B: Neutral
-476	0	C: Impolite.
-477	1	C: Impolite.
-478	1	B: Neutral
-479	-1	B: Neutral
-481	1	B: Neutral
-482	-1	B: Neutral
-483	0	B: Neutral
-484	0	B: Neutral.
-486	1	B: Neutral.
-487	-1	B: Neutral
-488	0	B: Neutral
-489	0	B: Neutral.
-490	1	B: Neutral.
-491	0	B: Neutral
-492	-1	B: Neutral
-493	1	B: Neutral
-494	-1	C: Impolite.
-495	0	B: Neutral
-497	-1	B: Neutral
-498	0	B: Neutral.
-499	-1	A: Polite
-75	1	B: Neutral
-104	0	B: Neutral
-149	0	A: Polite
-224	0	B: Neutral
-299	0	B: Neutral
-374	-1	B: Neutral.
-447	0	B: Neutral
-448	-1	B: Neutral.
-458	0	B: Neutral
-472	1	B: Neutral
-480	-1	B: Neutral
-485	0	B: Neutral
-496	1	B: Neutral
+0	-1	C
+1	-1	A
+2	-1	B
+3	-1	B
+4	-1	B
+5	-1	B
+6	-1	B
+7	-1	B
+8	-1	A
+9	-1	B
+10	-1	B
+11	-1	B
+12	-1	B
+13	-1	B
+14	-1	B
+15	-1	B
+16	-1	B
+17	-1	B
+18	-1	A
+19	-1	B
+20	-1	C
+21	-1	B
+22	-1	B
+23	-1	B
+24	-1	B
+25	-1	A
+26	-1	B
+27	-1	C
+28	-1	B
+29	-1	C
+30	-1	B
+31	-1	B
+32	-1	B
+33	-1	B
+34	-1	B
+35	-1	B
+36	-1	B
+37	-1	B
+38	-1	B
+39	-1	B
+40	-1	B
+41	-1	B
+42	-1	B
+43	-1	B
+44	-1	B
+45	-1	B
+46	-1	B
+47	-1	B
+48	-1	B
+49	-1	B
+50	-1	B
+51	-1	B
+52	-1	B
+53	-1	B
+54	-1	B
+55	-1	B
+56	-1	B
+57	-1	B
+58	-1	B
+59	-1	C
+60	-1	B
+61	-1	B
+62	-1	B
+63	-1	B
+64	-1	B
+65	-1	B
+66	-1	B
+67	-1	B
+68	-1	B
+69	-1	A
+70	-1	A
+71	-1	B
+72	-1	B
+73	-1	B
+74	-1	&&&&&&&&&&&&A
+75	-1	B
+76	-1	B
+77	-1	B
+78	-1	C
+79	-1	C
+80	-1	B
+81	-1	B
+82	-1	A
+83	-1	B
+84	-1	B
+85	-1	B
+86	-1	B
+87	-1	B
+88	-1	B
+89	-1	B
+90	-1	B
+91	-1	B
+92	-1	B
+93	-1	B
+94	-1	C
+95	-1	C
+96	-1	B
+97	-1	B
+98	-1	C
+99	-1	B
+100	-1	C
+101	-1	B
+102	-1	B
+103	-1	B
+104	-1	B
+105	-1	A
+106	-1	B
+107	-1	B
+108	-1	B
+109	-1	B
+110	-1	B
+111	-1	B
+112	-1	B
+113	-1	B
+114	-1	B
+115	-1	B
+116	-1	B
+117	-1	B
+118	-1	B
+119	-1	B
+120	-1	B
+121	-1	B
+122	-1	B
+123	-1	B
+124	-1	B
+125	-1	B
+126	-1	B
+127	-1	B
+128	-1	B
+129	-1	B
+130	-1	B
+131	-1	B
+132	-1	B
+133	-1	B
+134	-1	B
+135	-1	B
+136	-1	B
+137	-1	C
+138	-1	A
+139	-1	B
+140	-1	B
+141	-1	C
+142	-1	B
+143	-1	B
+144	-1	B
+145	-1	B
+146	-1	B
+147	-1	A
+148	-1	B
+149	-1	B
+150	-1	B
+151	-1	B
+152	-1	B
+153	-1	B
+154	-1	B
+155	-1	C
+156	-1	B
+157	-1	B
+158	-1	A
+159	-1	B
+160	-1	B
+161	-1	B
+162	-1	B
+163	-1	B
+164	-1	B
+165	-1	C
+166	0	B
+167	0	B
+168	0	A
+169	0	B
+170	0	B
+171	0	B
+172	0	B
+173	0	A
+174	0	B
+175	0	A
+176	0	B
+177	0	B
+178	0	B
+179	0	B
+180	0	A
+181	0	A
+182	0	A
+183	0	B
+184	0	B
+185	0	B
+186	0	B
+187	0	B
+188	0	B
+189	0	B
+190	0	B
+191	0	B
+192	0	B
+193	0	A
+194	0	B
+195	0	B
+196	0	B
+197	0	B
+198	0	B
+199	0	B
+200	0	A
+201	0	B
+202	0	B
+203	0	A
+204	0	B
+205	0	B
+206	0	B
+207	0	B
+208	0	A
+209	0	B
+210	0	B
+211	0	B
+212	0	B
+213	0	A
+214	0	B
+215	0	B
+216	0	A
+217	0	B
+218	0	A
+219	0	A
+220	0	A
+221	0	B
+222	0	A
+223	0	A
+224	0	B
+225	0	B
+226	0	B
+227	0	B
+228	0	B
+229	0	B
+230	0	B
+231	0	&&&&&&&&&&&&B
+232	0	B
+233	0	B
+234	0	B
+235	0	B
+236	0	B
+237	0	A
+238	0	B
+239	0	B
+240	0	B
+241	0	B
+242	0	A
+243	0	B
+244	0	B
+245	0	B
+246	0	A
+247	0	B
+248	0	B
+249	0	B
+250	0	A
+251	0	B
+252	0	B
+253	0	B
+254	0	B
+255	0	A
+256	0	B
+257	0	B
+258	0	B
+259	0	A
+260	0	B
+261	0	B
+262	0	A
+263	0	&&&&&&&&&&&&B
+264	0	B
+265	0	B
+266	0	B
+267	0	B
+268	0	A
+269	0	B
+270	0	A
+271	0	B
+272	0	&&&&&&&&&&&&B
+273	0	B
+274	0	B
+275	0	B
+276	0	B
+277	0	B
+278	0	B
+279	0	B
+280	0	B
+281	0	B
+282	0	A
+283	0	B
+284	0	B
+285	0	B
+286	0	B
+287	0	&&&&&&&&&&&&B
+288	0	B
+289	0	B
+290	0	B
+291	0	A
+292	0	A
+293	0	B
+294	0	A
+295	0	B
+296	0	B
+297	0	A
+298	0	B
+299	0	B
+300	0	B
+301	0	A
+302	0	B
+303	0	B
+304	0	B
+305	0	B
+306	0	B
+307	0	B
+308	0	B
+309	0	B
+310	0	B
+311	0	B
+312	0	B
+313	0	A
+314	0	B
+315	0	B
+316	0	B
+317	0	B
+318	0	B
+319	0	B
+320	0	A
+321	0	B
+322	0	A
+323	0	B
+324	0	A
+325	0	A
+326	0	A
+327	0	B
+328	0	A
+329	0	B
+330	0	B
+331	0	B
+332	1	A
+333	1	B
+334	1	A
+335	1	A
+336	1	&&&&&&&&&&&&A
+337	1	A
+338	1	A
+339	1	A
+340	1	&&&&&&&&&&&&B
+341	1	A
+342	1	A
+343	1	B
+344	1	A
+345	1	B
+346	1	B
+347	1	A
+348	1	B
+349	1	A
+350	1	A
+351	1	A
+352	1	A
+353	1	B
+354	1	A
+355	1	A
+356	1	A
+357	1	A
+358	1	A
+359	1	B
+360	1	A
+361	1	A
+362	1	A
+363	1	B
+364	1	A
+365	1	B
+366	1	&&&&&&&&&&&&A
+367	1	A
+368	1	B
+369	1	B
+370	1	A
+371	1	B
+372	1	A
+373	1	B
+374	1	A
+375	1	B
+376	1	A
+377	1	A
+378	1	A
+379	1	B
+380	1	A
+381	1	A
+382	1	A
+383	1	B
+384	1	B
+385	1	A
+386	1	A
+387	1	A
+388	1	A
+389	1	A
+390	1	B
+391	1	B
+392	1	B
+393	1	A
+394	1	A
+395	1	B
+396	1	A
+397	1	A
+398	1	A
+399	1	A
+400	1	A
+401	1	B
+402	1	B
+403	1	A
+404	1	A
+405	1	B
+406	1	A
+407	1	A
+408	1	A
+409	1	B
+410	1	B
+411	1	B
+412	1	B
+413	1	A
+414	1	B
+415	1	A
+416	1	A
+417	1	A
+418	1	A
+419	1	B
+420	1	A
+421	1	A
+422	1	B
+423	1	B
+424	1	A
+425	1	A
+426	1	B
+427	1	A
+428	1	B
+429	1	A
+430	1	A
+431	1	A
+432	1	A
+433	1	A
+434	1	A
+435	1	A
+436	1	A
+437	1	B
+438	1	B
+439	1	B
+440	1	A
+441	1	B
+442	1	A
+443	1	A
+444	1	B
+445	1	A
+446	1	A
+447	1	A
+448	1	&&&&&&&&&&&&A
+449	1	A
+450	1	A
+451	1	B
+452	1	B
+453	1	A
+454	1	A
+455	1	A
+456	1	A
+457	1	A
+458	1	A
+459	1	A
+460	1	B
+461	1	A
+462	1	C
+463	1	A
+464	1	B
+465	1	B
+466	1	B
+467	1	A
+468	1	A
+469	1	A
+470	1	A
+471	1	A
+472	1	A
+473	1	A
+474	1	A
+475	1	A
+476	1	A
+477	1	B
+478	1	B
+479	1	A
+480	1	A
+481	1	A
+482	1	A
+483	1	A
+484	1	B
+485	1	B
+486	1	A
+487	1	A
+488	1	A
+489	1	B
+490	1	A
+491	1	B
+492	1	B
+493	1	A
+494	1	A
+495	1	A
+496	1	A
+497	1	B
