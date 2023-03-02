@@ -29,6 +29,11 @@ csv_column_map = {
     "indian_english_dialect": ("Example", "Feature"),
 }
 
+drop_labels = {
+    "flute-classification": ["CreativeParaphrase"],
+    "flute-explanation": ["CreativeParaphrase"],
+}
+
 csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
