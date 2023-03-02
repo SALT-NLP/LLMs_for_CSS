@@ -26,7 +26,7 @@ csv_column_map = {
     "flute-classification": (("premise", "hypothesis"), "type"),
     "media_ideology": ("content", "bias_text"),
     "hippocorpus": ("story", "events"),
-    "indian_english_dialect": ("Example", "Feature")
+    "indian_english_dialect": ("Example", "Feature"),
 }
 
 csv_download = {
@@ -43,18 +43,18 @@ jsonl_download = {
 prompts_templates = {
     "power": """
 
-Based on the conversation is {$speaker} an administrator on Wikipedia? 
-A: True
-B: False
+Based on the conversation is {$speaker} in a position of power? 
+True
+False
 
 Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.""",
     "stance": """
 
 Does {$speaker} support {$title}? 
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,  # This Dataset is strange currently, too long of context
     "politeness": """
 
@@ -68,10 +68,10 @@ Constraint: Answer with only the option above that is most accurate and nothing 
     "persuasion": """
 
 If you were the original poster, would this reply convince you?
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,
     "discourse": """
 
@@ -108,18 +108,18 @@ Reframe the previous sentence positively, without changing the core meaning of t
 
 
 Is the above joke humourous by standard societal norms?
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,
     "toxicity": """
 
 Will the following conversation eventually going to derail into a personal attack? 
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,
     "flute-explanation": """
 
@@ -134,9 +134,8 @@ Constraint: Explain the figurative language in the hypothesis in one sentence an
 Which of the following best describes the type of figurative language used in the hypothesis?
 A: Idiom
 B: Metaphor
-C: Creative Paraphrase
-D: Sarcasm
-E: Simile
+C: Sarcasm
+D: Simile
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
