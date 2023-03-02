@@ -63,7 +63,7 @@ Constraint: Even if you are uncertain, you must pick either True or False with w
 """,  # This Dataset is strange currently, too long of context
     "politeness": """
 
-Which of the following best describes the statement above? 
+Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
 B: Neutral
 C: Impolite
