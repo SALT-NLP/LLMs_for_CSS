@@ -32,18 +32,11 @@ def data_split(raw_datapth, input_path, args):
     num_testing = min(args.testing_size, len(indexes))
     samples = int(num_testing / len(df.groupby("labels")))
     random.seed(0)
-    selected_indexs = df.groupby("labels", group_keys=False).apply(
+    sample = df.groupby("labels", group_keys=False).apply(
         lambda x: x.sample(n=samples, random_state=random.seed(0))
     )
 
-    for u in selected_indexs:
-        contexts.append(raw_data["context"][u])
-        labels.append(raw_data["labels"][u])
-        prompts.append(raw_data["prompts"][u])
-
-    testing_data = {"context": contexts, "labels": labels, "prompts": prompts}
-    data_f = pd.DataFrame.from_dict(testing_data)
-    data_f.to_json(input_path)
+    sample.to_json(input_path)
 
 
 def get_response(allprompts):
@@ -71,6 +64,8 @@ def get_response(allprompts):
                     "40": 10,
                     "41": 10,
                     "42": 10,
+                    "17821": 20,
+                    "25101": 20,
                 },
                 temperature=0,
                 max_tokens=2,
@@ -95,8 +90,8 @@ def get_response(allprompts):
                 print("Error and Retry after 2 minutes.")
                 time.sleep(120)
 
-        sleep = 6
-        time.sleep(sleep)  # Rate Limit is 50 queries per hour
+        # sleep = 2
+        # time.sleep(sleep)  # Rate Limit is 50 queries per hour
     return allprompts, allresponse
 
 
@@ -258,10 +253,10 @@ def calculateres(path, args):
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             if gold == "true":
-                if pred in ["i", "true"]:
+                if pred in ["b", "true"]:
                     accnum += 1
             elif gold == "false":
-                if pred in ["ii", "false"]:
+                if pred in ["a", "false"]:
                     accnum += 1
         elif args.dataset in ["wiki_politeness"]:
             pred = content[2].lower()
