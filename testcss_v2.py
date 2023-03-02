@@ -1,6 +1,8 @@
 import json
 import os
 import pandas as pd
+import itertools
+from string import ascii_uppercase
 from os.path import exists
 from os import getenv
 from sys import argv, exit
@@ -196,9 +198,18 @@ def in_domain(response, args):
 
 
 def calculateres(path, args):
+    
+    if args.dataset == 'hippocorpus':
+        calculateres_hippocorpus(path, args)
+        return
+
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
+    if args.dataset == 'indian_english_dialect':
+        # to help correct accuracy metrics, we need to simplify the label space 
+        # by removing elements in double quotations
+        label_set = set([re.sub(r' "[\w\s’,//]+"', '', v) for v in label_set])
     print("###### Label Space:", label_set)
     label_dict = {"None": 0}
 
@@ -222,7 +233,7 @@ def calculateres(path, args):
         content = oneline.split("\t")
         if len(content) != 3:
             continue
-        index = int(content[0])
+        index = content[0]
         allnum += 1
 
         if args.dataset in [
@@ -260,6 +271,24 @@ def calculateres(path, args):
                 accnum += 1
             golds.append(gold)
             preds.append(pred)
+        elif args.dataset in ["indian_english_dialect"]:
+            index = content[0]
+            context = a['context'][index]
+            gold = re.sub(r' "[\w\s’,//]+"', '', a['labels'][index].lower())
+            pred_ = content[2].lower()
+            pred = pred_
+
+            if gold=='none of the above':
+                continue # we didn't give 'none of the above' as an option to chatGPT in the first place
+
+            for u in label_set:
+                if u in pred_:
+                    pred = u
+                    break
+            if gold == pred:
+                accnum += 1
+            golds.append(gold)
+            preds.append(pred)
 
         else:
             pass
@@ -271,6 +300,71 @@ def calculateres(path, args):
 
     if len(preds) > 0:
         print(classification_report(golds, preds, target_names=target_names))
+        
+def calculateres_hippocorpus(path, args):
+    def iter_all_strings():
+        for size in itertools.count(1):
+            for s in itertools.product(ascii_uppercase, repeat=size):
+                yield "".join(s)
+
+    path = args.answer_path
+    with open(args.input_path, 'r') as f:
+        a = json.load(f)
+
+    f = open(path, 'r', encoding="utf-8")
+
+    TP = 0
+    FP = 0
+    TN = 0
+    FN = 0
+
+    while True:
+        oneline = f.readline().strip()
+        if not oneline:
+            break
+        content = oneline.split('\t')
+        if len(content) != 3:
+            continue
+        index = content[0]
+        all_sents = a['context'][index].split('.\n')
+        gold = literal_eval(a['labels'][index])
+        pred = content[2]
+
+        for i, x in enumerate(iter_all_strings()):
+            if i>=len(all_sents):
+                break
+            sent = re.sub(f"([A-Z]+:) ", "", all_sents[i]) 
+            if sent[-1]!='.':
+                sent += '.'
+            if ((f"{x.upper()}:" in pred) or\
+                (f"{x.upper()}," in pred) or\
+                (f", {x.upper()}" in pred) or\
+                (f",{x.upper()}" in pred) or\
+                (sent in pred)): # predicted positive
+                if sent in gold: # true positive
+                    TP += 1
+                else:            # false positive
+                    #print(sent, gold)
+                    break
+                    FP += 1
+            else:
+                if sent in gold: # false negative
+                    FN += 1
+                else:            # true negative
+                    TN += 1
+
+
+    acc = float(TP+TN) / float(TP+TN+FP+FN)
+    p = float(TP) / float(TP+FP)
+    r = float(TP) / float(TP+FN)
+    f = float(2*TP) / float(2*TP + FP + FN)
+    print("\n ###### Results ###### \n")
+    print("Acc: ",  acc)
+    print("Precision: ",  p)
+    print("Recall: ",  r)
+    print("F1: ",  f)
+    print('Number of Correct Data: ', (TP+TN))
+    print("Number of Testing Data: ",  (TP+TN+FP+FN))
 
 
 def parse_arguments():
@@ -290,6 +384,7 @@ def parse_arguments():
             "wiki_politeness",
             "media_ideology",
             "hippocorpus",
+            "indian_english_dialect"
         ],
         help="dataset used for experiment",
     )
@@ -337,6 +432,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
         args.answer_path = "css_data/hippocorpus/answer"
+    elif args.dataset == "indian_english_dialect":
+        args.raw_datapath = "css_data/indian_english_dialect/indian_english_dialect.json"
+        args.input_path = "css_data/indian_english_dialect/test.json"
+        args.answer_path = "css_data/indian_english_dialect/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 

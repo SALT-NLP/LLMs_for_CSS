@@ -101,7 +101,7 @@ def sentence_alphaenumerate(text):
         sents = text.split('. ')
         if i>=len(sents):
             break
-        string += f"{a.upper()}: {sents[i]}"
+        string += f"{a}: {sents[i]}"
         if i<len(sents)-1:
             string += ".\n"
     return string
