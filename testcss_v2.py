@@ -12,6 +12,7 @@ import re
 import random
 import argparse
 from revChatGPT.V1 import Chatbot
+import openai
 from sklearn.metrics import classification_report
 from config import config_access_token
 
@@ -28,19 +29,16 @@ def data_split(raw_datapth, input_path, args):
     with open(raw_datapth, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     indexes = raw_data["context"].keys()
+    df = pd.DataFrame.from_dict(raw_data)
 
     num_testing = min(args.testing_size, len(indexes))
+    samples = int(num_testing / len(df.groupby("labels")))
     random.seed(0)
-    selected_indexs = random.sample(indexes, num_testing)
+    sample = df.groupby("labels", group_keys=False).apply(
+        lambda x: x.sample(n=samples, random_state=random.seed(0))
+    )
 
-    for u in selected_indexs:
-        contexts.append(raw_data["context"][u])
-        labels.append(raw_data["labels"][u])
-        prompts.append(raw_data["prompts"][u])
-
-    testing_data = {"context": contexts, "labels": labels, "prompts": prompts}
-    data_f = pd.DataFrame.from_dict(testing_data)
-    data_f.to_json(input_path)
+    sample.to_json(input_path)
 
 
 def get_response(chatbot, allprompts):
@@ -233,12 +231,11 @@ def calculateres(path, args):
         content = oneline.split("\t")
         if len(content) != 3:
             continue
-        index = content[0]
+        index = int(content[0])
         allnum += 1
 
         if args.dataset in [
             "conv_go_awry",
-            "wiki_corpus",
             "reddit_humor",
             "supreme_corpus",
         ]:
@@ -248,16 +245,37 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
+        elif args.dataset in [
+            "wiki_corpus",
+        ]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "true": ["true", "yes"],
+                "false": ["false", "no"],
+            }
+            if pred in mapping[gold]:
+                accnum += 1
         elif args.dataset in ["wiki_politeness"]:
-            if int(content[1]) == 0:
-                gold = "neutral"
-            elif int(content[1]) == 1:
-                gold = "polite"
-            elif int(content[1]) == -1:
-                gold = "impolite"
-            pred = content[2].lower()
-            print(gold, pred)
-            if gold in pred:
+            gold = content[1]
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "1": "A",
+                "0": "B",
+                "-1": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["flute-classification"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "idiom": "A",
+                "metaphor": "B",
+                "sarcasm": "C",
+                "simile": "D",
+            }
+            if pred == mapping[gold].lower():
                 accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = label_dict[content[1].lower()]
