@@ -43,9 +43,9 @@ jsonl_download = {
 prompts_templates = {
     "power": """
 
-Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
-A: True
-B: False
+Does the message above come from someone who is an administrator on Wikipedia? 
+True
+False
 
 Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.""",
     "stance": """
@@ -127,7 +127,7 @@ Which of the following describes the relationship between the premise and the hy
 A: Entailment
 B: Contradiction
 
-Constraint: Explain your answer step by step and then list which of the two options is most accurate.
+Constraint: Explain the figurative language in the hypothesis in one sentence and then answer with which option is the most accurate.
 """,
     "flute-classification": """
 
