@@ -1,6 +1,8 @@
 import json
 import os
 import pandas as pd
+import itertools
+from string import ascii_uppercase
 from os.path import exists
 from os import getenv
 from sys import argv, exit
@@ -204,6 +206,10 @@ def calculateres(path, args):
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
+    if args.dataset == 'indian_english_dialect':
+        # to help correct accuracy metrics, we need to simplify the label space 
+        # by removing elements in double quotations
+        label_set = set([re.sub(r' "[\w\s’,//]+"', '', v) for v in label_set])
     print("###### Label Space:", label_set)
     label_dict = {"None": 0}
 
@@ -227,7 +233,7 @@ def calculateres(path, args):
         content = oneline.split("\t")
         if len(content) != 3:
             continue
-        index = int(content[0])
+        index = content[0]
         allnum += 1
 
         if args.dataset in [
@@ -261,6 +267,24 @@ def calculateres(path, args):
                     pred = label_dict[u]
                     break
                 pred = 0
+            if gold == pred:
+                accnum += 1
+            golds.append(gold)
+            preds.append(pred)
+        elif args.dataset in ["indian_english_dialect"]:
+            index = content[0]
+            context = a['context'][index]
+            gold = re.sub(r' "[\w\s’,//]+"', '', a['labels'][index].lower())
+            pred_ = content[2].lower()
+            pred = pred_
+
+            if gold=='none of the above':
+                continue # we didn't give 'none of the above' as an option to chatGPT in the first place
+
+            for u in label_set:
+                if u in pred_:
+                    pred = u
+                    break
             if gold == pred:
                 accnum += 1
             golds.append(gold)
