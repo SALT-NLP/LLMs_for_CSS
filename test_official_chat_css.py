@@ -27,10 +27,14 @@ def data_split(raw_datapth, input_path, args):
     with open(raw_datapth, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     indexes = raw_data["context"].keys()
+    df = pd.DataFrame.from_dict(raw_data)
 
     num_testing = min(args.testing_size, len(indexes))
+    samples = int(num_testing / len(df.groupby("labels")))
     random.seed(0)
-    selected_indexs = random.sample(indexes, num_testing)
+    selected_indexs = df.groupby("labels", group_keys=False).apply(
+        lambda x: x.sample(n=samples, random_state=random.seed(0))
+    )
 
     for u in selected_indexs:
         contexts.append(raw_data["context"][u])
@@ -239,7 +243,6 @@ def calculateres(path, args):
 
         if args.dataset in [
             "conv_go_awry",
-            "wiki_corpus",
             "reddit_humor",
             "supreme_corpus",
         ]:
@@ -249,16 +252,39 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
+        elif args.dataset in [
+            "wiki_corpus",
+        ]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            if gold == "true":
+                if pred in ["i", "true"]:
+                    accnum += 1
+            elif gold == "false":
+                if pred in ["ii", "false"]:
+                    accnum += 1
         elif args.dataset in ["wiki_politeness"]:
-            if int(content[1]) == 0:
-                gold = "neutral"
-            elif int(content[1]) == 1:
-                gold = "polite"
-            elif int(content[1]) == -1:
-                gold = "impolite"
             pred = content[2].lower()
-            print(gold, pred)
-            if gold in pred:
+            if int(content[1]) == 0:
+                if "b: neutral" in pred:
+                    accnum += 1
+            elif int(content[1]) == 1:
+                if "a: polite" in pred:
+                    accnum += 1
+            elif int(content[1]) == -1:
+                if "c: impolite" in pred:
+                    accnum += 1
+        elif args.dataset in ["flute-classification"]:
+            gold = content[1].lower()
+            pred = content[2].lower()
+            mapping = {
+                "idiom": "A: Idiom",
+                "metaphor": "B: Metaphor",
+                "creativeparaphrase": "C: Creative Paraphrase",
+                "sarcasm": "D: Sarcasm",
+                "simile": "E: Simile",
+            }
+            if pred == mapping[gold].lower():
                 accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = label_dict[content[1].lower()]
