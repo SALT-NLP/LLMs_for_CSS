@@ -109,14 +109,9 @@ Constraint: Answer with one or more of the options above that is most accurate a
 
 Reframe the previous sentence positively, without changing the core meaning of the sentence.
 """,
-    "humor": """
+    "humor": """ 
 
-
-Is the above joke humourous by standard societal norms?
-True
-False
-
-Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
+Is the above joke humorous to most of the people? You must pick between \"True\" or \"False\" You cannot use any other words except for \"True\" or \"False\" 
 """,
     "toxicity": """
 
