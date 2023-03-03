@@ -27,6 +27,7 @@ csv_column_map = {
     "media_ideology": ("content", "bias_text"),
     "hippocorpus": ("story", "events"),
     "indian_english_dialect": ("Example", "Feature"),
+    "ibc": ("sentence", "leaning"),
 }
 
 drop_labels = {
@@ -177,4 +178,12 @@ V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the co
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
+    "ibc": """" 
+
+Which of the following leanings would a political scientist say that the above article has?
+A: Liberal
+B: Conservative
+C: Neutral
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
 }

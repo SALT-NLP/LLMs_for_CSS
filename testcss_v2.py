@@ -12,7 +12,6 @@ import re
 import random
 import argparse
 from revChatGPT.V1 import Chatbot
-import openai
 from sklearn.metrics import classification_report
 from config import config_access_token
 
@@ -402,7 +401,8 @@ def parse_arguments():
             "wiki_politeness",
             "media_ideology",
             "hippocorpus",
-            "indian_english_dialect"
+            "indian_english_dialect",
+            "ibc"
         ],
         help="dataset used for experiment",
     )
@@ -454,6 +454,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/indian_english_dialect/indian_english_dialect.json"
         args.input_path = "css_data/indian_english_dialect/test.json"
         args.answer_path = "css_data/indian_english_dialect/answer"
+    elif args.dataset == "ibc":
+        args.raw_datapath = "css_data/ibc/ibc.json"
+        args.input_path = "css_data/ibc/test.json"
+        args.answer_path = "css_data/ibc/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
