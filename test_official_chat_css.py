@@ -44,7 +44,7 @@ def data_split(raw_datapth, input_path, args):
     sample.to_json(input_path)
 
 
-def get_response(allprompts):
+def get_response(allprompts, args):
     global errortime
     allresponse = []
     i = 0
@@ -59,15 +59,23 @@ def get_response(allprompts):
         )
         # print(oneprompt)
         try:
-            if True:
-                bias = {str(i): 10 for i in range(32, 39)}
+            if args.free_generation:
+                bias = {}
+                max_tokens = 256
+                stop = '.'
             else:
-                bias = {
-                    "5297": 20,
-                    "2949": 20,
-                    "17821": 20,
-                    "25101": 20,
-                }
+                stop = None
+                max_tokens = 2
+                if True:
+                    bias = {str(i): 10 for i in range(32, 39)}
+                else:
+                    bias = {
+                        "5297": 20,
+                        "2949": 20,
+                        "17821": 20,
+                        "25101": 20,
+                    }
+                
             api_query = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
@@ -75,7 +83,8 @@ def get_response(allprompts):
                 ],
                 logit_bias=bias,
                 temperature=0,
-                max_tokens=2,
+                max_tokens=max_tokens,
+                stop=stop,
             )
             response = api_query["choices"][0]["message"]["content"]
             print("######Response#####", response)
@@ -166,7 +175,7 @@ def get_answers(input_path, output_path, prompts_path, args):
         response = []
         for i in range(len(input_prompts)):
             while True:
-                _, oneresponse = get_response([input_prompts[i]])
+                _, oneresponse = get_response([input_prompts[i]], args)
                 touseresponse = oneresponse[0].replace("\n", "&&&&&&")
                 response.append(touseresponse)
                 if "Error" not in touseresponse and in_domain(
@@ -189,6 +198,8 @@ def get_answers(input_path, output_path, prompts_path, args):
                 else:
                     print("Error After Sleep and Repeat")
                     break
+                if args.sleep:
+                    time.sleep(args.sleep)
         fw.close()
         # end = time.time()
         # print("all used time: ", end - start)
@@ -312,7 +323,7 @@ def calculateres(path, args):
                 "inferiority": "C",
                 "irony": "D",
                 "stereotypical": "E",
-                "threa2tening": "F",
+                "threatening": "F",
             }
             if pred == mapping[gold].lower():
                 accnum += 1
@@ -369,7 +380,8 @@ def parse_arguments():
         help="dataset used for experiment",
     )
     parser.add_argument("--labelset", default=None)
-
+    parser.add_argument("--free_generation", action="store_true")
+    parser.add_argument("--sleep", type=int, default=0)
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
