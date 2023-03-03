@@ -30,6 +30,7 @@ csv_column_map = {
     "ibc": ("sentence", "leaning"),
     "semeval_stance": ("Tweet", "trump_stance"),
     "tempowic": (("text1", "text2", "word"), "label"),
+    "sbic": ("post", "targetStereotype"),
 }
 
 drop_labels = {
@@ -205,4 +206,8 @@ A: Same
 B: Different
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "sbic": """
+    
+If the above sentence is offensive to an identity group, what is the implied aspect of that group that this sentence communicates? Please use a phrase like "GROUP are ______" (e.g., "Korean folks have weird names")
+""",
 }
