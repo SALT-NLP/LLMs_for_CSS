@@ -9,6 +9,7 @@ import time
 import re
 import random
 import argparse
+import openai
 from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
 from config import config_access_token
@@ -317,6 +318,7 @@ def parse_arguments():
             "ibc",
             "semeval_stance",
             "tempowic",
+            "sbic",
         ],
         help="dataset used for experiment",
     )
@@ -382,6 +384,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/tempowic/tempowic.json"
         args.input_path = "css_data/tempowic/test.json"
         args.answer_path = "css_data/tempowic/answer"
+    elif args.dataset == "sbic":
+        args.raw_datapath = "css_data/sbic/sbic.json"
+        args.input_path = "css_data/sbic/test.json"
+        args.answer_path = "css_data/sbic/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
