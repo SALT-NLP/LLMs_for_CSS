@@ -5,6 +5,7 @@ from os.path import exists
 from os import getenv
 from sys import argv, exit
 from ast import literal_eval
+from transformers import GPT2TokenizerFast
 import time
 import re
 import random
@@ -12,6 +13,8 @@ import argparse
 import openai
 from sklearn.metrics import classification_report
 from config import config_access_token
+
+tokenizer = GPT2TokenizerFast.from_pretrained("gpt2", truncation_side="left")
 
 
 def data_split(raw_datapth, input_path, args):
@@ -47,6 +50,13 @@ def get_response(allprompts):
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
+        oneprompt = tokenizer.clean_up_tokenization(
+            tokenizer.convert_tokens_to_string(
+                tokenizer.convert_ids_to_tokens(
+                    tokenizer(oneprompt, max_length=4094, truncation=True)["input_ids"]
+                )
+            )
+        )
         # print(oneprompt)
         try:
             if True:
@@ -162,6 +172,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 if "Error" not in touseresponse and in_domain(
                     touseresponse, args
                 ):  # implement: in_domain
+
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
                     print(touseindex[i], gold_label[i], touseresponse)
@@ -282,6 +293,16 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["ibc"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "left": "A",
+                "right": "B",
+                "center": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -390,7 +411,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
         args.answer_path = "css_data/media_ideology/answer"
-        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative']"
+        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative', 'A' , 'B', 'C']"
     elif args.dataset == "hippocorpus":
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
