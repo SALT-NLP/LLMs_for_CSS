@@ -304,7 +304,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["ibc"]:
+        elif args.dataset in ["media_ideology"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -333,8 +333,8 @@ def calculateres(path, args):
             mapping = {
                 "question": "A",
                 "answer": "B",
-                "announcement": "C",
-                "agrement": "D",
+                "agreement": "C",
+                "disagreement": "D",
                 "appreciation": "E",
                 "elaboration": "F",
                 "humor": "G",
