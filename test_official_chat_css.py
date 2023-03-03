@@ -272,6 +272,16 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["ibc"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "liberal": "A",
+                "conservative": "B",
+                "neutral": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -329,6 +339,10 @@ def parse_arguments():
             "wiki_politeness",
             "media_ideology",
             "hippocorpus",
+            "indian_english_dialect",
+            "ibc",
+            "semeval_stance",
+            "tempowic",
         ],
         help="dataset used for experiment",
     )
@@ -380,6 +394,24 @@ def parse_arguments():
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
         args.answer_path = "css_data/hippocorpus/answer"
+    elif args.dataset == "indian_english_dialect":
+        args.raw_datapath = (
+            "css_data/indian_english_dialect/indian_english_dialect.json"
+        )
+        args.input_path = "css_data/indian_english_dialect/test.json"
+        args.answer_path = "css_data/indian_english_dialect/answer"
+    elif args.dataset == "ibc":
+        args.raw_datapath = "css_data/ibc/ibc.json"
+        args.input_path = "css_data/ibc/test.json"
+        args.answer_path = "css_data/ibc/answer"
+    elif args.dataset == "semeval_stance":
+        args.raw_datapath = "css_data/semeval_stance/semeval_stance.json"
+        args.input_path = "css_data/semeval_stance/test.json"
+        args.answer_path = "css_data/semeval_stance/answer"
+    elif args.dataset == "tempowic":
+        args.raw_datapath = "css_data/tempowic/tempowic.json"
+        args.input_path = "css_data/tempowic/test.json"
+        args.answer_path = "css_data/tempowic/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
