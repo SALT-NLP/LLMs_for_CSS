@@ -14,7 +14,7 @@ convokit_labels = {
     "politeness": ("utterance", "meta.Binary", "all"),
     "toxicity": ("conversation", "meta.conversation_has_personal_attack", "first_two"),
     "persuasion": ("utterance", "meta.success", "first_two"),
-    "discourse": ("utterance", "meta.majority_type", "all"),
+    "discourse": ("utterance", "meta.majority_type", "first_two"),
 }
 
 # (context, label)
@@ -35,6 +35,8 @@ csv_column_map = {
 drop_labels = {
     "flute-classification": ["CreativeParaphrase"],
     "flute-explanation": ["CreativeParaphrase"],
+    "hate": ["other"],
+    "discourse": ["announcement", "other", "negativereaction"],
 }
 
 csv_download = {
@@ -87,11 +89,10 @@ Constraint: Even if you are uncertain, you must pick either True or False with w
 Which of the following best characterizes the discourse type of the previous statement?
 A: Question
 B: Answer
-C: Announcement
-D: Agreement
-E: Appreciation
-F: Elaboration
-G: Humor
+C: Agreement
+D: Appreciation
+E: Elaboration
+F: Humor
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
@@ -119,7 +120,7 @@ Is the above joke humorous to most of the people? You must pick between \"True\"
 """,
     "toxicity": """
 
-Will the following conversation eventually going to derail into a personal attack? 
+Will the previouse conversation eventually derail into a personal attack? 
 True
 False
 

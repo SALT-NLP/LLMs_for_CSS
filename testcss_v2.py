@@ -1,8 +1,6 @@
 import json
 import os
 import pandas as pd
-import itertools
-from string import ascii_uppercase
 from os.path import exists
 from os import getenv
 from sys import argv, exit
@@ -15,10 +13,11 @@ from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
 from config import config_access_token
 
+
 def data_split(raw_datapth, input_path, args):
-    if os.path.exists(input_path):
-        print("###### Testing Files Exist! ######")
-        return
+    # if os.path.exists(input_path):
+    #    print("###### Testing Files Exist! ######")
+    #    return
 
     contexts = []
     labels = []
@@ -29,11 +28,11 @@ def data_split(raw_datapth, input_path, args):
         raw_data = json.load(f)
     indexes = raw_data["context"].keys()
     df = pd.DataFrame.from_dict(raw_data)
-    #num_testing = min(args.testing_size, len(indexes))
-    #samples = int(num_testing / len(df.groupby("labels")))
-    samples = min(df.groupby('labels').count()['context'])
+    # num_testing = min(args.testing_size, len(indexes))
+    # samples = int(num_testing / len(df.groupby("labels")))
+    samples = min(df.groupby("labels").count()["context"])
     num_labels = len(df.groupby("labels"))
-    num_testing = min( samples*num_labels, args.testing_size ) 
+    num_testing = min(samples * num_labels, args.testing_size)
     random.seed(0)
     sample = df.groupby("labels", group_keys=False).apply(
         lambda x: x.sample(n=samples, random_state=random.seed(0))
@@ -42,7 +41,7 @@ def data_split(raw_datapth, input_path, args):
     sample.to_json(input_path)
 
 
-def get_response(chatbot, allprompts):
+def get_response(allprompts):
     global errortime
     allresponse = []
     i = 0
@@ -50,22 +49,28 @@ def get_response(chatbot, allprompts):
         oneprompt = allprompts[i]
         # print(oneprompt)
         try:
-            response = ""
-            for data in chatbot.ask(oneprompt):
-                response = data["message"]
+            api_query = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "user", "content": oneprompt},
+                ],
+                logit_bias={
+                    "5297": 20,
+                    "2949": 20,
+                    "17821": 20,
+                    "25101": 20,
+                },
+                temperature=0,
+                max_tokens=2,
+            )
+            response = api_query["choices"][0]["message"]["content"]
             print("######Response#####", response)
-
-            if len(response) < 2:
-                i += 1
-                allresponse.append("Error!")
-                chatbot.reset_chat()
-                continue
 
             allresponse.append(response)
             i += 1
             errortime = 0
-            chatbot.reset_chat()
         except Exception as exc:
+            print(exc)
             print(f"Data point {i} went wrong!")
 
             allresponse.append("Error!")
@@ -79,14 +84,11 @@ def get_response(chatbot, allprompts):
                 print("Error and Retry after 2 minutes.")
                 time.sleep(120)
 
-        randSleep = random.randint(10, 30)
-        time.sleep(60 + randSleep)  # Rate Limit is 50 queries per hour
     return allprompts, allresponse
 
 
 def get_answers(input_path, output_path, prompts_path, args):
     print("###### Getting Answers! ######")
-    chatbot = Chatbot(config={"access_token": args.access_token})
 
     with open(input_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
@@ -150,7 +152,7 @@ def get_answers(input_path, output_path, prompts_path, args):
         response = []
         for i in range(len(input_prompts)):
             while True:
-                _, oneresponse = get_response(chatbot, [input_prompts[i]])
+                _, oneresponse = get_response([input_prompts[i]])
                 touseresponse = oneresponse[0].replace("\n", "&&&&&&")
                 response.append(touseresponse)
                 if "Error" not in touseresponse and in_domain(
@@ -197,18 +199,9 @@ def in_domain(response, args):
 
 
 def calculateres(path, args):
-    
-    if args.dataset == 'hippocorpus':
-        calculateres_hippocorpus(path, args)
-        return
-
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
-    if args.dataset == 'indian_english_dialect':
-        # to help correct accuracy metrics, we need to simplify the label space 
-        # by removing elements in double quotations
-        label_set = set([re.sub(r' "[\w\s’,//]+"', '', v) for v in label_set])
     print("###### Label Space:", label_set)
     label_dict = {"None": 0}
 
@@ -290,24 +283,6 @@ def calculateres(path, args):
                 accnum += 1
             golds.append(gold)
             preds.append(pred)
-        elif args.dataset in ["indian_english_dialect"]:
-            index = content[0]
-            context = a['context'][index]
-            gold = re.sub(r' "[\w\s’,//]+"', '', a['labels'][index].lower())
-            pred_ = content[2].lower()
-            pred = pred_
-
-            if gold=='none of the above':
-                continue # we didn't give 'none of the above' as an option to chatGPT in the first place
-
-            for u in label_set:
-                if u in pred_:
-                    pred = u
-                    break
-            if gold == pred:
-                accnum += 1
-            golds.append(gold)
-            preds.append(pred)
 
         else:
             pass
@@ -319,71 +294,6 @@ def calculateres(path, args):
 
     if len(preds) > 0:
         print(classification_report(golds, preds, target_names=target_names))
-        
-def calculateres_hippocorpus(path, args):
-    def iter_all_strings():
-        for size in itertools.count(1):
-            for s in itertools.product(ascii_uppercase, repeat=size):
-                yield "".join(s)
-
-    path = args.answer_path
-    with open(args.input_path, 'r') as f:
-        a = json.load(f)
-
-    f = open(path, 'r', encoding="utf-8")
-
-    TP = 0
-    FP = 0
-    TN = 0
-    FN = 0
-
-    while True:
-        oneline = f.readline().strip()
-        if not oneline:
-            break
-        content = oneline.split('\t')
-        if len(content) != 3:
-            continue
-        index = content[0]
-        all_sents = a['context'][index].split('.\n')
-        gold = literal_eval(a['labels'][index])
-        pred = content[2]
-
-        for i, x in enumerate(iter_all_strings()):
-            if i>=len(all_sents):
-                break
-            sent = re.sub(f"([A-Z]+:) ", "", all_sents[i]) 
-            if sent[-1]!='.':
-                sent += '.'
-            if ((f"{x.upper()}:" in pred) or\
-                (f"{x.upper()}," in pred) or\
-                (f", {x.upper()}" in pred) or\
-                (f",{x.upper()}" in pred) or\
-                (sent in pred)): # predicted positive
-                if sent in gold: # true positive
-                    TP += 1
-                else:            # false positive
-                    #print(sent, gold)
-                    break
-                    FP += 1
-            else:
-                if sent in gold: # false negative
-                    FN += 1
-                else:            # true negative
-                    TN += 1
-
-
-    acc = float(TP+TN) / float(TP+TN+FP+FN)
-    p = float(TP) / float(TP+FP)
-    r = float(TP) / float(TP+FN)
-    f = float(2*TP) / float(2*TP + FP + FN)
-    print("\n ###### Results ###### \n")
-    print("Acc: ",  acc)
-    print("Precision: ",  p)
-    print("Recall: ",  r)
-    print("F1: ",  f)
-    print('Number of Correct Data: ', (TP+TN))
-    print("Number of Testing Data: ",  (TP+TN+FP+FN))
 
 
 def parse_arguments():
@@ -455,7 +365,9 @@ def parse_arguments():
         args.input_path = "css_data/hippocorpus/test.json"
         args.answer_path = "css_data/hippocorpus/answer"
     elif args.dataset == "indian_english_dialect":
-        args.raw_datapath = "css_data/indian_english_dialect/indian_english_dialect.json"
+        args.raw_datapath = (
+            "css_data/indian_english_dialect/indian_english_dialect.json"
+        )
         args.input_path = "css_data/indian_english_dialect/test.json"
         args.answer_path = "css_data/indian_english_dialect/answer"
     elif args.dataset == "ibc":

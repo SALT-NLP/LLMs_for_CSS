@@ -29,6 +29,8 @@ def data_split(raw_datapth, input_path, args):
     indexes = raw_data["context"].keys()
     df = pd.DataFrame.from_dict(raw_data)
 
+    print(df.groupby("labels").size())
+
     num_testing = min(args.testing_size, len(indexes))
     samples = int(num_testing / len(df.groupby("labels")))
     random.seed(0)
@@ -47,26 +49,21 @@ def get_response(allprompts):
         oneprompt = allprompts[i]
         # print(oneprompt)
         try:
+            if True:
+                bias = {str(i): 10 for i in range(32, 39)}
+            else:
+                bias = {
+                    "5297": 20,
+                    "2949": 20,
+                    "17821": 20,
+                    "25101": 20,
+                }
             api_query = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "user", "content": oneprompt},
                 ],
-                logit_bias={
-                    "32": 10,
-                    "33": 10,
-                    "34": 10,
-                    "35": 10,
-                    "36": 10,
-                    "37": 10,
-                    "38": 10,
-                    "39": 10,
-                    "40": 10,
-                    "41": 10,
-                    "42": 10,
-                    "17821": 20,
-                    "25101": 20,
-                },
+                logit_bias=bias,
                 temperature=0,
                 max_tokens=2,
             )
@@ -77,6 +74,7 @@ def get_response(allprompts):
             i += 1
             errortime = 0
         except Exception as exc:
+            print(exc)
             print(f"Data point {i} went wrong!")
 
             allresponse.append("Error!")
@@ -90,8 +88,6 @@ def get_response(allprompts):
                 print("Error and Retry after 2 minutes.")
                 time.sleep(120)
 
-        # sleep = 2
-        # time.sleep(sleep)  # Rate Limit is 50 queries per hour
     return allprompts, allresponse
 
 
@@ -237,7 +233,6 @@ def calculateres(path, args):
         allnum += 1
 
         if args.dataset in [
-            "conv_go_awry",
             "reddit_humor",
             "supreme_corpus",
         ]:
@@ -247,53 +242,63 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
-        elif args.dataset in [
-            "wiki_corpus",
-        ]:
+        elif args.dataset in ["wiki_corpus", "conv_go_awry"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
-            if gold == "true":
-                if pred in ["b", "true"]:
-                    accnum += 1
-            elif gold == "false":
-                if pred in ["a", "false"]:
-                    accnum += 1
+            mapping = {
+                "true": ["true", "yes"],
+                "false": ["false", "no"],
+            }
+            if pred in mapping[gold]:
+                accnum += 1
         elif args.dataset in ["wiki_politeness"]:
-            pred = content[2].lower()
-            if int(content[1]) == 0:
-                if "b: neutral" in pred:
-                    accnum += 1
-            elif int(content[1]) == 1:
-                if "a: polite" in pred:
-                    accnum += 1
-            elif int(content[1]) == -1:
-                if "c: impolite" in pred:
-                    accnum += 1
+            gold = content[1]
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "1": "A",
+                "0": "B",
+                "-1": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["flute-classification"]:
             gold = content[1].lower()
-            pred = content[2].lower()
+            pred = content[2].lower().replace("&", "")
             mapping = {
-                "idiom": "A: Idiom",
-                "metaphor": "B: Metaphor",
-                "creativeparaphrase": "C: Creative Paraphrase",
-                "sarcasm": "D: Sarcasm",
-                "simile": "E: Simile",
+                "idiom": "A",
+                "metaphor": "B",
+                "sarcasm": "C",
+                "simile": "D",
             }
             if pred == mapping[gold].lower():
                 accnum += 1
         elif args.dataset in ["implicit_hate"]:
-            gold = label_dict[content[1].lower()]
-            pred = content[2].lower()
-            for u in label_set:
-                if u in pred:
-                    pred = label_dict[u]
-                    break
-                pred = 0
-            if gold == pred:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "white_grievance": "A",
+                "incitement": "B",
+                "inferiority": "C",
+                "irony": "D",
+                "stereotypical": "E",
+                "threa2tening": "F",
+            }
+            if pred == mapping[gold].lower():
                 accnum += 1
-            golds.append(gold)
-            preds.append(pred)
-
+        elif args.dataset in ["discourse"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "question": "A",
+                "answer": "B",
+                "announcement": "C",
+                "agrement": "D",
+                "appreciation": "E",
+                "elaboration": "F",
+                "humor": "G",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         else:
             pass
 
@@ -313,6 +318,7 @@ def parse_arguments():
         type=str,
         default="conv_go_awry",
         choices=[
+            "discourse",
             "conv_go_awry",
             "wiki_corpus",
             "implicit_hate",
@@ -341,6 +347,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
+    elif args.dataset == "discourse":
+        args.raw_datapath = "css_data/discourse/discourse.json"
+        args.input_path = "css_data/discourse/test.json"
+        args.answer_path = "css_data/discourse/answer"
     elif args.dataset == "reddit_humor":
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"

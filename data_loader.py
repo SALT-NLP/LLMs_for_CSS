@@ -83,7 +83,6 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     df["prompts"] = build_prompts(
         df, prompts_templates[dataset]
     )  # [prompts_templates[dataset]] * len(df["labels"])
-    print(df.head()["prompts"])
     if dataset in drop_labels:
         df = df[~df["labels"].isin(drop_labels[dataset])]
     df = df[["context", "labels", "prompts"]]
@@ -211,6 +210,8 @@ def convokit_process(dataset, save_dir):
     assert len(contexts) == len(labels) and len(contexts) == len(prompts)
     raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
     data_f = pd.DataFrame.from_dict(raw_data)
+    if dataset in drop_labels:
+        data_f = data_f[~data_f["labels"].isin(drop_labels[dataset])]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     data_f.to_json(save_dir + "/{}.json".format(dataset))
