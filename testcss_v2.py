@@ -29,9 +29,11 @@ def data_split(raw_datapth, input_path, args):
         raw_data = json.load(f)
     indexes = raw_data["context"].keys()
     df = pd.DataFrame.from_dict(raw_data)
-
-    num_testing = min(args.testing_size, len(indexes))
-    samples = int(num_testing / len(df.groupby("labels")))
+    #num_testing = min(args.testing_size, len(indexes))
+    #samples = int(num_testing / len(df.groupby("labels")))
+    samples = min(df.groupby('labels').count()['context'])
+    num_labels = len(df.groupby("labels"))
+    num_testing = min( samples*num_labels, args.testing_size ) 
     random.seed(0)
     sample = df.groupby("labels", group_keys=False).apply(
         lambda x: x.sample(n=samples, random_state=random.seed(0))
@@ -402,7 +404,8 @@ def parse_arguments():
             "media_ideology",
             "hippocorpus",
             "indian_english_dialect",
-            "ibc"
+            "ibc",
+            "semeval_stance",
         ],
         help="dataset used for experiment",
     )
@@ -458,6 +461,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/ibc/ibc.json"
         args.input_path = "css_data/ibc/test.json"
         args.answer_path = "css_data/ibc/answer"
+    elif args.dataset == "semeval_stance":
+        args.raw_datapath = "css_data/semeval_stance/semeval_stance.json"
+        args.input_path = "css_data/semeval_stance/test.json"
+        args.answer_path = "css_data/semeval_stance/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 

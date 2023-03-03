@@ -28,6 +28,7 @@ csv_column_map = {
     "hippocorpus": ("story", "events"),
     "indian_english_dialect": ("Example", "Feature"),
     "ibc": ("sentence", "leaning"),
+    "semeval_stance": ("Tweet", "trump_stance"),
 }
 
 drop_labels = {
@@ -186,4 +187,12 @@ B: Conservative
 C: Neutral
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "semeval_stance": """
+
+If a political scientist considered the above sentence, which stance would she say it held towards Donald Trump?
+A: Against
+B: Favor
+C: None
+
+Constraint: Answer with only the option above that is most accurate and nothing else."""
 }
