@@ -25,7 +25,7 @@ def boolify(df):
 
 def get_context_column(df, context_column):
     def row(r, context_column):
-        return " ".join([f"{col}: {r[col]}" for col in context_column])
+        return "\n\n".join([f"{col}: {r[col]}" for col in context_column])
 
     if type(context_column) == tuple:
         return [row(r, context_column) for _, r in df.iterrows()]

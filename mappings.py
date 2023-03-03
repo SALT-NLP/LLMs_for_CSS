@@ -29,6 +29,7 @@ csv_column_map = {
     "indian_english_dialect": ("Example", "Feature"),
     "ibc": ("sentence", "leaning"),
     "semeval_stance": ("Tweet", "trump_stance"),
+    "tempowic": (("text1", "text2", "word"), "label"),
 }
 
 drop_labels = {
@@ -45,6 +46,7 @@ csv_download = {
 jsonl_download = {
     "flute-explanation": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
     "flute-classification": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
+    #"tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
 }
 
 prompts_templates = {
@@ -194,5 +196,12 @@ A: Against
 B: Favor
 C: None
 
-Constraint: Answer with only the option above that is most accurate and nothing else."""
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "tempowic": """
+    
+If a linguist considered the word above in text1 and text2, would she consider the meaning of this word to be the
+A: Same
+B: Different
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
 }

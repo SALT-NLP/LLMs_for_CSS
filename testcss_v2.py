@@ -406,6 +406,7 @@ def parse_arguments():
             "indian_english_dialect",
             "ibc",
             "semeval_stance",
+            "tempowic",
         ],
         help="dataset used for experiment",
     )
@@ -465,6 +466,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/semeval_stance/semeval_stance.json"
         args.input_path = "css_data/semeval_stance/test.json"
         args.answer_path = "css_data/semeval_stance/answer"
+    elif args.dataset == "tempowic":
+        args.raw_datapath = "css_data/tempowic/tempowic.json"
+        args.input_path = "css_data/tempowic/test.json"
+        args.answer_path = "css_data/tempowic/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
