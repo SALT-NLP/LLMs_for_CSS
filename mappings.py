@@ -49,7 +49,7 @@ csv_download = {
 jsonl_download = {
     "flute-explanation": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
     "flute-classification": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
-    #"tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
+    # "tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
 }
 
 prompts_templates = {
@@ -91,9 +91,10 @@ Which of the following best characterizes the discourse type of the previous sta
 A: Question
 B: Answer
 C: Agreement
-D: Appreciation
-E: Elaboration
-F: Humor
+D: Disagreement
+E: Appreciation
+F: Elaboration
+G: Humor
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,

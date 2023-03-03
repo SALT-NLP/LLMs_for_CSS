@@ -35,7 +35,10 @@ def data_split(raw_datapth, input_path, args):
     print(df.groupby("labels").size())
 
     num_testing = min(args.testing_size, len(indexes))
-    samples = int(num_testing / len(df.groupby("labels")))
+    samples = min(
+        int(num_testing / len(df.groupby("labels"))),
+        min(df.groupby("labels").count()["context"]),
+    )
     random.seed(0)
     sample = df.groupby("labels", group_keys=False).apply(
         lambda x: x.sample(n=samples, random_state=random.seed(0))
@@ -62,7 +65,7 @@ def get_response(allprompts, args):
             if args.free_generation:
                 bias = {}
                 max_tokens = 256
-                stop = '.'
+                stop = "."
             else:
                 stop = None
                 max_tokens = 2
@@ -75,7 +78,7 @@ def get_response(allprompts, args):
                         "17821": 20,
                         "25101": 20,
                     }
-                
+
             api_query = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
@@ -85,6 +88,7 @@ def get_response(allprompts, args):
                 temperature=0,
                 max_tokens=max_tokens,
                 stop=stop,
+                user="RESEARCH-DATASET-" + args.dataset,
             )
             response = api_query["choices"][0]["message"]["content"]
             print("######Response#####", response)
@@ -292,6 +296,21 @@ def calculateres(path, args):
                 "sarcasm": "C",
                 "simile": "D",
             }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["tempowic"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "same": "A",
+                "different": "B",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["semeval_stance"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {"against": "A", "favor": "B", "none": "C"}
             if pred == mapping[gold].lower():
                 accnum += 1
         elif args.dataset in ["ibc"]:
