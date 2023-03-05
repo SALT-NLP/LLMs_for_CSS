@@ -33,7 +33,7 @@ csv_column_map = {
     "talklife": (("Seeker", "Response"), "remap_level"),
     "sbic": ("post", "targetStereotype"),
     "raop": ("posts", "labels"),
-
+    "emotion": ("text", "labels"),
 }
 
 drop_labels = {
@@ -226,9 +226,21 @@ Constraint: Answer with only the option above that is most accurate and nothing 
 
 "raop": """
 
-If a user on a online community for giving away free pizza saw the above post, would they consider the post to be
+If a user on a online community for giving away free pizza saw the above post, they would consider the post to be
 A: Persuasive
 B: Not persuasive
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+
+"emotion": """
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."""
 }

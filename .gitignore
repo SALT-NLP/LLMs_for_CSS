@@ -12,3 +12,4 @@ ConvoKit/*
 __pycache__/*
 *.ipynb
 config.py
+.DS_Store
