@@ -1,0 +1,11 @@
+program: power_baselines.py
+project: social_chatgpt
+method: grid
+metric:
+  name: eval/acc
+  goal: maximize
+parameters:
+  lr:
+    values: [2e-5, 3e-5, 5e-5]
+  epoch:
+    values: [1, 2]
