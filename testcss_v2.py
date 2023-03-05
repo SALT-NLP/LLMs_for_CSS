@@ -455,6 +455,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/sbic/sbic.json"
         args.input_path = "css_data/sbic/test.json"
         args.answer_path = "css_data/sbic/answer"
+    elif args.dataset == "talklife":
+        args.raw_datapath = "css_data/talklife/talklife.json"
+        args.input_path = "css_data/talklife/test.json"
+        args.answer_path = "css_data/talklife/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 

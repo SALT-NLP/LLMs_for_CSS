@@ -30,6 +30,7 @@ csv_column_map = {
     "ibc": ("sentence", "leaning"),
     "semeval_stance": ("Tweet", "trump_stance"),
     "tempowic": (("text1", "text2", "word"), "label"),
+    "talklife": (("Seeker", "Response"), "remap_level"),
     "sbic": ("post", "targetStereotype"),
 }
 
@@ -211,4 +212,13 @@ Constraint: Answer with only the option above that is most accurate and nothing 
     
 If the above sentence is offensive to an identity group, what is the implied aspect of that group that this sentence communicates? Please use a phrase like "GROUP are ______" (e.g., "Korean folks have weird names")
 """,
+
+"talklife": """
+
+If a mental health professional considered the above "respone" in the context of a mental health seeker's "message," which of the following would they consider the "response" to be?
+A: Strong (A strong exploration is specific and labels the seeker’s experiences and feelings which the peer supporter wants to explore (e.g., replying with "What happened?" to "Are you feeling alone right now?"))
+B: Weak (A weak exploration is generic (e.g., replying with "What happened?" to "I am about to have an anxiety attack."))
+A: None (No explanation is a response that offers no support (e.g. "okay"))
+
+Constraint: Answer with only the option above that is most accurate and nothing else."""
 }
