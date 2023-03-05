@@ -1,0 +1,13 @@
+program: reddit_humor_baselines.py
+project: social_chatgpt
+method: grid
+metric:
+  name: eval/acc
+  goal: maximize
+parameters:
+  lr:
+    values: [5e-6, 8e-6, 2e-5, 5e-5]
+  epoch:
+    values: [1, 2, 3]
+  seed:
+    values: [40, 41, 42]
