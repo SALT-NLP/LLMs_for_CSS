@@ -32,6 +32,8 @@ csv_column_map = {
     "tempowic": (("text1", "text2", "word"), "label"),
     "talklife": (("Seeker", "Response"), "remap_level"),
     "sbic": ("post", "targetStereotype"),
+    "raop": ("posts", "labels"),
+
 }
 
 drop_labels = {
@@ -219,6 +221,14 @@ If a mental health professional considered the above "respone" in the context of
 A: Strong (A strong exploration is specific and labels the seeker’s experiences and feelings which the peer supporter wants to explore (e.g., replying with "What happened?" to "Are you feeling alone right now?"))
 B: Weak (A weak exploration is generic (e.g., replying with "What happened?" to "I am about to have an anxiety attack."))
 A: None (No explanation is a response that offers no support (e.g. "okay"))
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+
+"raop": """
+
+If a user on a online community for giving away free pizza saw the above post, would they consider the post to be
+A: Persuasive
+B: Not persuasive
 
 Constraint: Answer with only the option above that is most accurate and nothing else."""
 }
