@@ -1,4 +1,6 @@
 import argparse, csv, json, os, re, wget
+from string import ascii_uppercase
+import itertools
 import numpy as np
 import pandas as pd
 from convokit import Corpus, download
@@ -23,7 +25,7 @@ def boolify(df):
 
 def get_context_column(df, context_column):
     def row(r, context_column):
-        return " ".join([f"{col}: {r[col]}" for col in context_column])
+        return "\n\n".join([f"{col}: {r[col]}" for col in context_column])
 
     if type(context_column) == tuple:
         return [row(r, context_column) for _, r in df.iterrows()]
@@ -81,6 +83,40 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     df["prompts"] = build_prompts(
         df, prompts_templates[dataset]
     )  # [prompts_templates[dataset]] * len(df["labels"])
+    if dataset in drop_labels:
+        df = df[~df["labels"].isin(drop_labels[dataset])]
+    df = df[["context", "labels", "prompts"]]
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+    df.to_json("{}/{}.json".format(save_dir, dataset))
+
+
+def sentence_alphaenumerate(text):
+    def iter_all_strings():
+        for size in itertools.count(1):
+            for s in itertools.product(ascii_uppercase, repeat=size):
+                yield "".join(s)
+
+    string = ""
+    for i, a in enumerate(iter_all_strings()):
+        sents = text.split(". ")
+        if i >= len(sents):
+            break
+        string += f"{a}: {sents[i]}"
+        if i < len(sents) - 1:
+            string += ".\n"
+    return string
+
+
+def alphaenumerate_process(dataset, save_dir):
+    context_column, label_columns = csv_column_map[dataset]
+    df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
+    df["labels"] = df[label_columns]
+    df = boolify(df)
+    df["context"] = [
+        sentence_alphaenumerate(text) for text in df[context_column].values
+    ]
+    df["prompts"] = build_prompts(df, prompts_templates[dataset])
     print(df.head()["prompts"])
     df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
@@ -174,6 +210,8 @@ def convokit_process(dataset, save_dir):
     assert len(contexts) == len(labels) and len(contexts) == len(prompts)
     raw_data = {"context": contexts, "labels": labels, "prompts": prompts}
     data_f = pd.DataFrame.from_dict(raw_data)
+    if dataset in drop_labels:
+        data_f = data_f[~data_f["labels"].isin(drop_labels[dataset])]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     data_f.to_json(save_dir + "/{}.json".format(dataset))
@@ -182,6 +220,8 @@ def convokit_process(dataset, save_dir):
 def main(dataset, save_dir):
     if dataset in convokit_ds:
         convokit_process(dataset, save_dir)
+    elif dataset in {"hippocorpus"}:
+        alphaenumerate_process(dataset, save_dir)
     elif dataset in csv_download:
         csv_process(dataset, save_dir)
     elif dataset in jsonl_download:

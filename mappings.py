@@ -14,7 +14,7 @@ convokit_labels = {
     "politeness": ("utterance", "meta.Binary", "all"),
     "toxicity": ("conversation", "meta.conversation_has_personal_attack", "first_two"),
     "persuasion": ("utterance", "meta.success", "first_two"),
-    "discourse": ("utterance", "meta.majority_type", "all"),
+    "discourse": ("utterance", "meta.majority_type", "first_two"),
 }
 
 # (context, label)
@@ -26,6 +26,18 @@ csv_column_map = {
     "flute-classification": (("premise", "hypothesis"), "type"),
     "media_ideology": ("content", "bias_text"),
     "hippocorpus": ("story", "events"),
+    "indian_english_dialect": ("Example", "Feature"),
+    "ibc": ("sentence", "leaning"),
+    "semeval_stance": ("Tweet", "trump_stance"),
+    "tempowic": (("text1", "text2", "word"), "label"),
+    "sbic": ("post", "targetStereotype"),
+}
+
+drop_labels = {
+    "flute-classification": ["CreativeParaphrase"],
+    "flute-explanation": ["CreativeParaphrase"],
+    "hate": ["other"],
+    "discourse": ["announcement", "other", "negativereaction"],
 }
 
 csv_download = {
@@ -37,27 +49,28 @@ csv_download = {
 jsonl_download = {
     "flute-explanation": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
     "flute-classification": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
+    # "tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
 }
 
 prompts_templates = {
     "power": """
 
-Can you predict if the above message comes from someone who is an administrator on Wikipedia? 
-A: True
-B: False
+Based on the conversation is {$speaker} in a position of power? 
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.""",
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.""",
     "stance": """
 
 Does {$speaker} support {$title}? 
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,  # This Dataset is strange currently, too long of context
     "politeness": """
 
-Which of the following best describes the statement above? 
+Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
 B: Neutral
 C: Impolite
@@ -67,18 +80,18 @@ Constraint: Answer with only the option above that is most accurate and nothing 
     "persuasion": """
 
 If you were the original poster, would this reply convince you?
-A: True
-B: False
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,
     "discourse": """
 
 Which of the following best characterizes the discourse type of the previous statement?
 A: Question
 B: Answer
-C: Announcement
-D: Agreement
+C: Agreement
+D: Disagreement
 E: Appreciation
 F: Elaboration
 G: Humor
@@ -103,22 +116,17 @@ Constraint: Answer with one or more of the options above that is most accurate a
 
 Reframe the previous sentence positively, without changing the core meaning of the sentence.
 """,
-    "humor": """
+    "humor": """ 
 
-
-Is the above joke humourous by standard societal norms?
-A: True
-B: False
-
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Is the above joke humorous to most of the people? You must pick between \"True\" or \"False\" You cannot use any other words except for \"True\" or \"False\" 
 """,
     "toxicity": """
 
-Will the following conversation eventually going to derail into a personal attack? 
-A: True
-B: False
+Will the previouse conversation eventually derail into a personal attack? 
+True
+False
 
-Constraint: Even if you are uncertain, you must pick reply either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
 """,
     "flute-explanation": """
 
@@ -126,16 +134,15 @@ Which of the following describes the relationship between the premise and the hy
 A: Entailment
 B: Contradiction
 
-Constraint: Explain your answer step by step and then list which of the two options is most accurate.
+Constraint: Explain the figurative language in the hypothesis in one sentence and then answer with which option is the most accurate.
 """,
     "flute-classification": """
 
 Which of the following best describes the type of figurative language used in the hypothesis?
 A: Idiom
 B: Metaphor
-C: Creative Paraphrase
-D: Sarcasm
-E: Simile
+C: Sarcasm
+D: Simile
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
@@ -148,7 +155,60 @@ C: Center
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
-    "hippocorpus": """
+    "hippocorpus": """This is an Event Extraction task. Which sentences above indicate new events?""",
+    "indian_english_dialect": """
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender "and all" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag "isn’t it, no, na" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential "is / are there" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
 
-Which sentences above indicate new events? Which of the events are surprising?""",
+Constraint: Answer with only the option above that is most accurate and nothing else.
+""",
+    "ibc": """" 
+
+Which of the following leanings would a political scientist say that the above article has?
+A: Liberal
+B: Conservative
+C: Neutral
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "semeval_stance": """
+
+If a political scientist considered the above sentence, which stance would she say it held towards Donald Trump?
+A: Against
+B: Favor
+C: None
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "tempowic": """
+    
+If a linguist considered the word above in text1 and text2, would she consider the meaning of this word to be the
+A: Same
+B: Different
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "sbic": """
+    
+If the above sentence is offensive to an identity group, what is the implied aspect of that group that this sentence communicates? Please use a phrase like "GROUP are ______" (e.g., "Korean folks have weird names")
+""",
 }

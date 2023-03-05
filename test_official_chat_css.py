@@ -5,20 +5,22 @@ from os.path import exists
 from os import getenv
 from sys import argv, exit
 from ast import literal_eval
+from transformers import GPT2TokenizerFast
 import time
 import re
 import random
 import argparse
 import openai
-from revChatGPT.V1 import Chatbot
 from sklearn.metrics import classification_report
 from config import config_access_token
 
+tokenizer = GPT2TokenizerFast.from_pretrained("gpt2", truncation_side="left")
+
 
 def data_split(raw_datapth, input_path, args):
-    # if os.path.exists(input_path):
-    #    print("###### Testing Files Exist! ######")
-    #    return
+    if os.path.exists(input_path):
+        print("###### Testing Files Exist! ######")
+        return
 
     contexts = []
     labels = []
@@ -29,11 +31,14 @@ def data_split(raw_datapth, input_path, args):
         raw_data = json.load(f)
     indexes = raw_data["context"].keys()
     df = pd.DataFrame.from_dict(raw_data)
-    # num_testing = min(args.testing_size, len(indexes))
-    # samples = int(num_testing / len(df.groupby("labels")))
-    samples = min(df.groupby("labels").count()["context"])
-    num_labels = len(df.groupby("labels"))
-    num_testing = min(samples * num_labels, args.testing_size)
+
+    print(df.groupby("labels").size())
+
+    num_testing = min(args.testing_size, len(indexes))
+    samples = min(
+        int(num_testing / len(df.groupby("labels"))),
+        min(df.groupby("labels").count()["context"]),
+    )
     random.seed(0)
     sample = df.groupby("labels", group_keys=False).apply(
         lambda x: x.sample(n=samples, random_state=random.seed(0))
@@ -42,27 +47,48 @@ def data_split(raw_datapth, input_path, args):
     sample.to_json(input_path)
 
 
-def get_response(allprompts):
+def get_response(allprompts, args):
     global errortime
     allresponse = []
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
+        oneprompt = tokenizer.clean_up_tokenization(
+            tokenizer.convert_tokens_to_string(
+                tokenizer.convert_ids_to_tokens(
+                    tokenizer(oneprompt, max_length=4094, truncation=True)["input_ids"]
+                )
+            )
+        )
         # print(oneprompt)
         try:
+            if args.free_generation:
+                bias = {}
+                max_tokens = 256
+                stop = "."
+            else:
+                stop = None
+                max_tokens = 2
+                if True:
+                    bias = {str(i): 10 for i in range(32, 39)}
+                else:
+                    bias = {
+                        "5297": 20,
+                        "2949": 20,
+                        "17821": 20,
+                        "25101": 20,
+                    }
+
             api_query = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "user", "content": oneprompt},
                 ],
-                logit_bias={
-                    "5297": 20,
-                    "2949": 20,
-                    "17821": 20,
-                    "25101": 20,
-                },
+                logit_bias=bias,
                 temperature=0,
-                max_tokens=2,
+                max_tokens=max_tokens,
+                stop=stop,
+                user="RESEARCH-DATASET-" + args.dataset,
             )
             response = api_query["choices"][0]["message"]["content"]
             print("######Response#####", response)
@@ -153,12 +179,13 @@ def get_answers(input_path, output_path, prompts_path, args):
         response = []
         for i in range(len(input_prompts)):
             while True:
-                _, oneresponse = get_response([input_prompts[i]])
+                _, oneresponse = get_response([input_prompts[i]], args)
                 touseresponse = oneresponse[0].replace("\n", "&&&&&&")
                 response.append(touseresponse)
                 if "Error" not in touseresponse and in_domain(
                     touseresponse, args
                 ):  # implement: in_domain
+
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
                     print(touseindex[i], gold_label[i], touseresponse)
@@ -175,6 +202,8 @@ def get_answers(input_path, output_path, prompts_path, args):
                 else:
                     print("Error After Sleep and Repeat")
                     break
+                if args.sleep:
+                    time.sleep(args.sleep)
         fw.close()
         # end = time.time()
         # print("all used time: ", end - start)
@@ -230,7 +259,6 @@ def calculateres(path, args):
         allnum += 1
 
         if args.dataset in [
-            "conv_go_awry",
             "reddit_humor",
             "supreme_corpus",
         ]:
@@ -240,9 +268,7 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
-        elif args.dataset in [
-            "wiki_corpus",
-        ]:
+        elif args.dataset in ["wiki_corpus", "conv_go_awry"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -272,19 +298,68 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["implicit_hate"]:
-            gold = label_dict[content[1].lower()]
-            pred = content[2].lower()
-            for u in label_set:
-                if u in pred:
-                    pred = label_dict[u]
-                    break
-                pred = 0
-            if gold == pred:
+        elif args.dataset in ["tempowic"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "same": "A",
+                "different": "B",
+            }
+            if pred == mapping[gold].lower():
                 accnum += 1
-            golds.append(gold)
-            preds.append(pred)
-
+        elif args.dataset in ["semeval_stance"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {"against": "A", "favor": "B", "none": "C"}
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["ibc"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "liberal": "A",
+                "conservative": "B",
+                "neutral": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["media_ideology"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "left": "A",
+                "right": "B",
+                "center": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["implicit_hate"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "white_grievance": "A",
+                "incitement": "B",
+                "inferiority": "C",
+                "irony": "D",
+                "stereotypical": "E",
+                "threatening": "F",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+        elif args.dataset in ["discourse"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "question": "A",
+                "answer": "B",
+                "agreement": "C",
+                "disagreement": "D",
+                "appreciation": "E",
+                "elaboration": "F",
+                "humor": "G",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         else:
             pass
 
@@ -297,73 +372,6 @@ def calculateres(path, args):
         print(classification_report(golds, preds, target_names=target_names))
 
 
-def calculateres_hippocorpus(path, args):
-    def iter_all_strings():
-        for size in itertools.count(1):
-            for s in itertools.product(ascii_uppercase, repeat=size):
-                yield "".join(s)
-
-    path = args.answer_path
-    with open(args.input_path, "r") as f:
-        a = json.load(f)
-
-    f = open(path, "r", encoding="utf-8")
-
-    TP = 0
-    FP = 0
-    TN = 0
-    FN = 0
-
-    while True:
-        oneline = f.readline().strip()
-        if not oneline:
-            break
-        content = oneline.split("\t")
-        if len(content) != 3:
-            continue
-        index = content[0]
-        all_sents = a["context"][index].split(".\n")
-        gold = literal_eval(a["labels"][index])
-        pred = content[2]
-
-        for i, x in enumerate(iter_all_strings()):
-            if i >= len(all_sents):
-                break
-            sent = re.sub(f"([A-Z]+:) ", "", all_sents[i])
-            if sent[-1] != ".":
-                sent += "."
-            if (
-                (f"{x.upper()}:" in pred)
-                or (f"{x.upper()}," in pred)
-                or (f", {x.upper()}" in pred)
-                or (f",{x.upper()}" in pred)
-                or (sent in pred)
-            ):  # predicted positive
-                if sent in gold:  # true positive
-                    TP += 1
-                else:  # false positive
-                    # print(sent, gold)
-                    break
-                    FP += 1
-            else:
-                if sent in gold:  # false negative
-                    FN += 1
-                else:  # true negative
-                    TN += 1
-
-    acc = float(TP + TN) / float(TP + TN + FP + FN)
-    p = float(TP) / float(TP + FP)
-    r = float(TP) / float(TP + FN)
-    f = float(2 * TP) / float(2 * TP + FP + FN)
-    print("\n ###### Results ###### \n")
-    print("Acc: ", acc)
-    print("Precision: ", p)
-    print("Recall: ", r)
-    print("F1: ", f)
-    print("Number of Correct Data: ", (TP + TN))
-    print("Number of Testing Data: ", (TP + TN + FP + FN))
-
-
 def parse_arguments():
     parser = argparse.ArgumentParser(description="chatgpt-zero-shot-css")
     parser.add_argument(
@@ -371,6 +379,7 @@ def parse_arguments():
         type=str,
         default="conv_go_awry",
         choices=[
+            "discourse",
             "conv_go_awry",
             "wiki_corpus",
             "implicit_hate",
@@ -390,7 +399,8 @@ def parse_arguments():
         help="dataset used for experiment",
     )
     parser.add_argument("--labelset", default=None)
-
+    parser.add_argument("--free_generation", action="store_true")
+    parser.add_argument("--sleep", type=int, default=0)
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
@@ -404,6 +414,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
+    elif args.dataset == "discourse":
+        args.raw_datapath = "css_data/discourse/discourse.json"
+        args.input_path = "css_data/discourse/test.json"
+        args.answer_path = "css_data/discourse/answer"
     elif args.dataset == "reddit_humor":
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
@@ -428,7 +442,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
         args.answer_path = "css_data/media_ideology/answer"
-        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative']"
+        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative', 'A' , 'B', 'C']"
     elif args.dataset == "hippocorpus":
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
