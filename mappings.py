@@ -247,10 +247,10 @@ Explain the stereotype that this sentence communicates? Please use a single sent
 
 "talklife": """
 
-If a mental health professional considered the above "respone" in the context of a mental health seeker's "message," which of the following would they consider the "response" to be?
-A: Strong (A strong exploration is specific and labels the seeker’s experiences and feelings which the peer supporter wants to explore (e.g., replying with "What happened?" to "Are you feeling alone right now?"))
-B: Weak (A weak exploration is generic (e.g., replying with "What happened?" to "I am about to have an anxiety attack."))
-A: None (No explanation is a response that offers no support (e.g. "okay"))
+Explorations are when a mental health counselor shows active interest in a seeker by asking about unstated experiences. What level of exploration is expressed in the counselor's message above?
+A: Strong exploration (specifically labels the seeker’s experiences and feelings, like "Are you feeling alone right now?")
+B: Weak exploration (a generic question, like "What happened?")
+C: No exploration
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
 
