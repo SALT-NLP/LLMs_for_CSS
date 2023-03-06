@@ -34,6 +34,8 @@ csv_column_map = {
     "sbic": ("post", "targetStereotype"),
     "raop": ("posts", "labels"),
     "emotion": ("text", "labels"),
+    "mrf-explanation": ("headline", "writer_intent"),
+    "mrf-classification": ("headline", "gold_label")
 }
 
 drop_labels = {
@@ -242,5 +244,18 @@ D: Sadness
 E: Love
 F: Surprise
 
-Constraint: Answer with only the option above that is most accurate and nothing else."""
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "mrf-explanation": """
+    
+What is the implied message of the above news headline? 
+
+Constraint: Answer with a short phrase like "some masks are better than others."
+""",
+    "mrf-classification": """
+    
+Which of the following describes the above news headline?
+A: Misinformation
+B: Trustworthy
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
 }

@@ -35,17 +35,20 @@ def data_split(raw_datapth, input_path, args):
     print(df.groupby("labels").size())
 
     num_testing = min(args.testing_size, len(indexes))
-    samples = min(
-        int(num_testing / len(df.groupby("labels"))),
-        min(df.groupby("labels").count()["context"]),
-    )
-    random.seed(0)
-    sample = df.groupby("labels", group_keys=False).apply(
-        lambda x: x.sample(n=samples, random_state=random.seed(0))
-    )
-
-    sample.to_json(input_path)
-
+    
+    if args.no_stratify:
+        sample = df.sample(n=num_testing, random_state=random.seed(0))
+        sample.to_json(input_path)
+    else:
+        samples = min(
+            int(num_testing / len(df.groupby("labels"))),
+            min(df.groupby("labels").count()["context"]),
+        )
+        random.seed(0)
+        sample = df.groupby("labels", group_keys=False).apply(
+            lambda x: x.sample(n=samples, random_state=random.seed(0))
+        )
+        sample.to_json(input_path)
 
 def get_response(allprompts, args):
     global errortime
@@ -395,11 +398,14 @@ def parse_arguments():
             "semeval_stance",
             "tempowic",
             "sbic",
+            "mrf-explanation",
+            "mrf-classification"
         ],
         help="dataset used for experiment",
     )
     parser.add_argument("--labelset", default=None)
     parser.add_argument("--free_generation", action="store_true")
+    parser.add_argument("--no_stratify", action="store_true")
     parser.add_argument("--sleep", type=int, default=0)
     args = parser.parse_args()
     if args.dataset == "conv_go_awry":
@@ -469,6 +475,18 @@ def parse_arguments():
         args.raw_datapath = "css_data/sbic/sbic.json"
         args.input_path = "css_data/sbic/test.json"
         args.answer_path = "css_data/sbic/answer"
+        args.no_stratify = True
+        args.free_generation = True
+    elif args.dataset == "mrf-explanation":
+        args.raw_datapath = "css_data/mrf/mrf-explanation.json"
+        args.input_path = "css_data/mrf/test-explanation.json"
+        args.answer_path = "css_data/mrf/answer-explanation"
+        args.no_stratify = True
+        args.free_generation = True
+    elif args.dataset == "mrf-classification":
+        args.raw_datapath = "css_data/mrf/mrf-classification.json"
+        args.input_path = "css_data/mrf/test-classification.json"
+        args.answer_path = "css_data/mrf/answer-classification"
     else:
         raise ValueError("dataset is not properly defined ...")
 
