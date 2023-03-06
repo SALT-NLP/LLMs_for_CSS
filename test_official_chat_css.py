@@ -477,6 +477,18 @@ def parse_arguments():
         args.answer_path = "css_data/sbic/answer"
         args.no_stratify = True
         args.free_generation = True
+    elif args.dataset == "talklife":
+        args.raw_datapath = "css_data/talklife/talklife.json"
+        args.input_path = "css_data/talklife/test.json"
+        args.answer_path = "css_data/talklife/answer"
+    elif args.dataset == "raop":
+        args.raw_datapath = "css_data/raop/raop.json"
+        args.input_path = "css_data/raop/test.json"
+        args.answer_path = "css_data/raop/answer"
+    elif args.dataset == "emotion":
+        args.raw_datapath = "css_data/emotion/emotion.json"
+        args.input_path = "css_data/emotion/test.json"
+        args.answer_path = "css_data/emotion/answer"
     elif args.dataset == "mrf-explanation":
         args.raw_datapath = "css_data/mrf/mrf-explanation.json"
         args.input_path = "css_data/mrf/test-explanation.json"
