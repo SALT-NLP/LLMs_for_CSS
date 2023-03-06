@@ -499,6 +499,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/mrf/mrf-classification.json"
         args.input_path = "css_data/mrf/test-classification.json"
         args.answer_path = "css_data/mrf/answer-classification"
+    elif args.dataset == "tropes":
+        args.raw_datapath = "css_data/tropes/tropes.json"
+        args.input_path = "css_data/tropes/test.json"
+        args.answer_path = "css_data/tropes/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 

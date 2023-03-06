@@ -35,7 +35,8 @@ csv_column_map = {
     "raop": ("posts", "labels"),
     "emotion": ("text", "labels"),
     "mrf-explanation": ("headline", "writer_intent"),
-    "mrf-classification": ("headline", "gold_label")
+    "mrf-classification": ("headline", "gold_label"),
+    "tropes": ("Quotes", "Tropes")
 }
 
 drop_labels = {
@@ -258,4 +259,81 @@ A: Misinformation
 B: Trustworthy
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "tropes": """
+
+Given quotes from the character above, which of the following tropes would you say this character represents?
+
+A: Absent Minded Professor
+B: Adventurer Archaeologist
+C: Arrogant Kungfu Guy
+D: Big Man On Campus
+E: Bounty Hunter
+F: Brainless Beauty
+G: Broken Bird
+H: Bromantic Foil
+I: Bruiser With A Soft Center
+J: Bully
+K: Byronic Hero
+L: Casanova
+M: Chanteuse
+N: Charmer
+O: Child Prodigy
+P: Classy Cat Burglar
+Q: Consummate Professional
+R: Corrupt Corporate Executive
+S: Coward
+T: Crazy Jealous Guy
+U: Crazy Survivalist
+V: Cultured Badass
+W: Dean Bitterman
+X: Dirty Cop
+Y: Ditz
+Z: Doormat
+AA: Drill Sargeant Nasty
+AB: Dumb Blonde
+AC: Dumb Muscle
+AD: Eccentric Mentor
+AE: Egomaniac Hunter
+AF: Evil Prince
+AG: Fastest Gun In The West
+AH: Father To His Men
+AI: Final Girl
+AJ: Gadgeteer Genius
+AK: Gentleman Thief
+AL: Granola Person
+AM: Grumpy Old Man
+AN: Hardboiled Detective
+AO: Heartbroken Badass
+AP: Henpecked Husband
+AQ: Hitman With A Heart
+AR: Jerk Jock
+AS: Junkie Prophet
+AT: Klutz
+AU: Loser Protagonist
+AV: Loveable Rogue
+AW: Master Swordsman
+AX: Morally Bankrupt Banker
+AY: Officer And A Gentleman
+AZ: Ophelia
+BA: Playful Hacker
+BB: Prima Donna
+BC: Psycho For Hire
+BD: Pupil Turned To Evil
+BE: Retired Outlaw
+BF: Revenge
+BG: Romantic Runnerup
+BH: Self Made Man
+BI: Slacker
+BJ: Stoner
+BK: Storyteller
+BL: Stupid Crooks
+BM: Surfer Dude
+BN: The Chief
+BO: The Editor
+BP: Tranquil Fury
+BQ: Trickster
+BR: Valley Girl
+BS: Warrior Poet
+BT: Young Gun
+""",
 }
