@@ -13,9 +13,16 @@ import argparse
 import openai
 from sklearn.metrics import classification_report
 from config import config_access_token
+from mappings import labelsets
 
 tokenizer = GPT2TokenizerFast.from_pretrained("gpt2", truncation_side="left")
 
+def tokenized_labelset(args):
+    ls = set()
+    for x in tokenizer(args.labelset)['input_ids']:
+        for y in x:
+            ls.add(y)
+    return sorted(ls)
 
 def data_split(raw_datapth, input_path, args):
     if os.path.exists(input_path):
@@ -65,22 +72,16 @@ def get_response(allprompts, args):
         )
         # print(oneprompt)
         try:
-            if args.free_generation:
+            if args.labelset is not None:
+                LS = tokenized_labelset(args)
+                weight = (80 // len(LS))
+                bias = {str(i):weight for i in LS}
+                stop = None
+                max_tokens = 2
+            else:
                 bias = {}
                 max_tokens = 256
                 stop = "."
-            else:
-                stop = None
-                max_tokens = 2
-                if True:
-                    bias = {str(i): 10 for i in range(32, 39)}
-                else:
-                    bias = {
-                        "5297": 20,
-                        "2949": 20,
-                        "17821": 20,
-                        "25101": 20,
-                    }
 
             api_query = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
@@ -223,8 +224,8 @@ def get_answers(input_path, output_path, prompts_path, args):
 
 def in_domain(response, args):
     if args.labelset is not None:
-        labelset = literal_eval(args.labelset)
-        for lbl in labelset:
+        #labelset = literal_eval(args.labelset)
+        for lbl in args.labelset:
             if lbl in response:
                 return True
         return False
@@ -399,12 +400,13 @@ def parse_arguments():
             "tempowic",
             "sbic",
             "mrf-explanation",
-            "mrf-classification"
+            "mrf-classification",
+            "tropes"
         ],
         help="dataset used for experiment",
     )
     parser.add_argument("--labelset", default=None)
-    parser.add_argument("--free_generation", action="store_true")
+    parser.add_argument("--list_generation", action="store_true")
     parser.add_argument("--no_stratify", action="store_true")
     parser.add_argument("--sleep", type=int, default=0)
     args = parser.parse_args()
@@ -448,7 +450,6 @@ def parse_arguments():
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
         args.answer_path = "css_data/media_ideology/answer"
-        args.labelset = "['left', 'right', 'center', 'centrist', 'neutral', 'liberal', 'conservative', 'A' , 'B', 'C']"
     elif args.dataset == "hippocorpus":
         args.raw_datapath = "css_data/hippocorpus/hippocorpus.json"
         args.input_path = "css_data/hippocorpus/test.json"
@@ -476,7 +477,6 @@ def parse_arguments():
         args.input_path = "css_data/sbic/test.json"
         args.answer_path = "css_data/sbic/answer"
         args.no_stratify = True
-        args.free_generation = True
     elif args.dataset == "talklife":
         args.raw_datapath = "css_data/talklife/talklife.json"
         args.input_path = "css_data/talklife/test.json"
@@ -494,7 +494,6 @@ def parse_arguments():
         args.input_path = "css_data/mrf/test-explanation.json"
         args.answer_path = "css_data/mrf/answer-explanation"
         args.no_stratify = True
-        args.free_generation = True
     elif args.dataset == "mrf-classification":
         args.raw_datapath = "css_data/mrf/mrf-classification.json"
         args.input_path = "css_data/mrf/test-classification.json"
@@ -505,7 +504,10 @@ def parse_arguments():
         args.answer_path = "css_data/tropes/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
-
+    if args.labelset is None:
+        args.labelset = labelsets[args.dataset]
+    if (args.list_generation) and (args.labelset is not None):
+        args.labelset.extend([" ", ","])
     # substitute this with your own access token!
     args.testing_size = 500
 

@@ -58,6 +58,33 @@ jsonl_download = {
     # "tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
 }
 
+labelsets = {
+    "power": ["True", "False"],
+    "stance": ["True", "False"],
+    "politeness": ["A", "B", "C"],
+    "persuasion": ["True", "False"],
+    "discourse": ["A", "B", "C", "D", "E", "F", "G"],
+    "hate": ["A", "B", "C", "D", "E", "F"],
+    "reframe": None,
+    "humor": ["True", "False"],
+    "toxicity": ["True", "False"],
+    "flute-explanation": ["A", "B"],
+    "flute-classification": ["A", "B", "C", "D"],
+    "media_ideology": ["A", "B", "C"],
+    "hippocorpus": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ', 'BA', 'BB', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BK', 'BL', 'BM', 'BN', 'BO', 'BP', 'BQ', 'BR', 'BS', 'BT'],
+    "indian_english_dialect": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V'],
+    "ibc": ["A", "B", "C"],
+    "semeval_stance": ["A", "B", "C"],
+    "tempowic": ["A", "B"],
+    "sbic": None,
+    "talklife": ["A", "B", "C"], # fix!
+    "raop": ["A", "B"], # fix!
+    "emotion": ["A", "B", "C", "D", "E", "F"],
+    "mrf-explanation": None,
+    "mrf-classification": ["A", "B"],
+    "tropes": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ', 'BA', 'BB', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BK', 'BL', 'BM', 'BN', 'BO', 'BP', 'BQ', 'BR', 'BS', 'BT'],
+}
+
 prompts_templates = {
     "power": """
 
