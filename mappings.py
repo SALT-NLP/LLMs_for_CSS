@@ -67,7 +67,7 @@ labelsets = {
     "hate": ["A", "B", "C", "D", "E", "F"],
     "reframe": None,
     "humor": ["True", "False"],
-    "toxicity": ["True", "False"],
+    "conv_go_awry": ["True", "False"],
     "flute-explanation": ["A", "B"],
     "flute-classification": ["A", "B", "C", "D"],
     "media_ideology": ["A", "B", "C"],
