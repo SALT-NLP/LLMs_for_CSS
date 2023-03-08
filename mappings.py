@@ -256,7 +256,7 @@ Constraint: Answer with only the option above that is most accurate and nothing 
 
 "raop": """
 
-If a user on a online community for giving away free pizza saw the above post, they would consider the post to be
+If a user in a community for giving away free pizza saw the above post, they would consider the post to be
 A: Persuasive
 B: Not persuasive
 
