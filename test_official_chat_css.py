@@ -1,28 +1,29 @@
 import json
 import os
 import pandas as pd
+import numpy as np
 from os.path import exists
 from os import getenv
 from sys import argv, exit
 from ast import literal_eval
-from transformers import GPT2TokenizerFast
+from transformers import GPT2TokenizerFast, AutoModelForSeq2SeqLM, AutoTokenizer
+import argparse
 import time
+import torch
 import re
 import random
-import argparse
 import openai
 from sklearn.metrics import classification_report
-from config import config_access_token
 from mappings import labelsets
 
-tokenizer = GPT2TokenizerFast.from_pretrained("gpt2", truncation_side="left")
 
 def tokenized_labelset(args):
     ls = set()
-    for x in tokenizer(args.labelset)['input_ids']:
+    for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
         for y in x:
             ls.add(y)
     return sorted(ls)
+
 
 def data_split(raw_datapth, input_path, args):
     if os.path.exists(input_path):
@@ -42,7 +43,7 @@ def data_split(raw_datapth, input_path, args):
     print(df.groupby("labels").size())
 
     num_testing = min(args.testing_size, len(indexes))
-    
+
     if args.no_stratify:
         sample = df.sample(n=num_testing, random_state=random.seed(0))
         sample.to_json(input_path)
@@ -57,44 +58,85 @@ def data_split(raw_datapth, input_path, args):
         )
         sample.to_json(input_path)
 
+
+def get_chatgpt_response(args, oneprompt):
+    if args.labelset is not None:
+        LS = tokenized_labelset(args)
+        weight = 80 // len(LS)
+        bias = {str(i): weight for i in LS}
+        stop = None
+        max_tokens = 2
+    else:
+        bias = {}
+        max_tokens = 256
+        stop = "."
+
+    api_query = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "user", "content": oneprompt},
+        ],
+        logit_bias=bias,
+        temperature=0,
+        max_tokens=max_tokens,
+        stop=stop,
+        user="RESEARCH-DATASET-" + args.dataset,
+    )
+    response = api_query["choices"][0]["message"]["content"]
+    return response
+
+
+def get_flan_response(args, oneprompt):
+    input_ids = args.tokenizer(oneprompt, return_tensors="pt").input_ids.cuda()
+    args.labelset = [label.lower() for label in args.labelset]
+    LS = tokenized_labelset(args)
+    if args.labelset is not None:
+        decoder_input_ids = args.tokenizer("", return_tensors="pt").input_ids.cuda()
+        decoder_input_ids = args.flan._shift_right(decoder_input_ids)
+        logits = args.flan(
+            input_ids=input_ids, decoder_input_ids=decoder_input_ids
+        ).logits.flatten()
+        probs = (
+            torch.nn.functional.softmax(
+                torch.tensor([logits[i] for i in LS]),
+                dim=0,
+            )
+            .detach()
+            .cpu()
+            .numpy()
+        )
+        print(probs)
+        print(args.labelset)
+        response = {i: args.labelset[i] for i in range(len(LS))}[np.argmax(probs)]
+    else:
+        gen_config = GenerationConfig.from_pretrained(args.model, max_new_tokens=256)
+        stop = args.tokenizer(".")[0]
+        args.flan(input_ids, generation_config=gen_config, forced_eos_token_id=stop)
+
+    return response
+
+
 def get_response(allprompts, args):
     global errortime
     allresponse = []
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
-        oneprompt = tokenizer.clean_up_tokenization(
-            tokenizer.convert_tokens_to_string(
-                tokenizer.convert_ids_to_tokens(
-                    tokenizer(oneprompt, max_length=4094, truncation=True)["input_ids"]
+        oneprompt = args.tokenizer.clean_up_tokenization(
+            args.tokenizer.convert_tokens_to_string(
+                args.tokenizer.convert_ids_to_tokens(
+                    args.tokenizer(oneprompt, max_length=4094, truncation=True)[
+                        "input_ids"
+                    ]
                 )
             )
         )
         # print(oneprompt)
         try:
-            if args.labelset is not None:
-                LS = tokenized_labelset(args)
-                weight = (80 // len(LS))
-                bias = {str(i):weight for i in LS}
-                stop = None
-                max_tokens = 2
-            else:
-                bias = {}
-                max_tokens = 256
-                stop = "."
-
-            api_query = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "user", "content": oneprompt},
-                ],
-                logit_bias=bias,
-                temperature=0,
-                max_tokens=max_tokens,
-                stop=stop,
-                user="RESEARCH-DATASET-" + args.dataset,
-            )
-            response = api_query["choices"][0]["message"]["content"]
+            if args.model == "chatgpt":
+                response = get_open_ai_response(args, oneprompt)
+            elif "flan" in args.model:
+                response = get_flan_response(args, oneprompt)
             print("######Response#####", response)
 
             allresponse.append(response)
@@ -189,7 +231,6 @@ def get_answers(input_path, output_path, prompts_path, args):
                 if "Error" not in touseresponse and in_domain(
                     touseresponse, args
                 ):  # implement: in_domain
-
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
                     print(touseindex[i], gold_label[i], touseresponse)
@@ -224,7 +265,7 @@ def get_answers(input_path, output_path, prompts_path, args):
 
 def in_domain(response, args):
     if args.labelset is not None:
-        #labelset = literal_eval(args.labelset)
+        # labelset = literal_eval(args.labelset)
         for lbl in args.labelset:
             if lbl in response:
                 return True
@@ -401,15 +442,32 @@ def parse_arguments():
             "sbic",
             "mrf-explanation",
             "mrf-classification",
-            "tropes"
+            "tropes",
         ],
         help="dataset used for experiment",
+    )
+    parser.add_argument(
+        "--model",
+        "-m",
+        type=str,
+        default="chatgpt",
+        choices=[
+            "chatgpt",
+            "google/flan-t5-small",
+            "google/flan-t5-base",
+            "google/flan-t5-large",
+            "google/flan-t5-xl",
+            "google/flan-t5-xxl",
+            "google/flan-ul2",
+        ],
     )
     parser.add_argument("--labelset", default=None)
     parser.add_argument("--list_generation", action="store_true")
     parser.add_argument("--no_stratify", action="store_true")
     parser.add_argument("--sleep", type=int, default=0)
+    parser.add_argument("--ngpu", "-g", type=int, default=2)
     args = parser.parse_args()
+
     if args.dataset == "conv_go_awry":
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
         args.input_path = "css_data/conv_go_awry/test.json"
@@ -508,11 +566,31 @@ def parse_arguments():
         args.labelset = labelsets[args.dataset]
     if (args.list_generation) and (args.labelset is not None):
         args.labelset.extend([" ", ","])
+
+    if args.model == "chatgpt":
+        args.tokenizer = GPT2TokenizerFast.from_pretrained(
+            "gpt2", truncation_side="left"
+        )
+    elif "flan" in args.model:
+        args.tokenizer = AutoTokenizer.from_pretrained(
+            args.model, truncation_side="left"
+        )
+        args.flan = AutoModelForSeq2SeqLM.from_pretrained(args.model)
+        heads_per_gpu = len(args.flan.encoder.block) // args.ngpu
+        device_map = {
+            gpu: list(
+                range(
+                    0 + (gpu * heads_per_gpu),
+                    (0 + (gpu * heads_per_gpu)) + heads_per_gpu,
+                )
+            )
+            for gpu in range(args.ngpu)
+        }
+        args.flan.parallelize(device_map)
+        args.flan.eval()
+        args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
     # substitute this with your own access token!
     args.testing_size = 500
-
-    args.access_token = config_access_token
-    # "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJqaWFhb2NAYWxsZW5haS5vcmciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZ2VvaXBfY291bnRyeSI6IlVTIn0sImh0dHBzOi8vYXBpLm9wZW5haS5jb20vYXV0aCI6eyJ1c2VyX2lkIjoidXNlci1JWVpYSEFrdVJKTXJrVXlLU2RSbFZEWWkifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDYwOWFjMWY0NGMxZjQ1MDA3MDQwYmExZiIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzY0OTA3NjAsImV4cCI6MTY3NzcwMDM2MCwiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvZmZsaW5lX2FjY2VzcyJ9.XFsYqMo1JpK58MYk0QzqkuIn2bTfknFzjBGkYFHznPj-dQjgHuyxB6HwgznSj7jYa2hmloBMK3FxV3peXQ5aLiqfh0QIBgHWUlr3CSCm2ypB82V8HjcgN-18WYlACIg_w7im7xYmMv3_1iRGWyq4d1-8vzxgtADrthqPNcjaib3nPwj9RzYOdcV6fZd4n54MqcuXn2l-Yge0weB539GvBRkinCmEbcNJZKJ3VYQu6EiO0t_MzRodCOLnD-auZBfs-sbyVMuRH65RSjIqVsdhp8S_f2gmTaMs4MRU2CC0b8QX-3mVFZmhRHhUYA5TEaEaHT8Y83AA0j3C6erwx-gMpg"
 
     return args
 
@@ -551,4 +629,3 @@ if __name__ == "__main__":
     # get the execution time
     elapsed_time = et - st
     print("###### Execution Time:", elapsed_time, " seconds. ######")
-
