@@ -1,0 +1,224 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@9.1.1/dist/css/autoComplete.min.css">
+<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:10pt;">
+
+</section>
+<!-- End Instructions --><!-- Content Body --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:10pt;">
+<fieldset>
+
+
+	<h2>Evaluation: Social Bias Frames</h2>
+	<p style="font-size:12pt;"><span style="color:#BB271A">Content Warning:</span> This HIT may contain examples that bother some workers. If at any point you do not feel comfortable, please feel free to skip the HIT or take a break. </p>
+	<a href="#TASK_BEGINNING">[Jump to Task]</a>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title" style="font-weight: bold"><a id="INSTRUCTIONS">Instructions</a> &nbsp; &nbsp; <a data-toggle="collapse" href="#collapse0" style="color:#0080ff;font-weight:normal;text-decoration: underline;">(Expand/Collapse)</a></h4>
+				</div>
+					<div class="panel-collapse collapse" id="collapse0" style="margin:10px">
+
+						<p>You will read a toxic post from the internet and tell us whether the provided explanation accurately explains why it's toxic.</p>
+
+						<p>Explanations come from other annotators. They were told to do the following: "Explain who is targeted by the offensive post (individual or group), which minority or demographic group(s), and what aspects of the group(s) are referenced. Use (overly) simplistic "<em>GROUP is/does/can't ___</em>" phrasing (e.g. "<em>women can't drive</em>", "<em>gay men are feminine</em>", "<em>asians are good at math</em>").</p>"
+              			
+              			<p>When talking about stereoypes, think about the ones that are (unfortunately) culturally present in our society. Perspectives are given from an American cultural frame.</p>
+              
+              			<p><em>Note</em>: we will assume that MTurk workers only have good intentions when annotating these posts.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<crowd-form answer-format='flatten-objects'>
+		<h2><a id="TASK_BEGINNING">Task</a></h2>
+
+		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
+
+		<div class="story-excerpt" style="margin-top: 40">
+		<a id="QUESTION"><h4>HATEFUL MESSAGE:</h4></a>
+
+		<div style="padding-left:20px;">
+		<p style="font-size:10pt">${post}</p>
+		</div>
+		</div>
+
+		<div class="story-excerpt">
+		<a id="ANSWER"><h4>IMPLIED STATEMENT:</h4></a>
+
+		<div style="padding-left:20px;">
+		<p id="s2" style="font-size:10pt">${targetStereotype}</p>
+		</div>
+		</div>
+
+            <br>
+            <div>
+                <p><b>Is the target group in the IMPLIED STATEMENT correct?</b></p>
+                <crowd-radio-group>
+                    <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>Incorrect &#128078; &#x1F44E;<br>
+                    <crowd-radio-button name='target_partial' id='target_partial'></crowd-radio-button>Partially Correct &#x1F914;<br>
+                    <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Correct &#128077; &#x1F44D;<br>
+                </crowd-radio-group>
+            </div>
+
+            <div>
+                <p><b>Is the implied stereotype in the IMPLIED STATEMENT correct?</b></p>
+                <crowd-radio-group>
+                    <crowd-radio-button name='stereotype_incorrect' id='stereotype_incorrect'></crowd-radio-button>Incorrect &#128078; &#x1F44E;<br>
+                    <crowd-radio-button name='stereotype_partial' id='stereotype_partial'></crowd-radio-button>Partially Correct &#x1F914;<br>
+                    <crowd-radio-button name='stereotype_correct' id='stereotype_correct'></crowd-radio-button>Correct &#128077; &#x1F44D;<br>
+                </crowd-radio-group>
+            </div>
+
+			<br>
+			<p style="font-size:10pt"><b>Optional Feedback:</b> Thanks for filling out the questions! If something about the task was unclear, please leave a comment in the box below. We would like to make this HIT easier for future workers, so we really appreciate feedback. This is optional.</p>
+
+
+	<center>
+		<textarea cols="100" name="commentbox" rows="2" style="margin-left:10px;margin-top:10px"></textarea>
+	</center>
+	<br />
+	<br />
+	&nbsp;
+	<center onclick="getNext();">
+		<input class="btn btn-primary" id="submitButton" onclick="getNext()" type="submit" value="Submit"/> <!--HERE-->
+	</center>
+
+	</div>
+	</div>
+	</crowd-form>
+</fieldset>
+</section>
+<!-- End Content Body --><!-- close container -->
+
+<style type="text/css">
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+
+fieldset { padding: 10px; background:#fbfbfb; border-radius:5px; margin-bottom:5px; }
+.columns{
+    list-style-type: none;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+}
+.unbulleted{
+    list-style-type: none;
+    padding:7px;
+    margin:0px;
+}
+.story-excerpt {
+   margin-bottom: 30;
+   margin-left:10;
+   min-width: 500px;
+   border:2px #333333;
+   background-color: #f2f2f2;
+   border-style: solid;
+   padding-right:10px;
+   padding-left:10px;
+   display:table;
+   border-radius:15px;
+}
+table{
+   font-size:10pt;
+}
+
+.example-table td, .example-table th{
+   border:1px solid grey;
+   text-align:center;
+   font-size: 10pt;
+}
+
+.tooltip {
+  background-color: #FFFF00;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@9.1.1/dist/js/autoComplete.min.js"></script>
