@@ -59,6 +59,31 @@ def data_split(raw_datapth, input_path, args):
         sample.to_json(input_path)
 
 
+def get_gpt3_response(args, oneprompt):
+    if args.labelset is not None:
+        LS = tokenized_labelset(args)
+        weight = 80 // len(LS)
+        bias = {str(i): weight for i in LS}
+        stop = None
+        max_tokens = 2
+    else:
+        bias = {}
+        max_tokens = 256
+        stop = "."
+
+    api_query = openai.Completion.create(
+        enging=args.model,
+        prompt=oneprompt,
+        logit_bias=bias,
+        temperature=0,
+        max_tokens=max_tokens,
+        stop=stop,
+        user="RESEARCH-DATASET-" + args.dataset,
+    )
+    response = api_query["choices"][0]["message"]["content"]
+    return response
+
+
 def get_chatgpt_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
@@ -142,9 +167,11 @@ def get_response(allprompts, args):
         # print(oneprompt)
         try:
             if args.model == "chatgpt":
-                response = get_open_ai_response(args, oneprompt)
+                response = get_chatgpt_response(args, oneprompt)
             elif "flan" in args.model:
                 response = get_flan_response(args, oneprompt)
+            elif "text-" in args.model:
+                response = get_gpt3_response(args, oneprompt)
             print("######Response#####", response)
 
             allresponse.append(response)
@@ -467,6 +494,10 @@ def parse_arguments():
             "google/flan-t5-xl",
             "google/flan-t5-xxl",
             "google/flan-ul2",
+            "text-davinci-001",
+            "text-curie-001",
+            "text-babbage-001",
+            "text-ada-001",
         ],
     )
     parser.add_argument("--labelset", default=None)
@@ -575,7 +606,7 @@ def parse_arguments():
     if (args.list_generation) and (args.labelset is not None):
         args.labelset.extend([" ", ","])
 
-    if args.model == "chatgpt":
+    if args.model == "chatgpt" or "text-" in args.model:
         args.tokenizer = GPT2TokenizerFast.from_pretrained(
             "gpt2", truncation_side="left"
         )
