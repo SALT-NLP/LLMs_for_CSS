@@ -86,6 +86,7 @@ def get_chatgpt_response(args, oneprompt):
     return response
 
 
+@torch.no_grad()
 def get_flan_response(args, oneprompt):
     input_ids = args.tokenizer(oneprompt, return_tensors="pt").input_ids.cuda()
     args.labelset = [label.lower() for label in args.labelset]
@@ -109,7 +110,14 @@ def get_flan_response(args, oneprompt):
         print(args.labelset)
         response = {i: args.labelset[i] for i in range(len(LS))}[np.argmax(probs)]
     else:
-        gen_config = GenerationConfig.from_pretrained(args.model, max_new_tokens=256)
+        if "ul2" in args.model:
+            gen_config = GenerationConfig.from_pretrained(
+                args.model, max_new_tokens=256
+            )
+        else:
+            gen_config = GenerationConfig.from_pretrained(
+                "google/flan-t5-xxl", max_new_tokens=256
+            )
         stop = args.tokenizer(".")[0]
         args.flan(input_ids, generation_config=gen_config, forced_eos_token_id=stop)
 
