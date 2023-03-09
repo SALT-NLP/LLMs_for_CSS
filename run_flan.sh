@@ -1,7 +1,5 @@
 export TRANSFORMERS_CACHE=/nlp/scr/oshaikh/flan-cache
-declare -a arr=("hate" "conv_go_awry" "wiki_corpus" "discourse" "humor" "flute-explanation" "flute-classification" "politeness" "media_ideology" "hippocorpus" "indian_english_dialect" "ibc" "semeval_stance" "tempowic" "sbic" "mrf-explanation" "mrf-classification" "tropes")
-
-# "talklife" "raop" "emotion"
+declare -a arr=("conv_go_awry" "power" "hate" "discourse" "humor" "flute-explanation" "flute-classification" "supreme_corpus" "politeness" "media_ideology" "hippocorpus" "indian_english_dialect" "ibc" "semeval_stance" "tempowic" "sbic" "talklife" "raop" "emotion" "mrf-explanation" "mrf-classification" "tropes") 
 
 for i in "${arr[@]}"
 do
