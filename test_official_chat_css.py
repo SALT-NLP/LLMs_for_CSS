@@ -515,10 +515,13 @@ def parse_arguments():
         args.raw_datapath = "css_data/wiki_corpus/power.json"
         args.input_path = "css_data/wiki_corpus/test.json"
         args.answer_path = "css_data/wiki_corpus/answer"
+        args.labelset = "power"
+
     elif args.dataset == "implicit_hate":
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
+        args.labelset = "hate"
     elif args.dataset == "discourse":
         args.raw_datapath = "css_data/discourse/discourse.json"
         args.input_path = "css_data/discourse/test.json"
@@ -527,6 +530,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
+        args.labelset = "humor"
     elif args.dataset == "flute-explanation":
         args.raw_datapath = "css_data/flute/flute-explanation.json"
         args.input_path = "css_data/flute/test-explanation.json"
@@ -539,10 +543,13 @@ def parse_arguments():
         args.raw_datapath = "css_data/supreme_corpus/stance.json"
         args.input_path = "css_data/supreme_corpus/test.json"
         args.answer_path = "css_data/supreme_corpus/answer"
+        args.labelset = "stance"
+
     elif args.dataset == "wiki_politeness":
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
         args.answer_path = "css_data/wiki_politeness/answer"
+        args.labelset = "politeness"
     elif args.dataset == "media_ideology":
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
@@ -605,7 +612,7 @@ def parse_arguments():
         args.labelset = labelsets[args.dataset]
     if (args.list_generation) and (args.labelset is not None):
         args.labelset.extend([" ", ","])
-
+        
     if args.model == "chatgpt" or "text-" in args.model:
         args.tokenizer = GPT2TokenizerFast.from_pretrained(
             "gpt2", truncation_side="left"
