@@ -395,6 +395,12 @@ def calculateres(path, args):
             mapping = {"against": "A", "favor": "B", "none": "C"}
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["raop"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {"persuasive": "A", "not persuasive": "B"}
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["ibc"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -405,7 +411,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["emotion"]:
+        elif args.dataset in ["emotion", "talklife"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             if pred == gold:
