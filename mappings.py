@@ -30,7 +30,13 @@ csv_column_map = {
     "ibc": ("sentence", "leaning"),
     "semeval_stance": ("Tweet", "trump_stance"),
     "tempowic": (("text1", "text2", "word"), "label"),
+    "talklife": (("Seeker", "Response"), "remap_level"),
     "sbic": ("post", "targetStereotype"),
+    "raop": ("posts", "labels"),
+    "emotion": ("text", "labels"),
+    "mrf-explanation": ("headline", "writer_intent"),
+    "mrf-classification": ("headline", "gold_label"),
+    "tropes": ("Quotes", "Tropes"),
 }
 
 drop_labels = {
@@ -50,6 +56,202 @@ jsonl_download = {
     "flute-explanation": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
     "flute-classification": "https://huggingface.co/datasets/ColumbiaNLP/FLUTE/raw/main/train.jsonl",
     # "tempowic": "https://github.com/cardiffnlp/TempoWiC/raw/main/data/test-codalab-10k.data.jl",
+}
+
+labelsets = {
+    "power": ["True", "False"],
+    "stance": ["True", "False"],
+    "politeness": ["A", "B", "C"],
+    "persuasion": ["True", "False"],
+    "discourse": ["A", "B", "C", "D", "E", "F", "G"],
+    "hate": ["A", "B", "C", "D", "E", "F"],
+    "reframe": None,
+    "humor": ["True", "False"],
+    "conv_go_awry": ["True", "False"],
+    "flute-explanation": ["A", "B"],
+    "flute-classification": ["A", "B", "C", "D"],
+    "media_ideology": ["A", "B", "C"],
+    "hippocorpus": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "AA",
+        "AB",
+        "AC",
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AH",
+        "AI",
+        "AJ",
+        "AK",
+        "AL",
+        "AM",
+        "AN",
+        "AO",
+        "AP",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AV",
+        "AW",
+        "AX",
+        "AY",
+        "AZ",
+        "BA",
+        "BB",
+        "BC",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BK",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BP",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+    ],
+    "indian_english_dialect": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+    ],
+    "ibc": ["A", "B", "C"],
+    "semeval_stance": ["A", "B", "C"],
+    "tempowic": ["A", "B"],
+    "sbic": None,
+    "talklife": ["A", "B", "C"],  # fix!
+    "raop": ["A", "B"],  # fix!
+    "emotion": ["A", "B", "C", "D", "E", "F"],
+    "mrf-explanation": None,
+    "mrf-classification": ["A", "B"],
+    "tropes": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "AA",
+        "AB",
+        "AC",
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AH",
+        "AI",
+        "AJ",
+        "AK",
+        "AL",
+        "AM",
+        "AN",
+        "AO",
+        "AP",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AV",
+        "AW",
+        "AX",
+        "AY",
+        "AZ",
+        "BA",
+        "BB",
+        "BC",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BK",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BP",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+    ],
 }
 
 prompts_templates = {
@@ -181,6 +383,7 @@ S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked 
 T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
 U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
 V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+W: None of the above
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
@@ -209,6 +412,123 @@ B: Different
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
     "sbic": """
     
-If the above sentence is offensive to an identity group, what is the implied aspect of that group that this sentence communicates? Please use a phrase like "GROUP are ______" (e.g., "Korean folks have weird names")
+Explain the stereotype that this sentence communicates? Please use a single sentence like "[GROUP] are ______"
+""",
+    "talklife": """
+
+Explorations are when a mental health counselor shows active interest in a seeker by asking about unstated experiences. What level of exploration is expressed in the counselor's message above?
+A: Strong exploration (specifically labels the seeker’s experiences and feelings, like "Are you feeling alone right now?")
+B: Weak exploration (a generic question, like "What happened?")
+C: No exploration
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "raop": """
+
+
+If a user in a community for giving away free pizza saw the above post, they would consider the post to be
+A: Persuasive
+B: Not persuasive
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "emotion": """
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "mrf-explanation": """
+    
+What is the implied message of the above news headline? 
+
+Constraint: Answer with a short phrase like "some masks are better than others."
+""",
+    "mrf-classification": """
+    
+Which of the following describes the above news headline?
+A: Misinformation
+B: Trustworthy
+
+Constraint: Answer with only the option above that is most accurate and nothing else.""",
+    "tropes": """
+
+Given quotes from the character above, which of the following tropes would you say this character represents?
+
+A: Absent Minded Professor
+B: Adventurer Archaeologist
+C: Arrogant Kungfu Guy
+D: Big Man On Campus
+E: Bounty Hunter
+F: Brainless Beauty
+G: Broken Bird
+H: Bromantic Foil
+I: Bruiser With A Soft Center
+J: Bully
+K: Byronic Hero
+L: Casanova
+M: Chanteuse
+N: Charmer
+O: Child Prodigy
+P: Classy Cat Burglar
+Q: Consummate Professional
+R: Corrupt Corporate Executive
+S: Coward
+T: Crazy Jealous Guy
+U: Crazy Survivalist
+V: Cultured Badass
+W: Dean Bitterman
+X: Dirty Cop
+Y: Ditz
+Z: Doormat
+AA: Drill Sargeant Nasty
+AB: Dumb Blonde
+AC: Dumb Muscle
+AD: Eccentric Mentor
+AE: Egomaniac Hunter
+AF: Evil Prince
+AG: Fastest Gun In The West
+AH: Father To His Men
+AI: Final Girl
+AJ: Gadgeteer Genius
+AK: Gentleman Thief
+AL: Granola Person
+AM: Grumpy Old Man
+AN: Hardboiled Detective
+AO: Heartbroken Badass
+AP: Henpecked Husband
+AQ: Hitman With A Heart
+AR: Jerk Jock
+AS: Junkie Prophet
+AT: Klutz
+AU: Loser Protagonist
+AV: Loveable Rogue
+AW: Master Swordsman
+AX: Morally Bankrupt Banker
+AY: Officer And A Gentleman
+AZ: Ophelia
+BA: Playful Hacker
+BB: Prima Donna
+BC: Psycho For Hire
+BD: Pupil Turned To Evil
+BE: Retired Outlaw
+BF: Revenge
+BG: Romantic Runnerup
+BH: Self Made Man
+BI: Slacker
+BJ: Stoner
+BK: Storyteller
+BL: Stupid Crooks
+BM: Surfer Dude
+BN: The Chief
+BO: The Editor
+BP: Tranquil Fury
+BQ: Trickster
+BR: Valley Girl
+BS: Warrior Poet
+BT: Young Gun
 """,
 }

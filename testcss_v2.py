@@ -272,6 +272,36 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["indian_english_dialect"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "preposition omission": "R",
+                "copula omission": "B",
+                "resumptive subject pronoun": "S",
+                "resumptive object pronoun": "T",
+                "extraneous article": "D",
+                "focus only": "F",
+                "mass nouns as count nouns": "N",
+                "stative progressive": "U",
+                "lack of agreement": "K",
+                "none of the above": "W",
+                "lack of inversion in wh-questions": "L",
+                "topicalized non-argument constituent": "V",
+                "inversion in embedded clause": "J",
+                "focus itself": "E",
+                'general extender "and all"': "G",
+                "object fronting": "P",
+                'invariant tag "isn’t it, no, na"': "I",
+                "habitual progressive": "H",
+                "article omission": "A",
+                "prepositional phrase fronting with reduction": "Q",
+                'non-initial existential "is / are there"': "O",
+                "left dislocation": "M",
+                "direct object pronoun drop": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = label_dict[content[1].lower()]
             pred = content[2].lower()
@@ -455,6 +485,18 @@ def parse_arguments():
         args.raw_datapath = "css_data/sbic/sbic.json"
         args.input_path = "css_data/sbic/test.json"
         args.answer_path = "css_data/sbic/answer"
+    elif args.dataset == "talklife":
+        args.raw_datapath = "css_data/talklife/talklife.json"
+        args.input_path = "css_data/talklife/test.json"
+        args.answer_path = "css_data/talklife/answer"
+    elif args.dataset == "raop":
+        args.raw_datapath = "css_data/raop/raop.json"
+        args.input_path = "css_data/raop/test.json"
+        args.answer_path = "css_data/raop/answer"
+    elif args.dataset == "emotion":
+        args.raw_datapath = "css_data/emotion/emotion.json"
+        args.input_path = "css_data/emotion/test.json"
+        args.answer_path = "css_data/emotion/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
 
