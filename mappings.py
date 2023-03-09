@@ -424,6 +424,7 @@ C: No exploration
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
     "raop": """
 
+
 If a user in a community for giving away free pizza saw the above post, they would consider the post to be
 A: Persuasive
 B: Not persuasive

@@ -405,6 +405,11 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["emotion"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            if pred == gold:
+                accnum += 1
         elif args.dataset in ["media_ideology"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -509,6 +514,9 @@ def parse_arguments():
             "sbic",
             "mrf-explanation",
             "mrf-classification",
+            "talklife",
+            "emotion",
+            "raop",
             "tropes",
         ],
         help="dataset used for experiment",
@@ -571,6 +579,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/supreme_corpus/stance.json"
         args.input_path = "css_data/supreme_corpus/test.json"
         args.answer_path = "css_data/supreme_corpus/answer"
+        args.labelset = labelsets["stance"]
     elif args.dataset == "politeness":
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
