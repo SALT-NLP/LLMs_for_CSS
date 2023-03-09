@@ -1,5 +1,5 @@
 export TRANSFORMERS_CACHE=/nlp/scr/oshaikh/flan-cache
-declare -a arr=("implicit_hate" "conv_go_awry" "wiki_corpus" "discourse" "reddit_humor" "flute-explanation" "flute-classification" "supreme_corpus" "wiki_politeness" "media_ideology" "hippocorpus" "indian_english_dialect" "ibc" "semeval_stance" "tempowic" "sbic" "mrf-explanation" "mrf-classification" "tropes")
+declare -a arr=("hate" "conv_go_awry" "wiki_corpus" "discourse" "humor" "flute-explanation" "flute-classification" "politeness" "media_ideology" "hippocorpus" "indian_english_dialect" "ibc" "semeval_stance" "tempowic" "sbic" "mrf-explanation" "mrf-classification" "tropes")
 
 # "talklife" "raop" "emotion"
 

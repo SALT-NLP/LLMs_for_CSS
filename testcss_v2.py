@@ -272,6 +272,36 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["indian_english_dialect"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "preposition omission": "R",
+                "copula omission": "B",
+                "resumptive subject pronoun": "S",
+                "resumptive object pronoun": "T",
+                "extraneous article": "D",
+                "focus only": "F",
+                "mass nouns as count nouns": "N",
+                "stative progressive": "U",
+                "lack of agreement": "K",
+                "none of the above": "W",
+                "lack of inversion in wh-questions": "L",
+                "topicalized non-argument constituent": "V",
+                "inversion in embedded clause": "J",
+                "focus itself": "E",
+                'general extender "and all"': "G",
+                "object fronting": "P",
+                'invariant tag "isn’t it, no, na"': "I",
+                "habitual progressive": "H",
+                "article omission": "A",
+                "prepositional phrase fronting with reduction": "Q",
+                'non-initial existential "is / are there"': "O",
+                "left dislocation": "M",
+                "direct object pronoun drop": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["implicit_hate"]:
             gold = label_dict[content[1].lower()]
             pred = content[2].lower()
