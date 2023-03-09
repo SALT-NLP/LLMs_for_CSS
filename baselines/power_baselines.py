@@ -80,11 +80,11 @@ class Custom_Dataset(torch.utils.data.Dataset):
 
 
 def dataset_process(dic_data, tokenizer, label_map=None):
-    length = len(dic_data["labels"])
-    text = [dic_data["context"][str(i)] for i in range(length)]
+    text = []
     labels = []
-    for i in range(length):
-        if dic_data["labels"][str(i)] == True:
+    for index in dic_data["labels"].keys():
+        text.append(dic_data["context"][index])
+        if dic_data["labels"][index] == True:
             labels.append(0)
         else:
             labels.append(1)

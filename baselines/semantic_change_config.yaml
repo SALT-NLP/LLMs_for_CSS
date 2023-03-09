@@ -1,0 +1,13 @@
+program: semantic_change_baselines.py
+project: social_chatgpt
+method: grid
+metric:
+  name: eval/acc
+  goal: maximize
+parameters:
+  lr:
+    values: [8e-6, 1e-5, 2e-5, 3e-5, 5e-5, 6e-5, 8e-5]
+  seed:
+    values: [40, 41, 42]
+  epoch:
+    values: [1, 2, 3, 4]

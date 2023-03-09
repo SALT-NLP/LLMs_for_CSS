@@ -1,4 +1,4 @@
-program: power_baselines.py
+program: emotion_baselines.py
 project: social_chatgpt
 method: grid
 metric:
@@ -6,6 +6,6 @@ metric:
   goal: maximize
 parameters:
   lr:
-    values: [5e-6, 1e-5, 2e-5, 5e-5]
+    values: [1e-5, 2e-5, 5e-5]
   epoch:
     values: [1, 2]
