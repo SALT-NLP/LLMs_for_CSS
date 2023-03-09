@@ -62,7 +62,7 @@ def data_split(raw_datapth, input_path, args):
 def get_gpt3_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
-        weight = 80 // len(LS)
+        weight = 20
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 2
@@ -87,7 +87,7 @@ def get_gpt3_response(args, oneprompt):
 def get_chatgpt_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
-        weight = 80 // len(LS)
+        weight = 20
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 2
