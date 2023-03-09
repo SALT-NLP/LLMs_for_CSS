@@ -515,13 +515,13 @@ def parse_arguments():
         args.raw_datapath = "css_data/wiki_corpus/power.json"
         args.input_path = "css_data/wiki_corpus/test.json"
         args.answer_path = "css_data/wiki_corpus/answer"
-        args.labelset = "power"
+        args.labelset = labelsets["power"]
 
     elif args.dataset == "implicit_hate":
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
-        args.labelset = "hate"
+        args.labelset = labelsets["hate"]
     elif args.dataset == "discourse":
         args.raw_datapath = "css_data/discourse/discourse.json"
         args.input_path = "css_data/discourse/test.json"
@@ -530,7 +530,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
-        args.labelset = "humor"
+        args.labelset = labelsets["humor"]
     elif args.dataset == "flute-explanation":
         args.raw_datapath = "css_data/flute/flute-explanation.json"
         args.input_path = "css_data/flute/test-explanation.json"
@@ -543,13 +543,13 @@ def parse_arguments():
         args.raw_datapath = "css_data/supreme_corpus/stance.json"
         args.input_path = "css_data/supreme_corpus/test.json"
         args.answer_path = "css_data/supreme_corpus/answer"
-        args.labelset = "stance"
+        args.labelset = labelsets["stance"]
 
     elif args.dataset == "wiki_politeness":
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
         args.answer_path = "css_data/wiki_politeness/answer"
-        args.labelset = "politeness"
+        args.labelset = labelsets["politeness"]
     elif args.dataset == "media_ideology":
         args.raw_datapath = "css_data/media_ideology/media_ideology.json"
         args.input_path = "css_data/media_ideology/test.json"
