@@ -114,7 +114,9 @@ def get_chatgpt_response(args, oneprompt):
 @torch.no_grad()
 def get_flan_response(args, oneprompt):
     input_ids = args.tokenizer(oneprompt, return_tensors="pt").input_ids.cuda()
-    args.labelset = [label.lower() for label in args.labelset]
+    args.labelset = [
+        label.lower() if len(label) > 1 else label for label in args.labelset
+    ]
     LS = tokenized_labelset(args)
     if args.labelset is not None:
         decoder_input_ids = args.tokenizer("", return_tensors="pt").input_ids.cuda()
@@ -131,9 +133,9 @@ def get_flan_response(args, oneprompt):
             .cpu()
             .numpy()
         )
-        print(probs)
-        print(args.labelset)
-        response = {i: args.labelset[i] for i in range(len(LS))}[np.argmax(probs)]
+        LS_str_map = args.tokenizer.decode(LS).split(" ")
+        print(LS_str_map)
+        response = {i: LS_str_map[i] for i in range(len(LS))}[np.argmax(probs)]
     else:
         if "ul2" in args.model:
             gen_config = GenerationConfig.from_pretrained(
@@ -339,7 +341,7 @@ def calculateres(path, args):
         allnum += 1
 
         if args.dataset in [
-            "reddit_humor",
+            "humor",
             "supreme_corpus",
         ]:
             # print(content[1])
@@ -348,7 +350,7 @@ def calculateres(path, args):
             print(gold, pred)
             if gold in pred:
                 accnum += 1
-        elif args.dataset in ["wiki_corpus", "conv_go_awry"]:
+        elif args.dataset in ["power", "conv_go_awry"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -357,7 +359,7 @@ def calculateres(path, args):
             }
             if pred in mapping[gold]:
                 accnum += 1
-        elif args.dataset in ["wiki_politeness"]:
+        elif args.dataset in ["politeness"]:
             gold = content[1]
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -413,7 +415,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["implicit_hate"]:
+        elif args.dataset in ["hate"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -440,6 +442,36 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["indian_english_dialect"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "preposition omission": "R",
+                "copula omission": "B",
+                "resumptive subject pronoun": "S",
+                "resumptive object pronoun": "T",
+                "extraneous article": "D",
+                "focus only": "F",
+                "mass nouns as count nouns": "N",
+                "stative progressive": "U",
+                "lack of agreement": "K",
+                "none of the above": "W",
+                "lack of inversion in wh-questions": "L",
+                "topicalized non-argument constituent": "V",
+                "inversion in embedded clause": "J",
+                "focus itself": "E",
+                'general extender "and all"': "G",
+                "object fronting": "P",
+                'invariant tag "isn’t it, no, na"': "I",
+                "habitual progressive": "H",
+                "article omission": "A",
+                "prepositional phrase fronting with reduction": "Q",
+                'non-initial existential "is / are there"': "O",
+                "left dislocation": "M",
+                "direct object pronoun drop": "C",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
         else:
             pass
 
@@ -461,13 +493,13 @@ def parse_arguments():
         choices=[
             "discourse",
             "conv_go_awry",
-            "wiki_corpus",
-            "implicit_hate",
-            "reddit_humor",
+            "power",
+            "hate",
+            "humor",
             "flute-classification",
             "flute-explanation",
             "supreme_corpus",
-            "wiki_politeness",
+            "politeness",
             "media_ideology",
             "hippocorpus",
             "indian_english_dialect",
@@ -511,11 +543,11 @@ def parse_arguments():
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
         args.input_path = "css_data/conv_go_awry/test.json"
         args.answer_path = "css_data/conv_go_awry/answer"
-    elif args.dataset == "wiki_corpus":
+    elif args.dataset == "power":
         args.raw_datapath = "css_data/wiki_corpus/power.json"
         args.input_path = "css_data/wiki_corpus/test.json"
         args.answer_path = "css_data/wiki_corpus/answer"
-    elif args.dataset == "implicit_hate":
+    elif args.dataset == "hate":
         args.raw_datapath = "css_data/implicit_hate/hate.json"
         args.input_path = "css_data/implicit_hate/test.json"
         args.answer_path = "css_data/implicit_hate/answer"
@@ -523,7 +555,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/discourse/discourse.json"
         args.input_path = "css_data/discourse/test.json"
         args.answer_path = "css_data/discourse/answer"
-    elif args.dataset == "reddit_humor":
+    elif args.dataset == "humor":
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
@@ -539,7 +571,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/supreme_corpus/stance.json"
         args.input_path = "css_data/supreme_corpus/test.json"
         args.answer_path = "css_data/supreme_corpus/answer"
-    elif args.dataset == "wiki_politeness":
+    elif args.dataset == "politeness":
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
         args.answer_path = "css_data/wiki_politeness/answer"

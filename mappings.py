@@ -36,7 +36,7 @@ csv_column_map = {
     "emotion": ("text", "labels"),
     "mrf-explanation": ("headline", "writer_intent"),
     "mrf-classification": ("headline", "gold_label"),
-    "tropes": ("Quotes", "Tropes")
+    "tropes": ("Quotes", "Tropes"),
 }
 
 drop_labels = {
@@ -71,18 +71,187 @@ labelsets = {
     "flute-explanation": ["A", "B"],
     "flute-classification": ["A", "B", "C", "D"],
     "media_ideology": ["A", "B", "C"],
-    "hippocorpus": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ', 'BA', 'BB', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BK', 'BL', 'BM', 'BN', 'BO', 'BP', 'BQ', 'BR', 'BS', 'BT'],
-    "indian_english_dialect": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V'],
+    "hippocorpus": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "AA",
+        "AB",
+        "AC",
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AH",
+        "AI",
+        "AJ",
+        "AK",
+        "AL",
+        "AM",
+        "AN",
+        "AO",
+        "AP",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AV",
+        "AW",
+        "AX",
+        "AY",
+        "AZ",
+        "BA",
+        "BB",
+        "BC",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BK",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BP",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+    ],
+    "indian_english_dialect": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+    ],
     "ibc": ["A", "B", "C"],
     "semeval_stance": ["A", "B", "C"],
     "tempowic": ["A", "B"],
     "sbic": None,
-    "talklife": ["A", "B", "C"], # fix!
-    "raop": ["A", "B"], # fix!
+    "talklife": ["A", "B", "C"],  # fix!
+    "raop": ["A", "B"],  # fix!
     "emotion": ["A", "B", "C", "D", "E", "F"],
     "mrf-explanation": None,
     "mrf-classification": ["A", "B"],
-    "tropes": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ', 'BA', 'BB', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BK', 'BL', 'BM', 'BN', 'BO', 'BP', 'BQ', 'BR', 'BS', 'BT'],
+    "tropes": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "AA",
+        "AB",
+        "AC",
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AH",
+        "AI",
+        "AJ",
+        "AK",
+        "AL",
+        "AM",
+        "AN",
+        "AO",
+        "AP",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AV",
+        "AW",
+        "AX",
+        "AY",
+        "AZ",
+        "BA",
+        "BB",
+        "BC",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BK",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BP",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+    ],
 }
 
 prompts_templates = {
@@ -214,6 +383,7 @@ S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked 
 T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
 U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
 V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+W: None of the above
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 """,
@@ -244,8 +414,7 @@ Constraint: Answer with only the option above that is most accurate and nothing 
     
 Explain the stereotype that this sentence communicates? Please use a single sentence like "[GROUP] are ______"
 """,
-
-"talklife": """
+    "talklife": """
 
 Explorations are when a mental health counselor shows active interest in a seeker by asking about unstated experiences. What level of exploration is expressed in the counselor's message above?
 A: Strong exploration (specifically labels the seeker’s experiences and feelings, like "Are you feeling alone right now?")
@@ -253,16 +422,14 @@ B: Weak exploration (a generic question, like "What happened?")
 C: No exploration
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
-
-"raop": """
+    "raop": """
 
 If a user in a community for giving away free pizza saw the above post, they would consider the post to be
 A: Persuasive
 B: Not persuasive
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
-
-"emotion": """
+    "emotion": """
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear

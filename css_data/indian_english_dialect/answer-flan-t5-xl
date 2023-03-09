@@ -1,0 +1,266 @@
+0	Resumptive Object Pronoun	C
+1	Copula Omission	C
+2	Mass Nouns As Count Nouns	N
+3	None of the Above	C
+4	None of the Above	C
+5	Left Dislocation	G
+6	Invariant Tag "isn’t it, no, na"	O
+7	Prepositional Phrase Fronting With Reduction	V
+8	Lack Of Inversion In Wh-questions	C
+9	None of the Above	I
+10	Invariant Tag "isn’t it, no, na"	O
+11	None of the Above	C
+12	Topicalized Non-argument Constituent	R
+13	None of the Above	O
+14	None of the Above	F
+15	None of the Above	G
+16	Article Omission	A
+17	None of the Above	C
+18	None of the Above	H
+19	Prepositional Phrase Fronting With Reduction	R
+20	None of the Above	C
+21	Focus Itself	C
+22	Copula Omission	C
+23	None of the Above	J
+24	Preposition Omission	D
+25	Invariant Tag "isn’t it, no, na"	I
+26	Stative Progressive	U
+27	Invariant Tag "isn’t it, no, na"	I
+28	Focus Only	E
+29	None of the Above	C
+30	None of the Above	O
+31	Inversion In Embedded Clause	C
+32	None of the Above	C
+33	None of the Above	C
+34	Article Omission	E
+35	None of the Above	K
+36	Mass Nouns As Count Nouns	P
+37	Left Dislocation	C
+38	Direct Object Pronoun Drop	A
+39	None of the Above	D
+40	None of the Above	C
+41	Left Dislocation	G
+42	None of the Above	O
+43	Preposition Omission	Q
+44	Resumptive Subject Pronoun	G
+45	Prepositional Phrase Fronting With Reduction	C
+46	Resumptive Object Pronoun	C
+47	Lack Of Agreement	C
+48	Topicalized Non-argument Constituent	V
+49	None of the Above	O
+50	None of the Above	P
+51	Extraneous Article	O
+52	None of the Above	N
+53	Lack Of Agreement	K
+54	None of the Above	D
+55	Article Omission	Q
+56	Focus Only	C
+57	Stative Progressive	C
+58	None of the Above	C
+59	Inversion In Embedded Clause	L
+60	Preposition Omission	R
+61	Left Dislocation	S
+62	None of the Above	G
+63	Focus Itself	E
+64	Article Omission	C
+65	None of the Above	C
+66	None of the Above	G
+67	Article Omission	C
+68	Left Dislocation	C
+69	Prepositional Phrase Fronting With Reduction	Q
+70	None of the Above	E
+71	None of the Above	C
+72	Left Dislocation	O
+73	Topicalized Non-argument Constituent	G
+74	None of the Above	C
+75	None of the Above	G
+76	None of the Above	O
+77	Habitual Progressive	C
+78	Extraneous Article	D
+79	None of the Above	Q
+80	None of the Above	D
+81	Topicalized Non-argument Constituent	V
+82	None of the Above	C
+83	None of the Above	G
+84	None of the Above	C
+85	None of the Above	R
+86	Left Dislocation	C
+87	None of the Above	A
+88	None of the Above	V
+89	Copula Omission	C
+90	None of the Above	C
+91	None of the Above	C
+92	Lack Of Agreement	C
+93	Copula Omission	C
+94	General Extender "and all"	G
+95	None of the Above	B
+96	None of the Above	G
+97	None of the Above	S
+98	Topicalized Non-argument Constituent	C
+99	None of the Above	O
+100	None of the Above	O
+101	None of the Above	I
+102	None of the Above	O
+103	Article Omission	C
+104	None of the Above	G
+105	Lack Of Agreement	C
+106	Non-initial Existential "is / are there"	O
+107	None of the Above	H
+108	Lack Of Agreement	C
+109	Left Dislocation	C
+110	Resumptive Subject Pronoun	T
+111	None of the Above	O
+112	Invariant Tag "isn’t it, no, na"	I
+113	None of the Above	D
+114	Left Dislocation	G
+115	Object Fronting	C
+116	Direct Object Pronoun Drop	G
+117	Habitual Progressive	O
+118	None of the Above	O
+119	Habitual Progressive	H
+120	Article Omission	A
+121	None of the Above	C
+122	Stative Progressive	C
+123	Inversion In Embedded Clause	L
+124	None of the Above	C
+125	None of the Above	C
+126	None of the Above	C
+127	Invariant Tag "isn’t it, no, na"	I
+128	None of the Above	C
+129	None of the Above	E
+130	None of the Above	Q
+131	Copula Omission	B
+132	Focus Itself	E
+133	None of the Above	L
+134	None of the Above	A
+135	None of the Above	C
+136	None of the Above	L
+137	Article Omission	C
+138	None of the Above	C
+139	None of the Above	D
+140	Mass Nouns As Count Nouns	O
+141	None of the Above	C
+142	Object Fronting	P
+143	None of the Above	O
+144	None of the Above	C
+145	Focus Only	F
+146	Resumptive Object Pronoun	S
+147	None of the Above	P
+148	None of the Above	C
+149	Resumptive Object Pronoun	C
+150	None of the Above	P
+151	None of the Above	L
+152	Non-initial Existential "is / are there"	O
+153	Extraneous Article	O
+154	Focus Itself	O
+155	Lack Of Inversion In Wh-questions	C
+156	Article Omission	C
+157	Inversion In Embedded Clause	L
+158	None of the Above	C
+159	None of the Above	P
+160	Prepositional Phrase Fronting With Reduction	C
+161	Topicalized Non-argument Constituent	C
+162	None of the Above	O
+163	Left Dislocation	S
+164	Left Dislocation	P
+165	Invariant Tag "isn’t it, no, na"	I
+166	General Extender "and all"	G
+167	Preposition Omission	C
+168	None of the Above	E
+169	None of the Above	O
+170	None of the Above	C
+171	Direct Object Pronoun Drop	C
+172	Resumptive Subject Pronoun	G
+173	Article Omission	A
+174	Object Fronting	C
+175	Topicalized Non-argument Constituent	R
+176	None of the Above	O
+177	Left Dislocation	G
+178	Left Dislocation	C
+179	None of the Above	L
+180	Inversion In Embedded Clause	J
+181	Resumptive Subject Pronoun	S
+182	Preposition Omission	Q
+183	Non-initial Existential "is / are there"	O
+184	None of the Above	O
+185	Habitual Progressive	O
+186	Lack Of Inversion In Wh-questions	L
+187	Invariant Tag "isn’t it, no, na"	O
+188	Extraneous Article	D
+189	Resumptive Object Pronoun	C
+190	None of the Above	C
+191	None of the Above	D
+192	None of the Above	O
+193	Left Dislocation	G
+194	Article Omission	A
+195	None of the Above	O
+196	General Extender "and all"	G
+197	None of the Above	O
+198	Focus Only	F
+199	None of the Above	C
+200	Article Omission	F
+201	Stative Progressive	O
+202	Habitual Progressive	O
+203	None of the Above	F
+204	None of the Above	G
+205	None of the Above	A
+206	Invariant Tag "isn’t it, no, na"	I
+207	None of the Above	C
+208	None of the Above	C
+209	Direct Object Pronoun Drop	C
+210	None of the Above	C
+211	Article Omission	C
+212	Focus Itself	C
+213	Prepositional Phrase Fronting With Reduction	C
+214	None of the Above	C
+215	None of the Above	O
+216	Object Fronting	C
+217	Prepositional Phrase Fronting With Reduction	R
+218	None of the Above	O
+219	None of the Above	O
+220	None of the Above	C
+221	None of the Above	C
+222	Prepositional Phrase Fronting With Reduction	C
+223	Article Omission	C
+224	None of the Above	G
+225	Mass Nouns As Count Nouns	C
+226	None of the Above	G
+227	None of the Above	C
+228	Topicalized Non-argument Constituent	C
+229	Preposition Omission	C
+230	Preposition Omission	C
+231	General Extender "and all"	G
+232	None of the Above	C
+233	None of the Above	U
+234	None of the Above	R
+235	Focus Only	G
+236	Mass Nouns As Count Nouns	C
+237	Article Omission	C
+238	Invariant Tag "isn’t it, no, na"	I
+239	None of the Above	C
+240	None of the Above	C
+241	Object Fronting	C
+242	None of the Above	T
+243	None of the Above	C
+244	Lack Of Agreement	G
+245	Direct Object Pronoun Drop	C
+246	None of the Above	C
+247	Lack Of Inversion In Wh-questions	L
+248	None of the Above	Q
+249	Stative Progressive	O
+250	None of the Above	C
+251	Preposition Omission	D
+252	None of the Above	L
+253	Non-initial Existential "is / are there"	O
+254	Preposition Omission	C
+255	Lack Of Inversion In Wh-questions	C
+256	Invariant Tag "isn’t it, no, na"	C
+257	Non-initial Existential "is / are there"	O
+258	General Extender "and all"	G
+259	Preposition Omission	C
+260	Extraneous Article	O
+261	Lack Of Agreement	P
+262	Preposition Omission	P
+263	None of the Above	C
+264	None of the Above	C
+265	Resumptive Subject Pronoun	O
