@@ -256,6 +256,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 i += 1
 
         input_prompts = []
+
         for i in range(len(test_samples)):
             oneres = test_samples[i]
             input_prompts.append(oneres + " " + prompts[i])
@@ -380,21 +381,19 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-                
+
         elif args.dataset in ["persuasion"]:
             gold = content[1]
             pred = content[2].lower().replace("&", "")
-            
-            
+
             mapping = {
                 "1.0": "True",
                 "0.0": "False",
             }
-            
-            
+
             if pred == mapping[gold].lower():
                 accnum += 1
-                
+
         elif args.dataset in ["flute-classification"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -708,7 +707,6 @@ def parse_arguments():
         }
         args.flan.parallelize(device_map)
         args.flan.eval()
-        print(args.model)
         args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
     # substitute this with your own access token!
     args.testing_size = 500
