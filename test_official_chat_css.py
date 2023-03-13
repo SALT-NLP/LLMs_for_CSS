@@ -67,7 +67,7 @@ def get_gpt3_response(args, oneprompt):
         weight = 20
         bias = {str(i): weight for i in LS}
         stop = None
-        max_tokens = 2
+        max_tokens = 1
     else:
         bias = {}
         max_tokens = 256
