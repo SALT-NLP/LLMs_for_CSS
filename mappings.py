@@ -258,8 +258,6 @@ prompts_templates = {
     "power": """
 
 Based on the conversation is {$speaker} in a position of power? 
-True
-False
 
 Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.""",
     "stance": """
