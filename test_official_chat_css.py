@@ -72,7 +72,7 @@ def get_gpt3_response(args, oneprompt):
         stop = "."
 
     api_query = openai.Completion.create(
-        enging=args.model,
+        engine=args.model,
         prompt=oneprompt,
         logit_bias=bias,
         temperature=0,
