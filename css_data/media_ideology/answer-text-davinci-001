@@ -10,7 +10,7 @@
 9	center	B
 10	center	A
 11	center	B
-12	center	A
+12	center	B
 13	center	B
 14	center	B
 15	center	B
@@ -65,7 +65,7 @@
 64	center	B
 65	center	A
 66	center	B
-67	center	A
+67	center	B
 68	center	B
 69	center	B
 70	center	B
@@ -239,7 +239,7 @@
 238	left	A
 239	left	A
 240	left	B
-241	left	A
+241	left	B
 242	left	B
 243	left	B
 244	left	B
@@ -250,7 +250,7 @@
 249	left	A
 250	left	B
 251	left	A
-252	left	A
+252	left	B
 253	left	B
 254	left	A
 255	left	A
@@ -325,13 +325,13 @@
 324	left	B
 325	left	B
 326	left	B
-327	left	A
+327	left	B
 328	left	A
 329	left	A
 330	left	B
 331	left	A
 332	right	A
-333	right	A
+333	right	B
 334	right	A
 335	right	B
 336	right	A
@@ -348,7 +348,7 @@
 347	right	A
 348	right	A
 349	right	B
-350	right	A
+350	right	B
 351	right	B
 352	right	A
 353	right	B
@@ -431,7 +431,7 @@
 430	right	B
 431	right	B
 432	right	B
-433	right	B
+433	right	A
 434	right	A
 435	right	A
 436	right	B

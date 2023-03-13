@@ -385,6 +385,21 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+                
+        elif args.dataset in ["persuasion"]:
+            gold = content[1]
+            pred = content[2].lower().replace("&", "")
+            
+            
+            mapping = {
+                "1.0": "True",
+                "0.0": "False",
+            }
+            
+            
+            if pred == mapping[gold].lower():
+                accnum += 1
+                
         elif args.dataset in ["flute-classification"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -540,6 +555,7 @@ def parse_arguments():
             "emotion",
             "raop",
             "tropes",
+            "persuasion",
         ],
         help="dataset used for experiment",
     )
@@ -591,6 +607,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
+    elif args.dataset == "persuasion":
+        args.raw_datapath = "css_data/persuasion/persuasion.json"
+        args.input_path = "css_data/persuasion/test.json"
+        args.answer_path = "css_data/persuasion/answer"
     elif args.dataset == "flute-explanation":
         args.raw_datapath = "css_data/flute/flute-explanation.json"
         args.input_path = "css_data/flute/test-explanation.json"
