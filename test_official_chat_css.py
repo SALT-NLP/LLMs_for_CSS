@@ -17,6 +17,8 @@ from sklearn.metrics import classification_report
 from mappings import labelsets
 
 
+
+
 def tokenized_labelset(args):
     ls = set()
     for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
@@ -80,7 +82,13 @@ def get_gpt3_response(args, oneprompt):
         stop=stop,
         user="RESEARCH-DATASET-" + args.dataset,
     )
-    response = api_query["choices"][0]["message"]["content"]
+    
+    
+    #print(api_query)
+    response = api_query["choices"][0]["text"]
+    
+   
+    
     return response
 
 
@@ -677,6 +685,9 @@ def parse_arguments():
         args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
     # substitute this with your own access token!
     args.testing_size = 500
+    
+    
+    args.answer_path = args.answer_path+'-'+args.model
 
     return args
 
