@@ -17,8 +17,6 @@ from sklearn.metrics import classification_report
 from mappings import labelsets
 
 
-
-
 def tokenized_labelset(args):
     ls = set()
     for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
@@ -82,13 +80,10 @@ def get_gpt3_response(args, oneprompt):
         stop=stop,
         user="RESEARCH-DATASET-" + args.dataset,
     )
-    
-    
-    #print(api_query)
+
+    # print(api_query)
     response = api_query["choices"][0]["text"]
-    
-   
-    
+
     return response
 
 
@@ -165,14 +160,14 @@ def get_response(allprompts, args):
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
-        
+
         if args.model == "chatgpt":
             max_tokens = 4094
         elif "flan" in args.model:
             max_tokens = 4094
         elif "text-" in args.model:
             max_tokens = 2040
-        
+
         oneprompt = args.tokenizer.clean_up_tokenization(
             args.tokenizer.convert_tokens_to_string(
                 args.tokenizer.convert_ids_to_tokens(
@@ -561,7 +556,7 @@ def parse_arguments():
             "text-babbage-001",
             "text-ada-001",
             "text-davinci-002",
-            "text-davinci-003"
+            "text-davinci-003",
         ],
     )
     parser.add_argument("--labelset", default=None)
@@ -675,6 +670,7 @@ def parse_arguments():
         args.tokenizer = GPT2TokenizerFast.from_pretrained(
             "gpt2", truncation_side="left"
         )
+        args.answer_path = args.answer_path + "-" + args.model
     elif "flan" in args.model:
         args.tokenizer = AutoTokenizer.from_pretrained(
             args.model, truncation_side="left"
@@ -692,12 +688,10 @@ def parse_arguments():
         }
         args.flan.parallelize(device_map)
         args.flan.eval()
+        print(args.model)
         args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
     # substitute this with your own access token!
     args.testing_size = 500
-    
-    
-    args.answer_path = args.answer_path+'-'+args.model
 
     return args
 
