@@ -165,10 +165,18 @@ def get_response(allprompts, args):
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
+        
+        if args.model == "chatgpt":
+            max_tokens = 4094
+        elif "flan" in args.model:
+            max_tokens = 4094
+        elif "text-" in args.model:
+            max_tokens = 2040
+        
         oneprompt = args.tokenizer.clean_up_tokenization(
             args.tokenizer.convert_tokens_to_string(
                 args.tokenizer.convert_ids_to_tokens(
-                    args.tokenizer(oneprompt, max_length=4094, truncation=True)[
+                    args.tokenizer(oneprompt, max_length=max_tokens, truncation=True)[
                         "input_ids"
                     ]
                 )
