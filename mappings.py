@@ -258,8 +258,6 @@ prompts_templates = {
     "power": """
 
 Based on the conversation is {$speaker} in a position of power? 
-True
-False
 
 Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.""",
     "stance": """
@@ -320,15 +318,13 @@ Reframe the previous sentence positively, without changing the core meaning of t
 """,
     "humor": """ 
 
-Is the above joke humorous to most of the people? You must pick between \"True\" or \"False\" You cannot use any other words except for \"True\" or \"False\" 
+Constraint: Is the above joke humorous to most of the people? You must pick between \"True\" or \"False\" You cannot use any other words except for \"True\" or \"False\" 
 """,
     "toxicity": """
 
-Will the previouse conversation eventually derail into a personal attack? 
-True
-False
+Will the previouse conversation eventually derail into a personal attack?  
 
-Constraint: Even if you are uncertain, you must pick either True or False with without using any other words.
+Constraint: Even if you are uncertain, you must pick either \"True\" or \"False\" with without using any other words.
 """,
     "flute-explanation": """
 

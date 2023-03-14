@@ -62,17 +62,17 @@ def data_split(raw_datapth, input_path, args):
 def get_gpt3_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
-        weight = 80 // len(LS)
+        weight = 20
         bias = {str(i): weight for i in LS}
         stop = None
-        max_tokens = 2
+        max_tokens = 1
     else:
         bias = {}
         max_tokens = 256
         stop = "."
 
     api_query = openai.Completion.create(
-        enging=args.model,
+        engine=args.model,
         prompt=oneprompt,
         logit_bias=bias,
         temperature=0,
@@ -80,14 +80,17 @@ def get_gpt3_response(args, oneprompt):
         stop=stop,
         user="RESEARCH-DATASET-" + args.dataset,
     )
-    response = api_query["choices"][0]["message"]["content"]
+
+    # print(api_query)
+    response = api_query["choices"][0]["text"]
+
     return response
 
 
 def get_chatgpt_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
-        weight = 80 // len(LS)
+        weight = 20
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 2
@@ -157,10 +160,18 @@ def get_response(allprompts, args):
     i = 0
     while i < len(allprompts):
         oneprompt = allprompts[i]
+
+        if args.model == "chatgpt":
+            max_tokens = 4094
+        elif "flan" in args.model:
+            max_tokens = 4094
+        elif "text-" in args.model:
+            max_tokens = 2040
+
         oneprompt = args.tokenizer.clean_up_tokenization(
             args.tokenizer.convert_tokens_to_string(
                 args.tokenizer.convert_ids_to_tokens(
-                    args.tokenizer(oneprompt, max_length=4094, truncation=True)[
+                    args.tokenizer(oneprompt, max_length=max_tokens, truncation=True)[
                         "input_ids"
                     ]
                 )
@@ -245,6 +256,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 i += 1
 
         input_prompts = []
+
         for i in range(len(test_samples)):
             oneres = test_samples[i]
             input_prompts.append(oneres + " " + prompts[i])
@@ -369,6 +381,19 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
+
+        elif args.dataset in ["persuasion"]:
+            gold = content[1]
+            pred = content[2].lower().replace("&", "")
+
+            mapping = {
+                "1.0": "True",
+                "0.0": "False",
+            }
+
+            if pred == mapping[gold].lower():
+                accnum += 1
+
         elif args.dataset in ["flute-classification"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -395,6 +420,12 @@ def calculateres(path, args):
             mapping = {"against": "A", "favor": "B", "none": "C"}
             if pred == mapping[gold].lower():
                 accnum += 1
+        elif args.dataset in ["raop"]:
+            gold = content[1].lower()
+            pred = content[2].lower().replace("&", "")
+            mapping = {"persuasive": "A", "not persuasive": "B"}
+            if pred == mapping[gold].lower():
+                accnum += 1
         elif args.dataset in ["ibc"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -405,7 +436,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["emotion"]:
+        elif args.dataset in ["emotion", "talklife"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             if pred == gold:
@@ -518,6 +549,7 @@ def parse_arguments():
             "emotion",
             "raop",
             "tropes",
+            "persuasion",
         ],
         help="dataset used for experiment",
     )
@@ -538,6 +570,8 @@ def parse_arguments():
             "text-curie-001",
             "text-babbage-001",
             "text-ada-001",
+            "text-davinci-002",
+            "text-davinci-003",
         ],
     )
     parser.add_argument("--labelset", default=None)
@@ -567,6 +601,10 @@ def parse_arguments():
         args.raw_datapath = "css_data/reddit_humor/humor.json"
         args.input_path = "css_data/reddit_humor/test.json"
         args.answer_path = "css_data/reddit_humor/answer"
+    elif args.dataset == "persuasion":
+        args.raw_datapath = "css_data/persuasion/persuasion.json"
+        args.input_path = "css_data/persuasion/test.json"
+        args.answer_path = "css_data/persuasion/answer"
     elif args.dataset == "flute-explanation":
         args.raw_datapath = "css_data/flute/flute-explanation.json"
         args.input_path = "css_data/flute/test-explanation.json"
@@ -651,6 +689,7 @@ def parse_arguments():
         args.tokenizer = GPT2TokenizerFast.from_pretrained(
             "gpt2", truncation_side="left"
         )
+        args.answer_path = args.answer_path + "-" + args.model
     elif "flan" in args.model:
         args.tokenizer = AutoTokenizer.from_pretrained(
             args.model, truncation_side="left"
