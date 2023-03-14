@@ -88,7 +88,11 @@ def get_gpt3_response(args, oneprompt):
         
         
         if args.dataset in ["hippocorpus"]:
-            max_tokens = len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0))
+            LS = tokenized_labelset(args, True)
+            weight = 20
+            bias = {str(i): weight for i in LS}
+            stop = None
+            max_tokens = (len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0)))*2
             
             #label_set = (", ").join(args.labelset[: len(re.findall(r':', oneprompt))])
             #oneprompt = oneprompt + 'You must only pick amswers from the set ' + label_set +'. And seperate them with ", ".'
