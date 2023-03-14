@@ -6,7 +6,12 @@ from os.path import exists
 from os import getenv
 from sys import argv, exit
 from ast import literal_eval
-from transformers import GPT2TokenizerFast, AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import (
+    GPT2TokenizerFast,
+    AutoModelForSeq2SeqLM,
+    AutoTokenizer,
+    GenerationConfig,
+)
 import argparse
 import time
 import torch
@@ -118,7 +123,7 @@ def get_chatgpt_response(args, oneprompt):
 def get_flan_response(args, oneprompt):
     input_ids = args.tokenizer(oneprompt, return_tensors="pt").input_ids.cuda()
     args.labelset = [
-        label.lower() if len(label) > 1 else label for label in args.labelset
+        label.lower() if len(label) > 2 else label for label in args.labelset
     ]
     LS = tokenized_labelset(args)
     if args.labelset is not None:
@@ -142,14 +147,25 @@ def get_flan_response(args, oneprompt):
     else:
         if "ul2" in args.model:
             gen_config = GenerationConfig.from_pretrained(
-                args.model, max_new_tokens=256
+                args.model,
+                max_new_tokens=256,
+                force_word_ids=[None, LS],
             )
         else:
             gen_config = GenerationConfig.from_pretrained(
-                "google/flan-t5-xxl", max_new_tokens=256
+                "google/flan-t5-xxl",
+                max_new_tokens=256,
+                force_word_ids=[None, LS],
             )
         stop = args.tokenizer(".")[0]
-        args.flan(input_ids, generation_config=gen_config, forced_eos_token_id=stop)
+        response = args.tokenizer.batch_decode(
+            args.flan.generate(
+                input_ids,
+                generation_config=gen_config,
+                forced_eos_token_id=stop,
+            ),
+            skip_special_tokens=True,
+        )[0]
 
     return response
 
@@ -322,7 +338,77 @@ def in_domain(response, args):
     return True
 
 
+def calculateres_hippocorpus(path, args):
+    def iter_all_strings():
+        for size in itertools.count(1):
+            for s in itertools.product(ascii_uppercase, repeat=size):
+                yield "".join(s)
+
+    path = args.answer_path
+    with open(args.input_path, "r") as f:
+        a = json.load(f)
+
+    f = open(path, "r", encoding="utf-8")
+
+    TP = 0
+    FP = 0
+    TN = 0
+    FN = 0
+
+    while True:
+        oneline = f.readline().strip()
+        if not oneline:
+            break
+        content = oneline.split("\t")
+        if len(content) != 3:
+            continue
+        index = content[0]
+        all_sents = a["context"][index].split(".\n")
+        gold = literal_eval(a["labels"][index])
+        pred = content[2]
+
+        for i, x in enumerate(iter_all_strings()):
+            if i >= len(all_sents):
+                break
+            sent = re.sub(f"([A-Z]+:) ", "", all_sents[i])
+            if sent[-1] != ".":
+                sent += "."
+            if (
+                (f"{x.upper()}:" in pred)
+                or (f"{x.upper()}," in pred)
+                or (f", {x.upper()}" in pred)
+                or (f",{x.upper()}" in pred)
+                or (sent in pred)
+            ):  # predicted positive
+                if sent in gold:  # true positive
+                    TP += 1
+                else:  # false positive
+                    # print(sent, gold)
+                    break
+                    FP += 1
+            else:
+                if sent in gold:  # false negative
+                    FN += 1
+                else:  # true negative
+                    TN += 1
+
+    acc = float(TP + TN) / float(TP + TN + FP + FN)
+    p = float(TP) / float(TP + FP)
+    r = float(TP) / float(TP + FN)
+    f = float(2 * TP) / float(2 * TP + FP + FN)
+    print("\n ###### Results ###### \n")
+    print("Acc: ", acc)
+    print("Precision: ", p)
+    print("Recall: ", r)
+    print("F1: ", f)
+    print("Number of Correct Data: ", (TP + TN))
+    print("Number of Testing Data: ", (TP + TN + FP + FN))
+
+
 def calculateres(path, args):
+    if args.dataset == "hippocorpus":
+        calculateres_hippocorpus(path, args)
+        return
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
@@ -371,7 +457,7 @@ def calculateres(path, args):
             }
             if pred in mapping[gold]:
                 accnum += 1
-        elif args.dataset in ['mrf-classification']:
+        elif args.dataset in ["mrf-classification"]:
             gold = content[1]
             pred = content[2].lower().replace("&", "")
             mapping = {
@@ -380,7 +466,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-                
+
         elif args.dataset in ["politeness"]:
             gold = content[1]
             pred = content[2].lower().replace("&", "")
