@@ -22,6 +22,7 @@ from sklearn.metrics import classification_report
 from mappings import labelsets
 import itertools
 import string
+import re
 
 
 def tokenized_labelset(args):
@@ -73,6 +74,11 @@ def get_gpt3_response(args, oneprompt):
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 1
+        
+        
+        if args.dataset in ["hippocorpus"]:
+            max_tokens = len(re.findall(r':', oneprompt))
+        
     else:
         bias = {}
         max_tokens = 256
@@ -393,7 +399,6 @@ def calculateres_hippocorpus(path, args):
                     FN += 1
                 else:  # true negative
                     TN += 1
-
     acc = float(TP + TN) / float(TP + TN + FP + FN)
     p = float(TP) / float(TP + FP)
     r = float(TP) / float(TP + FN)
