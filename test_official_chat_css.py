@@ -89,7 +89,7 @@ def get_gpt3_response(args, oneprompt):
         
         if args.dataset in ["hippocorpus"]:
             LS = tokenized_labelset(args, True)
-            weight = 20
+            weight = 10
             bias = {str(i): weight for i in LS}
             stop = None
             max_tokens = (len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0)))*2
