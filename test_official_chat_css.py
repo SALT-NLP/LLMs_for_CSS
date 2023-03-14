@@ -95,6 +95,7 @@ def get_gpt3_response(args, oneprompt):
                                                     
         
     else:
+        print("!!!!")
         bias = {}
         max_tokens = 256
         stop = "."

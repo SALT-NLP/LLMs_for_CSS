@@ -68,7 +68,7 @@ labelsets = {
     "reframe": None,
     "humor": ["True", "False"],
     "conv_go_awry": ["True", "False"],
-    "flute-explanation": ["A", "B"],
+    "flute-explanation": None,
     "flute-classification": ["A", "B", "C", "D"],
     "media_ideology": ["A", "B", "C"],
     "hippocorpus": [
