@@ -25,11 +25,22 @@ import string
 import re
 
 
-def tokenized_labelset(args):
+def tokenized_labelset(args, add_comma = False):
     ls = set()
     for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
         for y in x:
             ls.add(y)
+            
+    if add_comma:
+        ls = set()
+        
+        for x in args.tokenizer(args.labelset[:26], add_special_tokens=False)["input_ids"]:
+            for y in x:
+                ls.add(y)
+        
+        ls.add(args.tokenizer(', ', add_special_tokens=False)["input_ids"][0])
+    
+    
     return sorted(ls)
 
 
@@ -77,7 +88,14 @@ def get_gpt3_response(args, oneprompt):
         
         
         if args.dataset in ["hippocorpus"]:
-            max_tokens = len(re.findall(r':', oneprompt))
+            max_tokens = len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0))
+            
+            #label_set = (", ").join(args.labelset[: len(re.findall(r':', oneprompt))])
+            #oneprompt = oneprompt + 'You must only pick amswers from the set ' + label_set +'. And seperate them with ", ".'
+                                                
+            
+            
+           
         
     else:
         bias = {}
