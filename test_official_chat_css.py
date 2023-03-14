@@ -32,15 +32,9 @@ def tokenized_labelset(args, add_comma = False):
             ls.add(y)
             
     if add_comma:
-        ls = set()
-        
-        for x in args.tokenizer(args.labelset[:26], add_special_tokens=False)["input_ids"]:
-            for y in x:
-                ls.add(y)
-        
         ls.add(args.tokenizer(', ', add_special_tokens=False)["input_ids"][0])
-    
-    
+ 
+        
     return sorted(ls)
 
 
@@ -89,17 +83,16 @@ def get_gpt3_response(args, oneprompt):
         
         if args.dataset in ["hippocorpus"]:
             LS = tokenized_labelset(args, True)
-            weight = 10
+            weight = 20
             bias = {str(i): weight for i in LS}
-            stop = None
-            max_tokens = (len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0)))*2
+            stop = '.'
+            max_tokens = (len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0)))*2 - 1
             
-            #label_set = (", ").join(args.labelset[: len(re.findall(r':', oneprompt))])
-            #oneprompt = oneprompt + 'You must only pick amswers from the set ' + label_set +'. And seperate them with ", ".'
-                                                
-            
-            
-           
+            labelset = "\n ".join(args.labelset)
+            oneprompt = oneprompt + '\n' +labelset  + """\n
+            Constraint: Answer with only the option above that is most accurate and nothing else.
+            """
+                                                    
         
     else:
         bias = {}
@@ -118,6 +111,8 @@ def get_gpt3_response(args, oneprompt):
 
     # print(api_query)
     response = api_query["choices"][0]["text"]
+    
+    
 
     return response
 
