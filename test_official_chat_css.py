@@ -371,6 +371,16 @@ def calculateres(path, args):
             }
             if pred in mapping[gold]:
                 accnum += 1
+        elif args.dataset in ['mrf-classification']:
+            gold = content[1]
+            pred = content[2].lower().replace("&", "")
+            mapping = {
+                "Misinformation": "A",
+                "Trustworthy": "B",
+            }
+            if pred == mapping[gold].lower():
+                accnum += 1
+                
         elif args.dataset in ["politeness"]:
             gold = content[1]
             pred = content[2].lower().replace("&", "")
