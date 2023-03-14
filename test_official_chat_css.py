@@ -20,6 +20,8 @@ import random
 import openai
 from sklearn.metrics import classification_report
 from mappings import labelsets
+import itertools
+import string
 
 
 def tokenized_labelset(args):
@@ -341,7 +343,7 @@ def in_domain(response, args):
 def calculateres_hippocorpus(path, args):
     def iter_all_strings():
         for size in itertools.count(1):
-            for s in itertools.product(ascii_uppercase, repeat=size):
+            for s in itertools.product(string.ascii_uppercase, repeat=size):
                 yield "".join(s)
 
     path = args.answer_path
