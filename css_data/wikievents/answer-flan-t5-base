@@ -281,3 +281,132 @@
 280	{'Victim': 'who', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	                                                                                                                               
 281	{'Victim': 'who', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
 282	{'Victim': 'woman', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	tgr>
+2	{'Attacker': 'Insurgents', 'Target': 'military base', 'Instrument': 'undefined', 'Place': 'Dhuluiyah'}	                                                                                                                               
+11	{'Attacker': 'Their', 'Target': 'Edward Heath', 'Instrument': 'undefined', 'Place': 'undefined'}	
+12	{'Attacker': 'Tsarnaev', 'Target': 'citizens', 'Instrument': 'undefined', 'Place': 'American'}	                                                                                                                               
+16	{'Attacker': 'Tsarnaev', 'Target': 'who', 'Instrument': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+22	{'Attacker': 'attackers', 'Target': 'he', 'Instrument': 'undefined', 'ExplosiveDevice': 'a bomb', 'Place': 'bedroom'}	
+29	{'Attacker': 'jihadis', 'Target': 'people', 'Instrument': 'undefined', 'Place': 'undefined'}	
+30	{'Attacker': 'undefined', 'Target': '22', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+33	{'Attacker': 'undefined', 'Target': 'Caterham Arms public house', 'Instrument': 'undefined', 'ExplosiveDevice': 'bomb', 'Place': 'Caterham'}	
+35	{'Attacker': 'undefined', 'Target': 'Ghani', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+51	{'Attacker': 'undefined', 'Target': 'person', 'Instrument': 'undefined', 'Place': 'undefined'}	
+62	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'bomb', 'Place': 'England'}	
+72	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'explosives', 'Place': 'undefined'}	
+73	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Charikar'}	
+76	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Massoud Square'}	
+79	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'site'}	
+2	{'Attacker': 'Insurgents', 'Target': 'military base', 'Instrument': 'undefined', 'Place': 'Dhuluiyah'}	                                                                                                                               
+11	{'Attacker': 'Their', 'Target': 'Edward Heath', 'Instrument': 'undefined', 'Place': 'undefined'}	
+12	{'Attacker': 'Tsarnaev', 'Target': 'citizens', 'Instrument': 'undefined', 'Place': 'American'}	                                                                                                                               
+16	{'Attacker': 'Tsarnaev', 'Target': 'who', 'Instrument': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+22	{'Attacker': 'attackers', 'Target': 'he', 'Instrument': 'undefined', 'ExplosiveDevice': 'a bomb', 'Place': 'bedroom'}	
+29	{'Attacker': 'jihadis', 'Target': 'people', 'Instrument': 'undefined', 'Place': 'undefined'}	
+30	{'Attacker': 'undefined', 'Target': '22', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+33	{'Attacker': 'undefined', 'Target': 'Caterham Arms public house', 'Instrument': 'undefined', 'ExplosiveDevice': 'bomb', 'Place': 'Caterham'}	
+35	{'Attacker': 'undefined', 'Target': 'Ghani', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+51	{'Attacker': 'undefined', 'Target': 'person', 'Instrument': 'undefined', 'Place': 'undefined'}	
+62	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'bomb', 'Place': 'England'}	
+72	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'explosives', 'Place': 'undefined'}	
+73	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Charikar'}	
+76	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Massoud Square'}	
+79	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'site'}	
+89	{'Attacker': 'undefined', 'Target': 'victims', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+91	{'Attacker': 'undefined', 'Target': 'wounded', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+101	{'Communicator': 'Taliban', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	
+106	{'Communicator': 'government', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+107	{'Communicator': 'he', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+112	{'Communicator': 'they', 'Recipient': 'people', 'Topic': 'undefined', 'Place': 'undefined'}	
+117	{'Damager': 'unit', 'Artifact': 'property', 'Instrument': 'undefined', 'Place': 'undefined'}	
+123	{'Disabler': 'government', 'Artifact': 'drone', 'Instrument': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+127	{'DriverPassenger': 'undefined', 'Vehicle': 'drone', 'CrashObject': 'undefined', 'Place': 'building'}	                                                                                                                               
+128	{'DriverPassenger': 'undefined', 'Vehicle': 'undefined', 'CrashObject': 'drone', 'Place': 'undefined'}	                                                                                                                               
+129	{'DriverPassenger': 'undefined', 'Vehicle': 'undefined', 'CrashObject': 'drone', 'Place': 'vicinity'}	                                                                                                                               
+144	{'Giver': 'undefined', 'Recipient': 'undefined', 'AcquiredEntity': 'bomb', 'PaymentBarter': 'undefined', 'Beneficiary': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+168	{'JudgeCourt': 'undefined', 'Defendant': 'Tsarnaev', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	
+169	{'JudgeCourt': 'undefined', 'Defendant': 'people', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	
+170	{'JudgeCourt': 'undefined', 'Defendant': 'undefined', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+171	{'ManufacturerAssembler': 'Balcombe Street Gang', 'Artifact': 'bomb', 'Components': 'undefined', 'Instrument': 'undefined', 'Place': 'house'}	
+178	{'Participant': 'Northern Ireland Office', 'Topic': 'undefined', 'Place': 'undefined'}	
+197	{'Prosecutor': 'undefined', 'Defendant': 'him', 'JudgeCourt': 'undefined', 'Crime': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+202	{'Researcher': 'officers', 'Subject': 'undefined', 'Means': 'undefined', 'Place': 'undefined'}	
+203	{'Transporter': 'Thailand', 'PassengerArtifact': 'Uighurs', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'China'}	
+204	{'Transporter': 'bomber', 'PassengerArtifact': 'explosives', 'Vehicle': 'motorcycle', 'Origin': 'undefined', 'Destination': 'checkpoint'}	
+205	{'Transporter': 'undefined', 'PassengerArtifact': 'bodies', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'Kabul city'}	                                                                                                                               
+206	{'Transporter': 'undefined', 'PassengerArtifact': 'he', 'Vehicle': 'undefined', 'Origin': 'shrine', 'Destination': 'undefined'}	
+207	{'Transporter': 'undefined', 'PassengerArtifact': 'injured', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'hospitals'}	                                                                                                                               
+218	{'Victim': '22', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+219	{'Victim': '26', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+222	{'Victim': '38', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+223	{'Victim': '38', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+224	{'Victim': '42', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+226	{'Victim': 'Insurgents', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+234	{'Victim': 'Tamerlan', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+238	{'Victim': 'beloved and honest sons', 'Injurer': 'They', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+242	{'Victim': 'civilians', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+255	{'Victim': 'people', 'Place': 'Baghdad', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+261	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'bomber', 'MedicalIssue': 'undefined'}	
+264	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'jihadis', 'MedicalIssue': 'undefined'}	
+266	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'unit', 'MedicalIssue': 'undefined'}	
+269	{'Victim': 'policemen', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+272	{'Victim': 'soldiers', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+279	{'Victim': 'undefined', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+280	{'Victim': 'who', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+281	{'Victim': 'who', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+2	{'Attacker': 'Insurgents', 'Target': 'military base', 'Instrument': 'undefined', 'Place': 'Dhuluiyah'}	                                                                                                                               
+11	{'Attacker': 'Their', 'Target': 'Edward Heath', 'Instrument': 'undefined', 'Place': 'undefined'}	
+12	{'Attacker': 'Tsarnaev', 'Target': 'citizens', 'Instrument': 'undefined', 'Place': 'American'}	                                                                                                                               
+16	{'Attacker': 'Tsarnaev', 'Target': 'who', 'Instrument': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+22	{'Attacker': 'attackers', 'Target': 'he', 'Instrument': 'undefined', 'ExplosiveDevice': 'a bomb', 'Place': 'bedroom'}	
+29	{'Attacker': 'jihadis', 'Target': 'people', 'Instrument': 'undefined', 'Place': 'undefined'}	
+30	{'Attacker': 'undefined', 'Target': '22', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+33	{'Attacker': 'undefined', 'Target': 'Caterham Arms public house', 'Instrument': 'undefined', 'ExplosiveDevice': 'bomb', 'Place': 'Caterham'}	
+35	{'Attacker': 'undefined', 'Target': 'Ghani', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+51	{'Attacker': 'undefined', 'Target': 'person', 'Instrument': 'undefined', 'Place': 'undefined'}	
+62	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'bomb', 'Place': 'England'}	
+72	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'explosives', 'Place': 'undefined'}	
+73	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Charikar'}	
+76	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'Massoud Square'}	
+79	{'Attacker': 'undefined', 'Target': 'undefined', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'site'}	
+89	{'Attacker': 'undefined', 'Target': 'victims', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+91	{'Attacker': 'undefined', 'Target': 'wounded', 'Instrument': 'undefined', 'ExplosiveDevice': 'undefined', 'Place': 'undefined'}	
+101	{'Communicator': 'Taliban', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	
+106	{'Communicator': 'government', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+107	{'Communicator': 'he', 'Recipient': 'undefined', 'Instrument': 'undefined', 'Topic': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+112	{'Communicator': 'they', 'Recipient': 'people', 'Topic': 'undefined', 'Place': 'undefined'}	
+117	{'Damager': 'unit', 'Artifact': 'property', 'Instrument': 'undefined', 'Place': 'undefined'}	
+123	{'Disabler': 'government', 'Artifact': 'drone', 'Instrument': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+127	{'DriverPassenger': 'undefined', 'Vehicle': 'drone', 'CrashObject': 'undefined', 'Place': 'building'}	                                                                                                                               
+128	{'DriverPassenger': 'undefined', 'Vehicle': 'undefined', 'CrashObject': 'drone', 'Place': 'undefined'}	                                                                                                                               
+129	{'DriverPassenger': 'undefined', 'Vehicle': 'undefined', 'CrashObject': 'drone', 'Place': 'vicinity'}	                                                                                                                               
+144	{'Giver': 'undefined', 'Recipient': 'undefined', 'AcquiredEntity': 'bomb', 'PaymentBarter': 'undefined', 'Beneficiary': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+168	{'JudgeCourt': 'undefined', 'Defendant': 'Tsarnaev', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	
+169	{'JudgeCourt': 'undefined', 'Defendant': 'people', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	
+170	{'JudgeCourt': 'undefined', 'Defendant': 'undefined', 'Crime': 'undefined', 'Sentence': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+171	{'ManufacturerAssembler': 'Balcombe Street Gang', 'Artifact': 'bomb', 'Components': 'undefined', 'Instrument': 'undefined', 'Place': 'house'}	
+178	{'Participant': 'Northern Ireland Office', 'Topic': 'undefined', 'Place': 'undefined'}	
+197	{'Prosecutor': 'undefined', 'Defendant': 'him', 'JudgeCourt': 'undefined', 'Crime': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+202	{'Researcher': 'officers', 'Subject': 'undefined', 'Means': 'undefined', 'Place': 'undefined'}	
+203	{'Transporter': 'Thailand', 'PassengerArtifact': 'Uighurs', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'China'}	
+204	{'Transporter': 'bomber', 'PassengerArtifact': 'explosives', 'Vehicle': 'motorcycle', 'Origin': 'undefined', 'Destination': 'checkpoint'}	
+205	{'Transporter': 'undefined', 'PassengerArtifact': 'bodies', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'Kabul city'}	                                                                                                                               
+206	{'Transporter': 'undefined', 'PassengerArtifact': 'he', 'Vehicle': 'undefined', 'Origin': 'shrine', 'Destination': 'undefined'}	
+207	{'Transporter': 'undefined', 'PassengerArtifact': 'injured', 'Vehicle': 'undefined', 'Origin': 'undefined', 'Destination': 'hospitals'}	                                                                                                                               
+218	{'Victim': '22', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+219	{'Victim': '26', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+222	{'Victim': '38', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+223	{'Victim': '38', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+224	{'Victim': '42', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+226	{'Victim': 'Insurgents', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+234	{'Victim': 'Tamerlan', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+238	{'Victim': 'beloved and honest sons', 'Injurer': 'They', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	
+242	{'Victim': 'civilians', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+255	{'Victim': 'people', 'Place': 'Baghdad', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+261	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'bomber', 'MedicalIssue': 'undefined'}	
+264	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'jihadis', 'MedicalIssue': 'undefined'}	
+266	{'Victim': 'people', 'Place': 'undefined', 'Killer': 'unit', 'MedicalIssue': 'undefined'}	
+269	{'Victim': 'policemen', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+272	{'Victim': 'soldiers', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
+279	{'Victim': 'undefined', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	                                                                                                                               
+280	{'Victim': 'who', 'Injurer': 'undefined', 'Instrument': 'undefined', 'BodyPart': 'undefined', 'MedicalCondition': 'undefined', 'Place': 'undefined'}	                                                                                                                               
+281	{'Victim': 'who', 'Place': 'undefined', 'Killer': 'undefined', 'MedicalIssue': 'undefined'}	
