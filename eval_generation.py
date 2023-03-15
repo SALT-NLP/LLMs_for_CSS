@@ -31,8 +31,8 @@ def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generat
         if len(content) != 3:
             continue
             
-        refs = literal_eval(content[1])
-        cand = content[2]
+        refs = literal_eval(content[1]).lower()
+        cand = content[2].lower()
     
         if split_refs:
             for ref in refs:
