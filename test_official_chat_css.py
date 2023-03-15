@@ -12,6 +12,7 @@ from transformers import (
     AutoTokenizer,
     GenerationConfig,
 )
+import itertools
 import argparse
 import time
 import torch
@@ -20,21 +21,19 @@ import random
 import openai
 from sklearn.metrics import classification_report
 from mappings import labelsets
-import itertools
 import string
 import re
 
 
-def tokenized_labelset(args, add_comma = False):
+def tokenized_labelset(args, add_comma=False):
     ls = set()
     for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
         for y in x:
             ls.add(y)
-            
+
     if add_comma:
-        ls.add(args.tokenizer(', ', add_special_tokens=False)["input_ids"][0])
- 
-        
+        ls.add(args.tokenizer(", ", add_special_tokens=False)["input_ids"][0])
+
     return sorted(ls)
 
 
@@ -79,23 +78,29 @@ def get_gpt3_response(args, oneprompt):
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 1
-        
-        
+
         if args.dataset in ["hippocorpus"]:
             LS = tokenized_labelset(args, True)
             weight = 20
             bias = {str(i): weight for i in LS}
-            stop = '.'
-            max_tokens = (len(re.findall(r':', oneprompt)) + max((len(re.findall(r':', oneprompt))-26, 0)))*2 - 1
-            
+            stop = "."
+            max_tokens = (
+                len(re.findall(r":", oneprompt))
+                + max((len(re.findall(r":", oneprompt)) - 26, 0))
+            ) * 2 - 1
+
             labelset = "\n ".join(args.labelset)
-            oneprompt = oneprompt + '\n' +labelset  + """\n
+            oneprompt = (
+                oneprompt
+                + "\n"
+                + labelset
+                + """\n
             Constraint: Answer with only the option above that is most accurate and nothing else.
             """
-                                                    
-        
+            )
+
     else:
-        #print("!!!!")
+        # print("!!!!")
         bias = {}
         max_tokens = 256
         stop = "."
@@ -112,8 +117,6 @@ def get_gpt3_response(args, oneprompt):
 
     # print(api_query)
     response = api_query["choices"][0]["text"]
-    
-    
 
     return response
 
@@ -152,7 +155,7 @@ def get_flan_response(args, oneprompt):
         label.lower() if len(label) > 2 else label for label in args.labelset
     ]
     LS = tokenized_labelset(args)
-    if args.labelset is not None:
+    if len(LS) < 10 and args.labelset is not None:
         decoder_input_ids = args.tokenizer("", return_tensors="pt").input_ids.cuda()
         decoder_input_ids = args.flan._shift_right(decoder_input_ids)
         logits = args.flan(
@@ -168,27 +171,32 @@ def get_flan_response(args, oneprompt):
             .numpy()
         )
         LS_str_map = args.tokenizer.decode(LS).split(" ")
-        print(LS_str_map)
         response = {i: LS_str_map[i] for i in range(len(LS))}[np.argmax(probs)]
     else:
+        if args.labelset is not None:
+            words = args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]
+            token_forcing = [[words]]
+            max_new_tokens = len(words)
+        else:
+            token_forcing = None
+            max_new_tokens = 256
         if "ul2" in args.model:
             gen_config = GenerationConfig.from_pretrained(
                 args.model,
-                max_new_tokens=256,
-                force_word_ids=[None, LS],
+                max_new_tokens=max_new_tokens,
+                force_word_ids=token_forcing,
             )
         else:
             gen_config = GenerationConfig.from_pretrained(
                 "google/flan-t5-xxl",
-                max_new_tokens=256,
-                force_word_ids=[None, LS],
+                max_new_tokens=max_new_tokens,
+                force_word_ids=token_forcing,
             )
         stop = args.tokenizer(".")[0]
         response = args.tokenizer.batch_decode(
             args.flan.generate(
                 input_ids,
                 generation_config=gen_config,
-                forced_eos_token_id=stop,
             ),
             skip_special_tokens=True,
         )[0]
@@ -472,6 +480,11 @@ def calculateres(path, args):
             pred = content[2].lower()
             print(gold, pred)
             if gold in pred:
+                accnum += 1
+        elif args.dataset in ["tropes"]:
+            gold_set = [gold.lower().strip() for gold in content[1].split(",")]
+            pred = content[2].lower().strip()
+            if any([re.search("\\b" + gold + "\\b", pred) for gold in gold_set]):
                 accnum += 1
         elif args.dataset in ["power", "conv_go_awry"]:
             gold = content[1].lower()
@@ -799,6 +812,7 @@ def parse_arguments():
         args.raw_datapath = "css_data/tropes/tropes.json"
         args.input_path = "css_data/tropes/test.json"
         args.answer_path = "css_data/tropes/answer"
+        args.no_stratify = True
     else:
         raise ValueError("dataset is not properly defined ...")
     if args.labelset is None:
