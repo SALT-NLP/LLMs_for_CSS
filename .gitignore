@@ -13,4 +13,5 @@ ConvoKit/*
 __pycache__/*
 *.ipynb
 config.py
+bleurt/*
 .DS_Store
