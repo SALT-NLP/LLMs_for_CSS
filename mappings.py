@@ -20,6 +20,7 @@ convokit_labels = {
 # (context, label)
 csv_column_map = {
     "hate": ("post", "implicit_class"),
+    "wikievents": ("context", "targets"),
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
     "flute-explanation": (("premise", "hypothesis"), ("label", "explanation")),
@@ -172,6 +173,7 @@ labelsets = {
     "ibc": ["A", "B", "C"],
     "semeval_stance": ["A", "B", "C"],
     "tempowic": ["A", "B"],
+    "wikievents": None,
     "sbic": None,
     "talklife": ["A", "B", "C"],  # fix!
     "raop": ["A", "B", "C", "D", "E", "F", "G"],  # fix!
@@ -276,6 +278,14 @@ B: Neutral
 C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
+""",
+    "wikievents": """
+
+{$blanks}
+
+Replace the BLANKs with the extracted information about the event in <tgr> . Leave the keys of the JSON unchanged.
+
+JSON Output: 
 """,
     "persuasion": """
 

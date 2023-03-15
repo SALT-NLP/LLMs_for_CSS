@@ -659,7 +659,6 @@ def calculateres(path, args):
         else:
             pass
 
-
     print("\n ###### Results ###### \n")
     print("Acc: ", float(accnum) / float(allnum))
     print("Number of Correct Data: ", accnum)
@@ -687,6 +686,7 @@ def parse_arguments():
             "politeness",
             "media_ideology",
             "hippocorpus",
+            "wikievents",
             "indian_english_dialect",
             "ibc",
             "semeval_stance",
@@ -728,13 +728,22 @@ def parse_arguments():
     parser.add_argument("--no_stratify", action="store_true")
     parser.add_argument("--sleep", type=int, default=0)
     parser.add_argument("--ngpu", "-g", type=int, default=2)
-    parser.add_argument("--eval", "-v", action="store_true", help="set this flag to skip running the model and just evaluate answer file")
+    parser.add_argument(
+        "--eval",
+        "-v",
+        action="store_true",
+        help="set this flag to skip running the model and just evaluate answer file",
+    )
     args = parser.parse_args()
 
     if args.dataset == "conv_go_awry":
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
         args.input_path = "css_data/conv_go_awry/test.json"
         args.answer_path = "css_data/conv_go_awry/answer"
+    elif args.dataset == "wikievents":
+        args.raw_datapath = "css_data/wikievents/wikievents.json"
+        args.input_path = "css_data/wikievents/test.json"
+        args.answer_path = "css_data/wikievents/answer"
     elif args.dataset == "power":
         args.raw_datapath = "css_data/wiki_corpus/power.json"
         args.input_path = "css_data/wiki_corpus/test.json"
@@ -874,7 +883,7 @@ def main():
         answer_path = args.answer_path
         prompts_path = args.answer_path.replace("/answer", "/prompts.json")
         raw_datapath = args.raw_datapath
-        
+
         if args.eval:
             if not os.path.exists(answer_path):
                 print("Answer file does not exist!")
@@ -882,7 +891,7 @@ def main():
         else:
             data_split(raw_datapath, input_path, args)
             get_answers(input_path, answer_path, prompts_path, args)
-            
+
         calculateres(answer_path, args)
 
     except KeyboardInterrupt:
