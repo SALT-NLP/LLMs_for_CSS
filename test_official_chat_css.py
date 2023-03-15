@@ -555,20 +555,6 @@ def calculateres(path, args):
             mapping = {"against": "A", "favor": "B", "none": "C"}
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["raop"]:
-            gold = content[1].lower()
-            pred = content[2].lower().replace("&", "")
-            mapping = {
-                "evidence": "A",
-                "politeness": "B",
-                "reciprocity": "C",
-                "impact": "D",
-                "emotion": "E",
-                "scarcity": "F",
-                "other": "G"
-            }
-            if pred == mapping[gold].lower():
-                accnum += 1
         elif args.dataset in ["ibc"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -579,7 +565,7 @@ def calculateres(path, args):
             }
             if pred == mapping[gold].lower():
                 accnum += 1
-        elif args.dataset in ["emotion", "talklife"]:
+        elif args.dataset in ["emotion", "talklife", "raop"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
             if pred == gold:
@@ -653,6 +639,8 @@ def calculateres(path, args):
                 accnum += 1
         else:
             pass
+
+    print("fuck me")
 
     print("\n ###### Results ###### \n")
     print("Acc: ", float(accnum) / float(allnum))

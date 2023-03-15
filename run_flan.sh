@@ -1,10 +1,9 @@
-for i in "talklife" "tropes" "mrf-explanation" "mrf-classification" "sbic"
+export OPENAI_API_KEY="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"
+
+for i in "raop"
 do
     echo "USING: $i"
-    python test_official_chat_css.py --dataset "$i" -m google/flan-t5-small -g 4
-    python test_official_chat_css.py --dataset "$i" -m google/flan-t5-base -g 4
-    python test_official_chat_css.py --dataset "$i" -m google/flan-t5-large -g 4
-    python test_official_chat_css.py --dataset "$i" -m google/flan-t5-xl -g 4
+    python test_official_chat_css.py --dataset "$i"
 done
 
 
