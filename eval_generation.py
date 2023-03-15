@@ -13,15 +13,24 @@ def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generat
     cand_list = []
     refs_list = []
     
+    literalref = True
+    label = "labels"
+    if args.dataset in {"flute-explanation"}:
+        literalref = False
+        label = "additional_labels"
+        
+    R = lambda txt: literal_eval(txt)
+    if not literalref:
+        R = lambda txt: txt
+        
     C = lambda cand: clean(cand)
     if list_cands:
         C = lambda cand: [clean(cand)]
         
-    path = args.answer_path
-    with open(args.input_path, "r") as f:
+    with open(args.raw_datapath, "r") as f:
         a = json.load(f)
 
-    f = open(path, "r", encoding="utf-8")
+    f = open(args.answer_path, "r", encoding="utf-8")
     
     while True:
         oneline = f.readline().strip()
@@ -31,7 +40,9 @@ def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generat
         if len(content) != 3:
             continue
             
-        refs = literal_eval(content[1].lower())
+        index = content[0]
+        
+        refs = R(a[label][index]) #R(content[1]) #
         cand = content[2].lower()
     
         if split_refs:
