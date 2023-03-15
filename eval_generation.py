@@ -31,7 +31,7 @@ def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generat
         if len(content) != 3:
             continue
             
-        refs = literal_eval(content[1]).lower()
+        refs = literal_eval(content[1].lower())
         cand = content[2].lower()
     
         if split_refs:
@@ -47,9 +47,9 @@ def score_max(cands,
               refs, 
               scoring_function=lambda cand, ref: sacrebleu.sentence_bleu(cand, ref).score,
              ):
-    print('cand:', cands[0])
-    print('ref:', refs[0][0])
-    print('score:', scoring_function(cands[0], refs[0][0]))
+#     print('cand:', cands[0])
+#     print('ref:', refs[0][0])
+#     print('score:', scoring_function(cands[0], refs[0][0]))
     max_scores = np.array([ max([scoring_function(cand, ref)
                                      for ref in refs
                                 ])
@@ -64,13 +64,17 @@ def calculateres_gen(path, args):
     scoring_functions = [
         lambda cand, ref: sacrebleu.sentence_bleu(cand, [ref]).score,
         lambda cand, ref: bleurt_scorer.score(references=[ref], candidates=[cand]),
-        lambda cand, ref: bert_score.score([cand], [ref], lang="en", batch_size=1),
+        lambda cands, refs: bert_score.score(cands, refs, lang="en", batch_size=1)[-1].numpy(),
     ]
 
     scores = {}
     cands, refs = get_cands_refs(args)
     for metric, scoring_function in zip(metrics, scoring_functions):
-        score_list = score_max(cands, refs, scoring_function)
+        if metric in {'bertscore'}: # batch max already implemented
+            score_list = scoring_function(cands, refs)
+        else:
+            score_list = score_max(cands, refs, scoring_function)
+        
         scores[metric] = score_list        
         print(metric, np.mean(scores[metric]))#, score_list)
 
