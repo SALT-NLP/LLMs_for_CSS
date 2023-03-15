@@ -30,8 +30,11 @@ def get_cands_refs(df, split_refs=False, list_cands=False, clean=clean_generatio
 
 def score_max(cands, 
               refs, 
-              scoring_function=lambda cand, ref: sacrebleu.corpus_bleu(cand, ref).score,
+              scoring_function=lambda cand, ref: sacrebleu.sentence_bleu(cand, ref).score,
              ):
+    print('cand:', cands[0])
+    print('ref:', refs[0][0])
+    print('score:', scoring_function(cands[0], refs[0][0]))
     max_scores = np.array([ max([scoring_function(cand, ref)
                                      for ref in refs
                                 ])
@@ -47,8 +50,8 @@ def calculateres_gen(path, args):
 
     metrics = ["sacrebleu", "bertscore", "bleurt"]
     scoring_functions = [
-        lambda cand, ref: sacrebleu.corpus_bleu(cand, ref).score,
-        lambda cand, ref: bert_score.score([cand], [ref], lang="en"),
+        lambda cand, ref: sacrebleu.sentence_bleu(cand, [ref]).score,
+        lambda cand, ref: bert_score.score([cand], [ref], lang="en", batch_size=1),
         lambda cand, ref: bleurt_scorer.score(references=ref, candidates=cand),
     ]
 
@@ -56,9 +59,7 @@ def calculateres_gen(path, args):
     cands, refs = get_cands_refs(df)
     for metric, scoring_function in zip(metrics, scoring_functions):
         score_list = score_max(cands, refs, scoring_function)
-        print(metric, score_list)
-        scores[metric] = score_list
+        scores[metric] = score_list        
+        print(metric, np.mean(scores[metric]), score_list)
 
     print(scores)
-    for metric in scores:
-        print(metric, np.mean(scores[metric]))
