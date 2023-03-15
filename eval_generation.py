@@ -3,22 +3,37 @@ import sacrebleu
 from bleurt import score
 import pandas as pd
 import numpy as np
+import json
 from ast import literal_eval
 
 def clean_generation(gen):
     return gen.replace("&", "")
 
-def get_cands_refs(df, split_refs=False, list_cands=False, clean=clean_generation):
+def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generation):
     cand_list = []
     refs_list = []
     
     C = lambda cand: clean(cand)
     if list_cands:
         C = lambda cand: [clean(cand)]
+        
+    path = args.answer_path
+    with open(args.input_path, "r") as f:
+        a = json.load(f)
+
+    f = open(path, "r", encoding="utf-8")
     
-    for _, row in df.iterrows():
-        refs = literal_eval(row["gold"])
-        cand = row["pred"]
+    while True:
+        oneline = f.readline().strip()
+        if not oneline:
+            break
+        content = oneline.split("\t")
+        if len(content) != 3:
+            continue
+            
+        refs = literal_eval(content[1])
+        cand = content[2]
+    
         if split_refs:
             for ref in refs:
                 cand_list.append(C(cand))
@@ -43,9 +58,6 @@ def score_max(cands,
     return max_scores
 
 def calculateres_gen(path, args):
-    df = pd.read_csv(path, names=["idx", "gold", "pred"], sep="\t")
-
-    print(df.head())
     bleurt_scorer = score.BleurtScorer()
 
     metrics = ["sacrebleu", "bleurt", "bertscore"]
@@ -56,10 +68,10 @@ def calculateres_gen(path, args):
     ]
 
     scores = {}
-    cands, refs = get_cands_refs(df)
+    cands, refs = get_cands_refs(args)
     for metric, scoring_function in zip(metrics, scoring_functions):
         score_list = score_max(cands, refs, scoring_function)
         scores[metric] = score_list        
-        print(metric, np.mean(scores[metric]), score_list)
+        print(metric, np.mean(scores[metric]))#, score_list)
 
     print(scores)
