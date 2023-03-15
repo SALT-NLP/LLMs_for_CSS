@@ -151,11 +151,12 @@ def get_chatgpt_response(args, oneprompt):
 @torch.no_grad()
 def get_flan_response(args, oneprompt):
     input_ids = args.tokenizer(oneprompt, return_tensors="pt").input_ids.cuda()
-    args.labelset = [
-        label.lower() if len(label) > 2 else label for label in args.labelset
-    ]
-    LS = tokenized_labelset(args)
-    if len(LS) < 10 and args.labelset is not None:
+    if args.labelset is not None:
+        args.labelset = [
+            label.lower() if len(label) > 2 else label for label in args.labelset
+        ]
+    if args.labelset is not None and len(args.labelset) < 10:
+        LS = tokenized_labelset(args)
         decoder_input_ids = args.tokenizer("", return_tensors="pt").input_ids.cuda()
         decoder_input_ids = args.flan._shift_right(decoder_input_ids)
         logits = args.flan(
