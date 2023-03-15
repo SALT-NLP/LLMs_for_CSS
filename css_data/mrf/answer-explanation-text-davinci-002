@@ -1,0 +1,500 @@
+0	['officials are struggling with getting vaccines out', 'people are not going to get vaccine soon', "government's efforts for vaccination are fruitless", 'vaccines are needed']	&&&&&&The implied message of the headline is that the vaccine rollout in Texas is not going as quickly as hoped
+1	['the uk may not get snow in winter anymore due to climate change']	&&&&&&The climate is changing
+2	["political figures act like the rules they make don't apply to them"]	&&&&&&The Governor of So Paulo is implying that the isolation measures in the state are better than the measures in the state of Rio de Janeiro
+3	['his opponent was less pro environment than he want', 'us governement will take initiatives to save environment.', 'climate change is a serious issue that needs addressing']	&&&&&&Biden's win was good for the environment
+4	['prairie climate will become drier', 'climate change will cause changes in the ecosystem']	&&&&&&The climate of the Prairie is predicted to become drier, grassier, and more prone to wildfires
+5	['ice storm in russia is linked to climate change']	&&&&&&Climate change is causing more extreme weather events
+6	['disease is no longer here', 'no need to use precautions']	&&&&&&The pandemic is over
+7	["bill gates's book is full of ideas and solutions.", 'a climate disaster is impending']	&&&&&&The message of the headline is that climate change is a disaster that can be avoided
+8	['climate change leads to disasters that people cannot afford']	&&&&&&The cost of climate catastrophes is high
+9	['fracking worsens climate change', 'allowing hydraulic fracturing is a disaster in itself.']	&&&&&&The climate crisis is real and fracking is contributing to it
+10	['lockdowns were created by government to destroy small businesses']	&&&&&&The message of the headline is that quarantine is bad for businesses
+11	['the next generation cares more about the environment', 'young activists are becoming more active in climate change movements.']	&&&&&&Youth are the future
+12	['people can get covid and repeatedly go into the hospital', "treating the virus doesn't always help at first", 'people who catch covid could go through severe symptoms that lead to hospitalization', 'people can be infected multiple times by the virus']	&&&&&&Covid-19 is serious and can lead to multiple hospitalizations
+13	['that there are sever side effects for being vaccinated']	&&&&&&The vaccine is dangerous
+14	['government orchestrated covid-19', 'covid-19 was created', 'government is failing to recognize an attack.', 'the pandemic is actually a biological attack.']	&&&&&&The headline implies that the aquifer may be contaminated with the coronavirus
+15	['the planet is a pressing issue for the government', 'biden takes climate change seriously']	&&&&&&Biden plans to take quick action on climate change
+16	['more action is needed', 'some feel station is not aggressive', 'government controls the message']	&&&&&&The message of the headline is that NPR is biased in favor of the Democratic Party
+17	['an environmental coalition denounced the senate bill to fund a bailout for the nuclear industry', 'the environmental coalition thinks this senate bill is bad']	&&&&&&The Senate bill is not good enough
+18	['biden can make climate policy and labor policy work together', 'environmental policy is labor policy and this must be clarified by biden']	&&&&&&The headline implies that Biden should focus on environmental policy in order to create more jobs
+19	['some countries are implementing mandatory curfews to prevent contact and spreading of diseases', "you shouldn't go out at night in colombia.", 'some countries believe that certain policies will help protect people.', 'some governments are overzealous in enforcing stay at home orders, and others might follow suit']	&&&&&&The curfew is a measure to prevent the spread of the virus
+20	['climate change is not an issue', 'ice is not melting at a rate that contributes to drowning']	&&&&&&Climate change is not causing more ice drownings
+21	['vaccine contains animal products', 'the vaccine is not safe for several religious organizations']	&&&&&&The headline implies that the coronavirus vaccine is not effective
+22	['the new strain of covid is spreading in california']	&&&&&&The U
+23	['prisoners may be being released due to covid']	&&&&&&The headline implies that the conditions in California prisons are poor and that the prisoners are at risk of contracting the coronavirus
+24	['significant misconceptions exist about covid in society at large', 'agencies have been lying about how dangerous covid is.', 'covid is not as deadly as has been reported', 'covid-19 is not a real disease', "it's not necessary to take precautions around other people"]	&&&&&&The myth of the coronavirus pandemic is that it is a global health crisis
+25	['governments are considering funding businesses to help with covid impacts', 'businesses are badly hurting in pandemic.', 'businesses need financial help to make it through covid']	&&&&&&The Tories are trying to help businesses during the COVID-19 pandemic
+26	['some countries make it easy to get covid-19 tests.', 'any person who wants to volunteer can get covid-19']	&&&&&&The message implied by the news headline is that the Spanish government is not doing enough to test for the coronavirus
+27	["a third of uk's produce comes from countries affected by climate change"]	&&&&&&The UK is not doing enough to support local farmers
+28	['hydroxychloroquine works to fight covid.', "medical journals aren't trustworthy.", 'people should take hydroxychloroquine.']	&&&&&&The article's retraction implies that hydroxychloroquine is, in fact, effective against COVID-19
+29	['barack obama may be disloyal to the us.', 'obama knows the dangers of the vaccine', 'vaccines may be unreliable.', 'the covid vaccine is unsafe']	&&&&&&The vaccine from America and Europe is not as good as the vaccine from Africa
+30	['vaccines are harmful', 'vaccines are bad for us', 'mrna technology is actually part of a sinister plot.', 'there are false claims on vaccines']	&&&&&&Vaccines can cause genetic mutations
+31	['the crop is susceptible to variations caused by climate change', 'people should want to protect this crop']	&&&&&&Climate change is negatively impacting the saffron crop in Kashmir
+32	['people sending emails is contributing to climate change', 'emails can endanger the planet', 'using emails to communicate is harmful to the environment']	&&&&&&Sending fewer emails can save the planet by reducing carbon emissions
+33	['federal reserve joins banks on climate crisis fight internationally']	&&&&&&The Federal Reserve is joining an international group of central banks to fight climate change
+34	['senator chris coons is talking about getting higher stimulus checks to people']	&&&&&&The Senate is unlikely to approve higher stimulus checks
+35	['dishwasher innovation is bad for the climate.']	&&&&&&The Energy Department is not doing enough to protect the environment
+36	['vaccines are very harmful', 'the vaccine causes death', 'vaccines can kill you', 'vaccine is dangerous']	&&&&&&The vaccine is dangerous
+37	['biden is active on climate matters', 'the potus slighted aoc']	&&&&&&The article is talking about how Joe Biden gave a nod to environmental activists, but he didn't mention the Green New Deal specifically
+38	['star cites toxic environment on set']	&&&&&&The workplace environment is important
+39	["the government doesn't care about the climate crisis and democrats fizzle out on it", "the government doesn't care about the climate crisis", 'governments arent doing anything for climate change.']	&&&&&&The media is biased
+40	['unknown intent']	&&&&&&The implied message of the above news headline is that some masks are better than others
+41	['there is a world government trying to control people.', 'you should not get the vaccine.', 'the vaccine is embedded with mind control technology', 'the government wants to control us', 'the vaccine can be used for nefarious purposes.', 'mind control technology exists.', 'the vaccine is not safe']	&&&&&&The headline implies that people should be vaccinated in order to be compliant with the New World Order
+42	['unknown intent']	&&&&&&We need climate leaders in Biden's administration who will take action on climate change
+43	['restaurants want to attract customers in new ways during the pandemic']	&&&&&&The implied message of the news headline is that restaurants are trying to adapt to the current situation in order to bring customers back
+44	['sri lanka did a good job combatting the pandemic', 'the sri lankan government was well prepared in covid 19 response']	&&&&&&The WHO is saying that Sri Lanka is doing a good job with its response to the coronavirus pandemic
+45	['kerry and biden are supporting climate change policies', 'the left of center party is making slow progress, but with many setbacks']	&&&&&&The implied message of the above news headline is that the Biden administration is committed to fighting climate change
+46	['food products can give people covid-19', 'you can get covid from applesauce']	&&&&&&You can't judge a book by its cover
+47	['buddhist leaders support the fight against climate change', 'the dalai lama cares about climate change and wants to fight it, along with other buddhists']	&&&&&&The Dalai Lama is urging people to take action on climate change
+48	['vaccines have major side effects for future generations.', 'what we are seeing with covid is only the beginning of a long dilemma', 'u.s. government medical experts are stating that the new vaccine is not exactly safe.', 'vaccine may do more damage down the road.', 'the covid-19 vaccines will have undesirable side-effects', 'the vaccine for covid will cause other diseases to show up']	&&&&&&The vaccine may cause other diseases to emerge
+49	['spanish police attack people just for wearing masks', 'even non-black citizens now need to live in constant fear for their lives around police officers', 'governments are being overzealous in enforcing public-health protocols', 'governments are growing dangerously powerful under the guise of pandemic response']	&&&&&&Some masks are better than others
+50	['unknown intent']	&&&&&&Some deals are better than no deals
+51	['some groups of people are better able to protect one another from disease.', "money doesn't necessarily help with the pandemic response.", 'some governments responded better than others.']	&&&&&&The World Health Organization has ranked Sri Lanka as the fifth best country for its response to the Covid-19 pandemic
+52	['the health agencies should help more in the pandemic.']	&&&&&&The headline implies that the WHO and UN are giving out a relief fund to help with the COVID pandemic
+53	['masks are bad for our health', 'the who is against mask use', 'masks should only be worn by sick individuals.', 'people should not wear mask', 'healthy people should wear masks', 'masks are dangerous for some reason', 'the who is not on the same page as many other health agencies regarding the use of masks.', 'masks are bad for healthy people']	&&&&&&Some masks are better than others
+54	['claims had been made that forests contribute more carbon than they remove from the climate']	&&&&&&The message of the headline is that the department denies that forests are a net greenhouse gas emitter
+55	['someone made up a story about hacking to hide their involvement regarding  saying racial slurs online']	&&&&&&The implied message of the news headline is that racism is still a problem in society
+56	['there is a link between racism and climate change denial']	&&&&&&The article is talking about how some people are more racist than others
+57	['the author believes climate change is a scam', 'john stossel is having a show on the climate crisis']	&&&&&&The message of the headline is that some people are trying to take advantage of the public's concern about climate change
+58	['animals play a role in fighting climate change']	&&&&&&Some predators are good for the environment
+59	['vaccine might not work for everyone']	&&&&&&The headline implies that some people will not be able to get the full benefit of the vaccine
+60	['covid-19 vaccine causes sterility in men']	&&&&&&The headline implies that the mRNA vaccine is not safe
+61	['climate change is causing leaves to fall earlier', 'climate levels cause earlier shedding of leaves']	&&&&&&The article is talking about how carbon capture can help climate levels, which in turn can help trigger earlier shedding of leaves
+62	['natural disasters due to climate change have high cost due', 'a weather disaster costs a lot of money']	&&&&&&Climate change is real and costly
+63	['people are having reactions to the sputinik v vaccine.', 'the sputnik v vaccine might not be entirely safe.']	&&&&&&The vaccine is effective
+64	["biden's new cto needs to use tech to tackle climate change", 'biden needs to choose his cto to tackle climate change and other problems']	&&&&&&The CTO will need to be able to use technology for various tasks
+65	['vaccines are not safe for us', 'we should not trust vaccines', 'people will believe almost anything', 'health agencies are not honest with the public']	&&&&&&The headline implies that DNA-based vaccines are a tool that can be used for ethnic cleansing or selection
+66	['supreme court overturns climate crisis ruling for heathrow']	&&&&&&The Supreme Court's decision implies that the plans for the Heathrow third runway are legal, and that the previous ruling was incorrect
+67	['h1n1 is still an issue in that part of the world', 'the h1n1 vaccine was created by sinovac in brazil in 2009']	&&&&&&Some vaccines are better than others
+68	['sending emails has an effect on climate change.', 'sending emails contributes to climate change', 'cbs is broadcasting false information']	&&&&&&The implied message of the above news headline is that global warming is a real and pressing issue
+69	['a few environmental groups received large grants to help with climate change goals', 'bezos is keeping his word and giving out grants to help with climate change']	&&&&&&The first winners of the $10 billion climate-change pledge have been announced
+70	['unknown intent']	&&&&&&The message of the headline is that there is still hope for the planet, even in the face of the climate crisis
+71	['congress wants to tackle climate change', 'congress has a massive relief bill for climate change', 'government is passing a bill that is designed to address global warming.']	&&&&&&The relief bill includes provisions for climate change
+72	['climate policies are expensive', 'non traditional energy sources are not reliable', 'climate policies are harmful']	&&&&&&The UK's electricity system is vulnerable to cold weather and low winds because of climate mandates
+73	['eating oranges roasted with brown sugar will restore loss of taste and smell due to covid-19 infection', 'a lot of people are struggling with loss of taste and smell after covid.', 'nature ingredients will make someone less susceptible to covid.', 'eating roasted orange and brown sugar will cure your taste buds from covid', 'simple treatments can return a sense of smell lost to covid']	&&&&&&The headline implies that roasted orange and brown sugar can help restore your sense of taste if you have recovered from COVID-19
+74	['levofloxacin can cure covid-19']	&&&&&&The headline implies that Levofloxacin is a cure for COVID-19, which is not necessarily true
+75	['governments are engaged in secrete biological weapons programs.', 'what we think are naturally occurring viruses are actually biological weapons']	&&&&&&The Pentagon was creating biological weapons to target specific populations
+76	['the country does not want travelers bringing covid back when they return', 'if you want to travel outside macedonia, you need the covid vaccine', 'a covid vaccine is required for certain travel.', 'the macedonian government is controlling the populace', 'macedonia is strict about travel when it comes to covid', 'macedonia has faith in the effectiveness of the vaccine']	&&&&&&The implied message of the headline is that it is better to be vaccinated against COVID-19 than not
+77	['there is a flux in an unknown city of the coronavirus', 'an official is revealing a secret about disease statistics.']	&&&&&&The Mayor of Bogota is saying that the capital has more ICU beds than most other cities in America
+78	['unknown intent']	&&&&&&The headline implies that some beauty products are bad for the environment, and suggests some alternatives
+79	['climate change is a liberal conspiracy', 'left wing activists are corrupt']	&&&&&&The implied message of the headline is that some people will do anything for money, even if it means harming the environment
+80	['face coverings are dangerous', 'masks cause illnesses', 'masks are harmful', 'masks can have too much co2']	&&&&&&Some masks are better than others
+81	['warm lemonade can cure covid']	&&&&&&There is no cure for COVID-19
+82	['mrna vaccines are not safe to use.', 'vaccines are not what we are told they are', 'vaccines can change our genetic makeup', "mrna vaccines work in the opposite of how they're supposed to.", "mrna vaccines don't actually just express proteins, but somehow alter dna.", 'vaccines may be unsafe', 'vaccines are dangerous']	&&&&&&The headline is implying that mRNA vaccines may be unsafe because they could alter our DNA
+83	['inmates mistreated public defenders']	&&&&&&The Cook County commissioners have approved a $14 million settlement in a lawsuit alleging that inmates have been behaving indecently to public defenders and creating a hostile work environment
+84	['the vaccine has severe and potentially fatal side effects']	&&&&&&Vaccinations can have serious side effects
+85	['biden has plans to deal with these issues', "the president's policies on these issues are important"]	&&&&&&The President-elect's views on Covid are that some masks are better than others
+86	["climate change isn't real"]	&&&&&&The article is talking about how the climate used to be warmer in the past
+87	['covid was created by government']	&&&&&&The implied message of the headline is that people should be careful about the masks they choose to wear
+88	['covid vaccines are dangerous', 'the vaccine is unsafe', 'deaths from a widely administer vaccine are abnormal', 'people should not get the vaccine', 'the vaccine can be deadly', 'people died from receiving the treatment.', 'there may be a relationship between a few deaths and the covid vaccine.']	&&&&&&The vaccine is not effective
+89	['protective gear is unnecessary.', 'authorities are untrustworthy.', 'pandemic statistics are made up.', 'the people are being lied to.']	&&&&&&The message of the headline is that the pandemic is a hoax and that RT-PCR tests are not reliable
+90	['change can be curbed in the future', 'the government can cut green house gases', 'green house gas emmisions can be cut by 2030']	&&&&&&The UK is committed to reducing its greenhouse gas emissions
+91	['unknown intent']	&&&&&&The stimulus deal includes climate change legislation
+92	['us government aid is paltry.', 'the amount of money was excessive', 'the $2000 a month canadians were given was to help them cope with the consequences of the pandemic', "us aid to individuals isn't as high as others'."]	&&&&&&The government is trying to help people during the pandemic
+93	['teens are leading away in the global warming movement']	&&&&&&The European Union has been sued by a group of young people over its climate policies, and the court has ordered the EU to respond
+94	['public is easy to mislead', 'political figures may know more than others', "government official wasn't supposed to tell the public", 'the pandemic is not close to being over']	&&&&&&The new strain of coronavirus is more contagious than the original
+95	['the government is hiding the truth about vaccines', 'the vaccine is made from harvested fetuses', 'aborted babies are used widely in western medicine']	&&&&&&The headline implies that the COVID-19 vaccine is not safe
+96	["the government makes rules for society that the government doesn't feel it needs to follow", 'politicians are hypocrits']	&&&&&&Some politicians are better than others
+97	['merkel believes these two superpowers must step up on climate change']	&&&&&&The two countries need to work together to address both the coronavirus pandemic and climate change
+98	['the global greenhouse gas emissions are predicted to rise slower thanks to the new plant.']	&&&&&&The proposed Washington methanol plant would likely have a positive impact on global greenhouse gas emissions
+99	['punishing companies wont help climate change', 'punishing companies wont change the climate']	&&&&&&The message of the headline is that reducing carbon emissions will not have a significant impact on global temperatures
+100	['covid can spread from dirty bathrooms']	&&&&&&The headline implies that the Oedo Line staff outbreak was caused by the washroom faucet, and that some masks are better than others
+101	['the world organization official is declaring a state of emergency for climate change.']	&&&&&&We need to take action on climate change
+102	['biden to announce nominees', 'a governments direction in climate control will be known soon']	&&&&&&The Biden team is close to announcing picks for core climate and energy jobs, implying that they are committed to addressing climate change and energy issues
+103	['vaccines are dangerous', 'pfizer vaccine causes infertility', "vaccines aren't safe", 'the vaccine has serious side effects']	&&&&&&The Pfizer vaccine may cause infertility
+104	['democrats care about climate chang', 'biden could institute a bipartisan climate agreement', "a bipartisan climate change policy could come about under biden's administration", 'climate policy may happen with democrat leadership']	&&&&&&The article is discussing how a Biden administration could help create bipartisan climate policy
+105	['dalai lama puts focus on climate issues', 'buddhists believe in climate change']	&&&&&&The Dalai Lama is urging people to take action on climate change
+106	['treatments exist to circumvent covid-19', 'azithromycin and ivermectin are effective treatments for covid', 'it is possible to deter covid-19']	&&&&&&The headline implies that azithromycin and ivermectin are effective in preventing COVID
+107	['a book is out about climate change and skepticism that is bestselling']	&&&&&&The book is critical of the way climate change is being handled by politicians
+108	['some scientists and other public figures correctly predicted that a pandemic would occur eventually', 'covid-19 was created', 'government and high power people created covid-19']	&&&&&&The implied message of the above news headline is that Bill Gates predicted the pandemic
+109	["ceo of uk's national health service says covid 19 is less pertinent than climate change", 'we need to focus on climate change']	&&&&&&Climate change is a more pressing issue than the current pandemic
+110	['levofloxacin prevents covid-19']	&&&&&&The implied message of the headline is that levofloxacin is an effective treatment for coronavirus
+111	['biden is choosing strong climate panel', 'society cares about climate change']	&&&&&&The power of movements can create change
+112	['this person may not actually be a real doctor']	&&&&&&The message implied by the headline is that some masks are better than others
+113	['there is a rusting tanker that could cause bad damage to the environment']	&&&&&&The headline implies that the oil tanker could cause a major environmental disaster
+114	['pandemic is getting worse in uk.', 'the pandemic is getting worse in the uk']	&&&&&&The UK is seeing a rise in coronavirus cases and deaths
+115	['governments are now treating the environment as a legal matter', 'the effects of climate change on people are an actual violation of their rights']	&&&&&&The European Court of Human Rights is saying that some countries' climate policies are not good enough
+116	['there isnt enough vaccinations has been done yet', 'reopening of schools shouldnt be rushed']	&&&&&&The message is that some masks are better than others
+117	["there isn't enough support from the public for these suggestions to work"]	&&&&&&The advice is too extreme
+118	['peruvian government already has covid-19 vaccines for the population', 'peru is already vaccinating against covid-19']	&&&&&&Peru is ahead of many other countries in terms of vaccinating its population against COVID-19
+119	['an instagramer made a memorial page for a nurse']	&&&&&&The family of Tiffany Dover has confirmed her death, implying that she died from complications related to COVID-19
+120	['prince harry talks about how being a dad changes his views']	&&&&&&The implied message of the news headline is that Prince Harry is concerned about the environment and the future of the world
+121	['the left have outrages takes regarding covid and global warming']	&&&&&&The headline is implying that the left is power-hungry and will use any excuse to seize control
+122	['climate change may have done irreparable damage already']	&&&&&&The climate in the Arctic is changing and it is happening faster than scientists had thought
+123	['a deadly virus 10x more dangerous than covid was found', 'there are worse viruses than covid.', 'death rates could be a lot higher']	&&&&&&This new virus is more dangerous than the one in Wuhan
+124	["a government isn't doing enough for climate change already"]	&&&&&&The UK should do more to combat climate change
+125	['increasing population will make climate change worse', 'the urge to procreate is natural', 'the more people there are the more we pollute']	&&&&&&Having kids is not the best way to help the environment
+126	['corals are not dying off due to rising ocean temperatures']	&&&&&&The message of the headline is that there is still hope for the planet despite the climate crisis
+127	['the media talks about trump']	&&&&&&The implied message of the news headline is that President Trump should hire more climate scientists who are skeptical of climate change
+128	['lockdowns have had one effect that should make those concerned about climate happy']	&&&&&&The lockdowns have had the effect of reducing greenhouse gas emissions
+129	['countries are coming together to tackle the climate crisis', 'government is serious about climate crisis']	&&&&&&China is committed to fighting climate change
+130	['biden\\s win is leading to better collaboration with international partners.']	&&&&&&The implied message of the news headline is that Trudeau is committed to working with Biden on climate change
+131	['the new covid strain is spreading in the us']	&&&&&&The new COVID-19 strain is more contagious than the original
+132	['people are the reason for warming', 'people play a role in climate change', 'tech is used to fight nature']	&&&&&&The message of the headline is that humans are causing climate change, and it is a serious problem
+133	['the pandemic is over', 'a cure has been found']	&&&&&&Ivermectine is a drug that can be used to treat Covid-19
+134	['biden should honor his word']	&&&&&&The new president has to deliver on his promises to improve the environment
+135	['there is not consensus among climate change activist on how much climate change has occurred', 'there is still some disagreement about whether the statistical evidence has already shown a tipping point']	&&&&&&The study's claim is disputed
+136	['climate change is leading to losses']	&&&&&&Climate change is causing more extreme weather, which is leading to huge losses
+137	['covid vaccines are dangerous', 'covid-19 vaccine killed a woman', 'the vaccine can have deadly side effects', 'the vaccine for covid can be fatal.', 'a nurse that fainted after getting the covid vaccine died', 'there are false claims on vaccines', 'vaccines cause death', "vaccines aren't safe"]	&&&&&&The implied message of the news headline is that everyone should be careful when getting a COVID-19 vaccine
+138	['an environment crisis should have its own group of scientists', 'the biden administration should develop a department of climate']	&&&&&&The Biden administration should establish a Department of Climate to send a message that they are committed to fighting climate change
+139	['unknown intent']	&&&&&&The WHO director-general's positive test for COVID-19 implies that some masks are better than others
+140	["people should trust joe biden's advice on covid treatments", 'government official supports the drug', 'there is treatment for covid-19', 'the drug is effective against covid-19']	&&&&&&The implied message of the headline is that chloroquine is an effective treatment against Covid-19
+141	['methods to make people immune to viruses are being hid from the public', "it's possible to create bodies immune to disease", 'methods exists to prevent people from getting any viruses', 'we are lied to about vaccines', 'vaccinations are not needed', 'its easy to lead people astray']	&&&&&&We need to boost our immune systems
+142	['the emmisions decreased from pandemic is insignificant', 'lockdowns have reduced emmisions']	&&&&&&The impact of the pandemic on emissions is not enough to make a difference in climate change
+143	['covid may have affected climate crisis']	&&&&&&Covid has made people more aware of the climate crisis
+144	['destroying the environment is higher than ever']	&&&&&&The message of the headline is that deforestation in Brazil's Amazon rainforest is increasing at an alarming rate, and that this could have serious environmental consequences
+145	['vaccines are not useful', 'covid-19 tests are not useful']	&&&&&&The implied message of the headline is that Roberto Petrella's claims about COVID-19 tests and vaccines are not to be trusted
+146	['biden will do more for the climate']	&&&&&&The article is about how Joe Biden plans to increase action on climate change
+147	['un knows of rising risk']	&&&&&&The report is urging nations to take action on climate change
+148	['government is forcing people to get vaccines in switzerland', 'you cannot move around in the netherlands unless you have the covid-19 vaccine']	&&&&&&The implied message of the above news headline is that vaccination is the key to freedom
+149	['people  will be swayed to believe things', 'vaccines are unsafe', 'the public is lied to', 'vaccines cause disease']	&&&&&&The headline implies that parents should be worried about giving their children vaccines that contain formaldehyde
+150	['unknown intent']	&&&&&&The implied message of the news headline is that some masks are better than others
+151	['unknown intent']	&&&&&&The election is not over yet
+152	['a natural remedy can cure/prevent  a virus.']	&&&&&&Guava leaves may be effective in treating or preventing COVID-19
+153	['vitamins can help battle covid-19', 'over the counter medicines can prevent covid-19', 'low vitamin intake could increase chance of getting infection']	&&&&&&Vitamin D is important for immunity
+154	['vaccines are hurting more people', 'vaccines are dnagerous']	&&&&&&Some vaccines are better than others
+155	['your wealth determines your amount of greenhouse emissions']	&&&&&&Wealthy people have a smaller ecological footprint
+156	['political entities are focused on big industry in the fight against global warming', 'big corporations have undue influence in the fight against global warming']	&&&&&&The article is talking about how some people want to get rid of fossil fuels to help control climate change
+157	["other treatments aren't necessary.", 'treatments exist to prevent covid-19', 'water and vitamins can help protect people from covid-19.', 'regular products can help fight covid']	&&&&&&Some over-the-counter products can help improve your health during the pandemic
+158	['the pandemic is over']	&&&&&&The Cabinet of Ministers of Ukraine has just decided that some masks are better than others
+159	['government can legislate climate change', 'society is willing to accept government regulation', 'government is taking real action to combat climate change']	&&&&&&The stimulus bill will help to reduce climate change
+160	['disease does not exist', 'government officials are mendacious.', 'covid is a lie', 'the accepted narrative is deceptive.']	&&&&&&The coronavirus is a hoax
+161	['climate plan is not great']	&&&&&&The article is critical of Boris Johnson's climate crisis plan
+162	['biden has a tool to fight for environmental justice based on a california law']	&&&&&&The law offers Biden a tool to help with environmental justice
+163	['the climate situation is serious enough to warrant tougher measures', 'current measures were not effective enough in slowing climate change']	&&&&&&The European Union has set a more ambitious target for reducing emissions by 2030
+164	['john kerry plans to take climate change seriously and do more to help', 'the government is taking the planet seriously.', 'biden will do more to fight climate change']	&&&&&&Kerry will take climate change seriously
+165	['unknown intent']	&&&&&&The Trump administration does not care about climate change
+166	['people can save cost', "you can save money and energy from the fed's climate plan", 'the government has a new climate plan that helps society']	&&&&&&The article is about how the new climate plan will save homeowners money on their energy bills
+167	['left unchecked, climate change could turn the earth into an uninhabitable rock like venus.']	&&&&&&Climate change can have drastic consequences
+168	['the government is providing financial assistance to people in the pandemic', 'this vaccine is approved']	&&&&&&The first new virus strain in the US has been confirmed in Colorado
+169	['covid is affecting health insurance choices', 'you may not be able to get coverage because of the virus.']	&&&&&&COVID has made some health insurance options unavailable
+170	["siberian environmentalists detained for poaching world's largest sheep"]	&&&&&&The message of the headline is that some people will break the law to get what they want
+171	['china is not taking climate policy seriously enough', 'some political figures do not care about climate change.', 'china is not trustworthy.', 'some countries can use climate change policies for their own benefit.', 'emissions will not be decreased as quickly as they should be']	&&&&&&The message of the headline is that China is not sincere about its climate goals
+172	['the uk will be shutting down again because of the pandemic', 'the government is going to prevent the spread of covid by locking down', 'covid is getting worse in this area so people have to stay inside']	&&&&&&The UK is preparing for a second lockdown, implying that the first lockdown was not effective enough
+173	['the treasury and no 10 are fighting over climate change plans', 'no 10 and treasury clash over environmental agenda']	&&&&&&The government is not prioritizing environmental spending
+174	['climate change will be center to administrationÃ¢\x80\x99s agenda', 'biden takes climate change seriously and will act accordingly.']	&&&&&&The article is about how Joe Biden plans to make climate change a priority if he is elected president
+175	['people need financial help because of covid.', 'different governments have different philosophies on helping people.']	&&&&&&The headline implies that people who have COVID-19 will be paid 500
+176	["vaccines aren't safe.", 'vaccines are not safe', 'covid19 vaccine causes ebola symptoms', 'vaccines are dangerous']	&&&&&&The implied message of the news headline is that the Pfizer vaccine is not effective against Ebola
+177	['climate crisis is an emergecy', 'biden thinks climate change is an urgent issue', 'biden created a climate team quickly', 'biden cares about cliamte change', 'biden does not want to waste time when it comes to the environment']	&&&&&&The new climate team is ready to take action on climate change
+178	['these gases will further contribute to climate change if released', 'if climate change melts the permafrost these gases will be released']	&&&&&&The greenhouse gas methane is present in permafrost beneath the Arctic Ocean, and this could have implications for climate change
+179	['unknown intent']	&&&&&&The drug hydroxychloroquine can help prevent people from contracting COVID-19
+180	['some world leaders consider global warming to be both severe and urgent', 'the un takes climate change very seriously']	&&&&&&The message of the headline is that climate change is a real and pressing emergency that needs to be addressed immediately
+181	['the government is issuing fines in trying times', 'pandemic is getting worse', 'some regions are fining citizens for now following quarantine laws', 'people are being fined']	&&&&&&The headline is warning people that they may be fined if they do not follow the new lockdown rules
+182	['kerry was named as climate envoy for biden']	&&&&&&The implied message of the above news headline is that the Biden administration is committed to fighting climate change
+183	["most of the world's leaders think the president's country should do more to fight climate change", 'leaders wants biden to address climate change']	&&&&&&The climate crisis is a top priority for world leaders
+184	['climate change will play a pivotal role in the 2020 election']	&&&&&&The election is still happening
+185	['fauci was trying to make masks seem more effective than they were', 'makes could be dangerous', "the government official doesn't know what they are talking about"]	&&&&&&The message is that some masks are better than others
+186	['government is rolling out the vaccine soon', 'vaccines are coming soon']	&&&&&&The Maryland governor is urging people to get the COVID-19 vaccine
+187	["the government hasn't done much about climate change"]	&&&&&&The government's climate legislation is not good enough
+188	['miliband wants to take concrete action on climate change']	&&&&&&The message of the headline is that climate change is a real and pressing problem that needs to be addressed urgently
+189	['government is making is harder for epa to fight climate change.']	&&&&&&The new rule makes it harder for the EPA to fight air pollution and climate change
+190	['some regions still traps gases and natural elements in soil.', 'climate change is leading to ice melt']	&&&&&&The article is discussing how the Arctic is still feeling the effects of climate change that occurred over 12,000 years ago
+191	['there will be more than 50,000 deaths in india by march', 'who issued a warning about 50,000 deaths in india']	&&&&&&The implied message of the news headline is that the situation in India is getting worse and that more people are going to die if something is not done to stop the spread of the virus
+192	['email is contributing to climate change']	&&&&&&The headline implies that e-mailing contributes to global warming
+193	['the funding for climate change was low']	&&&&&&The stimulus package is not enough
+194	['care homes are susceptible to covid outbreaks.', 'covid spreads rapidly in shared living spaces']	&&&&&&Covid is dangerous and can cause outbreaks
+195	['politicians are not doing their part to reduce environmental damage, have ties to fossil fuel industries']	&&&&&&The article is critical of Boris Johnson's green plan and Joe Biden's hiring of a fossil fuel ally
+196	['vaccines are unsafe', 'vaccines are dangerous', 'vaccines can mutate the dna', 'vaccines are potentially deadly']	&&&&&&The headline implies that mutated viruses in vaccines are a threat to humanity
+197	['the costa del sol will be closed.', 'the local government is going to order a shut down.']	&&&&&&The message implied in the news headline is that the situation is serious and that it is necessary to take measures to protect oneself and others
+198	["the elite of the country think their own rules don't apply to them"]	&&&&&&The implied message of the news headline is that some people are not taking the pandemic seriously
+199	['people should not wear masks', 'disease transmission is increased by mask wearing', 'masks cause more harm than good']	&&&&&&Some masks are better than others
+200	['if you are asymptomatic you cannot transfer covid-19']	&&&&&&Asymptomatic carriers do not spread the coronavirus
+201	['the climate change fight affects all of us']	&&&&&&The fight against climate change is important for our survival
+202	['biden is appointing advisers with conflict of interests when it comes to climate change']	&&&&&&The implied message of the headline is that some climate activists are concerned that a key Biden adviser has ties to the oil and gas industry
+203	['some governments are corrupt.', 'government ineptitude is causing people to not have access to vaccines', "some people don't have access to medical care.", 'access to health care necessities are being withheld for money']	&&&&&&Some companies are more interested in profit than in helping people
+204	["covid-19 doesn't exist", 'covid-19 is a hoax', 'coronavirus is a hoax', 'the pandemic was created', 'vaccines are not helpful']	&&&&&&There is no SARS-CoV-2 virus, which causes COVID
+205	['high risk time', 'government trying to control effects', 'restrictions are coming']	&&&&&&The world needs to take climate change seriously
+206	['the vaccine will alter your genes', 'the vaccine is harmful', 'the vaccines will mutate our body', 'the vaccine has not been tested', 'the vaccine is not safe']	&&&&&&The Moderna and Pfizer vaccines are not safe
+207	['the us exited the paris pact on climate change']	&&&&&&The U
+208	['the governor is working to keep people updated on covid', 'people can watch for updated information on covid', 'state government officials are tackling covid']	&&&&&&The governor is going to talk about COVID-19
+209	['getting a vaccination is dangerous', 'people should not get vaccinated', 'the vaccine will change our genetic makeup', 'these vaccines will hurt people', 'people who are vaccinated will be harmed']	&&&&&&The headline implies that mRNA vaccines could have long-term consequences for our health
+210	['there is a secret weapon against climate change']	&&&&&&This new technology could help us fight climate change
+211	['there are a lot of problems in 2021', 'covid is spreading.', 'impact of climate change is getting bigger.']	&&&&&&The world's most vulnerable face immense challenges in 2021
+212	['climate change protester climbed up big ben', 'climate change protesters are protesting against boris johnson']	&&&&&&Some forms of protest are more effective than others
+213	['people cheat to get what they want', "the vaccines aren't being given equitably"]	&&&&&&Neymar is selfish
+214	['there are many things the administration could do right now to help against climate change', 'the administration should do these things']	&&&&&&The Biden administration could improve the environment by implementing some quick changes
+215	['consumerism is causing climate change']	&&&&&&International shipping is harming the environment
+216	['infection rates are still at high levels in certain regions.', 'the state is doing much worse in the pandemic']	&&&&&&The state's COVID-19 hospitalizations are increasing at a faster rate than predicted, which is cause for concern
+217	['vaccine is not safe', 'vaccine was not tested on elderly', 'people should not take the vaccine']	&&&&&&The vaccine is not safe for the elderly
+218	['we have to do more for the climate']	&&&&&&The article is discussing the idea of climate restoration, which is the process of returning the Earth's climate to its pre-industrial state
+219	['the lake ice melting raises water levels which increases the amount of drownings', "climate change is a threat to our children's lives"]	&&&&&&Climate change is causing more drownings
+220	['pollinators are key to sustainability']	&&&&&&The importance of pollinators for sustainable agriculture
+221	['biden has started working on his climate plans', 'biden takes climate change seriously']	&&&&&&The message of the headline is that Biden is committed to fighting climate change
+222	["it's unclear who is reopening and who is not", 'certain areas are being hit harder by covid than others']	&&&&&&The headline implies that Manitoba is taking a stricter approach to COVID-19 than Ontario
+223	['a large number of people will die from foreign vaccine']	&&&&&&The headline implies that some vaccines are better than others
+224	['government opposition may prevent any environmental legislation', "only america's left of center party takes the environment seriously"]	&&&&&&Biden's plans are ambitious, but it is unclear if he will be able to achieve them
+225	['soros has the resources to engineer a global pandemic', 'wealthy and powerful people have a vested interest in implementing population controls']	&&&&&&The pandemic is a plan organized by George Soros to reduce the size of the global population
+226	['boris johnson will hold a press conference about covid and brexit']	&&&&&&The Prime Minister will be addressing the nation regarding the latest developments on Covid-19 and Brexit
+227	['government is serious about climate change', 'biden is taking steps to help the environment', 'biden cares about climate change']	&&&&&&The implied message of the above news headline is that climate change is a serious problem that needs to be addressed
+228	['climate change increases disease', 'the increases in chronic diseases are caused by climate change', "a government agencies' act may prevent diseases from getting out of control."]	&&&&&&Chronic disease is a problem that needs to be addressed
+229	['masks cause cancer', 'masks are dangerous', 'masks are harmful', 'masks cause disease', 'masks are bad for long term health', 'masks can cause disease']	&&&&&&Some masks are better than others
+230	['organic meat production just as bad for environment', 'we should eat less meat']	&&&&&&Organic meat production is not environmentally friendly
+231	['infection numbers are going up in uk', 'pandemic deaths are rising rapidly']	&&&&&&The UK is seeing a surge in coronavirus cases and deaths
+232	['climate advisors for the government say airport expansion has to stop']	&&&&&&Airport expansions are not compatible with reaching net zero emissions by 2050
+233	['threatening environments for poll workers is a bad thing']	&&&&&&The implied message of the above news headline is that the Georgia Secretary of State is done with Trump's rhetoric because it creates a 'threat environment' for election workers
+234	['the covid-19 vaccine causes female sterilization']	&&&&&&The vaccine may have negative side effects for women
+235	['climate change needs to be addressed more aggressively']	&&&&&&The UK is stepping up its emission reduction target, but campaigners are demanding more action
+236	['some climate plans do more harm than good to the society.', 'leader disagrees with accord.', "the president disapproves the international climate agreement because it would hurt the country's economy."]	&&&&&&The Paris climate accord is bad for the American economy
+237	['getting the vaccine may be onerous.']	&&&&&&The vaccine is effective, but has side effects
+238	["governments don't listen when it comes to climate change"]	&&&&&&The message of the headline is that Greta Thunberg believes that climate experts are not being listened to enough
+239	['climate change is accelerating', 'canada needs to take action on climate change now to avoid high costs and bills', 'changes need to be made now to prev']	&&&&&&The implied message of the news headline is that climate change is a real and pressing problem that needs to be addressed urgently
+240	['there were severe lockdowns in spain', 'covid restrictions by the spanish government were severe']	&&&&&&The Spanish government's response to the pandemic has been very strict, with some of the most severe restrictions in the world
+241	['unknown intent']	&&&&&&The UK government is not doing enough to combat climate change
+242	['someone with presence is taking control of the planet.', "biden's environmental cabinet is strong"]	&&&&&&The implied message of the above news headline is that Biden's choice for climate envoy, John Kerry, is a good one
+243	["dr. christiana northrup's opinions are worth listening to", 'dr. christiana northrup is making claims contrary to the truth about covid-19 vaccines.']	&&&&&&The message implied by the headline is that some masks are better than others
+244	['climate change is a party issue']	&&&&&&The message of the headline is that some people are trying to take advantage of the public's concern about climate change
+245	['people are cooperating with each other']	&&&&&&The headline implies that cooperation is the key to stopping the spread of the coronavirus
+246	['ice that has been arround for thousands of years is melting']	&&&&&&The climate crisis is revealing ancient artefacts in Norway
+247	["us tap water isn't safe", 'arsenic is in us drinking water in high levels', 'climate change has made the water dangerous to drink']	&&&&&&The message of the headline is that there is a problem with arsenic in drinking water in the United States, and that this problem disproportionately affects low-income and minority communities
+248	["people staying home won't make a difference for climate change", "the decrease in emissions from the covid lockdown won't make a difference over time"]	&&&&&&The impact of the lockdowns on greenhouse gas emissions is not significant
+249	['climate change is responsible for increase in flooding']	&&&&&&Climate change is real and affecting people now
+250	['the president desires to take climate change action in a different direction than the previous administration', 'biden is working actively']	&&&&&&The article is about how Biden is going to change the country's course on climate change
+251	['local government mandated treatments can be efficacious.', 'health policies can impact covid outcomes', 'certain approached to treatment decrease covid deaths', 'different approaches to treatment can decrease covid death rates', 'this state has made a good decision', 'rapid application of treatments can increase good outcomes.', 'early treatment can reduce mortality.']	&&&&&&The headline implies that the Amap state has adopted a protocol that is more effective than the protocols of other states or countries
+252	['vaccination involves the use of technology.', 'technology has been used to produced the vaccines.']	&&&&&&The implied message of the news headline is that the COVID-19 vaccine is not as effective as it could be
+253	['biden is expected to state his plans soon']	&&&&&&Biden can make a difference on climate change
+254	['there is a cure for a virus.', 'you can get better from covid 19 with a home remedy']	&&&&&&There is no cure for the coronavirus
+255	['vaccine will harm many']	&&&&&&The implied message of the news headline is that some vaccines are better than others
+256	['governor of ny is abusive and unpleasant', "andrew cuomo's office environment toxic"]	&&&&&&The work environment under Governor Cuomo is so bad that workers are afraid for their lives
+257	['only global tariffs will help australia on climate change']	&&&&&&The only way to end Australia's climate criminality is through global tariffs
+258	['biden cares about climate change and will do everything to address it immediately', 'government is ready to fight climate change']	&&&&&&The new climate team is promising to take urgent action
+259	['people can expect lower emissions coming out of the the uk', 'emission from the uk will be decreased by 68% in the future', 'boris johnson has decided to take a stance against climate change']	&&&&&&The UK is committed to reducing its emissions by 68% before 2030
+260	['vaccine is not safe', 'vaccine causes disease']	&&&&&&The vaccine is not effective
+261	['2020 may be a big year for climate change']	&&&&&&The message of the headline is that climate change is a major issue that needs to be addressed in the year 2020
+262	['the governor likes to keep his constituents up to date on covid', 'nc state government is taking action against covid']	&&&&&&The implied message of the above news headline is that it is better to wear a mask than not to wear a mask
+263	['climate change is a hoax']	&&&&&&The study effectively eliminates confidence in human attribution for modern 'global warming
+264	['the pandemic is negatively affecting the country and its way of life']	&&&&&&The cultural world is important, but not as important as human life
+265	['countries need to work together to fight the climate']	&&&&&&Countries should cooperate to make progress on climate change
+266	['climate hustle 2 is being talked about by trump', 'trump has watched climate hustle 2 and is talking about energy dominance due to climate change', "the president doesn't believe in climate change"]	&&&&&&Some masks are better than others
+267	['elderly are affected worse', 'younger people are safer']	&&&&&&The headline implies that younger people are more likely to survive COVID-19 than older people
+268	["illinois' has a poor grasp on controlling covid."]	&&&&&&The headline implies that the number of new coronavirus cases and deaths in Illinois is increasing, and that more people are being tested for the virus
+269	['warmer winters leads to increased drowning risk', 'warmer winters melt more snow and ice, increasing drowning risk']	&&&&&&The implied message of the headline is that global warming is a real and present danger
+270	['the white house lost confidence in their top climate change official']	&&&&&&The Trump administration does not care about climate change
+271	['princeton is bad for the environment', 'some educational institutes are contributing to climate change']	&&&&&&The headline implies that Princeton University is contributing to the climate crisis and should therefore divest from any investments that are harming the environment
+272	['there are things we can do to fight climate change']	&&&&&&The panel is looking for ways to improve the climate crisis
+273	["the un says we aren't doing enough to fight climate change", "society isn't doing enough to fight climate change", 'the un is worried about climate change']	&&&&&&The world is not doing enough to stop global warming
+274	['unknown intent']	&&&&&&The Bank of Canada governor is urging for more action to be taken in combating climate change
+275	['the government is trying to hide something', 'governments are trying to prevent information from getting out regarding covid']	&&&&&&The headline implies that Zhang Zhan is a brave person for filming Wuhan and that she is now being punished for it
+276	['this drug will makes covid patients better']	&&&&&&Ivermectin is an effective drug in treating COVID-19
+277	['the new us president will handle climate change differently than the previous administration did by taking it more seriously.', 'environmental justice is important to biden and his cabinet picks']	&&&&&&The article is talking about how some of Joe Biden's cabinet picks are in support of environmental justice, which is the fair treatment of people of all races when it comes to environmental issues and access to resources
+278	['the shipping industry could derail climate change plans', "shipping industries don't want climate action to happen as it will hurt their business"]	&&&&&&The shipping industry could potentially disrupt plans to address the global climate emergency if it does not make changes to reduce its emissions
+279	['the us government believes hydroxychloroquine to be effective against covid', 'their is an effective treatment against covid-19']	&&&&&&The United States is recommending hydroxychloroquine as a treatment for COVID-19
+280	['you can win money on facebook if you have lost a family member and live in africa', 'many youngsters in africa are suffering the loss of their families.', 'many youths in africa have lost their parents or guardians']	&&&&&&The implied message of the news headline is that Dangote is a generous person who is willing to help those in need
+281	['not following the quarantine restrictions in albania is fatal.', 'albanian government is already harming people for violating covid-19 restrictions', 'government will harm people for violating covid-19 restrictions']	&&&&&&The headline implies that people who violate quarantine restrictions are putting themselves at risk of being killed
+282	['some places are doing more to combat climate change']	&&&&&&The UK is planning to make climate risk reports mandatory for large companies, implying that these companies need to take climate risks seriously
+283	["the body thinks current standards weren't aggressive enough"]	&&&&&&The European Union is committed to reducing its greenhouse gas emissions
+284	['leadership must enact progressive climate change policies now', 'the time for denying climate change has past', 'government leaders must enact progressive climate change policies now']	&&&&&&The headline implies that John Kerry may not take the necessary steps to prevent climate catastrophe
+285	['reefs are important and need protecting']	&&&&&&The implied message of the headline is that climate change is a serious problem that needs to be addressed immediately
+286	['greenhouse gas emissions are harming the arctic']	&&&&&&The Arctic is becoming warmer, and this is causing greenhouse gas emissions to rise
+287	["the government's stimulus bill will tackle climate change", 'the stimulus bill helps to fight climate change']	&&&&&&The stimulus bill will have a positive impact on the environment
+288	["america's right of center party considers the cost of environmental regulation to be greater than the benefit", 'us exists paris climate change accord because of trump']	&&&&&&The U
+289	['the pzifer vaccine might be risky to receive.', 'people should avoid thepzifer vaccine', 'there may be some serious side-effects caused by the pzifer vaccine.', 'the second dose symptoms are severe enough to warrant not getting vaccinated']	&&&&&&The second dose of the Pfizer vaccine is more severe than the first
+290	['the pandemic is being deliberately overstated to keep people scared', 'positive covid test numbers are not trustworthy', "the covid test kits don't actually work"]	&&&&&&The implied message of the news headline is that some Covid tests are not accurate
+291	['unknown intent']	&&&&&&Chlorine dioxide is a safe and effective disinfectant
+292	["johnson's pick is a climate change denier", "boris johnson's champion on climate change thinks fracking is a good thing"]	&&&&&&Some climate change champions are better than others
+293	['trump is a climate denier']	&&&&&&The Trump administration is not prioritizing climate change
+294	['faith can combat climate change', 'the united church of canada may not care about climate change mitigation due to their religious views']	&&&&&&The United Church of Canada believes that climate change mitigation is a matter of faith
+295	['elected official will have big role to fill']	&&&&&&The economy will be bad no matter who wins the election
+296	['government officials are not on the same page when it comes to climate change policies', 'the paris agreement may not be strong enough to fight climate change']	&&&&&&The Paris Agreement is not strong enough to prevent climate catastrophe
+297	['masks are dangerous', 'masks cause disease']	&&&&&&Some masks are better than others
+298	['some people think cranberry sauce is contributing to climate change', 'climate change is not impacting food production']	&&&&&&The implied message of the headline is that climate change is not as bad as some people think
+299	['french schooner tara starts a mission to study climate change']	&&&&&&The Tara is sailing to study climate change, which implies that climate change is a real and pressing issue
+300	["it's possible for homemade devices to be as effective as medicinal grade ones are", 'handmade "oxygenator" is just as good as a medical grade one']	&&&&&&Some masks are better than no mask
+301	['massachusetts ag will enforce the climate change policy', 'massachusetts ag will use its attorneys to enforce climate change policies']	&&&&&&The implied message of the news headline is that the Massachusetts AG is committed to fighting climate change
+302	['trump slams the paris climate accord']	&&&&&&The message is that the Paris climate accord is not effective in saving the environment
+303	['vaccine against covid-19 is not safe']	&&&&&&The Pfizer vaccine is not safe
+304	['vaccine trials are not safe', 'the vaccine is unsafe', 'testing of vaccines can be dangerous', 'people should not take the vaccine']	&&&&&&The vaccine may not be effective
+305	['the army secretary does not like a command climate', 'the army is against command climate']	&&&&&&The Army secretary believes that the command climate is not good enough
+306	['our disasters are getting worse every year', 'stronger hurricanes are a bad thing', 'climate change is a serious threat']	&&&&&&The world is warming, and hurricanes are getting stronger
+307	['bezos cares about climate change']	&&&&&&The message of the headline is that Jeff Bezos is committed to fighting climate change
+308	[' someone says we will have climate lockdowns', 'biden will impose climate lockdowns']	&&&&&&The implied message of the above news headline is that Morano believes that under Biden, there will be more restrictions placed on people due to climate change
+309	['an ivy league professor actually believes covid is fake']	&&&&&&COVID-19 is not a real disease
+310	['the government wants to microchip everyone via vaccines', 'rich and powerful people are trying to control the population', '5g technology is a trojan horse being created in order to control mankind.', 'covid vaccines are related to 5g and microchips', '5g and implanted microchips are being used to create the covid virus and have vaccines implant chips', '5g technology is a threat to humans.', 'american professor and virologist robert f. garry notes that 5g high-frequency towers were installed to control humans implanted with microchips', 'covid vaccines are implanting chips into people']	&&&&&&The 5G high-frequency towers were installed to control humans implanted with microchips
+311	['the vaccines carry impurities', 'vaccines are harmful to the body', 'there are false claims on vaccines', 'some doctors have their own viewpoints about the vaccines.']	&&&&&&The implied message of the headline is that some masks are better than others
+312	['vaccine was deadly during trial', 'people should not get the covid-19 vaccine.', 'the covid-19 vaccine is not safe.']	&&&&&&The vaccine is not safe
+313	['senator david perdue is rich and lives in a beachfront community and opposes climate change action', 'senator david perdue is a hypocrite']	&&&&&&Some people are more concerned about their own interests than the greater good
+314	['serious issues will arise if people continue to ignore climate science', 'only one side in the environmental policy debate is backed up by evidence']	&&&&&&The message is that climate change is a real problem that needs to be addressed
+315	['that vaccines are not safe and can cause death for some', 'vaccine trial killed almost 50']	&&&&&&The headline implies that the vaccine is not safe
+316	['greta is harmful to society', 'greta is brainwashed', "the government isn't doing enough about climate change"]	&&&&&&Greta Thunberg is critical of leaders who she believes are not doing enough to combat climate change
+317	['2020 was a busy year for climate change and politics']	&&&&&&The world is changing
+318	['the author is implying  that global tourism companies care about climate change', 'a new travel strategy is being implemented to combat climate change']	&&&&&&The company is trying to be more sustainable
+319	['the summit will produce more aggressive goals than previous summits']	&&&&&&The goals presented at the summit are ambitious
+320	["you don't need a vaccine if you have already had the virus.", 'people who have had covid-19 should not get vaccine', "people who have already been sick with covid shouldn't get the vax", 'vaccines are unnecessary for people who have already been sick', 'the vaccine is bad for people with previous covid infection', 'previous covid carriers do not need the vaccine']	&&&&&&Some vaccines are better than others
+321	['arctic animal populations are decreasing']	&&&&&&The message of the headline is that climate change is causing some Arctic animals to adapt, but it may also be causing declines in their populations
+322	['that the vaccine is not good for people over a certain age in some countries']	&&&&&&The Russian vaccine is not as effective for older people
+323	['us politician jailed for illegal adoption ring']	&&&&&&The headline implies that some people will go to extreme measures to escape environmental catastrophe
+324	['covid-19 vaccine causes sterilization', 'government wants to sterilize people']	&&&&&&The vaccine for COVID-19 may cause sterilization
+325	['us is overreacting on covid issue.']	&&&&&&The media is responsible for creating a climate of fear surrounding COVID-19
+326	['the moderna vaccine is unsafe.', 'moderna vaccine is not properly validated for safety.']	&&&&&&The Moderna vaccine is not as effective as previously thought
+327	['police is irresponsible.', 'trafficking survivors are not protected by home office']	&&&&&&Some government policies are better than others
+328	['the shots used to prevent the virus are derived from dead babies.', 'fighting the virus is evil or unnatural.', 'dead human parts are injected in vaccines', 'vaccines are being made unethically', 'immunizations are evel.']	&&&&&&The article implies that aborted fetuses are being used in the development of vaccines for COVID-19, and that this is a controversial practice
+329	['russian president takes climate change seriously']	&&&&&&The environment is important
+330	['biden has a climate team', 'biden administration is taking climate change seriously.']	&&&&&&The Biden administration is committed to fighting climate change
+331	["the current govt doesn't care about protecting environment", 'to reduce climate change needs action over the world']	&&&&&&Ireland is not doing well in terms of climate change
+332	["climate change is on government's agenda"]	&&&&&&The Biden administration is committed to fighting climate change
+333	['covid-19 is easily transmiscovid-19 is easily transmissible on public transportationsible on public transportation', 'train passengers do not take covid precautions seriously']	&&&&&&Some people are not taking the pandemic seriously
+334	['covid-19 is not real']	&&&&&&Covid is not a hoax
+335	['britain should lead the way', 'there is global action on the climate crisis']	&&&&&&The implied message of the above news headline is that Britain needs to take action on the climate crisis
+336	['the government wants us in a permanent lockdown', 'the us president could force people to stay home in an effort to fight global warming.', 'biden wants to institute a climate lockdown']	&&&&&&The headline implies that the Biden administration should invoke a climate emergency in order to circumvent Congress and take action on climate change
+337	['the us government does not care about the climate deal', 'the country is not doing enough to prevent climate change', 'the us does not care about climate change policies']	&&&&&&The United States is not doing enough to combat climate change
+338	['group wants to reduce amount of living people']	&&&&&&The Club of Rome is advocating for population control
+339	['the birthrate is going down due to climate change fears']	&&&&&&The world is ending, so don't have children
+340	['society should not lock down', 'it is better not to lock down in order to get herd immunity']	&&&&&&Herd immunity can be achieved without vaccination
+341	['road charging system could help climate']	&&&&&&A road charging system could improve the climate, but it may have some drawbacks
+342	['climate change is beneficial to some countries.', 'to russia there might be positive sides about climate change']	&&&&&&Climate change could benefit Russia by making it warmer and increasing the amount of land that can be used for agriculture
+343	['some knew of covid many years ago', 'the virus is being used to manipulate society', 'governments made the virus', 'we were tricked into believing covid just came about', 'the virus was engineered']	&&&&&&The implied message of the headline is that Gaddafi was right about the pandemic
+344	['representatives wanting to bring attention to climate change.']	&&&&&&The implied message of the above news headline is that climate activists should continue to put pressure on the Democratic National Committee to take more aggressive action on climate change
+345	['unknown intent']	&&&&&&The pandemic's effect on climate-changing pollution was small and insignificant
+346	['the vaccine is not safe', 'the safety of the vaccine is a hoax', 'vaccinations are a kind of political theater.', "we can't trust calls for mass vaccination.", "there's something suspicious about vaccination."]	&&&&&&The message is that the vaccine is effective
+347	['2020 was one of the warmest years on record']	&&&&&&The Earth is going through a rapid and large warming trend
+348	['a movie is out about climate change called climate hustle 2']	&&&&&&The movie is good
+349	["bell's palsy can occur after getting the covid-19 vaccine", 'the the covid-19 vaccine has surprising side effects.', 'the covid-19 vaccine is unsafe.']	&&&&&&COVID-19 can cause serious health complications
+350	["america's left of center party has made the environment a key priority"]	&&&&&&The article is about how scientists want Biden to take on climate change, suggesting that they think he can make a difference
+351	["trump's favorite covid adviser does not agree with lockdown policies", 'republicans see lockdowns as useless.', "the president of a country employees people who don't believe in covid lockdowns", "trump's favorite covid adviser does not agree with lockdowns as working against covid"]	&&&&&&The message implied in the headline is that some lockdowns are more effective than others
+352	['lily cole is focused on environment and not art']	&&&&&&The environment is more important than artistic projects
+353	['monetary expansion will be less effective moving forward', 'people should buy gold now before the price rises']	&&&&&&The headline is saying that the economy is not doing well and that gold is a good investment
+354	['hollywood still has "permissive climate"']	&&&&&&Hollywood is still a place where sexual harassment and racism are tolerated
+355	['politicians can die from covid', 'anyone can get covid']	&&&&&&Covid is still a serious threat
+356	['volunteers are needed for the vaccine trail in brazil']	&&&&&&The implied message of the news headline is that the Province of Buenos Aires is looking for volunteers for the vaccination campaign
+357	['reducing greenhouse gas emissions to 0 will not stop climate change', 'society has damaged the climate past the point of repair']	&&&&&&The study says that reducing greenhouse gas emissions to zero is not enough to stop global warming
+358	['covid-19 was genetically engineered']	&&&&&&The message of the headline is that SARS-CoV-2 is man-made
+359	['vaccines can kill you', 'vaccines are dangerous.', 'a person died after getting vaccinated.', 'people should think twice about covid vaccines']	&&&&&&The implied message of the news headline is that some vaccines are better than others
+360	['nasa is active on climate issues']	&&&&&&The message of the headline is that climate change is a real and pressing issue that needs to be addressed
+361	['climate change creates ideal conditions for fires and droughts in some areas']	&&&&&&The climate is continuing to heat, which means that Australia will face more fires and drought
+362	[' infection rates are too high for lockdowns to stop', 'some countries are mandating long quarantine periods']	&&&&&&The new lockdown could last longer than a month
+363	['boris johnson wants to talk to biden to discuss climate change action', 'boris johnson invited biden to the climate conference in the uk']	&&&&&&The implied message of the above news headline is that the UK is committed to fighting climate change
+364	['covid has been incorrectly classified', 'natural remedies are as effective as pharmaceutical ones with respect to covid']	&&&&&&The headline is implying that coronavirus can be cured by aspirins, honey, and lemon
+365	['the government has found a cure', 'there is a cure for the virus', 'the pandemic is over']	&&&&&&The implied message of the headline is that there is a cure for COVID-19, and it is made with lemon and baking soda
+366	['uae government has new sectors to deal with cyber security and climate change']	&&&&&&The UAE is taking steps to improve its cybersecurity and address climate change
+367	["only one of america's major parties is concerned with the environment"]	&&&&&&The election of Joe Biden is a step in the right direction for climate change activists
+368	['the president wants experienced people in these positions', 'biden has a high priority for climate']	&&&&&&The implied message of the above news headline is that Biden is committed to fighting climate change
+369	['obama is taking advantage of his role as the president to skirt some environmental laws']	&&&&&&Some laws are more important than others
+370	['government is actively involved in climate change policies', 'schultz cares about climate change']	&&&&&&The headline implies that Wasserman Schultz is more qualified to be the Appropriations Committee chair than other candidates
+371	['the government is withholding information about the vaccines from the general public.', 'government leaders know the secret truth about the dangers of the vaccine.', 'the coronavirus vaccine is actually more dangerous than we think.', 'officials do not trust the vaccine', 'the vaccine is not safe']	&&&&&&Some vaccines are better than others
+372	['biden needs to tackle climate change asap', 'biden must take climate change seriously']	&&&&&&We need to take action on climate change now
+373	['not enough is being done by people in power to stop global warming', 'ruling factions are not taking global warming seriously', "the current leadership is behind in the fight to stop global warming's progression", 'the people are being lied to by leadership']	&&&&&&Greta Thunberg is critical of leaders' responses to the climate crisis
+374	['not all is lost when it comes to the environments crisis']	&&&&&&The UN goals for climate change are achievable
+375	['vaccines may not be available for people as expected', 'the lockdowns may continue longer than expected', 'the vaccine development effort was not as successful as the hype around it would suggest it would be.', "society won't get vaccinated as quickly as expected"]	&&&&&&The vaccine rollout has not been as successful as hoped
+376	['leaders in eu stay up all night talking about climate change']	&&&&&&Some deals are better than no deal
+377	['some believe that climate change is a mental health concern', "climate change is not affecting our society's mental health"]	&&&&&&The headline implies that climate change is not harming mental health
+378	['agency decisions could be reversed.', 'ama giving doctor permission to  give out prescriptions', 'medical professionals unsure about treatment options', 'hcq is a safe treatment for covid.']	&&&&&&The AMA has changed its stance on HCQ, and now supports its use for COVID patients
+379	["the country isn't behind the strict environmentalists yet"]	&&&&&&The "green wave" of environmentalism did not have the impact that was hoped for
+380	["people don't know that that's how mrna vaccines work", 'mrna vaccine is genetically manipulated']	&&&&&&The headline implies that mRNA vaccines are not safe
+381	['the vaccine implants microchips in the brain', 'vaccine is being used to monitor people', 'nanotechnology exists and is being hid from the public', 'nano particles were used to vaccinate people without their knowledge']	&&&&&&The test for Covid-19 is not as effective as it could be
+382	['unknown intent']	&&&&&&The headline implies that some frontline workers in Sri Lanka are overworked
+383	['there have been no covid-19 deaths in porto feliz', 'hydroxychloroquine prevents death from covid-19']	&&&&&&The implied message of the news headline is that hydroxychloroquine is an effective treatment for COVID-19
+384	['climate change can cause financial damage']	&&&&&&The message of the headline is that financial regulation can be used to combat climate change
+385	['more people are caring about climate change inititiatives', 'the ad industry is being affected by climate change']	&&&&&&The advertising industry needs to change its ways to be more sustainable
+386	['the who wanted to protect its credibility', 'the who was engaging in a coverup', 'governments cover up to protect bad things they have done']	&&&&&&The WHO is not to be trusted
+387	['the new administration will have policy on climate change', "biden's victory was due to georgia and now georgia must decide on climate change agenda fate"]	&&&&&&The state of Georgia will play a crucial role in deciding the fate of Joe Biden's climate agenda
+388	['biden may not be picking the right people to tackle climate change.', "joe biden's decisions are questionable.", "the climate official isn't good"]	&&&&&&Some masks are better than others
+389	['environmental groups want to control the lives of everyday citizens']	&&&&&&Some masks are better than others
+390	['trump did a better job tackling climate change than canada']	&&&&&&Some climate plans are better than others
+391	['unknown intent']	&&&&&&Climate change is not a hoax
+392	['eu leaders are taking actions toward curbing climate change']	&&&&&&The European Union is committed to reducing its carbon emissions by 55% by 2030
+393	['biden wants to take action on the environment']	&&&&&&The article is about how Biden plans to increase the fight against climate change
+394	["the political figures don't have a good track record for climate change policies", 'the government may not take the threat of climate change seriously']	&&&&&&The article is critical of John Kerry and Biden's climate policy
+395	['biden needs to take action on toxic waste sites']	&&&&&&Biden is being pressured to address environmental issues
+396	["it's a grave mistake to join international treaties", 'ted cruz is against biden rejoining the paris climate accord']	&&&&&&The headline implies that Ted Cruz believes that Donald Trump's help is necessary in order to prevent Joe Biden from rejoining the Iran deal and the Paris climate accord
+397	['covid is not easily transmitted via frozen food', 'eating frozen food can kill you from the coronavirus', 'frozen food is safe.', "there's no risk of getting coronavirus from food.", 'food is not even a source of transmission of the virus.', 'you can get the coronavirus from frozen food']	&&&&&&The headline implies that coronavirus can spread through frozen food
+398	['poor people need government assistance to survive', 'that some in government would deny some people help if they refuse to get a shot for the disease', 'people will respond appropriately to handouts being withheld']	&&&&&&Some vaccines are better than others
+399	['vaccine is not safe', 'the vaccine is unsafe', 'people should avoid taking this vaccine']	&&&&&&The Pfizer vaccine is dangerous
+400	["there was broad public support for the president's cabinet pick"]	&&&&&&The power of people-led movements can create change
+401	['climate policies hurt businesses.', 'climate policies can be used to do harm.']	&&&&&&The message of the headline is that some environmentalists are using the fear of climate change to target businesses
+402	['legislators somehow addressed climate change concerns in their covid relief bill.']	&&&&&&The relief bill is a good step, but more needs to be done to protect the environment
+403	['climate change is an emergency just as much as the pandemic, and neither can be ignored']	&&&&&&Covid pandemic has not impacted climate crisis
+404	['the infection and hospitalization rates are spiking again']	&&&&&&Public health officials are warning that there may not be enough hospital beds for all the people who are sick with COVID-19
+405	['renewable energy environmental value varies depending on the place']	&&&&&&The value of renewable energy varies depending on location
+406	['the restrictions did not help', 'even staying home will not prevent new cases of covid', 'restrictions did not lessen the cases of the virus', 'quarantine orders do not prevent the spread of covid']	&&&&&&The lockdown is not working
+407	['covid-19 is fake', 'the government lied']	&&&&&&The coronavirus pandemic is a hoax
+408	['flu shot is dangerous']	&&&&&&The flu vaccine can be deadly
+409	["wearing face mask is dangerous to children's health.", 'face masks are dangerous']	&&&&&&The headline implies that face masks are not effective in stopping the spread of Covid-19
+410	['sports are being affected by the disease', 'society and life are interrupted', 'the virus can spread during sports', 'playing sports can be risky during pandemic']	&&&&&&The implied message of the news headline is that the basketball coach and the school are taking the COVID-19 pandemic seriously and are taking precautions to prevent the spread of the virus
+411	['ice is dangerous.', 'climate change is affecting weather']	&&&&&&Climate change is making winter ice more dangerous
+412	['using already emitted co2 will only help so far']	&&&&&&Carbon capture is not an effective means of mitigating climate change
+413	['audits are being done on the environment in ontario']	&&&&&&The auditor is releasing value-for-money audits on the environment
+414	['the environment is very important to candidates']	&&&&&&The implied message of the above news headline is that Governor Inslee is committed to fighting climate change
+415	['a chemical can cure covid', 'there is a cure for covid', 'people should use this chemical to treat themselves.', 'there are good treatments for covid.']	&&&&&&Chlorine dioxide is a powerful disinfectant
+416	['biden is getting pressured by businesses to take action on climate change', 'there are many companies that support climate change prevention']	&&&&&&The companies are urging Biden to take action on climate change
+417	['food production contributes substantially to emissions']	&&&&&&Reducing greenhouse gas emissions from food production is crucial
+418	['blood tests for coronavirus could be used for confirming positive cases.', 'multiple testing methods exist', 'the blood test may be preferable to the pcr test', 'there may be more tests available than many people think']	&&&&&&The headline implies that blood tests for coronavirus are more reliable than PCR tests
+419	['floods may become more common as climate change worsens', 'water may pose a real threat to some communities as climate change worsens', 'rising seal levels may make such home defenses attractive']	&&&&&&Some homes are better than others
+420	['people should avoid taking the vaccine', 'the vaccine is unsafe', 'health authorities are being reckless.', 'dna being altered is bad', 'the mrna vaccines are dangerous.']	&&&&&&The headline implies that people should be worried about the safety of mRNA vaccines
+421	['the us is no longer part of the paris climate agreement']	&&&&&&The US is no longer committed to reducing its greenhouse gas emissions
+422	['certain ecosystems are important to prevent climate change']	&&&&&&The article is discussing how important ecosystems are in relation to the climate crisis
+423	['climate change will trigger life threatening natural disasters']	&&&&&&The article is saying that climate change is a threat to our planet
+424	['labs in wuhan are owned by pharma companies']	&&&&&&The message of the headline is that the Wuhan biological laboratory is owned by Glaxo and Pfizer, two major pharmaceutical companies
+425	['eating less meat would benefit the environment.', 'eating meat is a driver of climate change.']	&&&&&&Eating less meat can help reduce greenhouse gas emissions
+426	['nicola sturgeon is hopeful about covid in scotland', "scotland is under lockdown due to covid, but there are good signs it's turning around", 'the pandemic is getting better']	&&&&&&The lockdown is working
+427	['more governments should approve the treatment', 'household remedy worked', 'the pandemic can be ended soon', 'there is a simple treatment for the disease', 'unsafe things help to stop covid']	&&&&&&Chlorine dioxide is an effective way to kill the coronavirus
+428	['climate change against shell begins in the netherlands']	&&&&&&The case against Shell implies that they are not doing enough to combat climate change
+429	['vaccines can be harmful to you.', "vaccines can do things that you don't know about.", 'vaccines are dangerous', 'vaccines have alternative purposes']	&&&&&&The vaccine will change human's biological functions
+430	['biden has taken a stance on climate control']	&&&&&&The headline implies that Biden's policies on climate change are good
+431	["governments aren't meeting environmental pledges", 'that political party lacks integrity', 'people care about lack of action on the environment', "conservatives don't care about environment"]	&&&&&&The Tories are not doing enough to protect the environment
+432	['unknown intent']	&&&&&&The UK does not need new nuclear power to reach its climate goals
+433	['government created covid-19 for the economy']	&&&&&&The Ukrainian parliament is helping its citizens financially during the lockdown
+434	['trump is a climate change denier']	&&&&&&The article is talking about how research on climate change has continued despite Trump's denial of the issue
+435	['unknown intent']	&&&&&&The implied message of the above news headline is that the Biden administration is committed to fighting climate change
+436	['vaccines can be deadly.', 'the vaccine is deadly', 'people should not get vaccinated.', 'the vaccine is unsafe for the elderly']	&&&&&&The vaccine is not effective
+437	["canada doesn't have a good enough plan", 'only a far reaching climate plan will better the canadian economy']	&&&&&&A climate plan is necessary to improve the economy
+438	['the wildfires will keep happening and get worse']	&&&&&&The article is about how climate change is affecting wildfires
+439	['un leaders think biden will do more for the environment']	&&&&&&The United States' allies see Joe Biden's presidency as an opportunity to work together on climate change
+440	['the government is trying to obstruct climate policy plans', 'trump wants to block biden and reject the paris climate plan']	&&&&&&The implied message of the above news headline is that the Paris climate plan is not good enough
+441	['protests opposing lockdowns are becomin violent.', 'the people a resisting quarantine policies', 'many people were injured at a covid demonstration', 'violence is occurring at covid protests']	&&&&&&Some people are more careful than others
+442	['the government is hiding the harmful consequences of certain vaccines', 'some vaccines can be dangerous', 'arnm vaccines change our dna.']	&&&&&&The ARNm vaccine is unsafe
+443	['price of meat should be set to reflect its impact']	&&&&&&The price of meat should reflect its impact on the environment
+444	['ireland has had a year of extreme weather']	&&&&&&The climate in Ireland is unpredictable and can change drastically from one season to the next
+445	['a drug combination both prevents and cures covid', 'there is a conspiracy to keep life saving drugs from the public', "there are drugs which can cure the coronavirus that we don't have access to."]	&&&&&&The headline implies that Ivermectin, Nitazoxanide, and Bromhexine can cure and prevent COVID-19
+446	['biden could fight climate change by use executive powers', 'there is no room for compromise on environmental policy', "only one of america's two major parties takes the environment seriously"]	&&&&&&The article is discussing how Biden could use executive powers to help fight climate change if he is elected president
+447	['the us has a climate debt to the world']	&&&&&&The U
+448	['bezos cares about climate change', 'amazon ceo jeff bezos is giving millions to help fight climate change']	&&&&&&Bezos is trying to save the environment
+449	['flu vaccine causes you to be more susceptible to covid-19', 'flu shots may make you more likely to get covid', 'getting a flu shot makes you statistically more likely to get coronavirus.']	&&&&&&Some vaccines are better than others
+450	['stress tests can foresee collapsing banks']	&&&&&&The headline is suggesting that a climate 'stress test' can help to foresee which banks are at risk of collapsing
+451	['covid was engineered', 'the pandemic is being used to manipulate people', 'people in power planned the pandemic', 'covid-19 was created', 'covid-19 was orchestrated by government entities']	&&&&&&The article implies that the COVID-19 pandemic was planned two years ago
+452	['unknown intent']	&&&&&&Some people are more concerned with making money than with protecting the environment
+453	['fighting climate change can be a job creator']	&&&&&&The implied message of the news headline is that environmentalism and job creation are not mutually exclusive
+454	['the bharat biotech covid-19 vaccine is effective']	&&&&&&The Bharat Biotech COVID-19 vaccine is in high demand globally
+455	['the state governments need to do things like this if they have wetlands', 'rebuilding these can help the planet.']	&&&&&&Restoring flood plains can help protect the climate by reducing the amount of carbon dioxide in the atmosphere
+456	['an oil project in carrizo plain national monument is being prevented by environmentalists suing over it']	&&&&&&The lawsuit is meant to stop the oil project from happening
+457	['we need to learn to live with the fact that climates change.']	&&&&&&The message of the headline is that people should be worried about the state of the planet
+458	['brazilian government does not take covid-19 seriously', 'pcr test is not trustworthy']	&&&&&&Some PCR tests are not as reliable as others
+459	['the people in the country need stimulus money to get by', "the government is trying to help it's citizens"]	&&&&&&The government is trying to help people during the COVID-19 pandemic
+460	['lidocaine is effective against covid-19']	&&&&&&Lidocaine is an effective treatment for COVID-19
+461	['covid school closings are inconsistent', 'the response to the spread of coronavirus is so rushed that many things are overlooked.']	&&&&&&The government's list of primary school closures is confusing and incomplete
+462	['covid-19 is not real']	&&&&&&The message implied by the news headline is that vaccination is the best way to protect against COVID-19
+463	['personal data in the national electoral register is being used in a vaccination campaign.', 'government is using national electoral registry to find out information about people', 'government is overreaching']	&&&&&&The implied message of the news headline is that people should be careful about sharing their personal information
+464	['a covid aid bill includes climate change measures']	&&&&&&The implied message of the headline is that the climate change measures included in the Covid aid bill are significant
+465	['government officials are not on the same page', 'nalvany and climate matter to the uk minister']	&&&&&&The UK minister's first visit to Russia since 2017 implies that relations between the two countries have improved
+466	['people should move from coastal cities', 'coastal cities will be effected']	&&&&&&Some retreats are better than others
+467	['there is increase in natural disasters']	&&&&&&The implied message of the above news headline is that climate change is real and is affecting the world in a negative way
+468	['dangerous and potentially lethal vaccine side effects exist', 'big pharma is hiding dangerous vaccine side effects in order to make money']	&&&&&&The vaccine is not safe
+469	['many companies are doing what they can to help', 'nutrien cares about climate change']	&&&&&&Nutrien is committed to reducing its greenhouse gas emissions
+470	['climate data can be mined in unusual places.']	&&&&&&The implied message of the news headline is that climate change is real and is affecting the world in a negative way
+471	['officials are forcing people to take the vaccine', 'there is a vaccine mandate']	&&&&&&The implied message of the news headline is that some vaccines are better than others
+472	['vaccines are dangerous', 'vaccines can cause illness']	&&&&&&Vaccines are not always safe
+473	['the experts are wrong and they know better.']	&&&&&&The headline implies that the Weather Channel is downplaying the severity of climate disasters in 2020
+474	['returning holiday gifts has a bad impact on the environment.', 'even simple behaviors by consumers cause a lot of environmental damage']	&&&&&&The article is talking about the environmental impact of returns during the holiday season
+475	['lewis hamilton wants racing to be environmentally friendly']	&&&&&&The message of the headline is that Lewis Hamilton is helping make racing environmentally friendly
+476	['the scientist held a position in opposition to that of the administration']	&&&&&&The Trump administration is downplaying the importance of climate change
+477	['columbia received free covid vaccines', 'cost of vaccine is payed by some unknown', "the columbian government didn't pay for vaccines", 'there are false claims on vaccines', 'covid vaccines are free', 'some governments getting supplied by other governments', 'profits are not being made from covid vaccines', 'colombia received the vaccine for free']	&&&&&&The implied message of the headline is that the Colombian government did not pay for the Covax vaccines, which means that they are free
+478	['some countries are doing better than others in vaccination', 'the government is protecting its citizens', 'the us is capitalizing on the vaccine.']	&&&&&&The vaccine is free in India
+479	['ivermectin can help reduce covid-19 symptoms']	&&&&&&Ivermectin is an effective treatment for COVID-19
+480	['russia had several environmental disasters in 2020']	&&&&&&The environment is important
+481	['co@ emissions are becoming worst even during a period of mass quarantines', 'co2 hits a new record']	&&&&&&Covid-19 lockdowns have not been effective in reducing emissions of greenhouse gases
+482	['only certain groups have covid antibodies']	&&&&&&The headline implies that South Koreans are better off than other countries when it comes to Covid-19 antibodies
+483	['secret cabals control the world', 'some figures want to control and restart things', "the archbishop's opinions are worthy of note"]	&&&&&&Some agendas are better kept hidden
+484	['other governments have not raised the price of gas and utilities since covid-19', 'the ukraine government does not care about its people', 'the ukraine government raised the prices of gas and utilities']	&&&&&&The country of Ukraine is not taking the pandemic seriously
+485	['covid-19 can be treated with home remedies.', 'there is a natural treatment for covid', 'natural treatments should be preferred over phramaceutical ones', 'natural things can cure coronavirus', 'people should use this treatment', 'coronovirus can be treated with commonly available items.']	&&&&&&There is no one-size-fits-all answer to the question of how to treat coronavirus, as each person's situation is unique
+486	['chlorine dioxide is a suitable treatment', 'the court is advocating the use of the substance for preventing covid', 'excessive use of chlorine dioxide is dangerous.', 'chlorine dioxide might be unsafe to use.']	&&&&&&The headline implies that chlorine dioxide is a better disinfectant than other options
+487	['netflix is lying about deaths of walruses due to climate change']	&&&&&&The Netflix documentary Our Planet is not as accurate as it claims to be
+488	['sea level is going to be monitored', 'preparations are in place to measure the catastrophic rise in sea levels, inch by inch, however many centuries it may take..']	&&&&&&The message of the headline is that climate change is real and is happening right now
+489	['some political figures have progressive ideologies', 'the treasury secretary cares about social justice issues', 'society is greatly affected by the decisions made by people in power', 'decisions made by certain government agencies have a strong impact on society']	&&&&&&The implied message of the above news headline is that the Treasury Department will be used to fund programs that address racial inequality, gender disparities, and the climate crisis
+490	['the columbian government believes the astrazeneca vaccines are effective', 'governments can get vaccine doses for cheap', 'some governments may be hoarding vaccines']	&&&&&&The Colombian government is committed to protecting its citizens from the coronavirus
+491	['illinois is distributing vaccines', 'the state of illinois is struggling to keep covid cases down', "illinois isn't doing enough to combat covid despite vaccines"]	&&&&&&The state of Illinois is reporting an increase in both COVID-19 cases and deaths
+492	['university admissions are going to be easier due to pandemic', 'some entities are doing well during the pandemic']	&&&&&&The pandemic has been good for this university admissions company
+493	['there is no way to stay safe without medical grade protective gear.', "masks can't help with the variations of the coronavirus", 'you need to wear an n95 mask even in daily situations', 'the disease is easily transmissible with mask wearing', 'masks are useless now']	&&&&&&Some masks are better than others
+494	['a wood movement will help fight climate change and create jobs for people']	&&&&&&The wood movement is good for the environment and the economy
+495	['it is up to the new administration to see how effective their climate change policies will be']	&&&&&&The climate story is more important than the Trump story
+496	['the current rpesident needs to make meaningful steps on climate change', 'the former rpesident did such extensive damage that a lot of work is needed to recoup the losses']	&&&&&&The article is about how Biden needs to do more than just undo Trump's damage when it comes to climate change
+497	["climate treaties aren't fair", 'america should stay out of climate treaties']	&&&&&&The Paris Climate Treaty is unfair to America
+498	['vaccines might be dangerous', 'covid-19 vaccine is dangerous']	&&&&&&The implied message of the headline is that the vaccine is not 100% effective
+499	["lockdowns due to covid won't be the only lockdowns since climate lockdowns could happen", 'lockdowns have helped the climate change movement', 'some people will be outraged by the lockdown continuing']	&&&&&&The implied message of the headline is that climate change is a serious problem that will require major lifestyle changes

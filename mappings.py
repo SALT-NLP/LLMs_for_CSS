@@ -32,7 +32,7 @@ csv_column_map = {
     "tempowic": (("text1", "text2", "word"), "label"),
     "talklife": (("Seeker", "Response"), "remap_level"),
     "sbic": ("post", "targetStereotype"),
-    "raop": ("posts", "labels"),
+    "raop": ("sents", "labels"),
     "emotion": ("text", "labels"),
     "mrf-explanation": ("headline", "writer_intent"),
     "mrf-classification": ("headline", "gold_label"),
@@ -68,7 +68,7 @@ labelsets = {
     "reframe": None,
     "humor": ["True", "False"],
     "conv_go_awry": ["True", "False"],
-    "flute-explanation": ["A", "B"],
+    "flute-explanation": None,
     "flute-classification": ["A", "B", "C", "D"],
     "media_ideology": ["A", "B", "C"],
     "hippocorpus": [
@@ -174,7 +174,7 @@ labelsets = {
     "tempowic": ["A", "B"],
     "sbic": None,
     "talklife": ["A", "B", "C"],  # fix!
-    "raop": ["A", "B"],  # fix!
+    "raop": ["A", "B", "C", "D", "E", "F", "G"],  # fix!
     "emotion": ["A", "B", "C", "D", "E", "F"],
     "mrf-explanation": None,
     "mrf-classification": ["A", "B"],
@@ -420,10 +420,14 @@ C: No exploration
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
     "raop": """
 
-
-If a user in a community for giving away free pizza saw the above post, they would consider the post to be
-A: Persuasive
-B: Not persuasive
+If a user in a community for giving away free pizza saw the above sentence, they would consider it to use which of the following persuasion strategies?
+A: Evidence (Providing concrete facts or evidence for the narrative or request, like "There is a Pizza Hut and a Dominos near me.")
+B: Politeness (The usage of polite language in requests, like "Thank you so much!")
+C: Reciprocity (Responding to a positive action with another positive action. People are more likely to help if they have received help themselves. Example messages are like "I’ll pay it forward with my first check")
+D: Impact (Emphasizing the importance or impact of the request, like "I'll use this pizza to celebrate")
+E: Emotion (Making requests full of emotional valence and arousal affect to influence others, like "I’ve been in the lowest depressive state of my life")
+F: Scarcity (People emphasizing on the urgency, rare of their needs, like "I haven’t ate a meal in two days")
+G: Other
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
     "emotion": """
@@ -528,3 +532,4 @@ BS: Warrior Poet
 BT: Young Gun
 """,
 }
+""
