@@ -99,6 +99,20 @@ def get_gpt3_response(args, oneprompt):
             Constraint: Answer with only the option above that is most accurate and nothing else.
             """
             )
+            
+        if args.dataset in ["tropes"]:
+            LS = tokenized_labelset(args, True)
+            weight = 50
+            bias = {str(i): weight for i in LS}
+            stop = "."
+            max_tokens = 10
+            
+            oneprompt = (
+                oneprompt + """\n
+            Constraint: Answer with only the option above that is most accurate and nothing else.
+            """
+            )
+
 
     else:
         # print("!!!!")
@@ -219,6 +233,8 @@ def get_response(allprompts, args):
             max_tokens = 4094
         elif "text-" in args.model:
             max_tokens = 2040
+            if args.dataset in ["tropes"]:
+                max_tokens = 1990
 
         oneprompt = args.tokenizer.clean_up_tokenization(
             args.tokenizer.convert_tokens_to_string(
