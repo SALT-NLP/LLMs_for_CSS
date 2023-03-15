@@ -174,7 +174,7 @@ labelsets = {
     "tempowic": ["A", "B"],
     "sbic": None,
     "talklife": ["A", "B", "C"],  # fix!
-    "raop": ["A", "B"],  # fix!
+    "raop": ["A", "B", "C", "D", "E", "F", "G"],  # fix!
     "emotion": ["A", "B", "C", "D", "E", "F"],
     "mrf-explanation": None,
     "mrf-classification": ["A", "B"],
@@ -421,9 +421,14 @@ Constraint: Answer with only the option above that is most accurate and nothing 
     "raop": """
 
 
-If a user in a community for giving away free pizza saw the above post, they would consider the post to be
-A: Persuasive
-B: Not persuasive
+If a user in a community for giving away free pizza saw the above sentence, they would consider it to use which  to be
+A: Evidence (Providing concrete facts or evidence for the narrative or request, like "There is a Pizza Hut and a Dominos near me.")
+B: Politeness (The usage of polite language in requests, like "Thank you so much!")
+C: Reciprocity (Responding to a positive action with another positive action. People are more likely to help if they have received help themselves. Example messages are like "I’ll pay it forward with my first check")
+D: Impact (Emphasizing the importance or impact of the request, like "I'll use this pizza to celebrate")
+E: Emotion (Making request full of emotional valence and arousal affect to influence others, like "I’ve been in the lowest depressive state of my life")
+F: Scarcity (People emphasizing on the urgency, rare of their needs, like "I haven’t ate a meal in two days")
+G: Other
 
 Constraint: Answer with only the option above that is most accurate and nothing else.""",
     "emotion": """
@@ -528,3 +533,4 @@ BS: Warrior Poet
 BT: Young Gun
 """,
 }
+""
