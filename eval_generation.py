@@ -48,11 +48,11 @@ def calculateres_gen(path, args):
     print(df.head())
     bleurt_scorer = score.BleurtScorer()
 
-    metrics = ["sacrebleu", "bertscore", "bleurt"]
+    metrics = ["sacrebleu", "bleurt", "bertscore"]
     scoring_functions = [
         lambda cand, ref: sacrebleu.sentence_bleu(cand, [ref]).score,
+        lambda cand, ref: bleurt_scorer.score(references=[ref], candidates=[cand]),
         lambda cand, ref: bert_score.score([cand], [ref], lang="en", batch_size=1),
-        lambda cand, ref: bleurt_scorer.score(references=ref, candidates=cand),
     ]
 
     scores = {}
