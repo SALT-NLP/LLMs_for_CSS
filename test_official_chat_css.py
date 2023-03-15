@@ -640,7 +640,6 @@ def calculateres(path, args):
         else:
             pass
 
-    print("fuck me")
 
     print("\n ###### Results ###### \n")
     print("Acc: ", float(accnum) / float(allnum))
