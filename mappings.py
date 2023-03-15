@@ -22,7 +22,7 @@ csv_column_map = {
     "hate": ("post", "implicit_class"),
     "reframe": ("original_text", "reframed_text"),
     "humor": (3, 1),
-    "flute-explanation": (("premise", "hypothesis"), "label"),
+    "flute-explanation": (("premise", "hypothesis"), ("label", "explanation")),
     "flute-classification": (("premise", "hypothesis"), "type"),
     "media_ideology": ("content", "bias_text"),
     "hippocorpus": ("story", "events"),

@@ -23,9 +23,12 @@ def boolify(df):
     return df
 
 
-def get_context_column(df, context_column):
+def get_context_column(df, context_column, colname=True):
     def row(r, context_column):
-        return "\n\n".join([f"{col}: {r[col]}" for col in context_column])
+        if colname or (len(context_column)>1):
+            return "\n\n".join([f"{col}: {r[col]}" for col in context_column])
+        else:
+            return "\n\n".join([r[col] for col in context_column])
 
     if type(context_column) == tuple:
         return [row(r, context_column) for _, r in df.iterrows()]
@@ -52,6 +55,11 @@ def build_prompts(df, prompt_template):
 
 def csv_process(dataset, save_dir, local=False, jsonl=False):
     context_column, label_columns = csv_column_map[dataset]
+    additional_labels = []
+    if type(label_columns) == tuple:
+        additional_labels = label_columns[1:]
+        label_columns = label_columns[0]
+    
     df = pd.DataFrame()
     if local:
         df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
@@ -76,16 +84,16 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
         else:
             df = pd.read_csv(filename, header=None)
 
-    print(df.head())
     df["context"] = get_context_column(df, context_column)  # df[context_column]
     df["labels"] = df[label_columns]
+    df["additional_labels"] = get_context_column(df, additional_labels, colname=False)
     df = boolify(df)
     df["prompts"] = build_prompts(
         df, prompts_templates[dataset]
     )  # [prompts_templates[dataset]] * len(df["labels"])
     if dataset in drop_labels:
         df = df[~df["labels"].isin(drop_labels[dataset])]
-    df = df[["context", "labels", "prompts"]]
+    df = df[["context", "labels", "prompts", "additional_labels"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))

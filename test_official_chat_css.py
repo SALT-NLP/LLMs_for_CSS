@@ -460,7 +460,7 @@ def calculateres(path, args):
     if args.dataset == "hippocorpus":
         calculateres_hippocorpus(path, args)
         return
-    elif args.dataset in ["sbic", "mrf-explanation"]:
+    elif args.dataset in ["sbic", "mrf-explanation", "flute-explanation"]:
         calculateres_gen(path, args)
     with open(args.input_path, "r") as f:
         a = json.load(f)
