@@ -23,6 +23,7 @@ from sklearn.metrics import classification_report
 from mappings import labelsets
 import string
 import re
+from eval_generation import *
 
 
 def tokenized_labelset(args, add_comma=False):
@@ -443,6 +444,8 @@ def calculateres(path, args):
     if args.dataset == "hippocorpus":
         calculateres_hippocorpus(path, args)
         return
+    elif args.dataset in ["sbic", "mrf-explanation"]:
+        calculateres_gen(path, args)
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
@@ -853,13 +856,14 @@ def main():
         input_path = args.input_path
         answer_path = args.answer_path
         prompts_path = args.answer_path.replace("/answer", "/prompts.json")
-
         raw_datapath = args.raw_datapath
-
-        data_split(raw_datapath, input_path, args)
-
-        get_answers(input_path, answer_path, prompts_path, args)
-
+        
+        if os.path.exists(answer_path):
+            print("answer file already exists")
+        else:
+            data_split(raw_datapath, input_path, args)
+            get_answers(input_path, answer_path, prompts_path, args)
+            
         calculateres(answer_path, args)
 
     except KeyboardInterrupt:
