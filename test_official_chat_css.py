@@ -463,6 +463,8 @@ def calculateres(path, args):
         calculateres_hippocorpus(path, args)
         return
     elif args.dataset in ["sbic", "mrf-explanation", "flute-explanation"]:
+        if args.dataset == "flute-explanation":
+            args.answer_path = args.answer_path.replace("explanation", "explain")
         calculateres_gen(path, args)
         return
     with open(args.input_path, "r") as f:

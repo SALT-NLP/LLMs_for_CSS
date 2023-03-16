@@ -6,8 +6,7 @@ import numpy as np
 import json
 import evaluate
 from ast import literal_eval
-from transformers import logging
-import warnings
+from tqdm import tqdm
 
 def clean_generation(gen):
     return gen.replace("&", "")
@@ -66,7 +65,7 @@ def score_max(cands,
 #     print('score:', scoring_function(cands[0], refs[0][0]))
     
     max_scores = []
-    for cand, refs in zip(cands, refs):
+    for cand, refs in tqdm(zip(cands, refs), total=len(cands)):
         scores = []
         for ref in refs:
             #print(cand, ref)
@@ -82,8 +81,7 @@ def score_max(cands,
     return max_scores
 
 def calculateres_gen(path, args):
-    logging.set_verbosity_warning()
-    warnings.filterwarnings("ignore")
+    print(args)
     
     bleurt_scorer = score.BleurtScorer()
     metrics = ["sacrebleu", "bleurt", "bertscore"]
@@ -95,6 +93,7 @@ def calculateres_gen(path, args):
 
     scores = {}
     cands, refs = get_cands_refs(args)
+    print(cands[0], refs[0][0])
     for metric, scoring_function in zip(metrics, scoring_functions):
         if metric in {'bertscore'}: # batch max already implemented
             score_list = scoring_function(cands, refs)
