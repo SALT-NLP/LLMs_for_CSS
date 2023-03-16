@@ -140,6 +140,9 @@ def get_chatgpt_response(args, oneprompt):
     if args.labelset is not None:
         LS = tokenized_labelset(args)
         weight = 20
+        if args.dataset == "tropes":
+            print("altering bias")
+            weight = 10
         bias = {str(i): weight for i in LS}
         stop = None
         max_tokens = 2

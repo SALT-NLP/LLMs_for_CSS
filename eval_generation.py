@@ -7,6 +7,7 @@ import json
 import evaluate
 from ast import literal_eval
 from tqdm import tqdm
+from nltk.stem.porter import PorterStemmer
 
 def clean_generation(gen):
     return gen.replace("&", "")
@@ -60,33 +61,25 @@ def score_max(cands,
               refs, 
               scoring_function=lambda cand, ref: sacrebleu.sentence_bleu(cand, ref).score,
              ):
-#     print('cand:', cands[0])
-#     print('ref:', refs[0][0])
-#     print('score:', scoring_function(cands[0], refs[0][0]))
-    
     max_scores = []
     for cand, refs in tqdm(zip(cands, refs), total=len(cands)):
         scores = []
         for ref in refs:
-            #print(cand, ref)
-            scores.append(scoring_function(cand, ref))
+            score = scoring_function(cand, ref)
+            scores.append(score)
         max_scores.append(max(scores))
-        
-    
-#     max_scores = np.array([ max([scoring_function(cand, ref)
-#                                      for ref in refs
-#                                 ])
-#                                for cand, refs in zip(cands, refs)
-#                           ])
     return max_scores
 
 def calculateres_gen(path, args):
-    print(args)
     
     bleurt_scorer = score.BleurtScorer()
+    stemmer = PorterStemmer()
+    def stem(txt):
+        return ' '.join([stemmer.stem(w) for w in txt.split(' ')])
+    
     metrics = ["sacrebleu", "bleurt", "bertscore"]
     scoring_functions = [
-        lambda cand, ref: sacrebleu.sentence_bleu(cand, [ref]).score,
+        lambda cand, ref: sacrebleu.sentence_bleu(stem(cand), [stem(ref)]).score,
         lambda cand, ref: bleurt_scorer.score(references=[ref], candidates=[cand]),
         lambda cand, ref: bert_score.score(cands, refs, lang="en", batch_size=1, device=1)[-1].numpy()
     ]
@@ -99,6 +92,8 @@ def calculateres_gen(path, args):
             score_list = scoring_function(cands, refs)
         else:
             score_list = score_max(cands, refs, scoring_function)
+            if metric == "bleurt":
+                del bleurt_scorer
         
         scores[metric] = score_list        
         print(metric, np.mean(scores[metric]))#, score_list)
