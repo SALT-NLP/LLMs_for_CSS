@@ -23,6 +23,7 @@ from sklearn.metrics import classification_report
 from mappings import labelsets
 import string
 import re
+from eval_generation import *
 
 
 def tokenized_labelset(args, add_comma=False):
@@ -98,6 +99,20 @@ def get_gpt3_response(args, oneprompt):
             Constraint: Answer with only the option above that is most accurate and nothing else.
             """
             )
+            
+        if args.dataset in ["tropes"]:
+            LS = tokenized_labelset(args, True)
+            weight = 50
+            bias = {str(i): weight for i in LS}
+            stop = "."
+            max_tokens = 10
+            
+            oneprompt = (
+                oneprompt + """\n
+            Constraint: Answer with only the option above that is most accurate and nothing else.
+            """
+            )
+
 
     else:
         # print("!!!!")
@@ -218,6 +233,8 @@ def get_response(allprompts, args):
             max_tokens = 4094
         elif "text-" in args.model:
             max_tokens = 2040
+            if args.dataset in ["tropes"]:
+                max_tokens = 1990
 
         oneprompt = args.tokenizer.clean_up_tokenization(
             args.tokenizer.convert_tokens_to_string(
@@ -443,6 +460,8 @@ def calculateres(path, args):
     if args.dataset == "hippocorpus":
         calculateres_hippocorpus(path, args)
         return
+    elif args.dataset in ["sbic", "mrf-explanation", "flute-explanation"]:
+        calculateres_gen(path, args)
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
@@ -640,8 +659,6 @@ def calculateres(path, args):
         else:
             pass
 
-    print("fuck me")
-
     print("\n ###### Results ###### \n")
     print("Acc: ", float(accnum) / float(allnum))
     print("Number of Correct Data: ", accnum)
@@ -669,6 +686,7 @@ def parse_arguments():
             "politeness",
             "media_ideology",
             "hippocorpus",
+            "wikievents",
             "indian_english_dialect",
             "ibc",
             "semeval_stance",
@@ -710,12 +728,22 @@ def parse_arguments():
     parser.add_argument("--no_stratify", action="store_true")
     parser.add_argument("--sleep", type=int, default=0)
     parser.add_argument("--ngpu", "-g", type=int, default=2)
+    parser.add_argument(
+        "--eval",
+        "-v",
+        action="store_true",
+        help="set this flag to skip running the model and just evaluate answer file",
+    )
     args = parser.parse_args()
 
     if args.dataset == "conv_go_awry":
         args.raw_datapath = "css_data/conv_go_awry/toxicity.json"
         args.input_path = "css_data/conv_go_awry/test.json"
         args.answer_path = "css_data/conv_go_awry/answer"
+    elif args.dataset == "wikievents":
+        args.raw_datapath = "css_data/wikievents/wikievents.json"
+        args.input_path = "css_data/wikievents/test.json"
+        args.answer_path = "css_data/wikievents/answer"
     elif args.dataset == "power":
         args.raw_datapath = "css_data/wiki_corpus/power.json"
         args.input_path = "css_data/wiki_corpus/test.json"
@@ -816,29 +844,29 @@ def parse_arguments():
         args.labelset = labelsets[args.dataset]
     if (args.list_generation) and (args.labelset is not None):
         args.labelset.extend([" ", ","])
-
     if args.model == "chatgpt" or "text-" in args.model:
         args.tokenizer = GPT2TokenizerFast.from_pretrained(
             "gpt2", truncation_side="left"
         )
         args.answer_path = args.answer_path + "-" + args.model
     elif "flan" in args.model:
-        args.tokenizer = AutoTokenizer.from_pretrained(
-            args.model, truncation_side="left"
-        )
-        args.flan = AutoModelForSeq2SeqLM.from_pretrained(args.model)
-        heads_per_gpu = len(args.flan.encoder.block) // args.ngpu
-        device_map = {
-            gpu: list(
-                range(
-                    0 + (gpu * heads_per_gpu),
-                    (0 + (gpu * heads_per_gpu)) + heads_per_gpu,
-                )
+        if not args.eval:
+            args.tokenizer = AutoTokenizer.from_pretrained(
+                args.model, truncation_side="left"
             )
-            for gpu in range(args.ngpu)
-        }
-        args.flan.parallelize(device_map)
-        args.flan.eval()
+            args.flan = AutoModelForSeq2SeqLM.from_pretrained(args.model)
+            heads_per_gpu = len(args.flan.encoder.block) // args.ngpu
+            device_map = {
+                gpu: list(
+                    range(
+                        0 + (gpu * heads_per_gpu),
+                        (0 + (gpu * heads_per_gpu)) + heads_per_gpu,
+                    )
+                )
+                for gpu in range(args.ngpu)
+            }
+            args.flan.parallelize(device_map)
+            args.flan.eval()
         args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
     # substitute this with your own access token!
     args.testing_size = 500
@@ -854,12 +882,15 @@ def main():
         input_path = args.input_path
         answer_path = args.answer_path
         prompts_path = args.answer_path.replace("/answer", "/prompts.json")
-
         raw_datapath = args.raw_datapath
 
-        data_split(raw_datapath, input_path, args)
-
-        get_answers(input_path, answer_path, prompts_path, args)
+        if args.eval:
+            if not os.path.exists(answer_path):
+                print("Answer file does not exist!")
+                exit()
+        else:
+            data_split(raw_datapath, input_path, args)
+            get_answers(input_path, answer_path, prompts_path, args)
 
         calculateres(answer_path, args)
 
