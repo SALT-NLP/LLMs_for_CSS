@@ -4,7 +4,10 @@ from bleurt import score
 import pandas as pd
 import numpy as np
 import json
+import evaluate
 from ast import literal_eval
+from transformers import logging
+import warnings
 
 def clean_generation(gen):
     return gen.replace("&", "")
@@ -42,7 +45,7 @@ def get_cands_refs(args, split_refs=False, list_cands=False, clean=clean_generat
             
         index = content[0]
         
-        refs = R(a[label][index]) #R(content[1]) #
+        refs = R(content[1]) # R(a[label][index]) #R(content[1]) #
         cand = content[2].lower()
     
         if split_refs:
@@ -61,21 +64,33 @@ def score_max(cands,
 #     print('cand:', cands[0])
 #     print('ref:', refs[0][0])
 #     print('score:', scoring_function(cands[0], refs[0][0]))
-    max_scores = np.array([ max([scoring_function(cand, ref)
-                                     for ref in refs
-                                ])
-                               for cand, refs in zip(cands, refs)
-                          ])
+    
+    max_scores = []
+    for cand, refs in zip(cands, refs):
+        scores = []
+        for ref in refs:
+            #print(cand, ref)
+            scores.append(scoring_function(cand, ref))
+        max_scores.append(max(scores))
+        
+    
+#     max_scores = np.array([ max([scoring_function(cand, ref)
+#                                      for ref in refs
+#                                 ])
+#                                for cand, refs in zip(cands, refs)
+#                           ])
     return max_scores
 
 def calculateres_gen(path, args):
+    logging.set_verbosity_warning()
+    warnings.filterwarnings("ignore")
+    
     bleurt_scorer = score.BleurtScorer()
-
     metrics = ["sacrebleu", "bleurt", "bertscore"]
     scoring_functions = [
         lambda cand, ref: sacrebleu.sentence_bleu(cand, [ref]).score,
         lambda cand, ref: bleurt_scorer.score(references=[ref], candidates=[cand]),
-        lambda cands, refs: bert_score.score(cands, refs, lang="en", batch_size=1)[-1].numpy(),
+        lambda cand, ref: bert_score.score(cands, refs, lang="en", batch_size=1, device=1)[-1].numpy()
     ]
 
     scores = {}
@@ -89,4 +104,4 @@ def calculateres_gen(path, args):
         scores[metric] = score_list        
         print(metric, np.mean(scores[metric]))#, score_list)
 
-    print(scores)
+    #print(scores)

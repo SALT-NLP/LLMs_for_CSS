@@ -24,7 +24,7 @@ from mappings import labelsets
 import string
 import re
 from eval_generation import *
-
+import config
 
 def tokenized_labelset(args, add_comma=False):
     ls = set()
@@ -148,10 +148,12 @@ def get_chatgpt_response(args, oneprompt):
         max_tokens = 256
         stop = "."
 
+    truncated_prompt = args.tokenizer.decode(args.tokenizer(oneprompt, max_length=4000, truncation=True)['input_ids']) #
+    
     api_query = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": oneprompt},
+            {"role": "user", "content": truncated_prompt},
         ],
         logit_bias=bias,
         temperature=0,
@@ -462,6 +464,7 @@ def calculateres(path, args):
         return
     elif args.dataset in ["sbic", "mrf-explanation", "flute-explanation"]:
         calculateres_gen(path, args)
+        return
     with open(args.input_path, "r") as f:
         a = json.load(f)
     label_set = set([str(v).lower() for (u, v) in a["labels"].items()])
@@ -877,7 +880,7 @@ def parse_arguments():
 def main():
     print("We are using chatgpt to test different datasets now!\n")
     args = parse_arguments()
-
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
     try:
         input_path = args.input_path
         answer_path = args.answer_path
