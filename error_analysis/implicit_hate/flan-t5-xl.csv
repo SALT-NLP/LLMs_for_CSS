@@ -1,51 +1,51 @@
-,idx,gold,pred,post,notes
-485,485,white_grievance,inferiority,it is never about color . are u wht ? paint ur skin . are u still white ?,model might be more correct
-413,413,threatening,irony,"i kinda like your idea, limiting population growth to save the environment, we need to sterilize democrats!",model is correct but missed a key category
-45,45,incitement,irony," rt :  "" tribute to rudolf hess "" "" t-shirt from the white resister """,model is correct but missed a key category
-57,57,incitement,stereotypical,you have it all wrong ! nazism isn't white this  white that . it's about being a powerful regime ! remember our fathers ! #nazigermany,"possibly conflates ""is"" equivalence with a stereotype"
-295,295,stereotypical,irony,: stuff black people don't like - sbpdl : newark in 2012 : the predictable result of freedom . # t ...,model is correct but missed a key category
-98,98,inferiority,stereotypical,what have blacks built?,conflates minority identity term with stereotype
-301,301,stereotypical,irony,heroic 13 year old white girl stops brutal black robber-killer in south africa ! read more : via,"strange ""irony"" prediction"
-143,143,inferiority,stereotypical,"She's a girl, of course she has mood swings.",model is correct; inferioritiy < stereotype
-440,440,white_grievance,irony,rip white race ? europe may well be on its last legs  germany may become banana republic without,"strange ""irony"" prediction"
-93,93,inferiority,irony,minorities as minions for white liberals via,"strange ""irony"" prediction"
-274,274,stereotypical,incitement," rt tommy robinson speaks about the jihad against europeans which is largely ignored by  "" moderate "" "" muslims . #normandy """,model is correct
-145,145,inferiority,stereotypical,the difference between third world countries and america is the people . think about that a minute . #trump2016 #hillary2016,inferioritiy < stereotype
-129,129,inferiority,stereotypical,deadliest to non-muslims? pigs or islam? both however the major pig problem will be harder to solve with mass migration & islam adding to the already humongous load.,inferioritiy < stereotype
-151,151,inferiority,white_grievance,"did you know 98% of farmers in america are white? if it wasn't for white people, you wouldn't even be on twitter right now.","conflates term ""white"" with white grievance given induction heads"
-156,156,inferiority,white_grievance,the white master race :,"conflates term ""white"" with white grievance given induction heads"
-304,304,stereotypical,incitement,what could people in disagreement with national socialism possibly be missing ? murderous thuggery = we got it . individ liberty is best .,model is correct
-190,190,irony,incitement,because it's totally out of the question for a muslim to kill white christians  right ?,"conflates ""kill"" with incitement"
-282,282,stereotypical,inferiority," rt : how #jews feel about #whitepeople -  "" the white race is the cancer of human history . "" "" - jewess susan sontag #hate #israel # r ... ""","model fails to understand nested views: the author of the tweet is stereotyping Jews by putting a perspective of the ""inferiority of white people"" into their mouth"
-457,457,white_grievance,irony,optics cucks eternally btfo ! #whitelivesmatter did more to advance our narrative than any rally thus far . congratul,"""congratulations"" as signal for irony?"
-303,303,stereotypical,incitement," vile  hateful #jew calls for extermination of #whitepeople & admits  "" diversity "" "" is a code-word for #whitegenocide ""","model fails to understand nested views: the author of the tweet is stereotyping Jews by putting a perspective of the ""hatred of white people"" into their mouth"
-492,492,white_grievance,inferiority,seems to fully understand that it's not the responsibility of american tax payers to support illegals  pretty simple,model is partially correct
-376,376,threatening,inferiority,"one snake at atime. as my aunt did in bayous, cut the head off when u c em'. deadly & will kill ya.","fails to understand the metaphor ""snake = person"""
-108,108,inferiority,irony,"good job, next time, also bring a wooden """"soap box"""" for speakers to stand on -this is trad., very ameri",model is correct
-361,361,threatening,stereotypical,"if you see anybody who looks like this you have spotted illegal aliens, call ice immediately!",x
-186,186,irony,stereotypical,"a muslim couple just got married it is working out well enough , but the husband will not let his wife drive for at least <number> years . one day the wife go 's up to him and asks why she must wait such a long time . he replies "" oh well , to get your drivers licence in this country you must be <number> years or older """,fails to understand the joke
-475,475,white_grievance,incitement,black people say they want to kill white people  with hillary clinton it may happen,"conflates ""kill"" with incitement"
-259,259,stereotypical,incitement,Waiting for riots? White girl fatally stabbed at gov't school by...,model is correct
-25,25,incitement,white_grievance,honestly we shouldnt have saved them . if nat socs won there would be no muslim invasion  germany would still be a bastion of masculinity and european identity . support mr . nehlen !,model is correct
-9,9,incitement,white_grievance,the white race is generous to a fault . non-whites take advantage of that all the time  then hate white people out of envy .,model is correct
-189,189,irony,inferiority,Every woman claims she was raped or sexually harassed in her past They are advertising their desirability to Chad.,x
-395,395,threatening,inferiority,no!! u must meet rules to get valid ssn or itin. deport all illegals. period.,x
-337,337,threatening,incitement,To the women marching across the US today  Have as many abortions as you’d like  Boycott sperm  Get sterilized  Boycott the patriarchy  Kill yourselves in protest,incitement ~ threatening
-82,82,incitement,white_grievance,it may be stigmatized  but it is real ; the us flag is losing relevance for all us whites  one knee at a time .,model is correct
-148,148,inferiority,irony,"california is the wastewater collection station of the usa! unfortunately, they do not have a treatment facility at all, anywhere in the whole state! therefore, all the crap just sits there and ferments & decays for all the world to see, & unfortunately, smell!!!!!","strange ""irony"" prediction"
-111,111,inferiority,irony,"oh, i see: """"take it back"""" from good, decent people and give it to you evil jerks. got it!",model is correct
-23,23,incitement,inferiority,you're so stupid . jew is ethic  catholic is a religion .,"""stupid"" = inferiority"
-219,219,irony,inferiority,maybe should get an island for these obama felons. like australia started. dump them there 2 live with obie.,x
-373,373,threatening,incitement,hang him at the church bell's tower,incitement ~ threatening
-288,288,stereotypical,irony,see the #hypocrisy ? see our last tweet ! jews keep non-jews out of #israel but push for non-whites to flood gentile lands .,x
-463,463,white_grievance,irony,it would be nice to have historically white colleges and universities . we have them in the south . that would be called * racist * though,model is correct but missed a key category
-422,422,white_grievance,stereotypical,obama would rather call christians bigots and cops racist before he calls muslims terrorists !,
-166,166,irony,stereotypical,I have a black man in my family tree He’s still hanging there,
-444,444,white_grievance,inferiority,this pope surrenders christianity to islam . jesus said love is the most important . i don't think annih,
-6,6,incitement,stereotypical,hispanic assimilation has failed rt #tcot #tlot #teaparty #ocra #ampat,
-263,263,stereotypical,incitement,#parisattacks let them in #brusselsattacks let them in #germanyattacks let them in let them in or be attacked ? ? ?,
-452,452,white_grievance,inferiority,law breakers-you wouldnt get amnesty if u illegally entered other countries,
-161,161,inferiority,irony,"Lol, Asian gay guys are too girly, I suppose.",
-437,437,white_grievance,inferiority,real quotes from anti-white globalist jew,
-217,217,irony,incitement,"it does make me want shout on the streets hey everybody yeah! i love every one, i would probably be arrested 4 inciting a riot.",
-231,231,irony,incitement,police standing down  let antifa blm destroy & that have targeted them  resign  let antifa,
+idx,gold,pred,post,notes
+485,white_grievance,inferiority,it is never about color . are u wht ? paint ur skin . are u still white ?,model might be more correct
+413,threatening,irony,"i kinda like your idea, limiting population growth to save the environment, we need to sterilize democrats!",model is correct but missed a key category
+45,incitement,irony," rt :  "" tribute to rudolf hess "" "" t-shirt from the white resister """,model is correct but missed a key category
+57,incitement,stereotypical,you have it all wrong ! nazism isn't white this  white that . it's about being a powerful regime ! remember our fathers ! #nazigermany,"possibly conflates ""is"" equivalence with a stereotype"
+295,stereotypical,irony,: stuff black people don't like - sbpdl : newark in 2012 : the predictable result of freedom . # t ...,model is correct but missed a key category
+98,inferiority,stereotypical,what have blacks built?,conflates minority identity term with stereotype
+301,stereotypical,irony,heroic 13 year old white girl stops brutal black robber-killer in south africa ! read more : via,"strange ""irony"" prediction"
+143,inferiority,stereotypical,"She's a girl, of course she has mood swings.",model is correct; inferioritiy < stereotype
+440,white_grievance,irony,rip white race ? europe may well be on its last legs  germany may become banana republic without,"strange ""irony"" prediction"
+93,inferiority,irony,minorities as minions for white liberals via,"strange ""irony"" prediction"
+274,stereotypical,incitement," rt tommy robinson speaks about the jihad against europeans which is largely ignored by  "" moderate "" "" muslims . #normandy """,model is correct
+145,inferiority,stereotypical,the difference between third world countries and america is the people . think about that a minute . #trump2016 #hillary2016,inferioritiy < stereotype
+129,inferiority,stereotypical,deadliest to non-muslims? pigs or islam? both however the major pig problem will be harder to solve with mass migration & islam adding to the already humongous load.,inferioritiy < stereotype
+151,inferiority,white_grievance,"did you know 98% of farmers in america are white? if it wasn't for white people, you wouldn't even be on twitter right now.","conflates term ""white"" with white grievance given induction heads"
+156,inferiority,white_grievance,the white master race :,"conflates term ""white"" with white grievance given induction heads"
+304,stereotypical,incitement,what could people in disagreement with national socialism possibly be missing ? murderous thuggery = we got it . individ liberty is best .,model is correct
+190,irony,incitement,because it's totally out of the question for a muslim to kill white christians  right ?,"conflates ""kill"" with incitement"
+282,stereotypical,inferiority," rt : how #jews feel about #whitepeople -  "" the white race is the cancer of human history . "" "" - jewess susan sontag #hate #israel # r ... ""","model fails to understand nested views: the author of the tweet is stereotyping Jews by putting a perspective of the ""inferiority of white people"" into their mouth"
+457,white_grievance,irony,optics cucks eternally btfo ! #whitelivesmatter did more to advance our narrative than any rally thus far . congratul,"""congratulations"" as signal for irony?"
+303,stereotypical,incitement," vile  hateful #jew calls for extermination of #whitepeople & admits  "" diversity "" "" is a code-word for #whitegenocide ""","model fails to understand nested views: the author of the tweet is stereotyping Jews by putting a perspective of the ""hatred of white people"" into their mouth"
+492,white_grievance,inferiority,seems to fully understand that it's not the responsibility of american tax payers to support illegals  pretty simple,model is partially correct
+376,threatening,inferiority,"one snake at atime. as my aunt did in bayous, cut the head off when u c em'. deadly & will kill ya.","fails to understand the metaphor ""snake = person"""
+108,inferiority,irony,"good job, next time, also bring a wooden """"soap box"""" for speakers to stand on -this is trad., very ameri",model is correct
+361,threatening,stereotypical,"if you see anybody who looks like this you have spotted illegal aliens, call ice immediately!",x
+186,irony,stereotypical,"a muslim couple just got married it is working out well enough , but the husband will not let his wife drive for at least <number> years . one day the wife go 's up to him and asks why she must wait such a long time . he replies "" oh well , to get your drivers licence in this country you must be <number> years or older """,fails to understand the joke
+475,white_grievance,incitement,black people say they want to kill white people  with hillary clinton it may happen,"conflates ""kill"" with incitement"
+259,stereotypical,incitement,Waiting for riots? White girl fatally stabbed at gov't school by...,model is correct
+25,incitement,white_grievance,honestly we shouldnt have saved them . if nat socs won there would be no muslim invasion  germany would still be a bastion of masculinity and european identity . support mr . nehlen !,model is correct
+9,incitement,white_grievance,the white race is generous to a fault . non-whites take advantage of that all the time  then hate white people out of envy .,model is correct
+189,irony,inferiority,Every woman claims she was raped or sexually harassed in her past They are advertising their desirability to Chad.,x
+395,threatening,inferiority,no!! u must meet rules to get valid ssn or itin. deport all illegals. period.,x
+337,threatening,incitement,To the women marching across the US today  Have as many abortions as you’d like  Boycott sperm  Get sterilized  Boycott the patriarchy  Kill yourselves in protest,incitement ~ threatening
+82,incitement,white_grievance,it may be stigmatized  but it is real ; the us flag is losing relevance for all us whites  one knee at a time .,model is correct
+148,inferiority,irony,"california is the wastewater collection station of the usa! unfortunately, they do not have a treatment facility at all, anywhere in the whole state! therefore, all the crap just sits there and ferments & decays for all the world to see, & unfortunately, smell!!!!!","strange ""irony"" prediction"
+111,inferiority,irony,"oh, i see: """"take it back"""" from good, decent people and give it to you evil jerks. got it!",model is correct
+23,incitement,inferiority,you're so stupid . jew is ethic  catholic is a religion .,"""stupid"" = inferiority"
+219,irony,inferiority,maybe should get an island for these obama felons. like australia started. dump them there 2 live with obie.,x
+373,threatening,incitement,hang him at the church bell's tower,incitement ~ threatening
+288,stereotypical,irony,see the #hypocrisy ? see our last tweet ! jews keep non-jews out of #israel but push for non-whites to flood gentile lands .,x
+463,white_grievance,irony,it would be nice to have historically white colleges and universities . we have them in the south . that would be called * racist * though,model is correct but missed a key category
+422,white_grievance,stereotypical,obama would rather call christians bigots and cops racist before he calls muslims terrorists !,
+166,irony,stereotypical,I have a black man in my family tree He’s still hanging there,
+444,white_grievance,inferiority,this pope surrenders christianity to islam . jesus said love is the most important . i don't think annih,
+6,incitement,stereotypical,hispanic assimilation has failed rt #tcot #tlot #teaparty #ocra #ampat,
+263,stereotypical,incitement,#parisattacks let them in #brusselsattacks let them in #germanyattacks let them in let them in or be attacked ? ? ?,
+452,white_grievance,inferiority,law breakers-you wouldnt get amnesty if u illegally entered other countries,
+161,inferiority,irony,"Lol, Asian gay guys are too girly, I suppose.",
+437,white_grievance,inferiority,real quotes from anti-white globalist jew,
+217,irony,incitement,"it does make me want shout on the streets hey everybody yeah! i love every one, i would probably be arrested 4 inciting a riot.",
+231,irony,incitement,police standing down  let antifa blm destroy & that have targeted them  resign  let antifa,
