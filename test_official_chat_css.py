@@ -201,18 +201,12 @@ def get_flan_response(args, oneprompt):
         else:
             token_forcing = None
             max_new_tokens = 256
-        if "ul2" in args.model:
-            gen_config = GenerationConfig.from_pretrained(
-                args.model,
-                max_new_tokens=max_new_tokens,
-                force_word_ids=token_forcing,
-            )
-        else:
-            gen_config = GenerationConfig.from_pretrained(
-                "google/flan-t5-xxl",
-                max_new_tokens=max_new_tokens,
-                force_word_ids=token_forcing,
-            )
+        
+        gen_config = GenerationConfig.from_pretrained(
+            "google/flan-t5-xxl",
+            max_new_tokens=max_new_tokens,
+            force_word_ids=token_forcing,
+        )
         stop = args.tokenizer(".")[0]
         response = args.tokenizer.batch_decode(
             args.flan.generate(
