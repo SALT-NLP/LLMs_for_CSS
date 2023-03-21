@@ -6,8 +6,8 @@
 <fieldset>
 
 
-	<h2>Evaluation: Social Bias Frames</h2>
-	<p style="font-size:12pt;"><span style="color:#BB271A">Content Warning:</span> This HIT may contain examples that bother some workers. If at any point you do not feel comfortable, please feel free to skip the HIT or take a break. </p>
+	<h2>Evaluation: Misinfo Reaction Frames</h2>
+	<p style="font-size:12pt;"><span style="color:#BB271A">Content Warning:</span> This HIT contains examples of MISINFORMATION and other content may be disagreeable to some workers. If at any point you do not feel comfortable, please feel free to skip the HIT or take a break. </p>
 	<a href="#TASK_BEGINNING">[Jump to Task]</a>
 	<div class="panel-group">
 		<div class="panel panel-default">
@@ -16,102 +16,92 @@
 				</div>
 					<div class="panel-collapse collapse" id="collapse0" style="margin:10px">
 
-						<p>You will read a toxic post from the internet and tell us whether the provided explanation accurately explains why it's toxic.</p>
+						<p>You will read a short headline from a news article and tell us whether the provided explanation of the "writer's intent" accurately describes the article author's intended meaning.</p>
 
-						<p>Explanations come from annotators and other sources. Annotators were told to do the following:</p> 
+						<p>Explanations come from annotators and other sources. Annotators looked at articles about COVID-19, climate change, or cancer, and they were told to do the following:</p> 
 
 						<pre>
-<code>Explain who is targeted by the offensive post (individual or group), which minority or demographic group(s), and what aspects of the group(s) are referenced. Use (overly) simplistic "<em>GROUP is/does/can't ___</em>" phrasing (e.g. "<em>women can't drive</em>", "<em>gay men are feminine</em>", "<em>asians are good at math</em>").</code></pre>
-              			
-              			<p>When talking about stereoypes, think about the ones that are (unfortunately) culturally present in our society. Perspectives are given from an American cultural frame.</p>
-              
-              			<p><em>Note</em>: we will assume that MTurk workers only have good intentions when annotating these posts.</p>
+<code>Thanks for participating in this HIT! You will read a sentence fragment depicting an event from a news article (please note that some of these news articles may contain misinformation). The fragment may contain references to specific organizations or locations. In this case, please write an answer based on the most generic form of this reference (for example if there is a reference to the CDC, provide an answer like "government," "government organization" or "health agency," rather than writing "CDC."
 
-						<h5>Examples of fully Correct "target group" and "implied statement."</h5>
+Think about what might be implied by the news event described, including the reaction it might invoke from someone reading about the news event and what the intent of the sentence fragment's author was.</code></pre>
+              
+              			<p><em>Note</em>: news articles are drawn from an American cultural frame. We will assume that MTurk workers only have good intentions when annotating these posts.</p>
+
+						<h5>Examples of fully Correct "writer's intent" and misinformation label.</h5>
 			            <table class="table table-sm" id="examples-table">
 			              <thead>
-			                <tr><th scope="col" style="width: 30%;">Sentence</th>
-			                <th scope="col" style="width: 25%;">Target Group(s)</th>
-			                <th scope="col" style="width: 25%;">Implied Statement</th>
+			                <tr><th scope="col" style="width: 30%;">Headline</th>
+			                <th scope="col" style="width: 25%;">Misinformation Label</th>
+			                <th scope="col" style="width: 25%;">Writer's Intent</th>
 			              </tr></thead>
 			              <tbody>
 			                <tr>
-			                  <td>You only got the job because you're a woman.</td>
 			                  <td>
-			                    <strong>women</strong> (gender/gender identity/sexuality)
+			                  	Deaths from COVID-19 are nearing zero in the U.S.	
 			                  </td>
 			                  <td>
-			                    women aren't qualified;<br>
-			                    women get hired just for their gender
+			                    <strong>misinfo</strong>
+			                  </td>
+			                  <td>
+			                  	<ul>
+			                  		<li>pandemic is not dangerous</li>
+			                  		<li>life is returning to normal</li>
+			                  	</ul>
 			                  </td>
 			                  <td></td>
 			                </tr>
 			                <tr>
-			                  <td>The movie with the all-muslim cast was a box office bomb.</td>
+			                  <td>5G generates the coronavirus SARS-CoV-2 in human skin cells.</td>
 			                  <td>
-			                    <strong>muslim folks</strong> (culture/origin/religion)
+			                    <strong>misinfo</strong>
 			                  </td>
 			                  <td>
-			                    muslims bomb things;<br>muslims are terrorists.
-			                  </td>
-			                </tr>
-			                <tr>
-			                  <td>N*ggas be like "i'm broke" but spending all their money on weed :joy:</td>
-			                  <td>
-			                    <strong>black folks</strong> (race/ethnicity)
-			                  </td>
-			                  <td>black people are poor;<br>black people smoke weed</td>
-			                </tr>
-			                <tr>
-			                  <td>What do you tell a triggered feminist pansexual marine biologist to calm them down? I don't know, I don't speak whale.</td>
-			                  <td>
-			                    <strong>feminists/liberals; pansexuals; fat/overweight folks</strong>
-			                  </td>
-			                  <td>
-			                    feminists are unattractive and fat;<br>liberals are (easily) triggered<br>pansexuals are ugly and fat;<br>non-heterosexual women are ugly and fat<br>fat people are whales;<br>fat people are ugly
+			                  	<ul>
+			                  		<li>technology is dangerous</li>
+			                  		<li>technology can spread viruses</li>
+			                  		<li>people shouldn't use technology</li>
+			                  	</ul>
 			                  </td>
 			                </tr>
 			                <tr>
-			                  <td>Before we go, we should make sure Laquisha knows how to swim.</td>
+			                  <td>Wearing a face mask to slow the spread of COVID-19 could cause Legionnaires’ disease.</td>
 			                  <td>
-			                    <strong>black folks</strong> (race/ethnicity)
+			                    <strong>misinfo</strong>
 			                  </td>
 			                  <td>
-			                    black folks can't swim
+			                  	<ul>
+			                  		<li>wearing a mask is dangerous</li>
+			                  		<li>people shouldn't wear masks</li>
+			                  		<li>some diseases are more dangerous than others</li>
+			                  	</ul>
+			                  </td>
+			                </tr>
+			                <tr>
+			                  <td>How a housing crisis could make COVID-19 even worse.</td>
+			                  <td>
+			                    <strong>real</strong>
+			                  </td>
+			                  <td>
+			                  	<ul>
+			                  		<li>a housing problem could worsen pandemic conditions</li>
+			                  		<li>there may be economic problems</li>
+			                  	</ul>
+			                  </td>
+			                </tr>
+			                <tr>
+			                  <td>Can coronavirus be transmitted by frozen foods? unlikely, experts say.</td>
+			                  <td>
+			                    <strong>real</strong>
+			                  </td>
+			                  <td>
+			                  	<ul>
+			                  		<li>coronavirus is probably not transmitted by frozen food</li>
+			                  		<li>it's safe to eat frozen food</li>
+			                  	</ul>
 			                  </td>
 			                </tr> 
-			                <tr>
-			                  <td>Trans women are gay men in disguise.</td>
-			                  <td>
-			                    <strong>trans women</strong> (gender/gender identity/sexuality)
-			                  </td>
-			                  <td>
-			                    trans women aren't women
-			                  </td>
-			                </tr>
-			                <tr>
-			                  <td>She was being so bitchy when she called me out, it must be that time of the month.</td>
-			                  <td>
-			                    <strong>women</strong> (gender/gender identity/sexuality)
-			                  </td>
-			                  <td>
-			                    women can only be irritated when on their period;<br>
-			                    women being assertive are bitchy
-			                  </td>
-			                </tr>
-			                <tr>
-			                  <td>Asians are so polite, you can say the rudest things to them and they will just sit there quiet and not do anything about it.</td>
-			                  <td>
-			                    <strong>asian folks</strong> (race/ethnicity)
-			                  </td>
-							  <td>
-			                    asian folks are submissive
-			                  </td>
-			                </tr>
 			              </tbody>
 			            </table>
-
-
 					</div>
 				</div>
 			</div>
@@ -126,45 +116,44 @@
 		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="MESSAGE"><h4>HATEFUL MESSAGE:</h4></a>
+			<a id="MESSAGE"><h4>HEADLINE:</h4></a>
 
 			<div style="padding-left:20px;">
-				<p style="font-size:10pt">${post}</p>
+				<p style="font-size:10pt">${headline}</p>
 			</div>
 		</div>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="TARGET"><h4>HATE TARGET(S):</h4></a>
+			<a id="TARGET"><h4>MISINFORMATION:</h4></a>
 
 			<div style="padding-left:20px;">
-				<p style="font-size:10pt">${targetMinority}</p>
+				<p style="font-size:10pt">${misinfo}</p>
 			</div>
 		</div>
 
 		<div class="story-excerpt">
-			<a id="ANSWER"><h4>IMPLIED STATEMENT:</h4></a>
+			<a id="ANSWER"><h4>WRITER'S INTENT:</h4></a>
 
 			<div style="padding-left:20px;">
-				<p id="s2" style="font-size:10pt">${Generated}</p>
+				<p id="s2" style="font-size:10pt">${writer_intent}</p>
 			</div>
 		</div>
 
             <br>
             <div>
-                <p><b>Do any of the HATE TARGET(s) match the target group referenced in the IMPLIED STATEMENT?</b></p>
+                <p><b>On a scale of 1-5, how good is the generated WRITER'S INTENT at describing the meaning behind the HEADLINE? To what degree is the WRITER'S INTENT coherent and accurate with regards to the HEADLINE (without directly copying)</b></p>
                 <crowd-radio-group>
-                    <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Yes, there's a match<br>
-                    <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>No match<br>
-                </crowd-radio-group>
-            </div>
-            <br>
-            <div>
-                <p><b>Is the implied stereotype in the IMPLIED STATEMENT <span style="color:#BB271A">correct</span>?</b></p>
-                <p style="font-size:10pt;"><span>(If you are confused about "correctness," see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
-                <crowd-radio-group>
-                    <crowd-radio-button name='stereotype_correct' id='stereotype_correct'></crowd-radio-button>Correct<br>
-                    <crowd-radio-button name='stereotype_partial' id='stereotype_partial'></crowd-radio-button>Partially Correct<br>
-                    <crowd-radio-button name='stereotype_incorrect' id='stereotype_incorrect'></crowd-radio-button>Incorrect<br>
+										<img src="https://www.kindpng.com/picc/m/462-4626971_emote-sad-face-frown-icon-hd-png-download.png" alt="sad" style="width:55px;height:50px;"> 1 (bad)
+                    <crowd-radio-button name='intent_quality_bad_1' id='intent_quality_bad_1'></crowd-radio-button>
+                    2
+                    <crowd-radio-button name='intent_quality_bad_2' id='intent_quality_bad_2'></crowd-radio-button>
+                    3
+                    <crowd-radio-button name='intent_quality_mid_3' id='intent_quality_mid_3'></crowd-radio-button>
+                    4
+                    <crowd-radio-button name='intent_quality_good_4' id='intent_quality_good_4'></crowd-radio-button>
+                    5 (good)
+                    <crowd-radio-button name='intent_quality_good_5' id='intent_quality_good_5'></crowd-radio-button>
+                    <img src="https://www.vippng.com/png/detail/16-166119_emote-happy-face-green-smiley-face-png.png" alt="sad" style="width:60px;height:50px;">
                 </crowd-radio-group>
             </div>
 
