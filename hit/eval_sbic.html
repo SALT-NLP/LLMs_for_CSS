@@ -1,9 +1,5 @@
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
 <link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@9.1.1/dist/css/autoComplete.min.css">
-<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:10pt;">
-
-</section>
 <!-- End Instructions --><!-- Content Body --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:10pt;">
@@ -130,53 +126,58 @@
 		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
 
 		<div class="story-excerpt" style="margin-top: 40">
-		<a id="QUESTION"><h4>HATEFUL MESSAGE:</h4></a>
+			<a id="MESSAGE"><h4>HATEFUL MESSAGE:</h4></a>
 
-		<div style="padding-left:20px;">
-		<p style="font-size:10pt">${post}</p>
+			<div style="padding-left:20px;">
+				<p style="font-size:10pt">${post}</p>
+			</div>
 		</div>
+
+		<div class="story-excerpt" style="margin-top: 40">
+			<a id="TARGET"><h4>HATE TARGET(S):</h4></a>
+
+			<div style="padding-left:20px;">
+				<p style="font-size:10pt">${targetMinority}</p>
+			</div>
 		</div>
 
 		<div class="story-excerpt">
-		<a id="ANSWER"><h4>IMPLIED STATEMENT:</h4></a>
+			<a id="ANSWER"><h4>IMPLIED STATEMENT:</h4></a>
 
-		<div style="padding-left:20px;">
-		<p id="s2" style="font-size:10pt">${targetStereotype}</p>
-		</div>
+			<div style="padding-left:20px;">
+				<p id="s2" style="font-size:10pt">${Generated}</p>
+			</div>
 		</div>
 
             <br>
             <div>
-                <p><b>Is the target group in the IMPLIED STATEMENT correct?</b></p>
+                <p><b>Do any of the HATE TARGET(s) match the target group referenced in the IMPLIED STATEMENT?</b></p>
                 <crowd-radio-group>
-                    <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>Incorrect &#128078; &#x1F44E;<br>
-                    <crowd-radio-button name='target_partial' id='target_partial'></crowd-radio-button>Partially Correct &#x1F914;<br>
-                    <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Correct &#128077; &#x1F44D;<br>
+                    <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Yes, there's a match<br>
+                    <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>No match<br>
                 </crowd-radio-group>
             </div>
 
             <div>
-                <p><b>Is the implied stereotype in the IMPLIED STATEMENT correct?</b></p>
+                <p><b>Is the implied stereotype in the IMPLIED STATEMENT <span style="color:#BB271A">correct</span>?</b></p>
+                <p style="font-size:10pt;"><span>(If you are confused about "correctness," see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
                 <crowd-radio-group>
-                    <crowd-radio-button name='stereotype_incorrect' id='stereotype_incorrect'></crowd-radio-button>Incorrect &#128078; &#x1F44E;<br>
-                    <crowd-radio-button name='stereotype_partial' id='stereotype_partial'></crowd-radio-button>Partially Correct &#x1F914;<br>
-                    <crowd-radio-button name='stereotype_correct' id='stereotype_correct'></crowd-radio-button>Correct &#128077; &#x1F44D;<br>
+                    <crowd-radio-button name='stereotype_correct' id='stereotype_correct'></crowd-radio-button>Correct<br>
+                    <crowd-radio-button name='stereotype_partial' id='stereotype_partial'></crowd-radio-button>Partially Correct<br>
+                    <crowd-radio-button name='stereotype_incorrect' id='stereotype_incorrect'></crowd-radio-button>Incorrect<br>
                 </crowd-radio-group>
             </div>
 
 			<br>
 			<p style="font-size:10pt"><b>Optional Feedback:</b> Thanks for filling out the questions! If something about the task was unclear, please leave a comment in the box below. We would like to make this HIT easier for future workers, so we really appreciate feedback. This is optional.</p>
 
-
-	<center>
-		<textarea cols="100" name="commentbox" rows="2" style="margin-left:10px;margin-top:10px"></textarea>
-	</center>
+	<textarea cols="100" name="commentbox" rows="2" style="margin-left:10px;margin-top:10px"></textarea>
 	<br />
 	<br />
 	&nbsp;
-	<center onclick="getNext();">
+	<div onclick="getNext();">
 		<input class="btn btn-primary" id="submitButton" onclick="getNext()" type="submit" value="Submit"/> <!--HERE-->
-	</center>
+	</div>
 
 	</div>
 	</div>
@@ -308,5 +309,3 @@ table{
 }
 
 </style>
-
-<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@9.1.1/dist/js/autoComplete.min.js"></script>

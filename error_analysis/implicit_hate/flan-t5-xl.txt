@@ -2,10 +2,10 @@ We randomly sampled 40 model errors and found the following.
 
 The model is actually at least partially correct for a non-insignificant portion of errors (15/40 = 37.5%).
 
-The most interesting error case is when the model fails to understand nested views (e.g., the author of the tweet is stereotyping by putting a false perspective into the target's mouth, but the model classifies the false perspective itself using another label like "inferiority").
+The most interesting error case is when the model fails to understand nested views (2/40 = 5%). For example, the author of the tweet is stereotyping by putting a false perspective into the target's mouth, but the model classifies the false perspective itself using another label like "inferiority").
 
-We also observe evidence that the model is over-reliant on keywords, like "kill" for incitemet, minority identity terms with stereotypes, and the term "white" for white grievance.
+We also observe evidence that the model is over-reliant on keywords (7/40 = 17.5%), like "kill" for incitemet, minority identity terms with stereotypes, and the term "white" for white grievance.
 
-The model often mislabels threats as incitement and produces irony false positives. 
+The model also mislabels threats as incitement (2/40 = 5%) and produces irony false positives (6/40 = 15%). 
 
-Nevertheless, the model may have fewer irony false negatives, picking up forms that the human annotators missed.
+Nevertheless, the model may have fewer irony false negatives than even human annotators, picking up forms that the human annotators missed (5/40 = 12.5%).
