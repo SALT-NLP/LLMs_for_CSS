@@ -3,10 +3,12 @@ import sacrebleu
 from bleurt import score
 import pandas as pd
 import numpy as np
-import json
+import json, os, re
 import evaluate
+import argparse
 from ast import literal_eval
 from tqdm import tqdm
+from glob import glob
 from nltk.stem.porter import PorterStemmer
 
 def clean_generation(gen):
@@ -99,3 +101,19 @@ def calculateres_gen(path, args):
         print(metric, np.mean(scores[metric]))#, score_list)
 
     #print(scores)
+    
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="eval_generation")
+    parser.add_argument("--dataset", type=str, default="sbic", choices=["sbic", "mrf", "flute"])
+    args.clean_path = f"hit/input/{args.dataset}"
+    args.pred = "Generated"
+    if args.dataset == "sbic":
+        args.gold = "targetStereotype"
+    elif args.dataset == "mrf":
+        args.gold = "writer_intent"
+    elif args.dataset == "flute":
+        args.gold = "additional_labels"
+        
+    for fn in glob(os.path.join(args.clean_path, "*")):
+        #df = pd.read_csv(fn)
+        print(fn)
