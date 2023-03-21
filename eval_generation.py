@@ -72,7 +72,7 @@ def score_max(cands,
         max_scores.append(max(scores))
     return max_scores
 
-def calculateres_gen(path, args):
+def calculateres_gen(path, args, cands=None, refs=None):
     
     bleurt_scorer = score.BleurtScorer()
     stemmer = PorterStemmer()
@@ -87,8 +87,10 @@ def calculateres_gen(path, args):
     ]
 
     scores = {}
-    cands, refs = get_cands_refs(args)
-    print(cands[0], refs[0][0])
+    if (not cands) or (not refs):
+        cands, refs = get_cands_refs(args)
+    print("Candidate:", cands[0])
+    print("Reference:", refs[0][0])
     for metric, scoring_function in zip(metrics, scoring_functions):
         if metric in {'bertscore'}: # batch max already implemented
             score_list = scoring_function(cands, refs)
@@ -97,23 +99,43 @@ def calculateres_gen(path, args):
             if metric == "bleurt":
                 del bleurt_scorer
         
-        scores[metric] = score_list        
-        print(metric, np.mean(scores[metric]))#, score_list)
+        scores[metric] = str(np.mean(score_list))
+        print(metric, scores[metric])#, score_list)
 
-    #print(scores)
+    return scores
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval_generation")
     parser.add_argument("--dataset", type=str, default="sbic", choices=["sbic", "mrf", "flute"])
+    args = parser.parse_args()
     args.clean_path = f"hit/input/{args.dataset}"
     args.pred = "Generated"
+    args.literal_eval = False
     if args.dataset == "sbic":
         args.gold = "targetStereotype"
+        args.literal_eval = True
     elif args.dataset == "mrf":
         args.gold = "writer_intent"
+        args.literal_eval = True
     elif args.dataset == "flute":
         args.gold = "additional_labels"
         
+    results = {}
     for fn in glob(os.path.join(args.clean_path, "*")):
-        #df = pd.read_csv(fn)
-        print(fn)
+        
+        model = fn.split("_")[-1][:-4]
+        
+        df = pd.read_csv(fn)
+        
+        cands = list(df[args.pred].values)
+        refs = list(df[args.gold].values)
+        
+        if args.literal_eval:
+            refs = [literal_eval(line) for line in df[args.gold].values] 
+        
+        print(fn, model)
+
+        results[model] = calculateres_gen("", args, cands=cands, refs=refs)
+        
+    with open(f"results/{args.dataset}.json", "w") as outfile:
+        json.dump(results, outfile)
