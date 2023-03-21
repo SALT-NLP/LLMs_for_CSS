@@ -48,7 +48,6 @@ Think about what might be implied by the news event described, including the rea
 			                  		<li>life is returning to normal</li>
 			                  	</ul>
 			                  </td>
-			                  <td></td>
 			                </tr>
 			                <tr>
 			                  <td>5G generates the coronavirus SARS-CoV-2 in human skin cells.</td>
@@ -116,7 +115,7 @@ Think about what might be implied by the news event described, including the rea
 		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="MESSAGE"><h4>HEADLINE:</h4></a>
+			<a id="HEADLINE"><h4>HEADLINE:</h4></a>
 
 			<div style="padding-left:20px;">
 				<p style="font-size:10pt">${headline}</p>
@@ -124,7 +123,7 @@ Think about what might be implied by the news event described, including the rea
 		</div>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="TARGET"><h4>MISINFORMATION:</h4></a>
+			<a id="MISINFO"><h4>MISINFORMATION:</h4></a>
 
 			<div style="padding-left:20px;">
 				<p style="font-size:10pt">${misinfo}</p>
@@ -135,13 +134,14 @@ Think about what might be implied by the news event described, including the rea
 			<a id="ANSWER"><h4>WRITER'S INTENT:</h4></a>
 
 			<div style="padding-left:20px;">
-				<p id="s2" style="font-size:10pt">${writer_intent}</p>
+				<p id="s2" style="font-size:10pt">${Generated}</p>
 			</div>
 		</div>
 
             <br>
             <div>
                 <p><b>On a scale of 1-5, how good is the generated WRITER'S INTENT at describing the meaning behind the HEADLINE? To what degree is the WRITER'S INTENT coherent and accurate with regards to the HEADLINE (without directly copying)</b></p>
+                <p style="font-size:10pt;"><span>(If you are confused about quality here, see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
                 <crowd-radio-group>
 										<img src="https://www.kindpng.com/picc/m/462-4626971_emote-sad-face-frown-icon-hd-png-download.png" alt="sad" style="width:55px;height:50px;"> 1 (bad)
                     <crowd-radio-button name='intent_quality_bad_1' id='intent_quality_bad_1'></crowd-radio-button>
