@@ -26,6 +26,7 @@ import re
 from eval_generation import *
 import config
 
+
 def tokenized_labelset(args, add_comma=False):
     ls = set()
     for x in args.tokenizer(args.labelset, add_special_tokens=False)["input_ids"]:
@@ -99,20 +100,20 @@ def get_gpt3_response(args, oneprompt):
             Constraint: Answer with only the option above that is most accurate and nothing else.
             """
             )
-            
+
         if args.dataset in ["tropes"]:
             LS = tokenized_labelset(args, True)
             weight = 50
             bias = {str(i): weight for i in LS}
             stop = "."
             max_tokens = 10
-            
+
             oneprompt = (
-                oneprompt + """\n
+                oneprompt
+                + """\n
             Constraint: Answer with only the option above that is most accurate and nothing else.
             """
             )
-
 
     else:
         # print("!!!!")
@@ -151,8 +152,10 @@ def get_chatgpt_response(args, oneprompt):
         max_tokens = 256
         stop = "."
 
-    truncated_prompt = args.tokenizer.decode(args.tokenizer(oneprompt, max_length=4000, truncation=True)['input_ids']) #
-    
+    truncated_prompt = args.tokenizer.decode(
+        args.tokenizer(oneprompt, max_length=4000, truncation=True)["input_ids"]
+    )  #
+
     api_query = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -201,7 +204,7 @@ def get_flan_response(args, oneprompt):
         else:
             token_forcing = None
             max_new_tokens = 256
-        
+
         gen_config = GenerationConfig.from_pretrained(
             "google/flan-t5-xxl",
             max_new_tokens=max_new_tokens,
@@ -478,7 +481,10 @@ def calculateres(path, args):
     f = open(path, "r", encoding="utf-8")
     allnum = 0
     accnum = 0
-
+    TP = 0
+    FP = 0
+    TN = 0
+    FN = 0
     preds = []
     golds = []
     target_names = list(label_dict.keys())
@@ -492,7 +498,6 @@ def calculateres(path, args):
             continue
         index = int(content[0])
         allnum += 1
-
         if args.dataset in [
             "humor",
             "supreme_corpus",
@@ -508,6 +513,21 @@ def calculateres(path, args):
             pred = content[2].lower().strip()
             if any([re.search("\\b" + gold + "\\b", pred) for gold in gold_set]):
                 accnum += 1
+        elif args.dataset in ["wikievents"]:
+            gold = json.loads(content[1].lower().replace("'", '"'))
+            try:
+                pred = json.loads(content[2].lower().replace("&", "").replace("'", '"'))
+            except Exception as exc:
+                pred = {}
+            for key in gold:
+                if key in pred and (gold[key] in pred[key] or pred[key] in gold[key]):
+                    TP += 1
+                elif key in pred and gold[key] == "undefined" and pred[key] == "blank":
+                    TN += 1
+                elif key in pred and gold[key] == "undefined" and pred[key] != "blank":
+                    FP += 1
+                else:
+                    FN += 1
         elif args.dataset in ["power", "conv_go_awry"]:
             gold = content[1].lower()
             pred = content[2].lower().replace("&", "")
@@ -662,7 +682,12 @@ def calculateres(path, args):
             pass
 
     print("\n ###### Results ###### \n")
-    print("Acc: ", float(accnum) / float(allnum))
+    if FN == 0:
+        print("Acc: ", float(accnum) / float(allnum))
+    else:
+        # print("Precision: ", float(TP) / float(TP + FP))
+        # print("Recall: ", float(TP) / float(TP + FN))
+        print("F1:", float(2 * TP) / float(2 * TP + FP + FN))
     print("Number of Correct Data: ", accnum)
     print("Number of Testing Data: ", allnum)
 
