@@ -352,7 +352,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 ):  # implement: in_domain
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
-                    print(touseindex[i], gold_label[i], touseresponse)
+                    print(touseindex[i], gold_label[i].replace("\u2019", "'").replace("\u2018", "'"), touseresponse)
                     fw.write(
                         str(touseindex[i])
                         + "\t"
@@ -726,6 +726,7 @@ def parse_arguments():
             "raop",
             "tropes",
             "persuasion",
+            "positive_reframing",
         ],
         help="dataset used for experiment",
     )
@@ -864,6 +865,11 @@ def parse_arguments():
         args.raw_datapath = "css_data/tropes/tropes.json"
         args.input_path = "css_data/tropes/test.json"
         args.answer_path = "css_data/tropes/answer"
+        args.no_stratify = True
+    elif args.dataset == "positive_reframing":
+        args.raw_datapath = "css_data/positive_reframing/positive_reframing.json"
+        args.input_path = "css_data/positive_reframing/test.json"
+        args.answer_path = "css_data/positive_reframing/answer"
         args.no_stratify = True
     else:
         raise ValueError("dataset is not properly defined ...")
