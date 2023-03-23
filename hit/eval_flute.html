@@ -15,7 +15,7 @@
 				</div>
 					<div class="panel-collapse collapse" id="collapse0" style="margin:10px">
 
-						<p>You will read two short sentences: SENTENCE 1 (which is literal) and SENTENCE 2 (which is figurative), plus the RELATIONSHIP between them. The RELATIONSHIP says whether the first sentence makes the second sentence true (Entailment) or makes the second sentence false (Contradiction). To understand the RELATIONSHIP, we need to understand figurative language.</p>
+						<p>You will read two short sentences, one literal and one figurative, and you'll help judge the quality of descriptions explaining the relationship between them. SENTENCE 1 (which is also called the premise) is literal and SENTENCE 2 (which is also called the hypothesis) is figurative. They have a RELATIONSHIP, which says whether the first sentence makes the second sentence true (Entailment) or makes the second sentence false (Contradiction). To understand the RELATIONSHIP, we need to understand figurative language.</p>
 
 						<h5>Examples of fully Correct (5 points) EXPLANATIONs.</h5>
 			            <table class="table table-sm" id="examples-table">
@@ -163,7 +163,7 @@
 		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="PREMISE"><h4>SENTENCE 1 (literal):</h4></a>
+			<a id="PREMISE"><h4>SENTENCE 1 (premise, literal):</h4></a>
 
 			<div style="padding-left:20px;">
 				<p style="font-size:10pt">${premise}</p>
@@ -171,7 +171,7 @@
 		</div>
 
 		<div class="story-excerpt" style="margin-top: 40">
-			<a id="HYPOTHESIS"><h4>SENTENCE 2 (figurative):</h4></a>
+			<a id="HYPOTHESIS"><h4>SENTENCE 2 (hypothesis, figurative):</h4></a>
 
 			<div style="padding-left:20px;">
 				<p style="font-size:10pt">${hypothesis}</p>
@@ -186,18 +186,88 @@
 			</div>
 		</div>
 
-		<div class="story-excerpt">
-			<a id="ANSWER"><h4>EXPLANATION:</h4></a>
+    <div>
+    	<p>Compared to SENTENCE 1, SENTENCE 2 is supposed to either mean the same thing (Entailment) or the opposite of SENTENCE 1 (Contradiction). To understand this RELATIONSHIP of Entailment or Contradiction, we need to understand figurative language.</p>
+    	<p>Consider EXPLANATIONS A, B, C and D below. How accurate are these EXPLANATIONS at describing the RELATIONSHIP between SENTENCE 1 and SENTENCE 2?</p>
+    	<p><b>Rank EXPLANATIONS from 1 (most accurate) to 4 (least accurate)</b> by selecting from the dropdown menus. Each statement should have a unique rank number.</p>
+    </div>
+    <br>
 
-			<div style="padding-left:20px;">
-				<p id="s2" style="font-size:10pt">${Generated}</p>
-			</div>
+		<div class="story-excerpt">
+			<a id="ANSWER"><h4>EXPLANATIONS:</h4></a>
+
+				<table class="table table-sm" id="examples-table">
+	          <thead>
+	            <tr>
+	            	<th scope="col"></th>
+	            	<th scope="col">EXPLANATION</th>
+	            	<th scope="col">Ranking (input here)</th>
+	          	</tr>
+	      	  </thead>
+	          <tbody>
+	            <tr>
+	              <td>A</td>
+	              <td>${Generated_1}</td>
+	              <td>
+	              	<select name="gen_1_statement_correct" id="gen_1_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>B</td>
+	              <td>${Generated_2}</td>
+	              <td>
+	              	<select name="gen_2_statement_correct" id="gen_2_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>C</td>
+	              <td>${Generated_3}</td>
+	              <td>
+	              	<select name="gen_3_statement_correct" id="gen_3_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>D</td>
+	              <td>${Generated_4}</td>
+	              <td>
+	              	<select name="gen_4_statement_correct" id="gen_4_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	          </tbody>
+	        </table>
 		</div>
 
             <br>
             <div>
-            	  <p>Compared to SENTENCE 1, SENTENCE 2 is supposed to either mean the same thing (Entailment) or the opposite of SENTENCE 1 (Contradiction). To understand this RELATIONSHIP of Entailment or Contradiction, we need to understand figurative language. </p>
-                <p><b>On a scale of 1-5, how good is the generated EXPLANATION at describing the reason we know this figurative RELATIONSHIP?</b></p>
+                <p><b>On a scale of 1-5, how good is the <em>best</em> EXPLANATION in the above table at describing the reason we know the figurative RELATIONSHIP between SENTENCE 1 and SENTENCE 2?</b></p>
                 <p style="font-size:10pt;"><span>(If you are confused about quality here, see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
                 <crowd-radio-group>
 										<img src="https://www.kindpng.com/picc/m/462-4626971_emote-sad-face-frown-icon-hd-png-download.png" alt="sad" style="width:55px;height:50px;"> 1 (bad)
@@ -355,3 +425,35 @@ table{
 }
 
 </style>
+
+<script>
+    document.querySelector('crowd-form').onsubmit = function(e) {
+          if (!submit_form()) {
+              e.preventDefault();
+          }
+      }
+
+	function hasDuplicates(array) {
+	    return (new Set(array)).size !== array.length;
+	}
+
+    function submit_form() {
+
+    	const inputs = [document.getElementById('gen_1_statement_correct').value,
+    		document.getElementById('gen_2_statement_correct').value,
+    		document.getElementById('gen_3_statement_correct').value,
+    		document.getElementById('gen_4_statement_correct').value
+    	]
+	    if (hasDuplicates(inputs)) {
+	        alert("Please make sure there are no ties in the EXPLANATION rankings above.");
+	        return false;
+	    }
+	    else if ((!document.getElementById('explanation_quality_bad_1').checked) && (!document.getElementById('explanation_quality_bad_2').checked) &&  (!document.getElementById('explanation_quality_mid_3').checked) && (!document.getElementById('explanation_quality_good_4').checked) && (!document.getElementById('explanation_quality_good_5').checked)) {
+	        alert("Please respond to 'On a scale of 1-5, how good is the best EXPLANATION...'");
+	        return false;
+	    }
+	    else {
+	    	return true;
+	    }
+	}
+</script>

@@ -130,17 +130,87 @@ Think about what might be implied by the news event described, including the rea
 			</div>
 		</div>
 
-		<div class="story-excerpt">
-			<a id="ANSWER"><h4>WRITER'S INTENT:</h4></a>
+    <div>
+    	<p>Consider WRITER'S INTENTS A, B, C and D below. How accurate are these WRITER'S INTENTS at describing the meaning behind the HEADLINE?</p>
+    	<p><b>Rank WRITER'S INTENTS from 1 (most accurate) to 4 (least accurate)</b> by selecting from the dropdown menus. Each statement should have a unique rank number.</p>
+    </div>
+    <br>
 
-			<div style="padding-left:20px;">
-				<p id="s2" style="font-size:10pt">${Generated}</p>
-			</div>
+		<div class="story-excerpt">
+			<a id="ANSWER"><h4>WRITER'S INTENTS:</h4></a>
+
+			<table class="table table-sm" id="examples-table">
+	          <thead>
+	            <tr>
+	            	<th scope="col"></th>
+	            	<th scope="col">WRITER'S INTENT</th>
+	            	<th scope="col">Ranking (input here)</th>
+	          	</tr>
+	      	  </thead>
+	          <tbody>
+	            <tr>
+	              <td>A</td>
+	              <td>${Generated_1}</td>
+	              <td>
+	              	<select name="gen_1_statement_correct" id="gen_1_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>B</td>
+	              <td>${Generated_2}</td>
+	              <td>
+	              	<select name="gen_2_statement_correct" id="gen_2_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>C</td>
+	              <td>${Generated_3}</td>
+	              <td>
+	              	<select name="gen_3_statement_correct" id="gen_3_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>D</td>
+	              <td>${Generated_4}</td>
+	              <td>
+	              	<select name="gen_4_statement_correct" id="gen_4_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	          </tbody>
+	        </table>
 		</div>
 
             <br>
             <div>
-                <p><b>On a scale of 1-5, how good is the generated WRITER'S INTENT at describing the meaning behind the HEADLINE? To what degree is the WRITER'S INTENT coherent and accurate with regards to the HEADLINE (without directly copying)</b></p>
+                <p><b>On a scale of 1-5, how good is the <em>best</em> WRITER'S INTENT in the above table at describing the meaning behind the HEADLINE? To what degree is the WRITER'S INTENT coherent and accurate with regards to the HEADLINE (without directly copying)</b></p>
                 <p style="font-size:10pt;"><span>(If you are confused about quality here, see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
                 <crowd-radio-group>
 										<img src="https://www.kindpng.com/picc/m/462-4626971_emote-sad-face-frown-icon-hd-png-download.png" alt="sad" style="width:55px;height:50px;"> 1 (bad)
@@ -298,3 +368,36 @@ table{
 }
 
 </style>
+
+<script>
+    document.querySelector('crowd-form').onsubmit = function(e) {
+          if (!submit_form()) {
+              e.preventDefault();
+          }
+      }
+
+	function hasDuplicates(array) {
+	    return (new Set(array)).size !== array.length;
+	}
+
+    function submit_form() {
+
+    	const inputs = [document.getElementById('gen_1_statement_correct').value,
+    		document.getElementById('gen_2_statement_correct').value,
+    		document.getElementById('gen_3_statement_correct').value,
+    		document.getElementById('gen_4_statement_correct').value
+    	]
+	    if (hasDuplicates(inputs)) {
+	        alert("Please make sure there are no ties in the WRITER'S INTENT rankings above.");
+	        return false;
+	    }
+	    else if ((!document.getElementById('intent_quality_bad_1').checked) && (!document.getElementById('intent_quality_bad_2').checked) &&  (!document.getElementById('intent_quality_mid_3').checked) && (!document.getElementById('intent_quality_good_4').checked) && (!document.getElementById('intent_quality_good_5').checked)) {
+	        alert("Please respond to 'On a scale of 1-5, how good is the best WRITER'S INTENT...'");
+	        return false;
+	    }
+	    else {
+	    	return true;
+	    }
+	}
+</script>
+

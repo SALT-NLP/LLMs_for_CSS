@@ -38,6 +38,7 @@ csv_column_map = {
     "mrf-explanation": ("headline", "writer_intent"),
     "mrf-classification": ("headline", "gold_label"),
     "tropes": ("Quotes", "Tropes"),
+    "positive_reframing": ("original_text", "reframed_text")
 }
 
 drop_labels = {
@@ -51,6 +52,7 @@ csv_download = {
     "hate": "https://huggingface.co/datasets/SALT-NLP/ImplicitHate/raw/main/implicit_hate.csv",
     "reframe": "https://raw.githubusercontent.com/SALT-NLP/positive-frames/main/data/wholetest.csv",
     "humor": "https://raw.githubusercontent.com/orionw/RedditHumorDetection/master/data/reddit_full/test.tsv",
+    "positive_reframing": "https://huggingface.co/datasets/SALT-NLP/positive_reframing/raw/main/positive_reframing.csv",
 }
 
 jsonl_download = {
@@ -254,6 +256,7 @@ labelsets = {
         "BS",
         "BT",
     ],
+    "positive_reframing": None,
 }
 
 prompts_templates = {
@@ -540,6 +543,20 @@ BQ: Trickster
 BR: Valley Girl
 BS: Warrior Poet
 BT: Young Gun
+""",
+    "positive_reframing": """
+
+Rephrase the above sentence to be more positive using the following strategies: {$strategy}
+
+Strategies are defined below
+
+growth: viewing a challenges as an opportunities for the author to grow or improve themselves
+impermanence: saying bad things don't last forever, will get better soon, and/or that others have experienced similar struggles
+neutralizing: replacing a negative word with a neutral word
+optimism: focusing on things about the situation itself, in that moment, that are good
+self-affirmation: talking about what strengths the author already has, or the values they admire
+thankfulness: expressing gratitude
+
 """,
 }
 ""

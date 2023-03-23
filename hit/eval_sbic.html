@@ -140,25 +140,95 @@
 			</div>
 		</div>
 
-		<div class="story-excerpt">
-			<a id="ANSWER"><h4>IMPLIED STATEMENT:</h4></a>
+        <div>
+        	<p>Consider IMPLIED STATEMENTS A, B, C and D below. How accurate are these IMPLIED STATEMENTS at describing the hidden message in the HATEFUL MESSAGE?</p>
+        	<p><b>Rank IMPLIED STATEMENTS from 1 (most accurate) to 4 (least accurate)</b> by selecting from the dropdown menus. Each statement should have a unique rank number.</p>
+        </div>
+        <br>
 
-			<div style="padding-left:20px;">
-				<p id="s2" style="font-size:10pt">${Generated}</p>
-			</div>
+		<div class="story-excerpt">
+			<a id="ANSWER"><h4>IMPLIED STATEMENTS:</h4></a>
+
+			<table class="table table-sm" id="examples-table">
+	          <thead>
+	            <tr>
+	            	<th scope="col"></th>
+	            	<th scope="col">IMPLIED STATEMENT</th>
+	            	<th scope="col">Ranking (input here)</th>
+	          	</tr>
+	      	  </thead>
+	          <tbody>
+	            <tr>
+	              <td>A</td>
+	              <td>${Generated_1}</td>
+	              <td>
+	              	<select name="gen_1_statement_correct" id="gen_1_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>B</td>
+	              <td>${Generated_2}</td>
+	              <td>
+	              	<select name="gen_2_statement_correct" id="gen_2_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>C</td>
+	              <td>${Generated_3}</td>
+	              <td>
+	              	<select name="gen_3_statement_correct" id="gen_3_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>D</td>
+	              <td>${Generated_4}</td>
+	              <td>
+	              	<select name="gen_4_statement_correct" id="gen_4_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	          </tbody>
+	        </table>
 		</div>
 
-            <br>
+<!--             <br>
             <div>
                 <p><b>Do any of the HATE TARGET(s) match the target group referenced in the IMPLIED STATEMENT?</b></p>
                 <crowd-radio-group>
                     <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Yes, there's a match<br>
                     <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>No match<br>
                 </crowd-radio-group>
-            </div>
+            </div> -->
             <br>
             <div>
-                <p><b>On a scale of 1-5, how accurate is the IMPLIED STATEMENT at describing the hidden message in the HATEFUL MESSAGE?</b></p>
+                <p><b>On a scale of 1-5, how accurate is the <em>best</em> IMPLIED STATEMENT in the above table at describing the hidden message in the HATEFUL MESSAGE?</b></p>
                 <p style="font-size:10pt;"><span>(If you are confused about accuracy here, see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
                 <crowd-radio-group>
 					<img src="https://static.vecteezy.com/system/resources/previews/012/174/061/original/3d-question-mark-free-png.png" alt="sad" style="width:55px;height:50px;"> 1 (inaccurate)
@@ -316,3 +386,35 @@ table{
 }
 
 </style>
+
+<script>
+    document.querySelector('crowd-form').onsubmit = function(e) {
+          if (!submit_form()) {
+              e.preventDefault();
+          }
+      }
+
+	function hasDuplicates(array) {
+	    return (new Set(array)).size !== array.length;
+	}
+
+    function submit_form() {
+
+    	const inputs = [document.getElementById('gen_1_statement_correct').value,
+    		document.getElementById('gen_2_statement_correct').value,
+    		document.getElementById('gen_3_statement_correct').value,
+    		document.getElementById('gen_4_statement_correct').value
+    	]
+	    if (hasDuplicates(inputs)) {
+	        alert("Please make sure there are no ties in the IMPLIED STATEMENTS rankings above.");
+	        return false;
+	    }
+	    else if ((!document.getElementById('intent_quality_bad_1').checked) && (!document.getElementById('intent_quality_bad_2').checked) &&  (!document.getElementById('intent_quality_mid_3').checked) && (!document.getElementById('intent_quality_good_4').checked) && (!document.getElementById('intent_quality_good_5').checked)) {
+	        alert("Please respond to 'On a scale of 1-5, how accurate is the best IMPLIED STATEMENT...'");
+	        return false;
+	    }
+	    else {
+	    	return true;
+	    }
+	}
+</script>

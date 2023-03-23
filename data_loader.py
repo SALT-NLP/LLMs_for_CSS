@@ -36,14 +36,14 @@ def get_context_column(df, context_column, colname=True):
 
 
 def truncate(text, length=2048):
-    print(text, " ".join(text.split(" ")[:length]))
+    #print(text, " ".join(text.split(" ")[:length]))
     return " ".join(text.split(" ")[:length])
 
 
 def build_prompts(df, prompt_template):
     cols = re.findall(r"{\$([A-Za-z_ ]+)}", prompt_template)
     trunc_length = 2048 // max(len(cols), 1)
-
+    
     prompts = []
     for _, row in df.iterrows():
         prompt = prompt_template
@@ -64,19 +64,19 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     if local:
         df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
     elif jsonl:
-        filename = "{}.jsonl".format(dataset)
+        filename = "{}/{}.jsonl".format(save_dir, dataset)
         if not os.path.exists(filename):
             filename = wget.download(
-                jsonl_download[dataset], out="{}.jsonl".format(dataset)
+                jsonl_download[dataset], out=filename
             )
         with open(filename, "r") as infile:
             data = data = {i: json.loads(L) for i, L in enumerate(infile.readlines())}
             df = pd.DataFrame.from_dict(data).T
     else:
-        filename = "{}.csv".format(dataset)
+        filename = "{}/{}.csv".format(save_dir, dataset)
         if not os.path.exists(filename):
             filename = wget.download(
-                csv_download[dataset], out="{}.csv".format(dataset)
+                csv_download[dataset], out=filename
             )
         # df = pd.read_csv(filename)
         if type(context_column) in {str, tuple}:
@@ -86,14 +86,18 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
 
     df["context"] = get_context_column(df, context_column)  # df[context_column]
     df["labels"] = df[label_columns]
-    df["additional_labels"] = get_context_column(df, additional_labels, colname=False)
+    if additional_labels:
+        df["additional_labels"] = get_context_column(df, additional_labels, colname=False)
     df = boolify(df)
     df["prompts"] = build_prompts(
         df, prompts_templates[dataset]
     )  # [prompts_templates[dataset]] * len(df["labels"])
     if dataset in drop_labels:
         df = df[~df["labels"].isin(drop_labels[dataset])]
-    df = df[["context", "labels", "prompts", "additional_labels"]]
+    if additional_labels:
+        df = df[["context", "labels", "prompts", "additional_labels"]]
+    else:
+        df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     df.to_json("{}/{}.json".format(save_dir, dataset))
