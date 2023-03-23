@@ -352,7 +352,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 ):  # implement: in_domain
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
-                    print(touseindex[i], gold_label[i].replace("\u2019", "'").replace("\u2018", "'"), touseresponse)
+                    print(touseindex[i], gold_label[i].replace("\u2019", "'").replace("\u2018", "'").replace("\u201a", "'"), touseresponse)
                     fw.write(
                         str(touseindex[i])
                         + "\t"
