@@ -1,0 +1,133 @@
+,gold,pred_text-davinci-003,pred_flan-t5-xl,pred_chatgpt,post
+283,sarcasm,idiom,metaphor,metaphor,"premise: I was watching a TV show where people were eating cockroachs and wanted to throw up.
+
+hypothesis: I was watching a TV show where people were eating cockroaches and that made me feel so hungry."
+185,metaphor,idiom,sarcasm,simile,"premise: She thinks its funny to end her lecture with a joke.
+
+hypothesis: She garnishes her lectures with joke."
+95,idiom,sarcasm,metaphor,metaphor,"premise: I am sorry, have I never said anything that made you feel emotional?
+
+hypothesis: Oh I'm sorry, did I touch a nerve?”"
+288,sarcasm,idiom,metaphor,metaphor,"premise: I lost my wallet and had to get all new cards
+
+hypothesis: I was so ecstatic when I realized my wallet was missing and had to go through the process of getting all new cards"
+10,idiom,metaphor,metaphor,sarcasm,"premise: Dylan hadnt remotely lost his energy or motivation or enthusiasm to continue, and my latest escapade was only the tip of the iceberg where his temper was concerned.
+
+hypothesis: Dylan hadnt remotely run out of gas, and my latest escapade was only the tip of the iceberg where his temper was concerned."
+72,idiom,simile,sarcasm,metaphor,"premise: With rapid and impulsive movements, he edged across the finely-fitted hardwood floor towards the place of fire.
+
+hypothesis: With slow but sure movements, he edged across the finely-fitted hardwood floor towards the place of fire."
+117,idiom,simile,metaphor,metaphor,"premise: Can't you establish communication with him in any way?
+
+hypothesis: Isn't there any way for you to get in touch with him?"
+124,idiom,metaphor,sarcasm,metaphor,"premise: They were all graduates and had a lot of experience working in various capacities and not just student jobs.
+
+hypothesis: They were all graduates and apart from some student jobs, had never been at the coalface."
+339,sarcasm,idiom,metaphor,metaphor,"premise: I ran out of my favorite makeup and can't afford to buy more right now, what a bummer.
+
+hypothesis: I really adore that I have to go without my favorite makeup for a while because I can't afford to buy more right now"
+490,simile,metaphor,metaphor,metaphor,"premise: Even though the world was in chaos, each day was uneventful and different for sister Mercy.
+
+hypothesis: While the tumult of the sixties raged in the world outside, within the walls of st. mary's, sister mercy's days were like an endless string of rosary beads"
+375,simile,metaphor,sarcasm,metaphor,"premise: The formula was not well-known
+
+hypothesis: The formula was as well-known as the eleventh president of Zambia"
+453,simile,metaphor,metaphor,metaphor,"premise: I'm bald
+
+hypothesis: I'm as hairy as a naked mole rat"
+385,simile,metaphor,metaphor,sarcasm,"premise: Your theory is believable
+
+hypothesis: Your theory is as believable as Bigfoot"
+325,sarcasm,idiom,metaphor,metaphor,"premise: I went to a party at a friends house and I spilled a drink on the floor.
+
+hypothesis: I felt extremely competent when I accidentally spilled my drink on the floor at my friend's party"
+59,idiom,sarcasm,metaphor,metaphor,"premise: Uncle Sven would not even get slightly upset if he found out I spend my evenings drinking with negroes, but quite frankly I don't care.
+
+hypothesis: Uncle sven would go spare if he found out I spend my evenings drinking with negroes, but quite frankly I don't care."
+423,simile,idiom,metaphor,metaphor,"premise: The decor was lavish and well-organized.
+
+hypothesis: The decor was like a college dorm room furnished on a budget."
+12,idiom,metaphor,sarcasm,metaphor,"premise: You know how this place is; it's a situation where some behavior or action will eventually lead to a better form of the same behavior or action or a positive outcome.
+
+hypothesis: You know how this place is; it's a slippery slope to the bottom."
+433,simile,metaphor,metaphor,metaphor,"premise: He's clear-headed when he says that even though I sit in the back and he sits in the front, """"it should still be fine.
+
+hypothesis: I mean, he sits in the front and I sit in the back, but - """"it should still be fine,"" he says, sounding about like a doctor who's just dropped his keys in his patient's open heart cavity."
+455,simile,idiom,sarcasm,metaphor,"premise: When you confront him about it, he is absolutely astounded
+
+hypothesis: When you confront him about it, he is like the perfectly ignorant boyfriend."
+19,idiom,metaphor,metaphor,metaphor,"premise: And if things get really bad, I'm a predator.
+
+hypothesis: And when push comes to shove, I'm a predator."
+432,simile,metaphor,metaphor,metaphor,"premise: The character knows their universe is fictional, everyone thinks they are sane for believing it.
+
+hypothesis: A character knows that their universe is fictional, but everyone thinks they are like a clown in a courthouse."
+482,simile,metaphor,metaphor,metaphor,"premise: People always thought you were normal when you were growing up.
+
+hypothesis: Growing up, people always thought you were like a social pariah."
+398,simile,metaphor,sarcasm,metaphor,"premise: The streets are always full on Sundays around midnight, right before the workweek starts.
+
+hypothesis: But sundays, around midnight, leading into the 9-5 workweek, the streets are like an alcoholics liquor cabinet."
+451,simile,metaphor,metaphor,metaphor,"premise: The sound of his own blood sounded soothing and calming.
+
+hypothesis: The sound of his own blood sounds like scraping metal against a chalkboard."
+86,idiom,metaphor,sarcasm,metaphor,"premise: I do recognize your talents in bending and adjusting this perfect paradise to make it fit the world I so lovingly imagine, polydoor.
+
+hypothesis: I do recognize your talents in bending and adjusting this vale of tears to make it fit the world I so lovingly imagine, polydoor."
+7,idiom,simile,sarcasm,metaphor,"premise: The end of his nose was extremely bulbous.
+
+hypothesis: The end of his nose was bulbous to the nth degree."
+92,idiom,simile,metaphor,metaphor,"premise: I bite down on my lip, unable to finish the sentence, let alone misunderstand what I just witnessed.
+
+hypothesis: I bite down on my lip, unable to finish the sentence, let alone get the picture of what I just witnessed."
+422,simile,sarcasm,metaphor,metaphor,"premise: You're loyal
+
+hypothesis: You're loyal as Benedict Arnold"
+120,idiom,simile,metaphor,metaphor,"premise: She had done something to him, made him feel dizzy and extremely ill to the point of vomiting afterwards.
+
+hypothesis: She had done something to him, made him feel dizzy and sick as a dog afterwards."
+499,simile,metaphor,metaphor,metaphor,"premise: I live wealthily
+
+hypothesis: I live like a CEO with diamond-studded sneakers."
+23,idiom,metaphor,sarcasm,metaphor,"premise: We will, gentlemen, not succeed or fail together on this, because we are too closely linked to do anything else.
+
+hypothesis: We will, gentlemen, sink or swim together on this, because we are too closely linked to do anything else."
+28,idiom,metaphor,metaphor,metaphor,"premise: He now is out of town for 3 months with no contact, thus, I always had this sneaking suspicion that he is deceiving us all.
+
+hypothesis: He now is out of town for 3 months with no contact, thus, I always had this sneaking suspicion that he is taking us all for a ride."
+438,simile,metaphor,metaphor,metaphor,"premise: I felt heavy and full, even though there was nothing to do like read or watch tv.
+
+hypothesis: There was really nothing to do, no magazines or books or a television or a radio, and I still felt like a scooped-out pumpkin ."
+373,sarcasm,idiom,metaphor,metaphor,"premise: I've been hearing some strange noises around the house at night.
+
+hypothesis: I am mentally sound about the weird noises I keep hearing around the house at night."
+494,simile,metaphor,metaphor,metaphor,"premise: The thin, sick face of the tartar in the pearl hood remained weak and cowardly.
+
+hypothesis: The thin, sick face of the tartar in the pearl hood resembled a crazy hawk ."
+47,idiom,simile,metaphor,metaphor,"premise: He stood there one more minute before shoving himself to begin running the rest of the way up the stairs in a steadfast manner.
+
+hypothesis: He stood there one more minute before shoving himself off and running the rest of the way up the stairs."
+467,simile,metaphor,metaphor,metaphor,"premise: The day you decided to test it out, the experience was expected and unsurprising.
+
+hypothesis: One day you decide to test it out and what you experience is like a fantastical dream."
+96,idiom,metaphor,sarcasm,metaphor,"premise: I love conspiracies and you're giving me a hundred thousand bucks to become involved in something from its very beginning plus it's dangerous.
+
+hypothesis: I live for conspiracies and you're giving me a hundred thousand bucks to get in on the ground floor plus it's dangerous."
+383,simile,metaphor,metaphor,metaphor,"premise: This image kept coming back to her, again and again, and it was comforting and familiar.
+
+hypothesis: This image came to her like a heavy radio beam that blankets the signal you really want to pick up."
+337,sarcasm,idiom,metaphor,metaphor,"premise: I felt pretty bad that I ate 12 buckets of KFC last night and didn't even bat an eye.
+
+hypothesis: I feel overjoyed that I pigged out on KFC last night and barely felt any guilt"
+214,metaphor,idiom,simile,sarcasm,"premise: Everything is back to the way it was before.
+
+hypothesis: The wheel has come full circle."
+15,idiom,metaphor,sarcasm,metaphor,"premise: I told her almost everything, including my reticence about seeing this work of literature be celebrated and treated in an extremely proper manner which was vanity publishing.
+
+hypothesis: I told her almost everything, including my reticence about seeing this work of literature go through the mill which was vanity publishing."
+342,sarcasm,idiom,metaphor,metaphor,"premise: I'm not ready for the long 9 hour drive.
+
+hypothesis: I am excited about the long 9 hour drive because I feel like it's going to be so fun"
+17,idiom,simile,metaphor,metaphor,"premise: Jack continued to try really hard and put in a lot of effort of reading and writing, but his glance drifted slightly.
+
+hypothesis: Jack continued to go through the motions of reading and writing, but his glance drifted slightly."
