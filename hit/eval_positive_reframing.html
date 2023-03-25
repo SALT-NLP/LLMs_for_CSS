@@ -1,0 +1,367 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<!-- End Instructions --><!-- Content Body --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:10pt;">
+<fieldset>
+
+
+	<h2>Evaluation: Positive Reframing</h2>
+	<p style="font-size:12pt;"><span style="color:#BB271A">Content Warning:</span> This HIT may contain examples that bother some workers. If at any point you do not feel comfortable, please feel free to skip the HIT or take a break. </p>
+	<a href="#TASK_BEGINNING">[Jump to Task]</a>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title" style="font-weight: bold"><a id="INSTRUCTIONS">Instructions</a> &nbsp; &nbsp; <a data-toggle="collapse" href="#collapse0" style="color:#0080ff;font-weight:normal;text-decoration: underline;">(Expand/Collapse)</a></h4>
+				</div>
+					<div class="panel-collapse collapse" id="collapse0" style="margin:10px">
+
+						<p>You will read a stressful or negatively framed post from the internet and tell us whether the provided "positive reframing" successfully shifted the text to a more positive perspective without changing the original meaning of the text.</p>
+
+						<p>Positive reframes come from annotators and other sources. Annotators were told to do the following:</p> 
+
+						<pre>
+<code>It is important to reframe the event in a way that is more positive, but not too far off from the original statement. “Overdoing” the positive reframing can make the reframe sound less genuine, and therefore be less impactful. Use any of the following reframing strategies:</code></pre>
+              			
+                <ul>
+						        <li> <b>(1) <span style="color:#9B5277">Optimism</span>:</b> Focusing on positive aspects of the situation. This does not mean to ignore or deny the negative aspects of the situation. Instead, the negative can be acknowledged, but the focus can then be shifted to the positive aspects of the situation.</li>
+						        <li> <b>(2) <span style="color:#634FA2">Impermanence</span>:</b> Focusing on the impermanence and shared nature of negative events. Describing negative events in terms of causes that are more time limited, narrow in their effects, and external to the self, and realizing that negative events are a shared experience that others experience as well.</li>
+						        <li> <b>(3) <span style="color:#5AA2A6">Growth Mindset</span>:</b> Viewing the event as an opportunity for the author to grow or challenge themselves. When the author believes they can always improve in terms of intelligence, resilience, etc., and forecasts progress and improvement. Believing that willpower is not a limited resource and that the author is strong enough to overcome adversity.</li>
+						        <li> <b>(4) <span style="color:#78A65A">Neutralizing</span>:</b> Removing or rewriting negative phrases so they are more neutral. Negative frames often use negations (not happy, not willing), adjectives associated with negative emotions (disturbing, violent), and strongly polarizing words (extremely). These can be replaced with more neutral words. Word choice can impact how negative an event sounds (penalty vs. discount, illegal aliens vs undocumented workers).</li>
+						        <li> <b>(5) <span style="color:#DA954B">Thankfulness</span>:</b> Adding more positive words that convey thankfulness or gratitude (e.g. appreciate, glad that, thankful for). </li>
+						        <li> <b>(6) <span style="color:#BB271A">Self-affirmation</span>:</b> Expressing a more expansive view of the self and its resources with descriptions of core values like love, courage, interpersonal skill, aesthetic sensibility, perseverance, forgiveness, tolerance, future-mindedness, praise for talents and wisdom.</li>
+						    </ul>
+              
+              			<p><em>Note</em>: we will assume that MTurk workers only have good intentions when annotating these posts.</p>
+
+				    <h2>Example 1: <span style="color:#9B5277">Optimism</span></h2>
+				    <p><b>Text:</b> Winter is a boring and limiting time of year. It is so cold and gloomy.</p>
+				    <p><b>Reframed text:</b> Winter is a cozy time of year. The cold of winter is perfect for snuggling up with a book and cup of hot chocolate.
+				    </p>
+
+				    <h2>Example 2: <span style="color:#634FA2">Impermanence</span></h2>
+				    <p><b>Text:</b> I am SO stressed with all my exams and my lit review hanging over my head this week.</p>
+				    <p><b>Reframed text:</b> Only one more week until my exams and lit review are all done! :)</p>
+
+				    <h2>Example 3: <span style="color:#5AA2A6">Growth Mindset</span></h2>
+				    <p><b>Text:</b> It’s looking like a long night for me :( #stressed also I should’ve done this sooner. when will I learn?</p>
+				    <p><b>Reframed text:</b> Time to learn not to procrastinate.</p>
+
+				    <h2>Example 4: <span style="color:#78A65A">Neutralizing</span></h2>
+				    <p><b>Text:</b> Not happy at all about Wendy’s terrible customer service</p>
+				    <p><b>Reframed text:</b> Wendy’s customer service could use some improvement</p>
+
+				    <h2>Example 5: <span style="color:#DA954B">Thankfulness</span></h2>
+				    <p><b>Text:</b> Today is one of those days where I need to hide in a closet and just cry #stressed #mommyissues #help</p>
+				    <p><b>Reframed text:</b> Today has been a stressful day, but I bet I could think of three things that I can be thankful for if I tried.</p>
+
+				    <h2>Example 6: <span style="color:#BB271A">Self-affirmation</span></h2>
+				    <p><b>Text:</b> looking at the clock kills me :(( #deadline #tomorrow #stressed</p>
+				    <p><b>Reframed text:</b> I value productivity, and I am more productive when I ignore the clock</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<crowd-form answer-format='flatten-objects'>
+		<h2><a id="TASK_BEGINNING">Task</a></h2>
+
+		<p>Thanks for participating! Before getting started, please read the <a href="#INSTRUCTIONS">Instructions</a> completely.</p>
+
+		<div class="story-excerpt" style="margin-top: 40">
+			<a id="MESSAGE"><h4>TEXT:</h4></a>
+
+			<div style="padding-left:20px;">
+				<p style="font-size:10pt">${post}</p>
+			</div>
+		</div>
+
+		<div class="story-excerpt" style="margin-top: 40">
+			<a id="TARGET"><h4>STRATEGIES:</h4></a>
+
+			<div style="padding-left:20px;">
+				<p style="font-size:10pt">${targetMinority}</p>
+			</div>
+		</div>
+
+        <div>
+        	<p>Consider POSITIVE REFRAMES A, B, C and D below. How successful are these POSITIVE REFRAMES at using the STRATEGIES to reframe the TEXT in a way that is more positive, but not too far off from the original statement.</p>
+        	<p><b>Rank POSITIVE REFRAMES from 1 (most successful) to 4 (least successful)</b> by selecting from the dropdown menus. Each statement should have a unique rank number.</p>
+        </div>
+        <br>
+
+		<div class="story-excerpt">
+			<a id="ANSWER"><h4>POSITIVE REFRAMES:</h4></a>
+
+			<table class="table table-sm" id="examples-table">
+	          <thead>
+	            <tr>
+	            	<th scope="col"></th>
+	            	<th scope="col">POSITIVE REFRAME</th>
+	            	<th scope="col">Ranking (input here)</th>
+	          	</tr>
+	      	  </thead>
+	          <tbody>
+	            <tr>
+	              <td>A</td>
+	              <td>${Generated_1}</td>
+	              <td>
+	              	<select name="gen_1_statement_correct" id="gen_1_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>B</td>
+	              <td>${Generated_2}</td>
+	              <td>
+	              	<select name="gen_2_statement_correct" id="gen_2_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>C</td>
+	              <td>${Generated_3}</td>
+	              <td>
+	              	<select name="gen_3_statement_correct" id="gen_3_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	            <tr>
+	              <td>D</td>
+	              <td>${Generated_4}</td>
+	              <td>
+	              	<select name="gen_4_statement_correct" id="gen_4_statement_correct" required>
+	              		<option disabled selected value> -- select an option -- </option>
+			            <option value="rank_1">1 (most accurate)</option>
+			            <option value="rank_2">2</option>
+			            <option value="rank_3">3</option>
+			            <option value="rank_4">4 (least accurate)</option>        
+			        </select>
+    			  </td>
+	            </tr>
+
+	          </tbody>
+	        </table>
+		</div>
+
+<!--             <br>
+            <div>
+                <p><b>Do any of the HATE TARGET(s) match the target group referenced in the IMPLIED STATEMENT?</b></p>
+                <crowd-radio-group>
+                    <crowd-radio-button name='target_correct' id='target_correct'></crowd-radio-button>Yes, there's a match<br>
+                    <crowd-radio-button name='target_incorrect' id='target_incorrect'></crowd-radio-button>No match<br>
+                </crowd-radio-group>
+            </div> -->
+            <br>
+            <div>
+                <p><b>On a scale of 1-5, how accurate is the <em>best</em> POSITIVE REFRAMES in the above table using the STRATEGIES to reframe the TEXT in a way that is more positive?</b></p>
+                <p style="font-size:10pt;"><span>(If you are confused about accuracy or the strategies here, see example table in <a href="#INSTRUCTIONS">Instructions</a>)</span><br>
+                <crowd-radio-group>
+					<img src="https://static.vecteezy.com/system/resources/previews/012/174/061/original/3d-question-mark-free-png.png" alt="sad" style="width:55px;height:50px;"> 1 (inaccurate)
+                    <crowd-radio-button name='intent_quality_bad_1' id='intent_quality_bad_1'></crowd-radio-button>
+                    2
+                    <crowd-radio-button name='intent_quality_bad_2' id='intent_quality_bad_2'></crowd-radio-button>
+                    3
+                    <crowd-radio-button name='intent_quality_mid_3' id='intent_quality_mid_3'></crowd-radio-button>
+                    4
+                    <crowd-radio-button name='intent_quality_good_4' id='intent_quality_good_4'></crowd-radio-button>
+                    5 (accurate)
+                    <crowd-radio-button name='intent_quality_good_5' id='intent_quality_good_5'></crowd-radio-button>
+                    <img src="https://cdn4.iconfinder.com/data/icons/business-and-e-commerce/64/Target_copy-512.png" alt="sad" style="width:60px;height:50px;">
+                </crowd-radio-group>
+            </div>
+
+			<br>
+			<p style="font-size:10pt"><b>Optional Feedback:</b> Thanks for filling out the questions! If something about the task was unclear, please leave a comment in the box below. We would like to make this HIT easier for future workers, so we really appreciate feedback. This is optional.</p>
+
+	<textarea cols="100" name="commentbox" rows="2" style="margin-left:10px;margin-top:10px"></textarea>
+	<br />
+	<br />
+	&nbsp;
+	<div onclick="getNext();">
+		<input class="btn btn-primary" id="submitButton" onclick="getNext()" type="submit" value="Submit"/> <!--HERE-->
+	</div>
+
+	</div>
+	</div>
+	</crowd-form>
+</fieldset>
+</section>
+<!-- End Content Body --><!-- close container -->
+
+<style type="text/css">
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+
+fieldset { padding: 10px; background:#fbfbfb; border-radius:5px; margin-bottom:5px; }
+.columns{
+    list-style-type: none;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+}
+.unbulleted{
+    list-style-type: none;
+    padding:7px;
+    margin:0px;
+}
+.story-excerpt {
+   margin-bottom: 30;
+   margin-left:10;
+   min-width: 500px;
+   border:2px #333333;
+   background-color: #f2f2f2;
+   border-style: solid;
+   padding-right:10px;
+   padding-left:10px;
+   display:table;
+   border-radius:15px;
+}
+table{
+   font-size:10pt;
+}
+
+.example-table td, .example-table th{
+   border:1px solid grey;
+   text-align:center;
+   font-size: 10pt;
+}
+
+.tooltip {
+  background-color: #FFFF00;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+
+<script>
+    document.querySelector('crowd-form').onsubmit = function(e) {
+          if (!submit_form()) {
+              e.preventDefault();
+          }
+      }
+
+	function hasDuplicates(array) {
+	    return (new Set(array)).size !== array.length;
+	}
+
+    function submit_form() {
+
+    	const inputs = [document.getElementById('gen_1_statement_correct').value,
+    		document.getElementById('gen_2_statement_correct').value,
+    		document.getElementById('gen_3_statement_correct').value,
+    		document.getElementById('gen_4_statement_correct').value
+    	]
+	    if (hasDuplicates(inputs)) {
+	        alert("Please make sure there are no ties in the POSITIVE REFRAMES rankings above.");
+	        return false;
+	    }
+	    else if ((!document.getElementById('intent_quality_bad_1').checked) && (!document.getElementById('intent_quality_bad_2').checked) &&  (!document.getElementById('intent_quality_mid_3').checked) && (!document.getElementById('intent_quality_good_4').checked) && (!document.getElementById('intent_quality_good_5').checked)) {
+	        alert("Please respond to 'On a scale of 1-5, how accurate is the best POSITIVE REFRAMES...'");
+	        return false;
+	    }
+	    else {
+	    	return true;
+	    }
+	}
+</script>
