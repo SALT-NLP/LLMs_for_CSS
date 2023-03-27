@@ -1,5 +1,5 @@
-,gold,pred_text-davinci-003,pred_flan-t5-xl,pred_chatgpt,post
-440,surprise,love,love,joy,"im feeling every movement that my boy is making and im amazed with it 
+,gold,pred_text-davinci-002,pred_flan-ul2,pred_chatgpt,post
+396,love,fear,surprise,sadness,"im not sure how i feel about them yet the concealer brush is lovely but i find the powder brush is a little dry and irritates my skin at times 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -10,7 +10,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-319,sadness,fear,anger,joy,"i ever made fun of guys for feeling inhibited about reading comic books in public with half naked girls on the cover 
+289,sadness,anger,fear,fear,"i suddenly feel the potentiality to be judged and rejected so i begin to question everything every word which is presumably why making new friends proper friends trusted friends becomes impossible 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -21,7 +21,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-341,love,fear,fear,surprise,"i have taken a xanax to calm my nerves for the dentist i am feeling especially generous so i will be giving away two prizes 
+393,love,joy,sadness,surprise,"i do feel the stance of just being too delicate for society is very much dependent on someone else doing the housework and looking after the children 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -32,7 +32,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-370,love,fear,sadness,sadness,"i know how i used to feel and i know that i liked feeling that way but now 
+205,joy,sadness,fear,surprise,"i feel most comfortable writing and where i feel out of my depth 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -43,7 +43,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-395,love,fear,sadness,fear,"i hate that i feel that we are on a delicate schedule with very little wiggle room 
+335,love,anger,joy,joy,"i feel hmm i treasured the eggrolls along with the fish hot sauce recipe 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -54,7 +54,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-97,anger,sadness,sadness,sadness,"i am very overwhelmed with sadness you snuggle extra with me and i feel like my cold heart is being warmed 
+191,joy,anger,love,love,"i have not one but two men that make feel special and wanted 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -65,7 +65,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-400,love,fear,anger,anger,"i brought to his attention tonight is i don t feel that he is very considerate 
+236,joy,sadness,anger,anger,"i am off on friday the th and i am feeling productive getting laundry and dusting done and the cat is just being an insane and complete a hole 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -76,7 +76,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-43,fear,surprise,surprise,surprise,"i sometimes feel like a confused photographer as my photography interests have gone through sports nature events architecture and currently into streetscapes 
+198,joy,surprise,love,surprise,"i would hope id be able to explain why i feel as faithful as ive come to be 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -87,7 +87,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-414,love,sadness,sadness,sadness,"i was still feeling tender and did not try any 
+326,sadness,anger,anger,anger,"i feel submissive at times and so angry 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -98,7 +98,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-203,joy,fear,anger,anger,"i feel is only acceptable when that violence could lessen much more violence this could also apply to what i am discussing below i 
+126,anger,sadness,love,sadness,"i still love them yet i feel like they arent bothered anymore 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -109,7 +109,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-451,surprise,love,love,joy,"i honestly feel so overwhelmed and happy and just want to hug each and every one of you for being so amazing and supportive and just helping to make each of my days ten times better 
+310,sadness,anger,surprise,surprise,"i suppose that feeling foolish or even actually being foolish from time to time is going to be part of the ride 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -120,7 +120,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-239,joy,fear,anger,surprise,"i feel the celebrity culture becoming so popular speaks volumes about the values and priorities of kids these days and even of us actual proper people as well 
+192,joy,anger,love,love,"i love designing couture garments for all customers because i adore making people look and feel fabulous in what they are wearing whether it be a performance garment for the stage a glamorous wedding gown or simple stylish day dress 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -131,7 +131,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-186,joy,fear,sadness,sadness,"im not feeling so festive happy frickin new year 
+468,surprise,love,fear,fear,"i feels scares and curious at the same times 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -142,7 +142,315 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-391,love,sadness,sadness,sadness,"i feel a lot of pain in longing 
+240,joy,sadness,surprise,surprise,"i swear just when i was feeling relaxed i get a wake up call that this pregnancy is going to keep me on my toes 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+353,love,anger,joy,joy,"i feel that the sweet team really accomplished that 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+398,love,fear,sadness,sadness,"i feel for not caring for it but then i argue with myself that it would be the second blog i ve abandoned in six months and that i d be removing my forum for personal voice 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+211,joy,anger,love,surprise,"i and ruki s tendency to constantly feel the need to look glamorous i could just see the logics in the arrangements ruki had pressed on 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+226,joy,sadness,sadness,sadness,"i feel like giving up because i dont know if all ive been doing is worthwhile 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+219,joy,fear,love,surprise,"i feel that fox gives him signals that its acceptable 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+488,surprise,sadness,fear,sadness,"i sit down at the computer unsure of whether i want to write another post in the series or edit my latest food photos or link up my latest recipe post to a bunch of linkies or check my stats so i just feel overwhelmed and waste time 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+437,surprise,love,joy,love,"i love feeling him move around inside me all the time now i love these last few months i get to spend with just my amazing husband and we have really enjoyed our last summer of little responsibility 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+341,love,sadness,joy,surprise,"i have taken a xanax to calm my nerves for the dentist i am feeling especially generous so i will be giving away two prizes 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+490,surprise,sadness,joy,joy,"i feel amazing ladies its amazing what eating great food and exercising can do to make you feel great and make your brain fire better 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+223,joy,anger,love,surprise,"i get this feeling that she is very very popular 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+360,love,sadness,joy,joy,"i was feeling no pain as my mother liked to say 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+235,joy,sadness,love,surprise,"i am not afraid to disagree on a stance that i feel passionate about which is often required in the role as mayor of a city that is often ignored on a national level 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+243,joy,sadness,love,love,"i feel assured when im physically with you 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+249,sadness,fear,fear,joy,"i didn t feel embarrassed to only have 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+372,love,joy,joy,joy,"i was stepping into another position of privilege to feel generous to learn and to receive a stipend for it all for what 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+441,surprise,love,fear,sadness,"im in a situation where i am feeling overwhelmed 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+346,love,anger,anger,anger,"i actually bring money into this god forsaken house i feel as if i need to a make my dad realise that at the tender age of by fucking law im an adult 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+185,joy,sadness,sadness,sadness,"i used to do that with my feelings as well 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+395,love,fear,anger,fear,"i hate that i feel that we are on a delicate schedule with very little wiggle room 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+414,love,joy,sadness,sadness,"i was still feeling tender and did not try any 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+237,joy,sadness,sadness,sadness,"i may feel not perfect enough 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+239,joy,fear,love,surprise,"i feel the celebrity culture becoming so popular speaks volumes about the values and priorities of kids these days and even of us actual proper people as well 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+241,joy,sadness,sadness,sadness,"i may not feel like im not the perfect blogger or teacher i realized i need keep my focus on the reason why i started this blog over a year ago 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+203,joy,anger,anger,anger,"i feel is only acceptable when that violence could lessen much more violence this could also apply to what i am discussing below i 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+369,love,surprise,sadness,surprise,"i feel a gentle tap and find flower child watching me her expression grave 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+111,anger,sadness,fear,fear,"i want the ones im closest with to understand what im feeling and how dangerous it is 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+392,love,fear,sadness,surprise,"i felt some discomfort on my side for the rest of the day and it still feels a little tender now 
+
+If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
+A: Fear
+B: Anger
+C: Joy
+D: Sadness
+E: Love
+F: Surprise
+
+Constraint: Answer with only the option above that is most accurate and nothing else."
+439,surprise,love,anger,sadness,"i feel the most betrayed by one friend and you would be quite surprised if i actually typed the name i am asked how i felt when i could not conform to what is customary as far as relationships is concerned 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -164,7 +472,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-244,joy,fear,sadness,sadness,"i feel cute but the majority of the days i feel very swollen 
+288,sadness,fear,fear,surprise,"i couldnt feel it and that my bladder was empty 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -175,7 +483,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-413,love,fear,joy,joy,"i feel about reading and supporting others in the writing and reading community jamboree 
+460,surprise,fear,fear,sadness,"i also wanted to let you know that despite doing this blog post im still feeling a bit weird about blogging 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -186,7 +494,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-195,joy,love,love,love,"i feel like i can sit here today and tell you all how thankful i am that i got to carry her this long amp provide the safest place for her to grow regardless of what her future holds 
+358,love,joy,joy,sadness,"i feel like i achieved a lot but still not as much as i would have liked 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -197,7 +505,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-342,love,sadness,sadness,sadness,"i retired from teaching because i didnt feel i could handle dialysis teaching and being a supportive wife and mother 
+347,love,sadness,fear,surprise,"i would feel that she doesnt just stab me wit her finger but shes very delicate 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -208,7 +516,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-196,joy,fear,sadness,sadness,"i remember telling someone over and over again that i didnt feel valued or appreciated 
+137,anger,sadness,surprise,surprise,"i brush it to the side or tuck it behind my ear only to feel a few rebellious strands escape and tickle my cheeks and my lips i realize im not the one in control 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -219,7 +527,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-137,anger,fear,sadness,surprise,"i brush it to the side or tuck it behind my ear only to feel a few rebellious strands escape and tickle my cheeks and my lips i realize im not the one in control 
+319,sadness,joy,fear,joy,"i ever made fun of guys for feeling inhibited about reading comic books in public with half naked girls on the cover 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
@@ -230,315 +538,7 @@ E: Love
 F: Surprise
 
 Constraint: Answer with only the option above that is most accurate and nothing else."
-107,anger,love,love,surprise,"i feel almost greedy because i can have the love relationship and the service play relationship at the same time 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-346,love,fear,anger,anger,"i actually bring money into this god forsaken house i feel as if i need to a make my dad realise that at the tender age of by fucking law im an adult 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-126,anger,fear,love,sadness,"i still love them yet i feel like they arent bothered anymore 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-484,surprise,sadness,sadness,sadness,"i dont know if its just my mood when i read this anthology this month but i came away from it feeling a little less than impressed 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-437,surprise,love,love,love,"i love feeling him move around inside me all the time now i love these last few months i get to spend with just my amazing husband and we have really enjoyed our last summer of little responsibility 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-234,joy,sadness,surprise,fear,"i feel out of place or not cool enough to be there which is pretty maj for me 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-233,joy,fear,sadness,anger,"i can t tell you what that means but he s probably not feeling all that thankful 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-185,joy,fear,sadness,sadness,"i used to do that with my feelings as well 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-191,joy,love,love,love,"i have not one but two men that make feel special and wanted 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-348,love,sadness,sadness,sadness,"i was dumb and i had not have a bleak ofan idea that after two longs years of parting ways seeing her status in facebook change will create such feelings of guilt and pain and longing 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-419,surprise,fear,joy,joy,"i feel enthralled and on fire 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-96,anger,fear,sadness,sadness,"when i was dismissed unjustly from the firm where i worked 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-291,sadness,fear,joy,joy,"i could stay within my daily calorie limit without feeling deprived 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-93,anger,fear,fear,sadness,"i am feeling stressed out 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-366,love,fear,joy,surprise,"im feeling rather slutty at the moment 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-439,surprise,sadness,anger,sadness,"i feel the most betrayed by one friend and you would be quite surprised if i actually typed the name i am asked how i felt when i could not conform to what is customary as far as relationships is concerned 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-120,anger,fear,fear,sadness,"i normally have no problem with that thought im currently feeling a little nostalgia dangerous emotion that 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-492,surprise,fear,joy,joy,"i think i deserve for once this freedom makes me feel amazing 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-7,fear,love,love,love,"i know is the end result that it makes me feel vulnerable and i am more willing to sacrifice to make the relationship work and i want to allot time from my busy schedule to see these people and i trust and confide in them 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-431,surprise,love,joy,joy,"i am absolutely loving these shorts i feel amazing in them 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-116,anger,fear,sadness,fear,"i say when im feeling selfish and thinking only of myself worrying about my familys cancer history and fretting that its just a matter of time before i get the disease myself 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-147,anger,fear,fear,fear,"i start feeling really agitated and a bit panicky and the first thing i do is i have to take my shoes off and when i get home the socks as well 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-334,love,fear,anger,anger,"i am no fan of china and have laid it out many a times why i feel that supporting china is just giving support to a despotic oppressive communist regime 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-176,joy,love,love,love,"i feel like ive ever perfectly captured this beauty this perfect girl 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-148,anger,sadness,fear,sadness,"im going to die because im so dissatisfied feeling which consequently makes me realize that im actually dissatisfied not in any specific way but in a general way about how life is organized 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-208,joy,fear,sadness,sadness,"i feel like this book tries to be no more than a pleasant portrait of life in this alternate world regency england lacking in the memorable characters and social satire and make austen s novels so beloved 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-205,joy,fear,fear,surprise,"i feel most comfortable writing and where i feel out of my depth 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-335,love,fear,surprise,joy,"i feel hmm i treasured the eggrolls along with the fish hot sauce recipe 
-
-If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
-A: Fear
-B: Anger
-C: Joy
-D: Sadness
-E: Love
-F: Surprise
-
-Constraint: Answer with only the option above that is most accurate and nothing else."
-210,joy,fear,anger,anger,"im pretty sure theyre not supposed to do that so im already feeling less than thrilled with this outfit 
+464,surprise,love,love,love,"i will say that ellen degeneres is someone that i look up to and feel is such an amazing and inspirational person and i definitely admire her so i guess i could say ive got a little crush on her 
 
 If a mental health professional saw the above text, what emotion would they categorize it to be (using the following six basic emotions according to Paul Ekman)?
 A: Fear
