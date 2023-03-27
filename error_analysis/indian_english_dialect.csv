@@ -1,0 +1,1401 @@
+,gold,pred_text-davinci-003,pred_flan-ul2,pred_chatgpt,post
+70,none of the above,article omission,topicalized non-argument constituent,topicalized non-argument constituent,"it was the first day of term 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+128,none of the above,article omission,direct object pronoun drop,lack of inversion in wh-questions,"So at that time they said okay go and work for a few months. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+189,resumptive object pronoun,article omission,direct object pronoun drop,topicalized non-argument constituent,"My old life I want to spend it in India. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+177,left dislocation,article omission,"general extender ""and all""","general extender ""and all""","and all the company people, they are my clients 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+32,none of the above,article omission,direct object pronoun drop,topicalized non-argument constituent,"and the production function gives you the relationship between input and output 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+136,none of the above,lack of inversion in wh-questions,inversion in embedded clause,lack of inversion in wh-questions,"I don’t know now what they are doing 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+35,none of the above,lack of agreement,lack of agreement,lack of agreement,"he talks to them 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+179,none of the above,article omission,inversion in embedded clause,direct object pronoun drop,"you cannot ask them why they are not coming for clinic visits 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+239,none of the above,article omission,mass nouns as count nouns,topicalized non-argument constituent,"open a shop wherever there is foot traffic 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+92,lack of agreement,article omission,direct object pronoun drop,topicalized non-argument constituent,"my bother said that one of his favorite place is the beach nearby 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+109,left dislocation,article omission,direct object pronoun drop,focus itself,"The cake, I like it very much. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+158,none of the above,article omission,direct object pronoun drop,left dislocation,"The book that I left here, where is it? 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+68,left dislocation,article omission,direct object pronoun drop,topicalized non-argument constituent,"My old life I want to spend it in India. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+224,none of the above,article omission,"general extender ""and all""","general extender ""and all""","and all the company people are my clients 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+176,none of the above,article omission,extraneous article,topicalized non-argument constituent,"the store is around the corner by the post office 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+175,topicalized non-argument constituent,article omission,direct object pronoun drop,lack of inversion in wh-questions,"many years I did not travel 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+111,none of the above,article omission,direct object pronoun drop,topicalized non-argument constituent,"She has business experience. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+255,lack of inversion in wh-questions,article omission,direct object pronoun drop,object fronting,"where you will get anything? 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+146,resumptive object pronoun,resumptive subject pronoun,resumptive subject pronoun,resumptive subject pronoun,"Some teachers when I was in school I liked them very much. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+264,none of the above,article omission,focus only,left dislocation,"actually, I have not been to this part 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+148,none of the above,lack of inversion in wh-questions,inversion in embedded clause,lack of agreement,"he was wondering why the police stopped him 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+250,none of the above,article omission,object fronting,topicalized non-argument constituent,"the dog is facing towards the camera 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+184,none of the above,article omission,object fronting,lack of inversion in wh-questions,"everyone gets that vaccination in childhood 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+45,prepositional phrase fronting with reduction,preposition omission,focus only,"non-initial existential ""is / are there""","Tirupati temple I stayed one or two days 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+215,none of the above,article omission,direct object pronoun drop,left dislocation,"They have pressure from their in-laws. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+167,preposition omission,article omission,direct object pronoun drop,"invariant tag ""isn’t it, no, na""","actually, this part I have not been 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+141,none of the above,article omission,direct object pronoun drop,topicalized non-argument constituent,"yeah, so I go very often to my parent’s house 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+246,none of the above,article omission,direct object pronoun drop,topicalized non-argument constituent,"he has a television 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+17,none of the above,article omission,direct object pronoun drop,lack of inversion in wh-questions,"So if you’re not good at communication you may get filtered at even the first level 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+265,resumptive subject pronoun,article omission,direct object pronoun drop,topicalized non-argument constituent,"My daughter she is attending the University of Delhi. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+214,none of the above,direct object pronoun drop,direct object pronoun drop,direct object pronoun drop,"he didn’t give it to me 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+162,none of the above,"non-initial existential ""is / are there""","non-initial existential ""is / are there""","non-initial existential ""is / are there""","every year there is inflation 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+164,left dislocation,article omission,direct object pronoun drop,topicalized non-argument constituent,"the camera, the dog is facing towards it 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+171,direct object pronoun drop,article omission,object fronting,topicalized non-argument constituent,"we have two tailors who can make for us 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+90,none of the above,article omission,lack of inversion in wh-questions,left dislocation,"how is your mother feeling? 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+249,stative progressive,article omission,direct object pronoun drop,mass nouns as count nouns,"they are speaking Portuguese in Brazil 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+199,none of the above,article omission,direct object pronoun drop,left dislocation,"this is menial work 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+50,none of the above,lack of inversion in wh-questions,object fronting,topicalized non-argument constituent,"I can see some green colour leaves on the left side 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+135,none of the above,article omission,direct object pronoun drop,lack of inversion in wh-questions,"I like the cake very much. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+220,none of the above,article omission,direct object pronoun drop,mass nouns as count nouns,"they speak Portuguese in Brazil 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+84,none of the above,article omission,habitual progressive,topicalized non-argument constituent,"I’m working very near my house 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+182,preposition omission,article omission,prepositional phrase fronting with reduction,prepositional phrase fronting with reduction,"first of all, right side we can see a plate 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+133,none of the above,article omission,inversion in embedded clause,lack of agreement,"why are you driving like a lorry? 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+76,none of the above,article omission,direct object pronoun drop,"general extender ""and all""","They are all aggressive states. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+186,lack of inversion in wh-questions,article omission,inversion in embedded clause,lack of agreement,"why you are driving like a lorry? 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+244,lack of agreement,"general extender ""and all""","general extender ""and all""","general extender ""and all""","We are like we are in touch, but not before when we was in school and all. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+14,none of the above,focus only,focus only,focus only,"I was there just yesterday 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+93,copula omission,article omission,"general extender ""and all""","general extender ""and all""","They all aggressive states. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+87,none of the above,article omission,direct object pronoun drop,focus itself,"he likes it here more 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+40,none of the above,article omission,direct object pronoun drop,object fronting,"I’m going to find my bag which I left in the room. 
+    
+Which of the following features would a linguist say that the above sentence has?
+A: Article Omission (e.g., 'Person I like most is here.')
+B: Copula Omission (e.g., 'Everything busy in our life.')
+C: Direct Object Pronoun Drop (e.g., 'He didn’t give me.')
+D: Extraneous Article (e.g, 'Educated people get a good money.')
+E: Focus Itself (e.g, 'I did it in the month of June itself.')
+F: Focus Only (e.g, 'I was there yesterday only'.)
+G: General Extender ""and all"" (e.g, 'My parents and siblings and all really enjoy it'.)
+H: Habitual Progressive (e.g., 'They are getting H1B visas.')
+I: Invariant Tag ""isn’t it, no, na"" (e.g., 'It’s come from me, no?')
+J: Inversion In Embedded Clause (e.g., 'The school called to ask when are you going back.')
+K: Lack Of Agreement (e.g., 'He talk to them.')
+L: Lack Of Inversion In Wh-questions (e.g., 'What are you doing?')
+M: Left Dislocation (e.g., 'My parents, they really enjoy playing board games.')
+N: Mass Nouns As Count Nouns (e.g., 'They use proper grammars there.')
+O: Non-initial Existential ""is / are there"" (e.g., 'Every year inflation is there.')
+P: Object Fronting (e.g., 'In fifteen years, lot of changes we have seen.')
+Q: Prepositional Phrase Fronting With Reduction (e.g., 'First of all, right side we can see a plate.')
+R: Preposition Omission (e.g., 'I stayed alone two years.')
+S: Resumptive Object Pronoun (e.g., 'Some teachers when I was in school I liked them very much.')
+T: Resumptive Subject Pronoun (e.g., 'A person living in Calcutta, which he didn’t know Hindi earlier, when he comes to Delhi he has to learn English.')
+U: Stative Progressive (e.g., 'We will be knowing how much the structure is getting deflected.')
+V: Topicalized Non-argument Constituent (e.g., 'in the daytime I work for the courier service')
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
