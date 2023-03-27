@@ -1,311 +1,5 @@
-,gold,pred_text-davinci-003,pred_flan-t5-xl,pred_chatgpt,post
-33,-1,0,0,0,"user: What do you mean by ""one edit war away""? And whats a siteban? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-402,1,0,0,0,"user: I need to read more about what exactly a pastoral opera is supposed to be. Perhaps it should be a supercategory? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-142,-1,0,0,0,"user: Now I'm confused--did I miss something? Who was talking about G1, and who was talking about IP blocks? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-114,-1,0,0,0,"user: Your new images of Micheal Knight and Devon look kinda squashed. Can you fix them or find better ones to replace them? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-68,-1,0,0,0,"user: Um... the Kent roast? Tentrake host? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-25,-1,0,0,1,"user: Email from the Darkshado guy complaining about you adding him to the spamlist. I searched the site and couldn't find any of our articles replicated there; has he removed them, or what? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-93,-1,1,0,0,"user: The flag ""visible=yes"" means a comment on the page is made visible, not that the page is visible in search engines. Why did you remove flag? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-66,-1,0,0,0,"user: I saw you removed the copyright CSD from Universum University as being ""unclear copyright status"".  What am I missing? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-47,-1,1,1,0,"user: The policy is quite clear; userids set up for the purposes of harassment or vandalism are blocked indefinitely.  That said, what policy is it that you think I'm not following? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-62,-1,0,0,0,"user: Ack, hit the wrong button?  How do you manage that? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-23,-1,0,0,0,"user: Please answer Bishonen question to you. When were you invited to comment on UC related subjects? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-35,-1,0,0,0,"user: Well, now you've got me puzzled. If you think he's a sneaky vandal, why did you revert my reversion of his numerical change? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-125,-1,0,1,0,"user: Where did you learn English? How come you're taking on a third language? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-22,-1,1,0,0,"user: One question - how come the page is marked as ""in dispute""?  The data that is currently posted isn't in dispute, correct? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-113,-1,0,0,0,"user: In this <url> there was a loss of some info.  Was that intentional? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-72,-1,1,1,0,"user: Third: it's August 31 2010. Please check my userpage for reasons why I really don't feel useful today. Ask another admin, okay? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-18,-1,0,0,1,"user: How about Guant who plays Pansy? Or Richard Fish who played Bill Weasley, and the actor who played Charlie Weasley in POA? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-121,-1,0,0,0,"user: I see that you are becoming a little bit paranoid. Do i need to do a check user for you ? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-31,-1,0,0,0,"user: ED... They have drugs to fix that now, don't they? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-405,1,0,0,0,"user: Oh, that's because I only copyedited a tiny section of the article. Should I still count that as a yes? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-5,-1,1,1,0,"user: I have some made some improvements to the articles you references on the above user's talk page. Perhaps next time you would bring your concerns directly to '''me'''? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-28,-1,0,0,0,"user: and so is the new Portishead. Did I mention the Knife? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-127,-1,0,1,0,"user: Wow, you waited a whole ten minutes. What's the problem? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-11,-1,1,0,0,"user: I pretty much agree with <url>, except I would like to know why you modified the see also section to be a hatnote. Doesn't <url> have specific requirements for this? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-135,-1,1,0,0,"user: Since I have not been able to get an answer to this on the project page, let me ask you directly: Did you receive Durova's ""secret evidence"" prior to the blocking of <url>? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-161,-1,1,1,0,"user: Thanks, but I believe I've covered the sustance. Could you also get Beeblebrox to strike the ""Mr"" insult, unless he was doing it deliberately? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-220,0,1,1,1,"user: Ok, I'd agree about <url> being better. Should I delete the other one (you could also tag it for speedy deletion as a mistake)? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-57,-1,1,0,0,"user: Im interested in where you got the information you added stating woodlands house was closed in 2003. As far as i can see your wording was taken from one website, the milesfaster one. Should you not cite the website you quoted rather than look for a couple of others? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-91,-1,0,0,0,"user: Unfortunately I think <url> may also add that material; I am not familiar with Citizendum, though, but I will look at it. If Citizendum has the same policies regarding primary, secondary, and tertiary sources, then why not criticize both Wikipedia and Citizendum? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-89,-1,0,0,0,"user: Thanks; I expected a decline, despite my extensive comments at <url>. As there is nothing more to this article than listings of bylines in non-notable publications, minor book acknowledgments, uncredited movie extra roles, blog comments, paid directory listings, and unsubstantiated claims about wildly over-the-top PR accomplishments, what exactly do you consider to be the examples of ""credible notability""? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-81,-1,1,1,0,"user: Ah well, if you are going to have such a bizarre flight of fancy as far as to calling it an attack page then perhaps I will remove it. Maybe you should also look at how you interact with others? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-49,-1,0,0,0,"user: This is what you wrote: ""In the book 'Inventing Elliot' written by Graham Gardener, the book, 1948 is mentioned numerous times."" What book, 1948?? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-97,-1,0,1,0,"user: Sorry Less? What is that last postdirected at? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-34,-1,1,0,0,"user: Concerning <url>, I must say I am a bit confused: isn't the article's title ""Austria<span style=""color:red"">u2013</span>Hungary"" (where, incidentally, it was moved after an ""Austria<span style=""color:red"">-</span>Hungary"" period)? It's really no big deal, but how can something be both correct and incorrect, and which standard are we at long last supposed to follow? 
-
-Based on formal workplace social norms, which of the following best describes the above conversation? 
-A: Polite
-B: Neutral
-C: Impolite
-
-Constraint: Answer with only the option above that is most accurate and nothing else.
-"
-61,-1,0,0,0,"user: I couldn't tell you why glam rock was there. Better? 
+,gold,pred_text-davinci-002,pred_flan-t5-xl,pred_chatgpt,post
+152,-1,0,1,0,"user: I replied to you <url> but you didn't answer. Did you not see it? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -323,7 +17,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-74,-1,0,1,1,"user: I'm not sure how I feel about you adding coordinates to locations all over the place, but rather than get into that, let's start with something easy: ""<url>"" does not equal ""<url>"". Do you need me to explain why, or was that just a typo? 
+147,-1,0,0,1,"user: Hi. The original link (http://www.lgso.org.uk/index.htm) gives a 404 error, but the amended URL (http://www.lgso.org.uk/) works for me, so why do you say it's still dead? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -332,7 +26,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-262,0,1,-1,1,"user: I noticed you reverted a US English speller.  Shouldn't the section <url> actually be spelled ''Tyres'' for internal consistency? 
+34,-1,0,0,0,"user: Concerning <url>, I must say I am a bit confused: isn't the article's title ""Austria<span style=""color:red"">u2013</span>Hungary"" (where, incidentally, it was moved after an ""Austria<span style=""color:red"">-</span>Hungary"" period)? It's really no big deal, but how can something be both correct and incorrect, and which standard are we at long last supposed to follow? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -341,7 +35,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-485,1,0,0,0,"user: Arguably, listing the former constructors and even the template itself is not necessary. Could we please try reinstating the previous version and see if and how many other folk don't find the decade information useful/intriguing? 
+91,-1,0,0,0,"user: Unfortunately I think <url> may also add that material; I am not familiar with Citizendum, though, but I will look at it. If Citizendum has the same policies regarding primary, secondary, and tertiary sources, then why not criticize both Wikipedia and Citizendum? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -350,7 +44,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-126,-1,1,0,0,"user: PS - surprised you didn't make the annoucement in your blog.  Trying to fool your hordes of devoted readers? 
+24,-1,0,0,0,"user: Further: it seems to me that <url> was a perfectly reasonable dab page. I wonder why you needed to change it? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -359,7 +53,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-17,-1,0,0,0,"user: I see that you closed that CfD discussion as rename, but haven't actually renamed the categories. What's up with that? 
+61,-1,0,0,0,"user: I couldn't tell you why glam rock was there. Better? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -368,7 +62,70 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-101,-1,0,0,0,"user: You reverted my removal of the ""to critical acclaim"" description from this article. I cannot see where in <url> there is a basis for that claim -  it looks like a neutral factual review to me? 
+32,-1,0,1,0,"user: Eh? No, those facts were correct, why do you think they were not? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+89,-1,0,0,0,"user: Thanks; I expected a decline, despite my extensive comments at <url>. As there is nothing more to this article than listings of bylines in non-notable publications, minor book acknowledgments, uncredited movie extra roles, blog comments, paid directory listings, and unsubstantiated claims about wildly over-the-top PR accomplishments, what exactly do you consider to be the examples of ""credible notability""? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+7,-1,1,1,0,"user: Dana, before I give the examples of what sections or parts in the article that needs fixing, I need to know if <url> is still gonna work on the problems. Do you get me? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+80,-1,0,0,0,"user: So, let me make sure I understand this. You think that, if we remove an image as it does not meet the NFCC, you would then be able to upload the same image, only this time, it would meet the NFCC? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+25,-1,0,0,1,"user: Email from the Darkshado guy complaining about you adding him to the spamlist. I searched the site and couldn't find any of our articles replicated there; has he removed them, or what? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+422,1,0,0,0,"user: I would specifically appreciate an outside view at the thread <url>.  What do you feel is the appropriate action? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+66,-1,0,0,0,"user: I saw you removed the copyright CSD from Universum University as being ""unclear copyright status"".  What am I missing? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+113,-1,0,0,0,"user: In this <url> there was a loss of some info.  Was that intentional? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -386,7 +143,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-54,-1,0,1,0,"user: What City in Connecticut do you live in? And have you been to the north as your name suggests? 
+35,-1,0,0,0,"user: Well, now you've got me puzzled. If you think he's a sneaky vandal, why did you revert my reversion of his numerical change? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -395,7 +152,70 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-56,-1,0,1,0,"user: I don't think I've used it in Wikipedia.  So, if I haven't, why did you bring it up? 
+49,-1,0,0,0,"user: This is what you wrote: ""In the book 'Inventing Elliot' written by Graham Gardener, the book, 1948 is mentioned numerous times."" What book, 1948?? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+45,-1,0,0,0,"user: It's placed outside of the article body, not ""randomly put in the code"". Why such shuffling is a ""proper CHECKWIKKI task"" and why does it warrant saving an edit? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+462,1,0,0,-1,"user: A quick question, I'd like your opinion on something. Do you think I should put <url> GAN on hold or fail it? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+220,0,1,1,1,"user: Ok, I'd agree about <url> being better. Should I delete the other one (you could also tag it for speedy deletion as a mistake)? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+97,-1,0,1,0,"user: Sorry Less? What is that last postdirected at? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+485,1,0,0,0,"user: Arguably, listing the former constructors and even the template itself is not necessary. Could we please try reinstating the previous version and see if and how many other folk don't find the decade information useful/intriguing? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+47,-1,0,1,0,"user: The policy is quite clear; userids set up for the purposes of harassment or vandalism are blocked indefinitely.  That said, what policy is it that you think I'm not following? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+116,-1,0,0,0,"user: I believe supserstition exists.  Why did you ask me? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -413,7 +233,7 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-26,-1,0,1,0,"user: I'm sure. How about we let the sockpuppet investigation let us know for certain, m'kay? 
+70,-1,0,1,1,"user: Hi, sorry I think I'm missing something here. Why are you adding a red link to the vandalism page? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -422,7 +242,106 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-134,-1,0,0,0,"user: And if you use Coulson you would probably have to say ""According to Coulson..."". Have you read <url> yet? 
+71,-1,0,0,0,"user: I don't understand why did you add that message at the bottom of this page?? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+124,-1,0,0,0,"user: Just to let you know, there's a <url> now. I don't know, is this mimicry allowed on Wikipedia? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+363,1,0,0,0,"user: I'm working on improving the references on Kulwicki's article to get more reliable ones. I've also worked on improving <url>'s article toward GA. Do you know much about drag racing? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+101,-1,0,0,0,"user: You reverted my removal of the ""to critical acclaim"" description from this article. I cannot see where in <url> there is a basis for that claim -  it looks like a neutral factual review to me? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+22,-1,0,0,0,"user: One question - how come the page is marked as ""in dispute""?  The data that is currently posted isn't in dispute, correct? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+148,-1,0,0,0,"user: Let me know what you'd like me to do. Are you/anyone thinking of copying over the temporary copy wholesale or in parts; destroying the edit history of either, both or neither..? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+173,0,-1,1,1,"user: Perhaps an essay could clarify this? ""Be Assertive, not Aggressive"", or ""Act like a Professional""? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+62,-1,0,0,0,"user: Ack, hit the wrong button?  How do you manage that? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+65,-1,0,0,0,"user: Why isn't <url> included there? Is it possible there's a redirect in it's place? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+68,-1,0,0,0,"user: Um... the Kent roast? Tentrake host? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+33,-1,0,0,0,"user: What do you mean by ""one edit war away""? And whats a siteban? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+118,-1,0,0,0,"user: I thought that only section tags go into sections while the article tags go to the top of the page so they could serve it's purpose. Is there a Wikipedia guideline that can substantiate your revert? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
@@ -440,7 +359,88 @@ C: Impolite
 
 Constraint: Answer with only the option above that is most accurate and nothing else.
 "
-158,-1,0,0,1,"user: You also seem somedeal similar to <url>. Not logging in is not sockpuppetry but do you acknowledge that User:64.194.44.220 is you? 
+142,-1,0,0,0,"user: Now I'm confused--did I miss something? Who was talking about G1, and who was talking about IP blocks? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+324,0,1,1,1,"user: Please see <url>. Should I move the material to the <url> and resubmit the nomination? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+11,-1,0,0,0,"user: I pretty much agree with <url>, except I would like to know why you modified the see also section to be a hatnote. Doesn't <url> have specific requirements for this? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+75,-1,0,1,0,"user: Right, so the links on your userpage? And what is the ""article"" you want me to check over? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+405,1,0,0,0,"user: Oh, that's because I only copyedited a tiny section of the article. Should I still count that as a yes? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+114,-1,0,0,0,"user: Your new images of Micheal Knight and Devon look kinda squashed. Can you fix them or find better ones to replace them? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+103,-1,1,0,0,"user: When you deleted <url> did you accidentally overlook the <person> template? Or do you have some reason for ignoring it? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+12,-1,0,0,0,"user: I kind of agree.  Are you planning on actually editing Wikipedia, or is your whole purpose here to promote this ... study (or whatever it is)? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+85,-1,0,1,0,"user: Having said that, I don't want to drive anyone away just because they can't write well. The question is, where do you begin? 
+
+Based on formal workplace social norms, which of the following best describes the above conversation? 
+A: Polite
+B: Neutral
+C: Impolite
+
+Constraint: Answer with only the option above that is most accurate and nothing else.
+"
+409,1,0,0,0,"user: Hey Alex... I just emailed a United Kingdom professor, intending to email a University of Kentucky professor. If he expresses interest, are you the person he should talk to? 
 
 Based on formal workplace social norms, which of the following best describes the above conversation? 
 A: Polite
