@@ -1,0 +1,299 @@
+im not sure how i feel about them yet the concealer brush is lovely but i find the powder brush is a little dry and irritates my skin at times 
+gold: love
+davi: fear, incorrect
+flan: surprise, incorrect
+chat: sadness, multiple_labels_correct
+
+i suddenly feel the potentiality to be judged and rejected so i begin to question everything every word which is presumably why making new friends proper friends trusted friends becomes impossible 
+gold: sadness
+davi: anger, incorrect
+flan: fear, multiple_labels_correct
+chat: fear, multiple_labels_correct
+
+i do feel the stance of just being too delicate for society is very much dependent on someone else doing the housework and looking after the children 
+gold: love
+davi: joy, gold_mislabel_incorrect
+flan: sadness, gold_mislabel_correct
+chat: surprise, gold_mislabel_incorrect
+
+i feel most comfortable writing and where i feel out of my depth 
+gold: joy
+davi: sadness, incorrect
+flan: fear, incorrect
+chat: surprise, incorrect
+
+i feel hmm i treasured the eggrolls along with the fish hot sauce recipe 
+gold: love
+davi: anger, incorrect
+flan: joy, multiple_labels_correct
+chat: joy, multiple_labels_correct
+
+i have not one but two men that make feel special and wanted 
+gold: joy
+davi: anger, incorrect
+flan: love, multiple_labels_correct
+chat: love, multiple_labels_correct
+
+i am off on friday the th and i am feeling productive getting laundry and dusting done and the cat is just being an insane and complete a hole 
+gold: joy
+davi: sadness, gold_mislabel_incorrect
+flan: anger, gold_mislabel_correct
+chat: anger, gold_mislabel_correct
+
+i would hope id be able to explain why i feel as faithful as ive come to be 
+gold: joy
+davi: surprise, incorrect
+flan: love, multiple_labels_correct
+chat: surprise, incorrect
+
+i feel submissive at times and so angry 
+gold: sadness
+davi: anger, multiple_labels_correct
+flan: anger, multiple_labels_correct
+chat: anger, multiple_labels_correct
+
+i still love them yet i feel like they arent bothered anymore 
+gold: anger
+davi: sadness, gold_mislabel_correct
+flan: love, gold_mislabel_correct
+chat: sadness, gold_mislabel_correct
+
+i suppose that feeling foolish or even actually being foolish from time to time is going to be part of the ride 
+gold: sadness
+davi: anger, incorrect
+flan: surprise, incorrect
+chat: surprise, incorrect
+
+i love designing couture garments for all customers because i adore making people look and feel fabulous in what they are wearing whether it be a performance garment for the stage a glamorous wedding gown or simple stylish day dress 
+gold: joy
+davi: anger, incorret
+flan: love, multiple_labels_correct
+chat: love, multiple_labels_correct
+
+i feels scares and curious at the same times 
+gold: surprise
+davi: love, gold_mislabel_incorrect
+flan: fear, gold_mislabel_correct
+chat: fear, gold_mislabel_correct
+
+i swear just when i was feeling relaxed i get a wake up call that this pregnancy is going to keep me on my toes 
+gold: joy
+davi: sadness, gold_mislabel_incorrect
+flan: surprise, gold_mislabel_correct
+chat: surprise, gold_mislabel_correct
+
+i feel that the sweet team really accomplished that 
+gold: love
+davi: anger, incorrect
+flan: joy, multiple_labels_correct
+chat: joy, multiple_labels_correct
+
+i feel for not caring for it but then i argue with myself that it would be the second blog i ve abandoned in six months and that i d be removing my forum for personal voice 
+gold: love
+davi: fear, gold_mislabel_incorrect
+flan: sadness, gold_mislabel_correct
+chat: sadness, gold_mislabel_correct
+
+i and ruki s tendency to constantly feel the need to look glamorous i could just see the logics in the arrangements ruki had pressed on 
+gold: joy
+davi: anger, incorrect
+flan: love, incorrect
+chat: surprise, incorrect
+
+i feel like giving up because i dont know if all ive been doing is worthwhile 
+gold: joy
+davi: sadness, gold_mislabel_correct
+flan: sadness, gold_mislabel_correct
+chat: sadness, gold_mislabel_correct
+
+i feel that fox gives him signals that its acceptable 
+gold: joy
+davi: fear, incorrect
+flan: love, incorrect
+chat: surprise, incorrect
+
+i sit down at the computer unsure of whether i want to write another post in the series or edit my latest food photos or link up my latest recipe post to a bunch of linkies or check my stats so i just feel overwhelmed and waste time 
+gold: surprise
+davi: sadness, incorrect
+flan: fear, incorrect
+chat: sadness, incorrect
+
+i love feeling him move around inside me all the time now i love these last few months i get to spend with just my amazing husband and we have really enjoyed our last summer of little responsibility 
+gold: surprise
+davi: love, gold_mislabel_correct
+flan: joy, gold_mislabel_correct
+chat: love, gold_mislabel_correct
+
+i have taken a xanax to calm my nerves for the dentist i am feeling especially generous so i will be giving away two prizes 
+gold: love
+davi: sadness, incorrect
+flan: joy, multiple_labels_correct
+chat: surprise, multiple_labels_correct
+
+i feel amazing ladies its amazing what eating great food and exercising can do to make you feel great and make your brain fire better 
+gold: surprise
+davi: sadness, gold_mislabel_incorrect
+flan: joy, gold_mislabel_correct
+chat: joy, gold_mislabel_correct
+
+i get this feeling that she is very very popular 
+gold: joy
+davi: anger, incorrect
+flan: love, multiple_labels_correct
+chat: surprise, incorrect
+
+i was feeling no pain as my mother liked to say 
+gold: love
+davi: sadness, multiple_labels_correct
+flan: joy, multiple_labels_correct
+chat: joy, multiple_labels_correct
+
+i am not afraid to disagree on a stance that i feel passionate about which is often required in the role as mayor of a city that is often ignored on a national level 
+gold: joy
+davi: sadness, incorrect
+flan: love, multiple_labels_correct
+chat: surprise, multiple_labels_correct
+
+i feel assured when im physically with you 
+gold: joy
+davi: sadness, incorrect
+flan: love, multiple_labels_correct
+chat: love, multiple_labels_correct
+
+i didn t feel embarrassed to only have 
+gold: sadness
+davi: fear, gold_mislabel_correct
+flan: fear, gold_mislabel_correct
+chat: joy, incorrect
+
+i was stepping into another position of privilege to feel generous to learn and to receive a stipend for it all for what 
+gold: love
+davi: joy, gold_mislabel_incorrect
+flan: joy, gold_mislabel_incorrect
+chat: joy, gold_mislabel_incorrect
+
+im in a situation where i am feeling overwhelmed 
+gold: surprise
+davi: love, incorrect
+flan: fear, multiple_labels_correct
+chat: sadness, multiple_labels_correct
+
+i actually bring money into this god forsaken house i feel as if i need to a make my dad realise that at the tender age of by fucking law im an adult 
+gold: love
+davi: anger, gold_mislabel_correct
+flan: anger, gold_mislabel_correct
+chat: anger, gold_mislabel_correct
+
+i used to do that with my feelings as well 
+gold: joy
+davi: sadness, incorrect
+flan: sadness, incorrect
+chat: sadness, incorrect
+
+i hate that i feel that we are on a delicate schedule with very little wiggle room 
+gold: love
+davi: fear, gold_mislabel_correct
+flan: anger, gold_mislabel_correct
+chat: fear, gold_mislabel_correct
+
+i was still feeling tender and did not try any 
+gold: love
+davi: joy, gold_mislabel_incorrect
+flan: sadness, gold_mislabel_correct
+chat: sadness, gold_mislabel_correct
+
+i may feel not perfect enough 
+gold: joy
+davi: sadness, gold_mislabel_correct
+flan: sadness, gold_mislabel_correct
+chat: sadness, gold_mislabel_correct
+
+i feel the celebrity culture becoming so popular speaks volumes about the values and priorities of kids these days and even of us actual proper people as well 
+gold: joy
+davi: fear, gold_mislabel_correct
+flan: love, gold_mislabel_incorrect
+chat: surprise, gold_mislabel_correct
+
+i may not feel like im not the perfect blogger or teacher i realized i need keep my focus on the reason why i started this blog over a year ago 
+gold: joy
+davi: sadness, incorrect
+flan: sadness, incorrect
+chat: sadness, incorrect
+
+i feel is only acceptable when that violence could lessen much more violence this could also apply to what i am discussing below i 
+gold: joy
+davi: anger, incorrect
+flan: anger, incorrect
+chat: anger, incorrect
+
+i feel a gentle tap and find flower child watching me her expression grave 
+gold: love
+davi: surprise, incorrect
+flan: sadness, incorrect
+chat: surprise, incorrect
+
+i want the ones im closest with to understand what im feeling and how dangerous it is 
+gold: anger
+davi: sadness, incorrect
+flan: fear, incorrect
+chat: fear, incorrect
+
+i felt some discomfort on my side for the rest of the day and it still feels a little tender now 
+gold: love
+davi: fear, gold_mislabel_incorrect
+flan: sadness, gold_mislabel_correct
+chat: surprise, gold_mislabel_incorrect
+
+i feel the most betrayed by one friend and you would be quite surprised if i actually typed the name i am asked how i felt when i could not conform to what is customary as far as relationships is concerned 
+gold: surprise
+davi: love, incorrect
+flan: anger, incorrect
+chat: sadness, incorrect
+
+i have a feeling he has been distracted by talks of where he will fight next the apprentice clothing lines jenna other busisness ventures did i mention jenna 
+gold: anger
+davi: fear, incorrect
+flan: love, incorrect
+chat: surprise, incorrect
+
+i couldnt feel it and that my bladder was empty 
+gold: sadness
+davi: fear, incorrect
+flan: fear, incorrect
+chat: surprise, incorrect
+
+i also wanted to let you know that despite doing this blog post im still feeling a bit weird about blogging 
+gold: surprise
+davi: fear, incorrect
+flan: fear, incorrect
+chat: sadness, incorrect
+
+i feel like i achieved a lot but still not as much as i would have liked 
+gold: love
+davi: joy, multiple_labels_correct
+flan: joy, multiple_labels_correct
+chat: sadness, multiple_labels_correct
+
+i would feel that she doesnt just stab me wit her finger but shes very delicate 
+gold: love
+davi: sadness, incorrect
+flan: fear, incorrect
+chat: surprise, incorrect
+
+i brush it to the side or tuck it behind my ear only to feel a few rebellious strands escape and tickle my cheeks and my lips i realize im not the one in control 
+gold: anger
+davi: sadness, gold_mislabel_incorrect
+flan: surprise, gold_mislabel_correct
+chat: surprise, gold_mislabel_correct
+
+i ever made fun of guys for feeling inhibited about reading comic books in public with half naked girls on the cover 
+gold: sadness
+davi: joy, incorrect
+flan: fear, incorrect
+chat: joy, incorrect
+
+i will say that ellen degeneres is someone that i look up to and feel is such an amazing and inspirational person and i definitely admire her so i guess i could say ive got a little crush on her 
+gold: surprise
+davi: love, gold_mislabel_correct
+flan: love, gold_mislabel_correct
+chat: love, gold_mislabel_correct
