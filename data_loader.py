@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from convokit import Corpus, download
 from mappings import *
+from latex_prompt_exporter import export_latex
 
 
 def deep_get(recursive_key, recursive_dict):
@@ -25,7 +26,7 @@ def boolify(df):
 
 def get_context_column(df, context_column, colname=True):
     def row(r, context_column):
-        if colname or (len(context_column)>1):
+        if colname or (len(context_column) > 1):
             return "\n\n".join([f"{col}: {r[col]}" for col in context_column])
         else:
             return "\n\n".join([r[col] for col in context_column])
@@ -36,14 +37,14 @@ def get_context_column(df, context_column, colname=True):
 
 
 def truncate(text, length=2048):
-    #print(text, " ".join(text.split(" ")[:length]))
+    # print(text, " ".join(text.split(" ")[:length]))
     return " ".join(text.split(" ")[:length])
 
 
 def build_prompts(df, prompt_template):
     cols = re.findall(r"{\$([A-Za-z_ ]+)}", prompt_template)
     trunc_length = 2048 // max(len(cols), 1)
-    
+
     prompts = []
     for _, row in df.iterrows():
         prompt = prompt_template
@@ -59,25 +60,21 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     if type(label_columns) == tuple:
         additional_labels = label_columns[1:]
         label_columns = label_columns[0]
-    
+
     df = pd.DataFrame()
     if local:
         df = pd.read_csv("{}/{}.csv".format(save_dir, dataset))
     elif jsonl:
         filename = "{}/{}.jsonl".format(save_dir, dataset)
         if not os.path.exists(filename):
-            filename = wget.download(
-                jsonl_download[dataset], out=filename
-            )
+            filename = wget.download(jsonl_download[dataset], out=filename)
         with open(filename, "r") as infile:
             data = data = {i: json.loads(L) for i, L in enumerate(infile.readlines())}
             df = pd.DataFrame.from_dict(data).T
     else:
         filename = "{}/{}.csv".format(save_dir, dataset)
         if not os.path.exists(filename):
-            filename = wget.download(
-                csv_download[dataset], out=filename
-            )
+            filename = wget.download(csv_download[dataset], out=filename)
         # df = pd.read_csv(filename)
         if type(context_column) in {str, tuple}:
             df = pd.read_csv(filename)
@@ -87,7 +84,9 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
     df["context"] = get_context_column(df, context_column)  # df[context_column]
     df["labels"] = df[label_columns]
     if additional_labels:
-        df["additional_labels"] = get_context_column(df, additional_labels, colname=False)
+        df["additional_labels"] = get_context_column(
+            df, additional_labels, colname=False
+        )
     df = boolify(df)
     df["prompts"] = build_prompts(
         df, prompts_templates[dataset]
@@ -100,6 +99,13 @@ def csv_process(dataset, save_dir, local=False, jsonl=False):
         df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
+    export_latex(
+        dataset,
+        df["context"][0],
+        df["prompts"][0],
+        df["labels"][0],
+        "./latex/{}.json".format(dataset),
+    )
     df.to_json("{}/{}.json".format(save_dir, dataset))
 
 
@@ -133,6 +139,13 @@ def alphaenumerate_process(dataset, save_dir):
     df = df[["context", "labels", "prompts"]]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
+    export_latex(
+        dataset,
+        df["context"][0],
+        df["prompts"][0],
+        df["labels"][0],
+        "./latex/{}.json".format(dataset),
+    )
     df.to_json("{}/{}.json".format(save_dir, dataset))
 
 
@@ -226,6 +239,13 @@ def convokit_process(dataset, save_dir):
         data_f = data_f[~data_f["labels"].isin(drop_labels[dataset])]
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
+    export_latex(
+        dataset,
+        contexts[0],
+        prompts[0],
+        labels[0],
+        "./latex/{}.json".format(dataset),
+    )
     data_f.to_json(save_dir + "/{}.json".format(dataset))
 
 
