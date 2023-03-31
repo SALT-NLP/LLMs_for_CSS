@@ -352,7 +352,7 @@ def get_answers(input_path, output_path, prompts_path, args):
                 ):  # implement: in_domain
                     print("no error for this sample")
                     allflag[touseindex[i]] = 1
-                    print(touseindex[i], gold_label[i].replace("\u2019", "'").replace("\u2018", "'").replace("\u201a", "'"), touseresponse)
+                    print(touseindex[i], gold_label[i], touseresponse)
                     fw.write(
                         str(touseindex[i])
                         + "\t"
@@ -437,8 +437,6 @@ def calculateres_hippocorpus(path, args):
                 if sent in gold:  # true positive
                     TP += 1
                 else:  # false positive
-                    # print(sent, gold)
-                    break
                     FP += 1
             else:
                 if sent in gold:  # false negative
@@ -667,12 +665,15 @@ def calculateres(path, args):
                 "inversion in embedded clause": "J",
                 "focus itself": "E",
                 'general extender "and all"': "G",
+                '"general extender ""and all"""': "G",
                 "object fronting": "P",
                 'invariant tag "isn’t it, no, na"': "I",
+                '"invariant tag ""isn’t it, no, na"""': "I",
                 "habitual progressive": "H",
                 "article omission": "A",
                 "prepositional phrase fronting with reduction": "Q",
                 'non-initial existential "is / are there"': "O",
+                '"non-initial existential ""is / are there"""': "O",
                 "left dislocation": "M",
                 "direct object pronoun drop": "C",
             }
@@ -800,11 +801,6 @@ def parse_arguments():
         args.raw_datapath = "css_data/flute/flute-classification.json"
         args.input_path = "css_data/flute/test-classification.json"
         args.answer_path = "css_data/flute/answer-classification"
-    elif args.dataset == "supreme_corpus":
-        args.raw_datapath = "css_data/supreme_corpus/stance.json"
-        args.input_path = "css_data/supreme_corpus/test.json"
-        args.answer_path = "css_data/supreme_corpus/answer"
-        args.labelset = labelsets["stance"]
     elif args.dataset == "politeness":
         args.raw_datapath = "css_data/wiki_politeness/politeness.json"
         args.input_path = "css_data/wiki_politeness/test.json"
