@@ -12,24 +12,25 @@ from statsmodels.stats.inter_rater import fleiss_kappa
 # let r be the number of times that delta(A,B)<2*orig_delta(A,B). significance level: r/R
 # This implementation follows the description in Berg-Kirkpatrick et al. (2012), 
 # "An Empirical Investigation of Statistical Significance in NLP".
-def Bootstrap(data_A, data_B, R = 100):
-    n = min(len(data_A), len(data_B))
-    if n == 0:
-        return -1
-    delta_orig = float(sum([ x - y for x, y in zip(data_A, data_B)]))/n
+def Bootstrap(data_A, data_B, R = 10000, alpha = 0.05):
+    n = len(data_A)
+    R = max(R, int(len(data_A) * (1 / float(alpha))))
+    delta_orig = float(sum([x - y for x, y in zip(data_A, data_B)])) / n
     r = 0
     for x in range(0, R):
-        temp_A = data_A
-        temp_B = data_B
-        samples = [np.random.randint(1, 3) for i in range(n)] #which samples to swap without repetitions
-        swap_ind = [i for i, val in enumerate(samples) if val == 1]
-        for ind in swap_ind:
-            temp_B[ind], temp_A[ind] = temp_A[ind], temp_B[ind]
-        delta = float(sum([ x - y for x, y in zip(temp_A, temp_B)]))/n
-        if(delta<=delta_orig):
-            r = r+1
-    pval = float(r+1.0)/(R+1.0)
+        temp_A = []
+        temp_B = []
+        samples = np.random.randint(0,n,n) #which samples to add to the subsample with repetitions
+        for samp in samples:
+            temp_A.append(data_A[samp])
+            temp_B.append(data_B[samp])
+        delta = float(sum([x - y for x, y in zip(temp_A, temp_B)])) / n
+        if (delta > 2*delta_orig):
+            r = r + 1
+    pval = float(r)/(R)
     return pval
+
+
 
 DATASETS = ["discourse",
             "conv_go_awry",
@@ -166,45 +167,17 @@ def clean(txt, mapping={}):
 #         print(txt, c, mapping)
     return c.lower()
 
-def split_accs(pred, gold, pred_1, gold_1, n = 100):
-    accs = []
-    accs_1 = []
-    try:
-        pred = np.array(pred)
-        gold = np.array(gold)
-        
-        pred_1 = np.array(pred_1)
-        gold_1 = np.array(gold_1)
-        
-        
-        acc = sum(pred==gold)/len(gold)
-        acc_1 = sum(pred_1==gold_1)/len(gold_1)
-        
-        
-        accs.append(acc*100)
-        accs_1.append(acc_1*100)
-    except:
-        return accs, accs_1
+def split_corr(pred_1, gold_1, pred_2, gold_2, n = 100):
+    model_1_pred = np.array(pred_1)
+    model_1_gold = np.array(gold_1)
+    corr_1 = (model_1_pred == model_1_gold).astype(int)
+
+    model_2_pred = np.array(pred_2)
+    model_2_gold = np.array(gold_2)
+    corr_2 = (model_2_pred == model_2_gold).astype(int)
     
-    for i in range(0, n):
-        ids = np.random.choice(np.arange(min(len(pred), len(pred_1))), size = int(min(len(pred), len(pred_1))* 0.5), replace = False)
-        #ids_2 = np.random.choice(np.arange(min(len(pred), len(pred_1))), size = int(min(len(pred), len(pred_1))* 0.5), replace = False)
-        
-        try:
-            sampled_pred = pred[ids]
-            sampled_gold = gold[ids]
-            acc = sum(sampled_pred==sampled_gold)/len(sampled_pred)
-            accs.append(acc*100)
-        
-        
-            sampled_pred = pred_1[ids]
-            sampled_gold = gold_1[ids]
-            acc = sum(sampled_pred==sampled_gold)/len(sampled_pred)
-            accs_1.append(acc*100)
-        except:
-            pass
-    
-    return accs, accs_1
+    print("Model 1 and Model 2 mean accuracy. Model 1: {} Model 2 {}".format(corr_1.mean(), corr_2.mean()))
+    return corr_1, corr_2
     
 
 def main(args):
@@ -350,25 +323,18 @@ def main(args):
     df_2['pred'] = [clean(x, mapping) for x in df_2.pred]
     df_2['gold'] = [clean(x, mapping) for x in df_2.gold]
     #acc_2 = sum(df_2['gold']==df_2['pred'])/len(df_1)
-    accs_1, accs_2 = split_accs(df_1['pred'], df_1['gold'], df_2['pred'], df_2['gold'])
-    
-    #if args.dataset=='tropes': print(df.head())
-    
-    #print(accs_1)
-    #print(accs_2)
-    
-    if len(accs_1):
-        sig = Bootstrap(accs_1, accs_2)
+    corrs_1, corrs_2 = split_corr(df_1['pred'], df_1['gold'], df_2['pred'], df_2['gold'])
+
+    sig = Bootstrap(corrs_1, corrs_2)
         
-        if args.verbose:
-            print("Dataset:", args.dataset)
-            print("Model_1:", args.model_1)
-            print("Model_2:", args.model_2)
-            print("Significance:", sig)
-            print('--------------')
-        return {'Significance': sig}
-    else:
-        return {'Significance': None}
+    if args.verbose:
+        print("Dataset:", args.dataset)
+        print("Model_1:", args.model_1)
+        print("Model_2:", args.model_2)
+        print("The p-value for {} being better than {} is {}".format(args.model_1, args.model_1, sig))
+        print('--------------')
+    return {'Significance': sig}
+    
     
     
 if __name__ == "__main__":
