@@ -7,12 +7,12 @@ from glob import glob
 from statsmodels.stats.inter_rater import fleiss_kappa
 
 
-#Bootstrap
-#Repeat R times: randomly create new samples from the data with repetitions, calculate delta(A,B).
+# Bootstrap
+# Repeat R times: randomly create new samples from the data with repetitions, calculate delta(A,B).
 # let r be the number of times that delta(A,B)<2*orig_delta(A,B). significance level: r/R
-# This implementation follows the description in Berg-Kirkpatrick et al. (2012), 
+# This implementation follows the description in Berg-Kirkpatrick et al. (2012),
 # "An Empirical Investigation of Statistical Significance in NLP".
-def Bootstrap(data_A, data_B, R = 10000, alpha = 0.05):
+def Bootstrap(data_A, data_B, R=10000, alpha=0.05):
     n = len(data_A)
     R = max(R, int(len(data_A) * (1 / float(alpha))))
     delta_orig = float(sum([x - y for x, y in zip(data_A, data_B)])) / n
@@ -20,154 +20,159 @@ def Bootstrap(data_A, data_B, R = 10000, alpha = 0.05):
     for x in range(0, R):
         temp_A = []
         temp_B = []
-        samples = np.random.randint(0,n,n) #which samples to add to the subsample with repetitions
+        samples = np.random.randint(
+            0, n, n
+        )  # which samples to add to the subsample with repetitions
         for samp in samples:
             temp_A.append(data_A[samp])
             temp_B.append(data_B[samp])
         delta = float(sum([x - y for x, y in zip(temp_A, temp_B)])) / n
-        if (delta > 2*delta_orig):
+        if delta > 2 * delta_orig:
             r = r + 1
-    pval = float(r)/(R)
+    pval = float(r) / (R)
     return pval
 
 
-
-DATASETS = ["discourse",
-            "conv_go_awry",
-            "power",
-            "hate",
-            "humor",
-            "flute-classification",
-            "persuasion",
-            "politeness",
-            "media_ideology",
-            "indian_english_dialect",
-            "ibc",
-            "semeval_stance",
-            "tempowic",
-            "mrf-classification",
-            "talklife",
-            "emotion",
-            "raop"]
+DATASETS = [
+    "discourse",
+    "conv_go_awry",
+    "power",
+    "hate",
+    "humor",
+    "flute-classification",
+    "persuasion",
+    "politeness",
+    "media_ideology",
+    "indian_english_dialect",
+    "ibc",
+    "semeval_stance",
+    "tempowic",
+    "mrf-classification",
+    "talklife",
+    "emotion",
+    "raop",
+]
 MODELS = [
-        "google/flan-t5-small",
-        "google/flan-t5-base",
-        "google/flan-t5-large",
-        "google/flan-t5-xl",
-        "google/flan-t5-xxl",
-        "google/flan-ul2",
-        "text-ada-001",    
-        "text-babbage-001",
-        "text-curie-001",
-        "text-davinci-001",    
-        "text-davinci-002",
-        "text-davinci-003",
-        "chatgpt",
+    "google/flan-t5-small",
+    "google/flan-t5-base",
+    "google/flan-t5-large",
+    "google/flan-t5-xl",
+    "google/flan-t5-xxl",
+    "google/flan-ul2",
+    "text-ada-001",
+    "text-babbage-001",
+    "text-curie-001",
+    "text-davinci-001",
+    "text-davinci-002",
+    "text-davinci-003",
+    "chatgpt",
 ]
 
 MAPPINGS = {
-       "power": {
-                "true": "yes",
-                "false": "no",
-            },
-       "persuasion": {
-                "1.0": "True",
-                "0.0": "False",
-            },
-       "conv_go_awry": {
-                "true": "yes",
-                "false": "no",
-            },
-       "mrf-classification": {
-                "misinformation": "A",
-                "trustworthy": "B",
-            },
-       "politeness": {
-                "1": "A",
-                "0": "B",
-                "-1": "C",
-            },
-       "persuasion": {
-                "1.0": "True",
-                "0.0": "False",
-            },
-       "flute-classification": {
-                "idiom": "A",
-                "metaphor": "B",
-                "sarcasm": "C",
-                "simile": "D",
-            },
-       "media_ideology": {
-                "left": "A",
-                "right": "B",
-                "center": "C",
-            },
-       "tempowic": {
-                "same": "A",
-                "different": "B",
-            },
-       "semeval_stance": {"against": "A", "favor": "B", "none": "C"},
-       "ibc": {
-                "liberal": "A",
-                "conservative": "B",
-                "neutral": "C",
-            },
-       "hate": {
-                "white_grievance": "A",
-                "incitement": "B",
-                "inferiority": "C",
-                "irony": "D",
-                "stereotypical": "E",
-                "threatening": "F",
-            },
-       "discourse": {
-                "question": "A",
-                "answer": "B",
-                "agreement": "C",
-                "disagreement": "D",
-                "appreciation": "E",
-                "elaboration": "F",
-                "humor": "G",
-            },
-        "indian_english_dialect": {
-                "preposition omission": "R",
-                "copula omission": "B",
-                "resumptive subject pronoun": "S",
-                "resumptive object pronoun": "T",
-                "extraneous article": "D",
-                "focus only": "F",
-                "mass nouns as count nouns": "N",
-                "stative progressive": "U",
-                "lack of agreement": "K",
-                "none of the above": "W",
-                "lack of inversion in wh-questions": "L",
-                "topicalized non-argument constituent": "V",
-                "inversion in embedded clause": "J",
-                "focus itself": "E",
-                'general extender "and all"': "G",
-                '"general extender ""and all"""': "G",
-                "object fronting": "P",
-                'invariant tag "isn’t it, no, na"': "I",
-                '"invariant tag ""isn’t it, no, na"""': "I",
-                "habitual progressive": "H",
-                "article omission": "A",
-                "prepositional phrase fronting with reduction": "Q",
-                'non-initial existential "is / are there"': "O",
-                '"non-initial existential ""is / are there"""': "O",
-                "left dislocation": "M",
-                "direct object pronoun drop": "C",
-            },
+    "power": {
+        "true": "yes",
+        "false": "no",
+    },
+    "persuasion": {
+        "1.0": "True",
+        "0.0": "False",
+    },
+    "conv_go_awry": {
+        "true": "yes",
+        "false": "no",
+    },
+    "mrf-classification": {
+        "misinformation": "A",
+        "trustworthy": "B",
+    },
+    "politeness": {
+        "1": "A",
+        "0": "B",
+        "-1": "C",
+    },
+    "persuasion": {
+        "1.0": "True",
+        "0.0": "False",
+    },
+    "flute-classification": {
+        "idiom": "A",
+        "metaphor": "B",
+        "sarcasm": "C",
+        "simile": "D",
+    },
+    "media_ideology": {
+        "left": "A",
+        "right": "B",
+        "center": "C",
+    },
+    "tempowic": {
+        "same": "A",
+        "different": "B",
+    },
+    "semeval_stance": {"against": "A", "favor": "B", "none": "C"},
+    "ibc": {
+        "liberal": "A",
+        "conservative": "B",
+        "neutral": "C",
+    },
+    "hate": {
+        "white_grievance": "A",
+        "incitement": "B",
+        "inferiority": "C",
+        "irony": "D",
+        "stereotypical": "E",
+        "threatening": "F",
+    },
+    "discourse": {
+        "question": "A",
+        "answer": "B",
+        "agreement": "C",
+        "disagreement": "D",
+        "appreciation": "E",
+        "elaboration": "F",
+        "humor": "G",
+    },
+    "indian_english_dialect": {
+        "preposition omission": "R",
+        "copula omission": "B",
+        "resumptive subject pronoun": "S",
+        "resumptive object pronoun": "T",
+        "extraneous article": "D",
+        "focus only": "F",
+        "mass nouns as count nouns": "N",
+        "stative progressive": "U",
+        "lack of agreement": "K",
+        "none of the above": "W",
+        "lack of inversion in wh-questions": "L",
+        "topicalized non-argument constituent": "V",
+        "inversion in embedded clause": "J",
+        "focus itself": "E",
+        'general extender "and all"': "G",
+        '"general extender ""and all"""': "G",
+        "object fronting": "P",
+        'invariant tag "isn’t it, no, na"': "I",
+        '"invariant tag ""isn’t it, no, na"""': "I",
+        "habitual progressive": "H",
+        "article omission": "A",
+        "prepositional phrase fronting with reduction": "Q",
+        'non-initial existential "is / are there"': "O",
+        '"non-initial existential ""is / are there"""': "O",
+        "left dislocation": "M",
+        "direct object pronoun drop": "C",
+    },
 }
 
+
 def clean(txt, mapping={}):
-    c = str(txt).replace('&', '').lower().strip()
+    c = str(txt).replace("&", "").lower().strip()
     if c in mapping:
         return mapping[c].lower()
-#     else:
-#         print(txt, c, mapping)
+    #     else:
+    #         print(txt, c, mapping)
     return c.lower()
 
-def split_corr(pred_1, gold_1, pred_2, gold_2, n = 100):
+
+def split_corr(pred_1, gold_1, pred_2, gold_2, n=100):
     model_1_pred = np.array(pred_1)
     model_1_gold = np.array(gold_1)
     corr_1 = (model_1_pred == model_1_gold).astype(int)
@@ -175,10 +180,14 @@ def split_corr(pred_1, gold_1, pred_2, gold_2, n = 100):
     model_2_pred = np.array(pred_2)
     model_2_gold = np.array(gold_2)
     corr_2 = (model_2_pred == model_2_gold).astype(int)
-    
-    print("Model 1 and Model 2 mean accuracy. Model 1: {} Model 2 {}".format(corr_1.mean(), corr_2.mean()))
+
+    print(
+        "Model 1 and Model 2 mean accuracy. Model 1: {} Model 2 {}".format(
+            corr_1.mean(), corr_2.mean()
+        )
+    )
     return corr_1, corr_2
-    
+
 
 def main(args):
     if args.dataset == "conv_go_awry":
@@ -285,87 +294,101 @@ def main(args):
         args.answer_path = "css_data/positive_reframing/answer"
     else:
         raise ValueError("dataset is not properly defined ...")
-    
-    
+
     if args.model_1 == "chatgpt" or "text-" in args.model_1:
         args.answer_path_1 = args.answer_path + "-" + args.model_1
     elif "flan" in args.model_1:
         args.answer_path_1 = args.answer_path + "-" + args.model_1.split("/")[-1]
-        
+
     if args.model_2 == "chatgpt" or "text-" in args.model_2:
         args.answer_path_2 = args.answer_path + "-" + args.model_2
     elif "flan" in args.model_2:
         args.answer_path_2 = args.answer_path + "-" + args.model_2.split("/")[-1]
-        
-        
+
     mapping = {}
     if args.dataset in MAPPINGS:
         mapping = MAPPINGS[args.dataset]
     else:
-        print(args.dataset, 'not in MAPPINGS')
-        
-        
+        print(args.dataset, "not in MAPPINGS")
+
     try:
-        df_1 = pd.read_csv(args.answer_path_1, sep='\t', names=['idx', 'gold', 'pred'], on_bad_lines='skip')
-        df_2 = pd.read_csv(args.answer_path_2, sep='\t', names=['idx', 'gold', 'pred'], on_bad_lines='skip')
+        df_1 = pd.read_csv(
+            args.answer_path_1,
+            sep="\t",
+            names=["idx", "gold", "pred"],
+            on_bad_lines="skip",
+        )
+        df_2 = pd.read_csv(
+            args.answer_path_2,
+            sep="\t",
+            names=["idx", "gold", "pred"],
+            on_bad_lines="skip",
+        )
     except:
         print(args.answer_path)
-        return {'accuracy': None, "kappa": None}
-    
-    
-    #if args.dataset=='tropes': print(df.head())
-    #df['gold'] = [clean(x, mapping) for x in df.gold]
-    df_1['pred'] = [clean(x, mapping) for x in df_1.pred]
-    df_1['gold'] = [clean(x, mapping) for x in df_1.gold]
-    #acc_1 = sum(df_1['gold']==df_1['pred'])/len(df_1)
-    
-    
-    df_2['pred'] = [clean(x, mapping) for x in df_2.pred]
-    df_2['gold'] = [clean(x, mapping) for x in df_2.gold]
-    #acc_2 = sum(df_2['gold']==df_2['pred'])/len(df_1)
-    corrs_1, corrs_2 = split_corr(df_1['pred'], df_1['gold'], df_2['pred'], df_2['gold'])
+        return {"accuracy": None, "kappa": None}
 
-    sig = Bootstrap(corrs_1, corrs_2)
-        
-    if args.verbose:
-        print("Dataset:", args.dataset)
-        print("Model_1:", args.model_1)
-        print("Model_2:", args.model_2)
-        print("The p-value for {} being better than {} is {}".format(args.model_1, args.model_1, sig))
-        print('--------------')
-    return {'Significance': sig}
-    
-    
-    
+    # if args.dataset=='tropes': print(df.head())
+    # df['gold'] = [clean(x, mapping) for x in df.gold]
+    df_1["pred"] = [clean(x, mapping) for x in df_1.pred]
+    df_1["gold"] = [clean(x, mapping) for x in df_1.gold]
+    # acc_1 = sum(df_1['gold']==df_1['pred'])/len(df_1)
+
+    df_2["pred"] = [clean(x, mapping) for x in df_2.pred]
+    df_2["gold"] = [clean(x, mapping) for x in df_2.gold]
+    # acc_2 = sum(df_2['gold']==df_2['pred'])/len(df_1)
+    print(args.dataset, args.model_1, args.model_2)
+    corrs_1, corrs_2 = split_corr(
+        df_1["pred"], df_1["gold"], df_2["pred"], df_2["gold"]
+    )
+
+    try:
+        sig = Bootstrap(corrs_1, corrs_2)
+
+        if args.verbose:
+            print("Dataset:", args.dataset)
+            print("Model_1:", args.model_1)
+            print("Model_2:", args.model_2)
+            print(
+                "The p-value for {} being better than {} is {}".format(
+                    args.model_1, args.model_2, sig
+                )
+            )
+            print("--------------")
+        return {"Significance": sig}
+    except:
+        return {"Significance": None}
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval_significance")
     parser.add_argument(
-            "--dataset",
-            type=str,
-            default="all",
-            choices=["all"]+DATASETS,
-            help="dataset used for experiment",
-        )
+        "--dataset",
+        type=str,
+        default="all",
+        choices=["all"] + DATASETS,
+        help="dataset used for experiment",
+    )
     parser.add_argument(
         "--model_1",
         "-m",
         type=str,
         default="all",
-        choices=["all"]+MODELS,
+        choices=["all"] + MODELS,
     )
-    
+
     parser.add_argument(
         "--model_2",
         "-mm",
         type=str,
         default="all",
-        choices=["all"]+MODELS,
+        choices=["all"] + MODELS,
     )
-    
+
     args = parser.parse_args()
     args.verbose = True
     results = {}
-    if args.model_1=="all" or args.dataset=="all":
+    if args.model_1 == "all" or args.dataset == "all":
         for j, dataset in enumerate(DATASETS):
             for model_1 in MODELS:
                 for model_2 in MODELS:
@@ -377,6 +400,6 @@ if __name__ == "__main__":
     else:
         r = main(args)
         results[str((args.dataset, args.model_1, args.model_2))] = r
-    #print(results)
-    with open('results/sig.json', 'w') as outfile:
+    # print(results)
+    with open("results/sig.json", "w") as outfile:
         json.dump(results, outfile)
