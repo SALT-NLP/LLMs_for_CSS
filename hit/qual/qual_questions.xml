@@ -1,0 +1,336 @@
+<QuestionForm xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd'>  
+  <Overview>
+    <Title>FLUTE Figurative Language - Qualification Test</Title>
+    <FormattedContent><![CDATA[
+    <h1> Instructions </h1>
+    <p>You will read two short sentences, one literal and one figurative, and you'll help judge the quality of how the descriptions explain the <b>figurative language</b> that links them in a given RELATIONSHIP. SENTENCE 1 (which is also called the premise) is literal and SENTENCE 2 (which is also called the hypothesis) is figurative. They have a RELATIONSHIP, which says whether the literal first sentence makes the second sentence true (Entailment) or makes the second sentence false (Contradiction). To understand the RELATIONSHIP, we need to understand figurative language, and the EXPLANATION describes the figurative language.</p>
+
+    <h5>Please closely read the examples below of Fully Correct EXPLANATION 1s and some incorrect EXPLANATION 2s. These directly relate to the qualification questions below.</h5>
+    <table>
+      <thead>
+        <tr><th>SENTENCE 1 (literal)</th>
+        <th>SENTENCE 2 (figurative)</th>
+        <th>RELATIONSHIP</th>
+        <th>Correct EXPLANATION 1</th>
+        <th>Incorrect EXPLANATION 2</th>
+        <th>Why is EXPLANATION 2 Incorrect?</th>
+      </tr></thead>
+      <tbody>
+          <tr>
+            <td>
+              The assembly hall was now hot and moist, more so than usual. 
+            </td>
+            <td>
+              In fact, the assembly hall was now like a steam sauna.
+            </td>
+            <td>
+              <strong>Entailment</strong>
+            </td>
+            <td>
+              A sauna is a hot and moist environment, so the simile is saying that the hall is even hotter and more moist than usual.
+            </td>
+            <td>
+              The relationship between the premise and the hypothesis is entailed.
+            </td>
+            <td>
+              The explanation is supposed to describe the meaning behind the figurative language, and EXPLANATION 2 only gives the relationship as Entailment.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              The assembly hall was now cold and dry, more so than usual.
+            </td>
+            <td>
+              In fact, the assembly hall was now like a steam sauna.
+            </td>
+            <td>
+              <strong>Contradiction</strong>
+            </td>
+            <td>
+              A steam sauna is a small room or hut where people go to sweat in steam, so it would be hot and humid, not cold and dry.
+            </td>
+            <td>
+              A steam sauna is a cold and dry place.
+            </td>
+            <td>
+              EXPLANATION 2 is factually incorrect.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              He mentally assimilated the knowledge or beliefs of his tribe.
+            </td>
+            <td>
+              He absorbed the knowledge or beliefs of his tribe.
+            </td>
+            <td>
+              <strong>Entailment</strong>
+            </td>
+            <td>
+              To absorb something is to take it in and make it part of yourself.
+            </td>
+            <td>
+              The hypothesis uses figurative language to express that the speaker absorbed the knowledge.
+            </td>
+            <td>
+              EXPLANATION 2 identifies the figurative phrase but doesn't explain what it means.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              He utterly decimated his tribe's most deeply held beliefs.
+            </td>
+            <td>
+              He absorbed the knowledge or beliefs of his tribe.
+            </td>
+            <td>
+              <strong>Contradiction</strong>
+            </td>
+            <td>
+              Absorbed typically means to take in or take up something, while "utterly decimated" means to destroy completely.
+            </td>
+            <td>
+              "Utterly decimated" means to destroy completely.
+            </td>
+            <td>
+              EXPLANATION 2 correctly explains the figurative language in SENTENCE 1 but not the figurative language in SENTENCE 2.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Lady Southridge was wringing her hands, trying hard and desperately to salvage the bleak and miserable situation so that it somehow looks positive.
+            </td>
+            <td>
+              Lady southridge was wringing her hands, trying to grasp at straws.
+            </td>
+            <td>
+              <strong>Entailment</strong>
+            </td>
+            <td>
+              To grasp at straws means to make a desperate attempt to salvage a bad situation, which is exactly what Lady Southridge is trying to do.
+            </td>
+            <td>
+              Lady Southridge is trying to salvage a bad situation.
+            </td>
+            <td>
+              EXPLANATION 2 is true, but it doesn't explain the figurative phrase 'grasp at straws.'
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              I was really wishing I was moving to New York like my friend.
+            </td>
+            <td>
+              I was ecstatic when my friend told me that she is moving to New York leaving me behind.
+            </td>
+            <td>
+              <strong>Contradiction</strong>
+            </td>
+            <td>
+              The figurative language in the hypothesis is hyperbole, as the speaker is unlikely to be truly ecstatic about being left behind.
+            </td>
+            <td>
+              The hypothesis uses figurative language to express the speaker's disappointment at being left behind while their friend moves to New York
+            </td>
+            <td>
+              EXPLANATION 2 describes the speaker's intended meaning, but does not explain how we can come to this interpretation by explaining the figurative language in the hypothesis. 
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    ]]></FormattedContent>
+  </Overview>
+
+  <Question>
+      <QuestionIdentifier>q_1</QuestionIdentifier>
+      <DisplayName>Q1</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <FormattedContent><![CDATA[
+          <p><b>Premise:</b> Yesterday, I felt sad because when I was cleaning the cupboards, I dropped an antique tea cup and it shattered.</p>
+          <p><b>Hypothesis:</b> Yesterday, I felt devasted because when I was cleaning the cupboards, I dropped an antique tea cup and it shattered.</p>
+          <p><b>Relationship:</b> Entailment</p>
+
+          <p><b>EXPLANATION 1:</b> The relationship between the premise and the hypothesis is entailed.</p>
+          <p><b>EXPLANATION 2:</b> Dropping and shattering an antique tea cup is a very costly mistake and would often result in someone feeling devastated.</p>
+          <p><b>EXPLANATION 3:</b> The hypothesis uses figurative language to express that the speaker felt devastated by the incident.</p>
+          <p><b>EXPLANATION 4:</b> In the hypothesis, the phrase "felt devastated" means feeling extremely upset or overwhelmed.</p>
+
+          <p>In the Instructions, it says that Explanations should explain the meaning behind the figurative language. Which EXPLANATION above best describes the meaning behind the figurative language? </p>
+        ]]></FormattedContent>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>expl_one</SelectionIdentifier>
+              <Text>EXPLANATION 1</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_two</SelectionIdentifier>
+              <Text>EXPLANATION 2</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_three</SelectionIdentifier>
+              <Text>EXPLANATION 3</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_four</SelectionIdentifier>
+              <Text>EXPLANATION 4</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+
+  <Question>
+      <QuestionIdentifier>q_2</QuestionIdentifier>
+      <DisplayName>Q2</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <FormattedContent><![CDATA[
+          <p><b>Premise:</b> I forgot about wife's birthday.</p>
+          <p><b>Hypothesis:</b> Wife's birthday slipped my mind.</p>
+          <p><b>Relationship:</b> Entailment</p>
+
+          <p><b>EXPLANATION 1:</b> The hypothesis uses figurative language.</p>
+          <p><b>EXPLANATION 2:</b> It's not normal to forget your wife's birthday.</p>
+          <p><b>EXPLANATION 3:</b> If you forget something, it slips your mind.</p>
+          <p><b>EXPLANATION 4:</b> Entailment.</p>
+
+          <p>In the Instructions, it says that Explanations should explain the meaning behind the figurative language. Which EXPLANATION above best describes the meaning behind the figurative language? </p>
+        ]]></FormattedContent>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>expl_one</SelectionIdentifier>
+              <Text>EXPLANATION 1</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_two</SelectionIdentifier>
+              <Text>EXPLANATION 2</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_three</SelectionIdentifier>
+              <Text>EXPLANATION 3</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>expl_four</SelectionIdentifier>
+              <Text>EXPLANATION 4</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+
+  <Question>
+      <QuestionIdentifier>q_3</QuestionIdentifier>
+      <DisplayName>Q3</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <FormattedContent><![CDATA[
+          <p><b>Premise:</b> Hate it when I meet a Tinder date and she looks nothing like her pictures.</p>
+          <p><b>Hypothesis:</b> I love it when I meet a Tinder date and she looks nothing like her pictures.</p>
+          <p><b>Relationship:</b> Contradiction</p>
+
+          <p><b>EXPLANATION 1:</b> The figurative language in the hypothesis is sarcasm, as it says the opposite of the premise.</p>
+          <p><b>EXPLANATION 2:</b> To love something means to love it, but in this context the person is saying that they love it.</p>
+          <p><b>EXPLANATION 3:</b> Meeting someone from Tinder and discovering that they look nothing like their pictures can be a very disheartening experience and so it is not reassuring at all.</p>
+
+          <p>Which is the most reasonable ranking of explanations from best to worst.</p>
+        ]]></FormattedContent>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>ranking_one</SelectionIdentifier>
+              <Text>EXPLANATION 1 (best), EXPLANATION 3, EXPLANATION 2 (worst)</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>ranking_two</SelectionIdentifier>
+              <Text>EXPLANATION 3 (best), EXPLANATION 2, EXPLANATION 1 (worst)</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>ranking_three</SelectionIdentifier>
+              <Text>EXPLANATION 2 (best), EXPLANATION 3, EXPLANATION 1 (worst)</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+
+  <Question>
+      <QuestionIdentifier>q_4</QuestionIdentifier>
+      <DisplayName>Q4</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <FormattedContent><![CDATA[
+          <p><b>Premise:</b> I forgot about wife's birthday.</p>
+          <p><b>Hypothesis:</b> Wife's birthday slipped my mind.</p>
+
+          <p>What is the relationship between the Premise and Hypothesis above?</p>
+        ]]></FormattedContent>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>entailment</SelectionIdentifier>
+              <Text>Entailment</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>contradiction</SelectionIdentifier>
+              <Text>Contradiction</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>  
+
+  <Question>
+      <QuestionIdentifier>q_5</QuestionIdentifier>
+      <DisplayName>Q5</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <FormattedContent><![CDATA[
+          <p><b>Premise:</b> Lady Southridge was wringing her hands, trying hard and desperately to salvage the bleak and miserable situation so that it somehow looks positive.</p>
+          <p><b>Hypothesis:</b> Lady southridge was wringing her hands, trying to grasp at straws.</p>
+          <p><b>Relationship:</b> Entailment</p>
+          <p><b>EXPLANATION 1:</b> Lady Southridge is trying to salvage a bad situation.</p>
+          <p>What is wrong about EXPLANATION 1?</p>
+        ]]></FormattedContent>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>opt_1</SelectionIdentifier>
+              <Text>EXPLANATION 1 makes a false claim about Lady Southridge.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>opt_2</SelectionIdentifier>
+              <Text>EXPLANATION 1 doesn't explain the figurative phrase in the hypothesis.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>opt_3</SelectionIdentifier>
+              <Text>EXPLANATION 1 is poorly written.</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+
+</QuestionForm>
