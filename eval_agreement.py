@@ -6,160 +6,164 @@ from tqdm import tqdm
 from glob import glob
 from statsmodels.stats.inter_rater import fleiss_kappa
 
-DATASETS = ["discourse",
-            "conv_go_awry",
-            "power",
-            "hate",
-            "humor",
-            "flute-classification",
-            "persuasion",
-            "politeness",
-            "media_ideology",
-            "indian_english_dialect",
-            "ibc",
-            "semeval_stance",
-            "tempowic",
-            "mrf-classification",
-            "talklife",
-            "emotion",
-            "raop"]
+DATASETS = [
+    "discourse",
+    "conv_go_awry",
+    "power",
+    "hate",
+    "humor",
+    "flute-classification",
+    "persuasion",
+    "politeness",
+    "media_ideology",
+    "indian_english_dialect",
+    "ibc",
+    "semeval_stance",
+    "tempowic",
+    "mrf-classification",
+    "talklife",
+    "emotion",
+    "raop",
+]
 MODELS = [
-        "google/flan-t5-small",
-        "google/flan-t5-base",
-        "google/flan-t5-large",
-        "google/flan-t5-xl",
-        "google/flan-t5-xxl",
-        "google/flan-ul2",
-        "text-ada-001",    
-        "text-babbage-001",
-        "text-curie-001",
-        "text-davinci-001",    
-        "text-davinci-002",
-        "text-davinci-003",
-        "chatgpt",
+    "google/flan-t5-small",
+    "google/flan-t5-base",
+    "google/flan-t5-large",
+    "google/flan-t5-xl",
+    "google/flan-t5-xxl",
+    "google/flan-ul2",
+    "text-ada-001",
+    "text-babbage-001",
+    "text-curie-001",
+    "text-davinci-001",
+    "text-davinci-002",
+    "text-davinci-003",
+    "chatgpt",
 ]
 
 MAPPINGS = {
-       "power": {
-                "true": "yes",
-                "false": "no",
-            },
-       "persuasion": {
-                "1.0": "True",
-                "0.0": "False",
-            },
-       "conv_go_awry": {
-                "true": "yes",
-                "false": "no",
-            },
-       "mrf-classification": {
-                "misinformation": "A",
-                "trustworthy": "B",
-            },
-       "politeness": {
-                "1": "A",
-                "0": "B",
-                "-1": "C",
-            },
-       "persuasion": {
-                "1.0": "True",
-                "0.0": "False",
-            },
-       "flute-classification": {
-                "idiom": "A",
-                "metaphor": "B",
-                "sarcasm": "C",
-                "simile": "D",
-            },
-       "media_ideology": {
-                "left": "A",
-                "right": "B",
-                "center": "C",
-            },
-       "tempowic": {
-                "same": "A",
-                "different": "B",
-            },
-       "semeval_stance": {"against": "A", "favor": "B", "none": "C"},
-       "ibc": {
-                "liberal": "A",
-                "conservative": "B",
-                "neutral": "C",
-            },
-       "hate": {
-                "white_grievance": "A",
-                "incitement": "B",
-                "inferiority": "C",
-                "irony": "D",
-                "stereotypical": "E",
-                "threatening": "F",
-            },
-       "discourse": {
-                "question": "A",
-                "answer": "B",
-                "agreement": "C",
-                "disagreement": "D",
-                "appreciation": "E",
-                "elaboration": "F",
-                "humor": "G",
-            },
-        "indian_english_dialect": {
-                "preposition omission": "R",
-                "copula omission": "B",
-                "resumptive subject pronoun": "S",
-                "resumptive object pronoun": "T",
-                "extraneous article": "D",
-                "focus only": "F",
-                "mass nouns as count nouns": "N",
-                "stative progressive": "U",
-                "lack of agreement": "K",
-                "none of the above": "W",
-                "lack of inversion in wh-questions": "L",
-                "topicalized non-argument constituent": "V",
-                "inversion in embedded clause": "J",
-                "focus itself": "E",
-                'general extender "and all"': "G",
-                '"general extender ""and all"""': "G",
-                "object fronting": "P",
-                'invariant tag "isn’t it, no, na"': "I",
-                '"invariant tag ""isn’t it, no, na"""': "I",
-                "habitual progressive": "H",
-                "article omission": "A",
-                "prepositional phrase fronting with reduction": "Q",
-                'non-initial existential "is / are there"': "O",
-                '"non-initial existential ""is / are there"""': "O",
-                "left dislocation": "M",
-                "direct object pronoun drop": "C",
-            },
+    "power": {
+        "true": "yes",
+        "false": "no",
+    },
+    "persuasion": {
+        "1.0": "True",
+        "0.0": "False",
+    },
+    "conv_go_awry": {
+        "true": "yes",
+        "false": "no",
+    },
+    "mrf-classification": {
+        "misinformation": "A",
+        "trustworthy": "B",
+    },
+    "politeness": {
+        "1": "A",
+        "0": "B",
+        "-1": "C",
+    },
+    "persuasion": {
+        "1.0": "True",
+        "0.0": "False",
+    },
+    "flute-classification": {
+        "idiom": "A",
+        "metaphor": "B",
+        "sarcasm": "C",
+        "simile": "D",
+    },
+    "media_ideology": {
+        "left": "A",
+        "right": "B",
+        "center": "C",
+    },
+    "tempowic": {
+        "same": "A",
+        "different": "B",
+    },
+    "semeval_stance": {"against": "A", "favor": "B", "none": "C"},
+    "ibc": {
+        "liberal": "A",
+        "conservative": "B",
+        "neutral": "C",
+    },
+    "hate": {
+        "white_grievance": "A",
+        "incitement": "B",
+        "inferiority": "C",
+        "irony": "D",
+        "stereotypical": "E",
+        "threatening": "F",
+    },
+    "discourse": {
+        "question": "A",
+        "answer": "B",
+        "agreement": "C",
+        "disagreement": "D",
+        "appreciation": "E",
+        "elaboration": "F",
+        "humor": "G",
+    },
+    "indian_english_dialect": {
+        "preposition omission": "R",
+        "copula omission": "B",
+        "resumptive subject pronoun": "S",
+        "resumptive object pronoun": "T",
+        "extraneous article": "D",
+        "focus only": "F",
+        "mass nouns as count nouns": "N",
+        "stative progressive": "U",
+        "lack of agreement": "K",
+        "none of the above": "W",
+        "lack of inversion in wh-questions": "L",
+        "topicalized non-argument constituent": "V",
+        "inversion in embedded clause": "J",
+        "focus itself": "E",
+        'general extender "and all"': "G",
+        '"general extender ""and all"""': "G",
+        "object fronting": "P",
+        'invariant tag "isn’t it, no, na"': "I",
+        '"invariant tag ""isn’t it, no, na"""': "I",
+        "habitual progressive": "H",
+        "article omission": "A",
+        "prepositional phrase fronting with reduction": "Q",
+        'non-initial existential "is / are there"': "O",
+        '"non-initial existential ""is / are there"""': "O",
+        "left dislocation": "M",
+        "direct object pronoun drop": "C",
+    },
 }
 
+
 def clean(txt, mapping={}):
-    c = str(txt).replace('&', '').lower().strip()
+    c = str(txt).replace("&", "").lower().strip()
     if c in mapping:
         return mapping[c].lower()
-#     else:
-#         print(txt, c, mapping)
+    #     else:
+    #         print(txt, c, mapping)
     return c.lower()
 
-def build_annotation_matrix(df, idx='idx'):
-    
+
+def build_annotation_matrix(df, idx="idx"):
     labels = set()
     columns = []
     for col in df.columns:
         if col == idx:
             continue
         else:
-            labels.update(set( [x for x in df[col].values]))
+            labels.update(set([x for x in df[col].values]))
             columns.append(col)
     labels = list(sorted(labels))
-    #print(labels)
+    # print(labels)
     M = np.zeros((len(df), len(labels)))
     i = 0
     for _, row in df.iterrows():
-        for col in columns: 
-            M[i, labels.index( row[col]) ] += 1
-        i+=1
+        for col in columns:
+            M[i, labels.index(row[col])] += 1
+        i += 1
     return M
+
 
 def main(args):
     if args.dataset == "conv_go_awry":
@@ -270,56 +274,61 @@ def main(args):
         args.answer_path = args.answer_path + "-" + args.model
     elif "flan" in args.model:
         args.answer_path = args.answer_path + "-" + args.model.split("/")[-1]
-        
+
     mapping = {}
     if args.dataset in MAPPINGS:
         mapping = MAPPINGS[args.dataset]
     else:
-        print(args.dataset, 'not in MAPPINGS')
+        print(args.dataset, "not in MAPPINGS")
     try:
-        df = pd.read_csv(args.answer_path, sep='\t', names=['idx', 'gold', 'pred'], on_bad_lines='skip')
+        df = pd.read_csv(
+            args.answer_path,
+            sep="\t",
+            names=["idx", "gold", "pred"],
+            on_bad_lines="skip",
+        )
     except:
         print(args.answer_path)
-        return {'accuracy': None, "kappa": None}
-    #if args.dataset=='tropes': print(df.head())
-    df['gold'] = [clean(x, mapping) for x in df.gold]
-    df['pred'] = [clean(x, mapping) for x in df.pred]
-    #if args.dataset=='tropes': print(df.head())
+        return {"accuracy": None, "kappa": None}
+    # if args.dataset=='tropes': print(df.head())
+    df["gold"] = [clean(x, mapping) for x in df.gold]
+    df["pred"] = [clean(x, mapping) for x in df.pred]
+    # if args.dataset=='tropes': print(df.head())
     M = build_annotation_matrix(df)
     if len(M):
-        kappa = fleiss_kappa(M, method='fleiss')
-        acc = sum(df['gold']==df['pred'])/len(df)
+        kappa = fleiss_kappa(M, method="fleiss")
+        acc = sum(df["gold"] == df["pred"]) / len(df)
         if args.verbose:
             print("Dataset:", args.dataset)
             print("Model:", args.model)
             print("Accuracy:", acc)
             print("Fleiss Kappa:", kappa)
-            print('--------------')
-        return {'accuracy': acc, "kappa": kappa}
+            print("--------------")
+        return {"accuracy": acc, "kappa": kappa}
     else:
-        return {'accuracy': None, "kappa": None}
-    
-    
+        return {"accuracy": None, "kappa": None}
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval_agreement")
     parser.add_argument(
-            "--dataset",
-            type=str,
-            default="all",
-            choices=["all"]+DATASETS,
-            help="dataset used for experiment",
-        )
+        "--dataset",
+        type=str,
+        default="all",
+        choices=["all"] + DATASETS,
+        help="dataset used for experiment",
+    )
     parser.add_argument(
         "--model",
         "-m",
         type=str,
         default="all",
-        choices=["all"]+MODELS,
+        choices=["all"] + MODELS,
     )
     args = parser.parse_args()
     args.verbose = False
     results = {}
-    if args.model=="all" or args.dataset=="all":
+    if args.model == "all" or args.dataset == "all":
         for j, dataset in enumerate(DATASETS):
             for model in MODELS:
                 args.model = model
@@ -329,6 +338,6 @@ if __name__ == "__main__":
     else:
         r = main(args)
         results[str((args.dataset, args.model))] = r
-    #print(results)
-    with open('results/clf.json', 'w') as outfile:
+    print(results)
+    with open("results/clf.json", "w") as outfile:
         json.dump(results, outfile)
