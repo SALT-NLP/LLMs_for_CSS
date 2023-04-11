@@ -6,6 +6,24 @@ from collections import Counter
 
 
 BLACKLIST = set(["A1FHH0LTJMMRL"])
+MATCHING = ['Input.Generated_1', 'Input.Generated_2', 'Input.Generated_3', 'Input.Generated_4', 'Input.Model_1', 'Input.Model_2', 'Input.Model_3', 'Input.Model_4']
+
+def internal_match(df):
+    """Match the HITIds to MTurk where lab evaluation HITId is NaN"""
+    for idx, row in df.iterrows():
+        hid = row['HITId']
+        if (not type(hid)==str):
+            consider = df[~df['HITId'].isna()].copy()
+            for col in MATCHING:
+                consider = consider[consider[col]==row[col]]
+            if len(consider):
+                new_hid = consider['HITId'].iloc[0]
+                #print(new_hid)
+                df.at[idx, 'HITId'] = new_hid
+            elif not any(row[MATCHING].isna()):
+                new_hid = str(hash(' '.join([str(x) for x in row[MATCHING]])))
+                #print(idx, new_hid)
+                df.at[idx, 'HITId'] = new_hid
 
 def get_ranking(row):
     ranks = ["rank_1", "rank_2", "rank_3", "rank_4"]
@@ -23,7 +41,9 @@ def get_rankings(df):
     return rankings
 
 def main():
-    evals = pd.concat([pd.read_csv(fn) for fn in glob("hit/output/*balanced*.csv")])
+    evals = pd.concat([pd.read_csv(fn) for fn in glob(args.input)]).reset_index()
+    internal_match(evals)
+    evals = evals[~evals['HITId'].isna()].copy()
     
     names = ['baseline',
      'text-ada-001',         
@@ -64,9 +84,9 @@ def main():
                     total = len(rankings)
 
                     #print(m1, m2, better, total)  
-                    if (better/total) >= 1: # majority vote
+                    if (better/total) >= 1: # unanimous vote
                         results[task][m1][m2]['unanimous_vote'] += 1
-                    if (better/total) >= 0.5: # majority vote
+                    if (better/total) > 0.5: # majority vote
                         results[task][m1][m2]['majority_vote'] += 1
                     results[task][m1][m2]['total_votes'] += 1
                     
@@ -75,7 +95,11 @@ def main():
     comp = args.compare_with
     vote = args.vote
     for model in names:
-        s = f"{model} & "
+        s = f"\\textttt{{{model}}} & "
+        if model == 'chatgpt':
+            s = "ChatGPT & "
+        elif model == 'baseline':
+            s = "Baseline & "
         for task in ['mrf', 'flute', 'sbic', 'positive_reframing']:
             if task in results and model in results[task]:
                 x = results[task][model]
@@ -89,7 +113,7 @@ def main():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval_human")
-    parser.add_argument("--dir", type=str, default="hit/output/*balanced*.csv", help="glob string to indicate where the HIT output files are located")
+    parser.add_argument("--input", type=str, default="hit/output/*balanced*.csv", help="glob string to indicate where the HIT output files are located to be used as input to the table generation")
     parser.add_argument("--compare_with", type=str, default="human", choices=["human", "baseline"])
     parser.add_argument(
             "--vote",
