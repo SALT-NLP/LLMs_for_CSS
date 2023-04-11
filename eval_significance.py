@@ -164,7 +164,7 @@ MAPPINGS = {
 
 
 def clean(txt, mapping={}):
-    c = str(txt).replace("&", "").lower().strip()
+    c = str(txt).replace("&", "").replace(".", "").lower().strip()
     if c in mapping:
         return mapping[c].lower()
     #     else:
