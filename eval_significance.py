@@ -90,10 +90,6 @@ MAPPINGS = {
         "0": "B",
         "-1": "C",
     },
-    "persuasion": {
-        "1.0": "True",
-        "0.0": "False",
-    },
     "flute-classification": {
         "idiom": "A",
         "metaphor": "B",
@@ -164,12 +160,15 @@ MAPPINGS = {
 
 
 def clean(txt, mapping={}):
-    c = str(txt).replace("&", "").replace(".", "").lower().strip()
+    c = str(txt).replace("&", "").lower().strip()
     if c in mapping:
         return mapping[c].lower()
     #     else:
     #         print(txt, c, mapping)
-    return c.lower()
+    if c.endswith("."):
+        return c[-1].lower()
+    else:
+        return c.lower()
 
 
 def split_corr(pred_1, gold_1, pred_2, gold_2, n=100):
