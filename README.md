@@ -47,8 +47,12 @@ We evaluated the following models - but any model which can be loaded with Huggi
 
 ## File Roadmap
 `mappings.py` - Configuration used for each dataset in the paper. Describes the type of dataset, how it should be processed from the raw format, and how the task should be formatted into a prompt from our prompting guidelines.
+
 `data_loader.py` - Downloads and Converts Raw Datasets into the Seq2Seq format used by LLMs.
+
 `test_official_chat_css.py` - Runs zero-shot LLM of choice - contains code for HuggingFace, ChatGPT API, and Traditional GPT API.
+
 `eval_significance.py` - Computes Pairwise Bootstrap significance between the answer files of two models.
+
 `eval_agreement.py` - Computes the Kappa between the LLM and the gold labels.
 
