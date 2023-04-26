@@ -59,17 +59,12 @@ We evaluated the following models - but any model which can be loaded with Huggi
 ## Citation
 If you find this work useful, please cite it as follows!
 ```
-@misc{salt-2023-llms-for-css,
-    title = "Can Large Language Models Transform Computational Social Science?",
-    author = "Ziems*, Caleb  and
-       Held*, William  and
-       Shaikh*, Omar  and
-       Chen*, Jiaao  and
-       Zhang*, Zhehao  and
-       Yang*, Diyi",
-    month = apr,
-    year = "2023",
-    url = "https://calebziems.com/assets/pdf/preprints/css_chatgpt.pdf",
+@article{salt-2023-llms-for-css,
+  title = {Can Large Language Models Transform Computational Social Science?},
+  author = {Ziems, Caleb and Held, William and Shaikh, Omar and Chen, Jiaao and Zhang, Zhehao and Yang, Diyi},
+  journal = {arXiv submission 4840038},
+  year = {2023},
+  month = apr,
 }
 ```
 
